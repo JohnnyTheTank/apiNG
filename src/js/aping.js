@@ -3,7 +3,7 @@
  * @version 0.1.0
  * @author: Hornung, Jonathan (jonathan.hornung@gmail.com)
  * @firstline : 2015/10/02
- * @lastupdate : 2015/10/02
+ * @lastupdate : 2015/10/03
  */
 
 var apiNG = angular.module('apiNG', []);
@@ -11,15 +11,12 @@ var apiNG = angular.module('apiNG', []);
 apiNG.directive('aping', function() {
     return {
         restrict: 'A',
-        // Replace the div with our template
         replace: true,
-        //template: postsTemplate,
         templateUrl:"templates/aping.template.html",
         scope: {
             platform: '@',
             identifier: '@',
         },
-        // Specify a controller directly in our directive definition.
         controller: function($scope, tumblrTapir) {
             $scope.feed = [];
 
@@ -52,7 +49,7 @@ apiNG.directive('aping', function() {
                             });
                             break;
 
-                        // add more cases here, like tumbl
+                        // add more cases here, like tumblr and an new factory like "tumbrTapir"
 
                         default:
                             break;
@@ -66,10 +63,7 @@ apiNG.directive('aping', function() {
 
 apiNG.factory('tumblrTapir', function($http) {
 
-    var endpoint, params, path, _feed;
-    endpoint = function() {
-        return "" + protocol + domain + path;
-    };
+    var params, path, _feed;
     params = function() {
         return "&callback=JSON_CALLBACK";
     };
