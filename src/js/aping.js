@@ -11,7 +11,7 @@ var apiNG = angular.module('apiNG', []);
 apiNG.directive('aping', function() {
     return {
         restrict: 'A',
-        replace: true,
+        replace: false,
         templateUrl:"templates/aping.template.html",
         scope: {
             platform: '@',
@@ -63,13 +63,8 @@ apiNG.directive('aping', function() {
 
 apiNG.factory('tumblrTapir', function($http) {
 
-    var params, path, _feed;
-    params = function() {
-        return "&callback=JSON_CALLBACK";
-    };
-
-    _feed = function(user) {
-        return $http.jsonp('http://api.tumblr.com/v2/blog/'+user+'.tumblr.com/posts?filter=raw'+params());
+    var _feed = function(_identifier) {
+        return $http.jsonp('http://api.tumblr.com/v2/blog/'+_identifier+'.tumblr.com/posts?filter=raw&callback=JSON_CALLBACK');
     };
 
     return {
