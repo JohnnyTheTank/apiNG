@@ -2,9 +2,9 @@
 
 var apingApp = angular.module('aping', ['youtube', 'instagram', 'yaru22.angular-timeago', 'linkify']);
 
-function feedEntry(_plattform, _plattform_id) {
-    this.plattform = _plattform || false;
-    this.plattform_id = _plattform_id || false;
+function feedEntry(_platform, _platform_id) {
+    this.platform = _platform || false;
+    this.platform_id = _platform_id || false;
     this.blog_name = false;
     this.blog_id = false;
     this.blog_link = false;
@@ -25,7 +25,7 @@ function feedEntry(_plattform, _plattform_id) {
     this.tag = false;
 }
 
-function plattformEntry(_name, _id) {
+function platformEntry(_name, _id) {
     this.name = _name || false;
     this.uniqueId = _id;
     this.intern_id = false;

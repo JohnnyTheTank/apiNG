@@ -84,8 +84,8 @@ apingApp.service('apingService', function () {
 
     this.getBlankChannelObject = function (_name) {
 
-        var plattformObject = new plattformEntry(_name, this.generateUniqueId());
+        var platformObject = new platformEntry(_name, this.generateUniqueId());
 
-        return plattformObject;
+        return platformObject;
     };
 });

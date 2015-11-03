@@ -81,7 +81,7 @@ tapirYoutube.factory('youtubeService', ['$http', 'apiKeys', 'apingService', 'def
 
     youtubeService.getChannelObjectByJsonData = function (_data) {
 
-        var plattformObject = new plattformEntry("youtube", apingService.generateUniqueId());
+        var platformObject = new platformEntry("youtube", apingService.generateUniqueId());
 
         if(_data && _data.items && _data.items[0] && _data.items[0].snippet){
             var channel = _data.items[0];
@@ -95,7 +95,7 @@ tapirYoutube.factory('youtubeService', ['$http', 'apiKeys', 'apingService', 'def
              this.errorMessage = false;
              */
 
-            $.extend(true, plattformObject, {
+            $.extend(true, platformObject, {
                 intern_id: channel.id.channelId,
                 type: "channel",
                 intern_type: channel.id.kind,
@@ -106,12 +106,12 @@ tapirYoutube.factory('youtubeService', ['$http', 'apiKeys', 'apingService', 'def
 
 
         }
-        return plattformObject;
+        return platformObject;
     };
 
-    youtubeService.getVideoFeedObjectByJsonData = function (_data, _plattformObject) {
+    youtubeService.getVideoFeedObjectByJsonData = function (_data, _platformObject) {
 
-        //var plattformObject = new plattformEntry("youtube", apingService.generateUniqueId());
+        //var platformObject = new platformEntry("youtube", apingService.generateUniqueId());
 
         var _resultObject = [];
 
@@ -119,12 +119,12 @@ tapirYoutube.factory('youtubeService', ['$http', 'apiKeys', 'apingService', 'def
 
 
             angular.forEach(_data.items, function (yt, i) {
-                var postObject = new feedEntry(_plattformObject.name, _plattformObject.uniqueId);
+                var postObject = new feedEntry(_platformObject.name, _platformObject.uniqueId);
 
                 $.extend(true, postObject, {
-                    blog_name : _plattformObject.title || yt.snippet.channelTitle || yt.snippet.channelId || false,
-                    blog_id: _plattformObject.intern_id || yt.snippet.channelId || false,
-                    blog_link: _plattformObject.url || "https://www.youtube.com/channel/" + yt.snippet.channelId,
+                    blog_name : _platformObject.title || yt.snippet.channelTitle || yt.snippet.channelId || false,
+                    blog_id: _platformObject.intern_id || yt.snippet.channelId || false,
+                    blog_link: _platformObject.url || "https://www.youtube.com/channel/" + yt.snippet.channelId,
                     intern_type: yt.id.kind,
                     date: yt.snippet.publishedAt,
                     intern_id: yt.id.videoId || yt.snippet.resourceId.videoId,
