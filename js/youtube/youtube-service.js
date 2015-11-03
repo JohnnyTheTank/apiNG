@@ -2,11 +2,17 @@
 
 tapirYoutube.factory('youtubeService', ['$http', 'apiKeys', 'apingService', 'defaultSettings', function ($http, apiKeys, apingService, defaultSettings) {
 
+    /**
+     * Youtube JSON API
+     *
+     * Doku:                https://developers.google.com/youtube/v3/docs/
+     * Api Explorer:        https://developers.google.com/apis-explorer/#p/youtube/v3/
+     * Username Converter:  http://kid.yt.j.pfweb.eu/
+     */
+
     var youtubeService = {};
 
     youtubeService.getVideosFromChannelById = function (_channelId, _searchString) {
-
-        //http://kid.yt.j.pfweb.eu/
 
         var youtubeSearchObject = {
             part: "id,snippet",
