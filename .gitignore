@@ -1,1 +1,15 @@
 /.idea
+/.idea/deployment.xml
+/Prepros Build
+/node_modules
+/.sass-cache
+*/.sass-cache
+.DS_Store
+/bower_components
+Thumbs.db
+*.map
+/**/.DS_Store
+/**/.ds_store
+/**/thumbs.db
+/**/Thumbs.db
+/.codekit-cache

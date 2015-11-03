@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html lang="de_DE">
+<head>
+    <!-- DNS Prefetches -->
+    <link rel="dns-prefetch" href="//www.sme-cdn.com">
+    <link rel="dns-prefetch" href="//ajax.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+
+    <!-- Charset -->
+    <meta charset="utf-8">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Title -->
+    <title></title>
+
+    <!-- IE Force -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="//www.sme-cdn.com/sme/sme.template/current/sme.template.css"
+          media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/main-style.css" media="screen"/>
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript" src="js/plugins.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/app-config.js"></script>
+    <script type="text/javascript" src="js/events/events-module.js"></script>
+    <script type="text/javascript" src="js/events/events-controller.js"></script>
+    <script type="text/javascript" src="js/aping/aping-module.js"></script>
+    <script type="text/javascript" src="js/aping/aping-directive.js"></script>
+    <script type="text/javascript" src="js/aping/aping-service.js"></script>
+    <script type="text/javascript" src="js/youtube/youtube-module.js"></script>
+    <script type="text/javascript" src="js/youtube/youtube-service.js"></script>
+    <script type="text/javascript" src="js/instagram/instagram-module.js"></script>
+    <script type="text/javascript" src="js/instagram/instagram-service.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+
+</head>
+
+<body ng-app="app">
+<div class="container-wrapper">
+    <div class="container">
+        <div class="row-wrapper">
+
+            <div ng-controller="eventsController">
+
+                <!--
+                <br>
+                <section class="row">
+                    <article class="col-md-12">
+                        <div class="row" ng-repeat="event in events" ng-cloak>
+                            <div class="col-sm-2">
+                                {{event.date | date:'dd.MM.yyyy'}}
+                            </div>
+                            <div class="col-sm-4">
+                                {{event.city}}
+                            </div>
+                            <div class="col-sm-4">
+                                {{event.location | uppercase}}
+                            </div>
+                            <div class="col-sm-2">
+                                <a ng-href="{{event.link}}" target="_blank">Tickets</a>
+                            </div>
+                        </div>
+
+                        <br>
+
+                    </article>
+                </section>
+                -->
+                <!-- ./ row -->
+
+
+                <aping
+                    yt="
+                        [
+                            {
+                                'playlistId':'PLzm_lfByuAEF5RTM5j94TLrbbF4a9PBG4'
+                            }
+                        ]"
+
+                    ig="[
+                            {
+                                'userId':'1555226147'
+                            }
+                        ]"
+                ></aping>
+
+
+            </div>
+
+            <aping
+                    template-url="js/aping/aping-custom-template.html"
+                    yt="
+                        [
+                            {
+                                'search':'eminem'
+                            },
+                            {
+                                'search':'helene fischer'
+                            },
+                            {
+                                'channelId':'UCuGcxogeiX5DbfzBMTl_aZQ',
+                                'search':'madsen'
+                            },
+                            {
+                                'channelId':'UCuGcxogeiX5DbfzBMTl_aZQ',
+                                'search':'johannes oerding'
+                            }
+                        ]">
+            </aping>
+
+        </div>
+        <!-- ./ Row Wrapper -->
+    </div>
+    <!-- ./ Container -->
+</div>
+<!-- ./ Container Wrapper -->
+
+<br><br>
+
+</body>
+</html>
