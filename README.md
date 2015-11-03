@@ -1,12 +1,8 @@
-**Links**
-- Stage: <stage-link>
-- Live: <live-link>
+**apiNG**
 
-**Accounts**
-- Archer: <app-id>
-- Fasttrack: <fasttrack-link>
+apiNG is an AngularJS platform for getting some data from REST APIs and displays it in various designs (templates)
 
 ***
-**History**
-- <yyyy-MM-dd> | <your initials> | <edit type>
-    - <comment>
+**NOTE**
+
+this tool is under development and not ready for public usage
