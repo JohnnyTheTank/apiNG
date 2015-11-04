@@ -3,11 +3,11 @@
   "authors": [
     "Jonathan Hornung <jonathan.hornung@gmail.com>"
   ],
-  "description": "",
+  "description": "apiNG is an AngularJS platform for getting some data from REST APIs and displays it in various designs (templates)",
   "main": "",
   "moduleType": [],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/JohnnyTheTank/apiNG",
   "ignore": [
     "**/.*",
     "node_modules",
