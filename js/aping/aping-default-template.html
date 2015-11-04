@@ -14,10 +14,6 @@
                         <p class="card-text" ng-if="feed.text" linkify>{{::feed.text | limitTo: 350 }}{{::feed.text.length > 350 ? '...' : ''}}</p>
 
                         <time-ago lass="card-link text-muted" from-time="{{::feed.timestamp}}"></time-ago>
-
-                        <p>
-                            Zum {{::feed.type}}
-                        </p>
                     </div>
                 </div>
             </div>
