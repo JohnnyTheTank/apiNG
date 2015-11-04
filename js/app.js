@@ -7,6 +7,6 @@ app.run(function () {
 });
 
 /**
- * TODO: Tutorial lesen
- * http://www.sitepoint.com/practical-guide-angularjs-directives/
+ * TODO: Tutorial lesen http://www.sitepoint.com/practical-guide-angularjs-directives/
+ * TODO: Jedes Modul soll seine eigene Abhängigkeiten verwalten
  */

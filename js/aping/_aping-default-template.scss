@@ -4,6 +4,15 @@
 
         margin-bottom:1rem;
 
+        a {
+            &.aping-picture-link {
+
+                &:hover {
+                    @include filter(grayscale(0.5) sepia(0.6));
+                }
+            }
+        }
+
         .card-title {
 
         }

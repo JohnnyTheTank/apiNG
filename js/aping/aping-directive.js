@@ -99,9 +99,17 @@ apingApp.directive('aping', function ($sce, youtubeService, instagramService, de
 
                     igSettings.forEach(function (igObject) {
                         if (igObject.userId) {
-                            instagramService.getPostsFromUserById(igObject.userId)
-                                .success(function (_result) {
-                                    console.log(_result);
+                            instagramService.getPostsFromUserById({'userId':igObject.userId})
+                                .success(function (_data) {
+
+                                    var resultObject = instagramService.getVideoFeedObjectByJsonData(
+                                        _data,
+                                        apingService.getBlankChannelObject("instagram")
+                                    );
+
+                                    scope.results = scope.results.concat(resultObject.entries);
+                                    scope.platforms.push(resultObject.platform);
+
                                 })
                                 .error(function (_error) {
                                     console.info("Es gab ein problem", _error);
