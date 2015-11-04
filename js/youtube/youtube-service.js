@@ -12,19 +12,24 @@ tapirYoutube.factory('youtubeService', ['$http', 'apiKeys', 'apingService', 'def
 
     var youtubeService = {};
 
-    youtubeService.getVideosFromChannelById = function (_channelId, _searchString) {
+    youtubeService.getVideosFromChannelById = function (_params) {
 
         var youtubeSearchObject = {
             part: "id,snippet",
             type: "video",
-            channelId: _channelId,
+            channelId: _params.channelId,
             order: "date",
             key: apiKeys.youtube,
             maxResults: defaultSettings.items,
         };
 
-        if(_searchString) {
-            youtubeSearchObject.q = _searchString;
+
+        if(_params.searchString) {
+            youtubeSearchObject.q = _params.searchString;
+        }
+
+        if(_params.pageToken) {
+            youtubeSearchObject.pakeToken = _params.pageToken;
         }
 
         return $http({
@@ -34,15 +39,19 @@ tapirYoutube.factory('youtubeService', ['$http', 'apiKeys', 'apingService', 'def
         });
     };
 
-    youtubeService.getVideosFromSearchByString = function (_searchString) {
+    youtubeService.getVideosFromSearchByString = function (_params) {
         var youtubeSearchObject = {
             part: "id,snippet",
             type: "video",
-            q: _searchString,
+            q: _params.searchString,
             order: "date",
             key: apiKeys.youtube,
             maxResults: defaultSettings.items,
         };
+
+        if(_params.pageToken) {
+            youtubeSearchObject.pakeToken = _params.pageToken;
+        }
 
         return $http({
             method: 'GET',
@@ -51,16 +60,20 @@ tapirYoutube.factory('youtubeService', ['$http', 'apiKeys', 'apingService', 'def
         });
     };
 
-    youtubeService.getVideosFromPlaylistById = function(_playlistId) {
+    youtubeService.getVideosFromPlaylistById = function(_params) {
 
 
         var youtubeSearchObject = {
             part: "id,snippet",
             type: "video",
-            playlistId: _playlistId,
+            playlistId: _params.playlistId,
             key: apiKeys.youtube,
             maxResults: defaultSettings.items,
         };
+
+        if(_params.pageToken) {
+            youtubeSearchObject.pakeToken = _params.pageToken;
+        }
 
         return $http({
             method: 'GET',
@@ -69,11 +82,11 @@ tapirYoutube.factory('youtubeService', ['$http', 'apiKeys', 'apingService', 'def
         });
     };
 
-    youtubeService.getChannelById = function (_channelId) {
+    youtubeService.getChannelById = function (_params) {
         var youtubeSearchObject = {
             part: "id,snippet",
             type: "channel",
-            channelId: _channelId,
+            channelId: _params.channelId,
             key: apiKeys.youtube,
             maxResults: 1,
         };
@@ -117,12 +130,16 @@ tapirYoutube.factory('youtubeService', ['$http', 'apiKeys', 'apingService', 'def
 
     youtubeService.getVideoFeedObjectByJsonData = function (_data, _platformObject) {
 
-        //var platformObject = new platformEntry("youtube", apingService.generateUniqueId());
-
-        var _resultObject = [];
+        var _resultObject = {
+            platform: false,
+            entries: [],
+        };
 
         if (_data && _data.items) {
 
+            if(_data.nextPageToken) {
+                _platformObject.loadMore = _data.nextPageToken;
+            }
 
             angular.forEach(_data.items, function (yt, i) {
                 var postObject = new feedEntry(_platformObject.name, _platformObject.uniqueId);
@@ -158,10 +175,12 @@ tapirYoutube.factory('youtubeService', ['$http', 'apiKeys', 'apingService', 'def
                 postObject.post_url = "https://www.youtube.com/watch?v="+postObject.intern_id;
 
 
-                _resultObject.push(postObject);
+                _resultObject.entries.push(postObject);
             });
 
         }
+
+        _resultObject.platform = _platformObject;
 
         return _resultObject;
     };

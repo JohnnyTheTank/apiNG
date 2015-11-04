@@ -40,4 +40,5 @@ function platformEntry(_name, _id) {
     this.configError = false;
     this.noEntries = false;
     this.errorMessage = false;
+    this.loadMore = false;
 }
