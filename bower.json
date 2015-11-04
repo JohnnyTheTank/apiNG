@@ -1,28 +1,40 @@
 {
-  "name": "aping",
-  "authors": [
-    "Jonathan Hornung <jonathan.hornung@gmail.com>"
-  ],
-  "description": "apiNG is an AngularJS platform for getting some data from REST APIs and displays it in various designs (templates)",
-  "main": "",
-  "moduleType": [],
-  "license": "MIT",
-  "homepage": "https://github.com/JohnnyTheTank/apiNG",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "angular": "angularjs#~1.4.7",
-    "angular-sanitize": "~1.4.7",
-    "jquery": "~2.1.4",
-    "bootstrap": "4.0.0-alpha",
-    "fastclick": "~1.0.6",
-    "angular-i18n": "~1.4.7",
-    "angular-timeago": "~0.2.4",
-    "angular-linkify": "~1.2.0"
-  }
+    "name": "aping",
+    "authors": [
+        "Jonathan Hornung <jonathan.hornung@gmail.com>"
+    ],
+    "description": "apiNG is an AngularJS platform for getting some data from REST APIs and displays it in various designs (templates)",
+    "main": "",
+    "moduleType": [
+        "globals"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/JohnnyTheTank/apiNG",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "keywords": [
+        "aping",
+        "angularjs",
+        "rest",
+        "api"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/JohnnyTheTank/apiNG.git"
+    },
+    "dependencies": {
+        "angular": "angularjs#~1.4.7",
+        "angular-sanitize": "~1.4.7",
+        "jquery": "~2.1.4",
+        "bootstrap": "4.0.0-alpha",
+        "fastclick": "~1.0.6",
+        "angular-i18n": "~1.4.7",
+        "angular-timeago": "~0.2.4",
+        "angular-linkify": "~1.2.0"
+    }
 }
