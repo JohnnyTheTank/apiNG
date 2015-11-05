@@ -126,5 +126,7 @@ apingApp.directive('aping', function ($sce, youtubeService, instagramService, de
 });
 
 /**
- *
+ * TODO: Twitter https://github.com/pavelk2/social-feed/
+ * TODO: Twitter https://github.com/jublonet/codebird-js
+ * TODO: Youtube Fullscreen Angular Tool: https://github.com/kanzelm3/angular-video-bg
  */
