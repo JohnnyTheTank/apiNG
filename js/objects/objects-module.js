@@ -5,20 +5,45 @@ var apingObjects = angular.module('jtt_aping_objects', []);
 /*
 Object Struktur
 
-    {} appConfigObject (1x im scope)
-        (gilt pro instanz = aufruf der direktive)
+    {} appConfigObject (1x im scope, parameter von run)
+        (gilt pro instanz = aufruf der direktive )
         Beinhaltet folgende Werte:
-        {} App Default Settings
+        {} App Default Settings (module.config)
+        {} App Settings (aping.json)
         {} Settings aus den Attributen
 
         []
             {} requestConfigObject
                 (gilt für jeden request)
                 Beinhaltet folgende Werte:
-                {} Request Default Settings
+                {} Plattform Default Settings (module.config)
+                {} Definition Settings (json file)
                 {} Settings aus dem betreffenden Attribut //z.b. {'user':'yyz','items':'5'}
                 {} API spezifische Eigenschaften, die der Aufruf selbst hinzufügt
                     - (nextPageToken, ...)
+
+
+    {} resultObject (return von run)
+        {} appConfigObject
+
+        []
+            {} platformObject (1x pro plattform)
+                []
+                    {} requestObject (1x pro request)
+                        {} errorObject
+                        {} infoObject
+                        {} outputObject
+
+
+    scope:
+        {} appConfig (appConfigObject)
+        [] results (Feed)
+        [] platforms
+            [] requests
+                {} errors
+                {} infos
+
+
 
 
     baseObjects
@@ -30,13 +55,15 @@ Object Struktur
 
 
     outputObjects
-        * channelObject (gleichbedeutend mit User, Page oder Kanal)
+        * channelObject (Channel ist gleichbedeutend mit User, Page oder Kanal)
         * socialObject (jeglicher Social Media Content)
         * videoObject
         * pictureObject
         * audioObject
         * eventObject
         * ...
+
+
 
 
     Pro Object gibt es einen Service, der folgendes liefert
