@@ -30,13 +30,14 @@ Object Struktur
             {} platformObject (1x pro plattform)
                 []
                     {} requestObject (1x pro request)
-                        {} errorObject
-                        {} infoObject
+                        {} requestErrorObject
+                        {} requestInfoObject
                         {} outputObject
 
 
     scope:
         {} appConfig (appConfigObject)
+        {} appErrors (appErrorObject)
         [] results (Feed)
         [] platforms
             [] requests
@@ -48,10 +49,12 @@ Object Struktur
 
     baseObjects
         * appConfigObject
+        * appErrorObject
+        * platformObject
+        * platformErrorObject
         * requestConfigObject
-        * platformObject (enhält
-        * errorObject (enthält Errormeldungen)
-        * infoObject
+        * requestErrorObject (enthält Errormeldungen)
+        * requestInfoObject
 
 
     outputObjects

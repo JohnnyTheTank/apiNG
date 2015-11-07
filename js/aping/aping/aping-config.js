@@ -1,6 +1,6 @@
 "use strict";
 
-app.config(function ($provide) {
+apingApp.config(function ($provide) {
 
     $provide.constant("apiKeys", {
         youtube : "AIzaSyAoZx2uwqnQ7WALp6lOuvWkBM6CfxCEJeA",
