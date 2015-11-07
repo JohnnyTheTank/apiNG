@@ -64,14 +64,12 @@
 ---
 
 
-Pro Object gibt es einen Service, der folgendes liefert
+**Pro Object** gibt es **einen Service**, der folgendes liefert
 * fn() liefert ein BlankoObject, das nur die notwendigsten Parameter hat
 * fn()s liefern bestimmte Werte für das jeweilige Setting
 
 ---
 
-Pro Plattform gibt es immer eine Factory und einen Service:
-
+**Pro Plattform** gibt es immer **eine Factory** und **einen Service**:
 * Die FACTORY besorgt den API-Call und liefert die JSON-Daten zurück.
-
 * Der SERVICE füllt die JSON-Daten in die entsprechenden Objekte um. Hierbei soll es immer eine Funktion geben, die einen kompletten Aufruf bearbeitet in dem sie jeweils pro Item eine eigene Funktion aufruft, in welcher die eigentliche Parse-Arbeit passiert
