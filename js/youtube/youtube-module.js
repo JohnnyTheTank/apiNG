@@ -1,3 +1,3 @@
 "use strict";
 
-var tapirYoutube = angular.module("youtube", []);
+var jttYoutube = angular.module("jtt_youtube", []);

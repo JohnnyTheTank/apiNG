@@ -1,6 +1,6 @@
 "use strict";
 
-var apingApp = angular.module('aping', ['youtube', 'instagram', 'yaru22.angular-timeago', 'linkify']);
+var apingApp = angular.module('jtt_aping', ['jtt_youtube', 'jtt_instagram', 'yaru22.angular-timeago', 'linkify']);
 
 function feedEntry(_platform, _platform_id) {
     this.platform = _platform || false;
@@ -41,4 +41,34 @@ function platformEntry(_name, _id) {
     this.noEntries = false;
     this.errorMessage = false;
     this.loadMore = false;
+}
+
+function configObject() {
+    //this.feedType = false; //'social', 'video', 'picture, 'event', ...
+
+    this.feedType = function(_feedType) {
+        var defaultFeedType = "social";
+        if(_feedType && typeof _feedType === 'string') {
+            _feedType = _feedType.toLowerCase();
+            switch (_feedType) {
+                case "social":
+                case "video":
+                case "picture":
+                case "event":
+                    return _feedType;
+                    break;
+            }
+        }
+        return defaultFeedType;
+    };
+
+    var templateUrl = false;
+    var platforms = false;
+
+};
+
+
+
+function socialMediaObject() {
+
 }

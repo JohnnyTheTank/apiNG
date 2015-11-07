@@ -36,9 +36,9 @@
     <script type="text/javascript" src="js/aping/aping-directive.js"></script>
     <script type="text/javascript" src="js/aping/aping-service.js"></script>
     <script type="text/javascript" src="js/youtube/youtube-module.js"></script>
-    <script type="text/javascript" src="js/youtube/youtube-service.js"></script>
+    <script type="text/javascript" src="js/youtube/youtube-factory.js"></script>
     <script type="text/javascript" src="js/instagram/instagram-module.js"></script>
-    <script type="text/javascript" src="js/instagram/instagram-service.js"></script>
+    <script type="text/javascript" src="js/instagram/instagram-factory.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 
 </head>
@@ -50,7 +50,7 @@
 
             <div ng-controller="eventsController">
 
-                <!--
+
                 <br>
                 <section class="row">
                     <article class="col-md-12">
@@ -73,47 +73,24 @@
 
                     </article>
                 </section>
-                -->
-                <!-- ./ row -->
 
 
                 <aping
-                    yt="
-                        [
-                            {
-                                'playlistId':'PLzm_lfByuAEF5RTM5j94TLrbbF4a9PBG4'
-                            }
-                        ]"
-
-                    ig="[
-                            {
-                                'userId':'1555226147'
-                            }
-                        ]"
-                ></aping>
+                        type="socialMedia"
+                        yt="[{'playlistId':'PLzm_lfByuAEF5RTM5j94TLrbbF4a9PBG4'}]">
+                </aping>
 
 
             </div>
 
             <aping
                     template-url="js/aping/aping-custom-template.html"
-                    yt="
-                        [
-                            {
-                                'search':'eminem'
-                            },
-                            {
-                                'search':'helene fischer'
-                            },
-                            {
-                                'channelId':'UCuGcxogeiX5DbfzBMTl_aZQ',
-                                'search':'madsen'
-                            },
-                            {
-                                'channelId':'UCuGcxogeiX5DbfzBMTl_aZQ',
-                                'search':'johannes oerding'
-                            }
-                        ]">
+                    yt="[{'search':'eminem'},
+                        {'search':'helene fischer'},
+                        {'channelId':'UCuGcxogeiX5DbfzBMTl_aZQ', 'search':'madsen'},
+                        {'channelId':'UCuGcxogeiX5DbfzBMTl_aZQ','search':'johannes oerding'}]"
+
+                    ig="[{'userId':'1555226147'}]">
             </aping>
 
         </div>

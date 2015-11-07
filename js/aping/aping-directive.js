@@ -1,6 +1,6 @@
 "use strict";
 
-apingApp.directive('aping', function ($sce, youtubeService, instagramService, defaultSettings, apingService) {
+apingApp.directive('aping', function ($sce, defaultSettings, apingService, youtubeFactory) {
     return {
         restrict: 'E',
         replace: 'true',
@@ -18,6 +18,9 @@ apingApp.directive('aping', function ($sce, youtubeService, instagramService, de
                 scope.platforms = [];
             }
 
+
+
+
             parseJsonAndGetData();
 
             function parseJsonAndGetData() {
@@ -27,6 +30,8 @@ apingApp.directive('aping', function ($sce, youtubeService, instagramService, de
 
                     ytSettings.forEach(function (ytObject) {
 
+                        /*
+
                         var searchString = false;
                         if (ytObject.search) {
                             searchString = ytObject.search;
@@ -34,18 +39,18 @@ apingApp.directive('aping', function ($sce, youtubeService, instagramService, de
 
                         if (ytObject.channelId) {
 
-                            youtubeService.getChannelById({'channelId': ytObject.channelId})
+                            youtubeFactory.getChannelById({'channelId': ytObject.channelId})
                                 .success(function (_channelData) {
                                     if (_channelData) {
-                                        youtubeService.getVideosFromChannelById({
+                                        youtubeFactory.getVideosFromChannelById({
                                                 'channelId': ytObject.channelId,
                                                 'searchString': searchString
                                             })
                                             .success(function (_videosData) {
                                                 if (_videosData) {
-                                                    var resultObject = youtubeService.getVideoFeedObjectByJsonData(
+                                                    var resultObject = youtubeFactory.getVideoFeedObjectByJsonData(
                                                         _videosData,
-                                                        apingService.getBlankChannelObject("youtube")
+                                                        apingService.getBlankChannelObject("jtt_youtube")
                                                     );
 
                                                     scope.results = scope.results.concat(resultObject.entries);
@@ -55,43 +60,41 @@ apingApp.directive('aping', function ($sce, youtubeService, instagramService, de
                                     }
                                 });
                         } else if (searchString) {
-                            youtubeService.getVideosFromSearchByString({'searchString': searchString})
+                            youtubeFactory.getVideosFromSearchByString({'searchString': searchString})
                                 .success(function (_videosData) {
                                     if (_videosData) {
 
-                                        var resultObject = youtubeService.getVideoFeedObjectByJsonData(
+                                        var resultObject = youtubeFactory.getVideoFeedObjectByJsonData(
                                             _videosData,
-                                            apingService.getBlankChannelObject("youtube")
+                                            apingService.getBlankChannelObject("jtt_youtube")
                                         );
 
                                         scope.results = scope.results.concat(resultObject.entries);
                                         scope.platforms.push(resultObject.platform);
                                     }
                                 });
-                        } else if (ytObject.playlistId) {
+                        } else*/ if (ytObject.playlistId) {
 
-                            youtubeService.getVideosFromPlaylistById({'playlistId': ytObject.playlistId})
+
+                            youtubeFactory.getVideosFromPlaylistById({'playlistId': ytObject.playlistId})
                                 .success(function (_videosData) {
                                     if (_videosData) {
-                                        var resultObject = youtubeService.getVideoFeedObjectByJsonData(
+                                        var resultObject = youtubeFactory.getVideoFeedObjectByJsonData(
                                             _videosData,
-                                            apingService.getBlankChannelObject("youtube")
+                                            apingService.getBlankChannelObject("jtt_youtube")
                                         );
 
                                         scope.results = scope.results.concat(resultObject.entries);
                                         scope.platforms.push(resultObject.platform);
+
                                     }
                                 });
                         }
                     });
 
-                    setTimeout(function () {
-                        if (scope.platforms[0].loadMore) {
-                            //alert(scope.platforms[0].loadMore);
-                        }
-                    }, 2000)
 
                 }
+                /*
 
                 if (scope.ig) {
                     var igSettings = $.parseJSON(scope.ig.replace(/'/g, '"'));
@@ -99,12 +102,12 @@ apingApp.directive('aping', function ($sce, youtubeService, instagramService, de
 
                     igSettings.forEach(function (igObject) {
                         if (igObject.userId) {
-                            instagramService.getPostsFromUserById({'userId':igObject.userId})
+                            instagramFactory.getPostsFromUserById({'userId':igObject.userId})
                                 .success(function (_data) {
 
-                                    var resultObject = instagramService.getVideoFeedObjectByJsonData(
+                                    var resultObject = instagramFactory.getVideoFeedObjectByJsonData(
                                         _data,
-                                        apingService.getBlankChannelObject("instagram")
+                                        apingService.getBlankChannelObject("jtt_instagram")
                                     );
 
                                     scope.results = scope.results.concat(resultObject.entries);
@@ -117,7 +120,9 @@ apingApp.directive('aping', function ($sce, youtubeService, instagramService, de
                         }
                     });
                 }
+                */
             }
+
         },
         templateUrl: function (elem, attrs) {
             return attrs.templateUrl || defaultSettings.template;

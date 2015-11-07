@@ -1,6 +1,6 @@
 "use strict";
 
-tapirInstagram.factory('instagramService', ['$http', 'apiKeys', 'apingService', 'defaultSettings', function ($http, apiKeys, apingService, defaultSettings) {
+jttInstagram.factory('instagramFactory', ['$http', 'apiKeys', 'apingService', 'defaultSettings', function ($http, apiKeys, apingService, defaultSettings) {
 
     /**
      * Instagram JSON API

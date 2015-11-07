@@ -1,6 +1,6 @@
 "use strict";
 
-var app = angular.module('app', ['events', 'aping']);
+var app = angular.module('app', ['events', 'jtt_aping']);
 
 app.run(function () {
     FastClick.attach(document.body);

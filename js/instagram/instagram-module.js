@@ -1,3 +1,3 @@
 "use strict";
 
-var tapirInstagram = angular.module("instagram", []);
+var jttInstagram = angular.module("jtt_instagram", []);
