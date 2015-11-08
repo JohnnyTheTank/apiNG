@@ -8,8 +8,8 @@ apingApp.config(function ($provide) {
         instagramClientId: "a14e354a00e7425eb2667f54ab86c136",
     });
 
-    $provide.constant("defaultSettings", {
-        template : 'js/aping/aping-default-template.html',
+    $provide.constant("apingDefaultSettings", {
+        template : 'js/aping/templates/default/aping-default-template.html',
         items : 20,
         iconSet : 'miuGloss',
         inactiveIconSet : 'miuBlack',

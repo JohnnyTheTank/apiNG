@@ -1,6 +1,6 @@
 "use strict";
 
-apingApp.directive('aping', function ($sce, defaultSettings, apingService, youtubeFactory) {
+apingApp.directive('aping', function ($sce, apingDefaultSettings) {
     return {
         restrict: 'E',
         replace: 'true',
@@ -73,7 +73,7 @@ apingApp.directive('aping', function ($sce, defaultSettings, apingService, youtu
                                         scope.platforms.push(resultObject.platform);
                                     }
                                 });
-                        } else*/ if (ytObject.playlistId) {
+                        } else if (ytObject.playlistId) {
 
 
                             youtubeFactory.getVideosFromPlaylistById({'playlistId': ytObject.playlistId})
@@ -90,6 +90,7 @@ apingApp.directive('aping', function ($sce, defaultSettings, apingService, youtu
                                     }
                                 });
                         }
+                        */
                     });
 
 
@@ -125,7 +126,7 @@ apingApp.directive('aping', function ($sce, defaultSettings, apingService, youtu
 
         },
         templateUrl: function (elem, attrs) {
-            return attrs.templateUrl || defaultSettings.template;
+            return attrs.templateUrl || apingDefaultSettings.template;
         }
     };
 });

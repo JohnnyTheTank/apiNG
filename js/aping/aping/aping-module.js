@@ -1,7 +1,8 @@
 "use strict";
 
-var apingApp = angular.module('jtt_aping', ['jtt_youtube', 'jtt_instagram', 'yaru22.angular-timeago', 'linkify']);
+var apingApp = angular.module('jtt_aping', ['yaru22.angular-timeago', 'linkify']);
 
+/*
 function feedEntry(_platform, _platform_id) {
     this.platform = _platform || false;
     this.platform_id = _platform_id || false;
@@ -72,3 +73,4 @@ function configObject() {
 function socialMediaObject() {
 
 }
+    */
