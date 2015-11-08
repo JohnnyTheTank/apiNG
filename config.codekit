@@ -16793,6 +16793,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
+	"\/bower_components\/angular-youtube-api-factory\/angular-youtube-api-factory.min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/angular-youtube-api-factory\/angular-youtube-api-factory.min.js",
+		"outputAbbreviatedPath": "\/bower_components\/angular-youtube-api-factory\/angular-youtube-api-factory.min.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
 	"\/bower_components\/angular-youtube-api-factory\/bower.json": {
 		"fileType": 524288,
 		"ignore": 1,
@@ -16811,7 +16822,7 @@
 		"enableSmartQuotes": 1,
 		"escapeLineBreaks": 0,
 		"fileType": 4096,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/angular-youtube-api-factory\/README.md",
 		"maskEmailAddresses": 1,
@@ -19723,6 +19734,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/aping\/objects\/baseObjects\/configObjects\/appConfigObject-service.js",
 		"outputAbbreviatedPath": "\/js\/aping\/objects\/baseObjects\/configObjects\/appConfigObject-service.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
+	"\/js\/aping\/objects\/baseObjects\/configObjects\/requestConfigObject-service.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/aping\/objects\/baseObjects\/configObjects\/requestConfigObject-service.js",
+		"outputAbbreviatedPath": "\/js\/aping\/objects\/baseObjects\/configObjects\/requestConfigObject-service.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,

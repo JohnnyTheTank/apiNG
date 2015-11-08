@@ -2,11 +2,15 @@
 
 apingObjects.service('appConfigObjectService', function () {
     this.getNew = function () {
-        return {
+
+        var appConfigObject = {
             items: false,
             templateUrl: false,
-            type: false
-        }
+            type: false,
+            requestConfigObjects: [],
+        };
+
+        return appConfigObject;
     }
 
 });

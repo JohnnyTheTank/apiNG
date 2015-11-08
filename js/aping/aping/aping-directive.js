@@ -33,7 +33,6 @@ apingApp.directive('aping', function (
 
                 appConfig.yt = appSettingsService.getYoutube(scope.yt);
 
-
                 var appResult = run(appConfig);
 
                 function run(_appConfig) {
@@ -41,6 +40,7 @@ apingApp.directive('aping', function (
                     var runAppResultObject = appResultObjectService.getNew();
                     runAppResultObject.appConfig = _appConfig;
 
+                    var requestConfigObjects = [];
 
                     if (runAppResultObject.appConfig.yt.length > 0) {
 
@@ -70,6 +70,7 @@ apingApp.directive('aping', function (
                                             'channelId': ytObject.channelId,
                                             'searchString': searchString,
                                             'key': runAppResultObject.appConfig.apiKeys.youtube,
+                                            'maxResults': runAppResultObject.appConfig.items,
                                         };
                                         if(ytObject.nextPageToken) {
                                             youtubeSearchObject.nextPageToken = ytObject.nextPageToken;
@@ -79,7 +80,6 @@ apingApp.directive('aping', function (
                                             if (_videosData) {
 
                                                 var requestResultObject = outputObjectYoutubeService.getObjectByJsonData(_videosData, runAppResultObject.appConfig.type);
-                                                console.log(scope.results);
                                                 scope.results = scope.results.concat(requestResultObject.outputObjects);
                                                 console.log(scope.results);
                                                 platformResultObject.requestObjects.push(requestResultObject);
