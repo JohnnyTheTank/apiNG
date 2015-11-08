@@ -32,7 +32,6 @@
     "angular-sanitize": "~1.4.7",
     "jquery": "~2.1.4",
     "bootstrap": "4.0.0-alpha",
-    "fastclick": "~1.0.6",
     "angular-i18n": "~1.4.7",
     "angular-timeago": "~0.2.4",
     "angular-linkify": "~1.2.0",

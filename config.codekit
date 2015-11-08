@@ -18633,49 +18633,6 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/bower_components\/fastclick\/bower.json": {
-		"fileType": 524288,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/fastclick\/bower.json",
-		"orderOutput": 0,
-		"outputAbbreviatedPath": "\/bower_components\/fastclick\/bower-min.json",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1
-		},
-	"\/bower_components\/fastclick\/lib\/fastclick.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/fastclick\/lib\/fastclick.js",
-		"outputAbbreviatedPath": "\/bower_components\/fastclick\/lib\/fastclick.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 0
-		},
-	"\/bower_components\/fastclick\/README.md": {
-		"criticStyle": 0,
-		"enableFootnotes": 1,
-		"enableLabels": 1,
-		"enableSmartQuotes": 1,
-		"escapeLineBreaks": 0,
-		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/fastclick\/README.md",
-		"maskEmailAddresses": 1,
-		"outputAbbreviatedPath": "\/bower_components\/fastclick\/README.html",
-		"outputFormat": 0,
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"parseMetadata": 1,
-		"processHTML": 0,
-		"randomFootnoteNumbers": 0,
-		"useCompatibilityMode": 0
-		},
 	"\/bower_components\/jquery\/bower.json": {
 		"fileType": 524288,
 		"ignore": 1,
@@ -19739,7 +19696,7 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
-	"\/js\/aping\/objects.md": {
+	"\/js\/aping\/objects.MD": {
 		"criticStyle": 0,
 		"enableFootnotes": 1,
 		"enableLabels": 1,
@@ -19747,8 +19704,8 @@
 		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 1,
-		"ignoreWasSetByUser": 1,
-		"inputAbbreviatedPath": "\/js\/aping\/objects.md",
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/aping\/objects.MD",
 		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/js\/aping\/objects.html",
 		"outputFormat": 0,
@@ -19959,28 +19916,6 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
-	"\/js\/plugins.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 1,
-		"inputAbbreviatedPath": "\/js\/plugins.js",
-		"outputAbbreviatedPath": "\/js\/plugins.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 0
-		},
-	"\/js\/plugins.min.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/plugins.min.js",
-		"outputAbbreviatedPath": "\/js\/plugins.min.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 0
-		},
 	"\/js\/script.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -20048,58 +19983,8 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Hornung, Jonathan",
+"lastSavedByUser": "Jonathan Hornung",
 "manualImportLinks": {
-	"\/js\/plugins.js": [
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/bower_components\/jquery\/dist\/jquery.js",
-			"position": 0,
-			"type": 0
-			},
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/bower_components\/angular\/angular.js",
-			"position": 1,
-			"type": 0
-			},
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/bower_components\/angular-sanitize\/angular-sanitize.js",
-			"position": 2,
-			"type": 0
-			},
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/bower_components\/angular-linkify\/angular-linkify.js",
-			"position": 3,
-			"type": 1
-			},
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/bower_components\/angular-i18n\/angular-locale_de-de.js",
-			"position": 4,
-			"type": 1
-			},
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/bower_components\/angular-timeago\/dist\/angular-timeago.js",
-			"position": 5,
-			"type": 1
-			},
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/bower_components\/bootstrap\/dist\/js\/bootstrap.js",
-			"position": 6,
-			"type": 1
-			},
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/bower_components\/fastclick\/lib\/fastclick.js",
-			"position": 7,
-			"type": 1
-			}
-		]
 	},
 "projectAttributes": {
 	"bowerAbbreviatedPath": "",
