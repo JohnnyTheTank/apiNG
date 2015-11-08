@@ -11,28 +11,6 @@ var apingApp = angular.module(
     ]);
 
 /*
- function feedEntry(_platform, _platform_id) {
- this.platform = _platform || false;
- this.platform_id = _platform_id || false;
- this.blog_name = false;
- this.blog_id = false;
- this.blog_link = false;
- this.intern_type = false;
- this.type = false;
- this.date = false;
- this.timestamp = false;
- this.post_url = false;
- this.intern_id = false;
- this.text = false;
- this.caption = false;
- this.content = false;
- this.content_url = false;
- this.img_url = false;
- this.img_isSmall = false;
- this.source = false;
- this.tags = false;
- this.tag = false;
- }
 
  function platformEntry(_name, _id) {
  this.name = _name || false;

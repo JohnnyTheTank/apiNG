@@ -1,9 +1,12 @@
 "use strict";
 
-apingApp.directive('aping', function ($sce,
-                                      appSettingsService,
-                                      appConfigObjectService,
-                                      youtubeFactory) {
+apingApp.directive('aping', function (
+        $sce,
+        appSettingsService,
+        appConfigObjectService,
+        appResultObjectService,
+        youtubeFactory
+    ) {
         return {
             restrict: 'E',
             replace: 'true',
@@ -19,10 +22,6 @@ apingApp.directive('aping', function ($sce,
                     scope.results = [];
                 }
 
-                if (!scope.platforms) {
-                    scope.platforms = [];
-                }
-
                 var appConfig = appConfigObjectService.getNew();
 
                 appConfig.items = appSettingsService.getItems(scope.items);
@@ -32,9 +31,12 @@ apingApp.directive('aping', function ($sce,
                 appConfig.yt = appSettingsService.getYoutube(scope.yt);
 
 
-                run(appConfig);
+                var appResult = run(appConfig);
 
                 function run(_appConfig) {
+
+                    var runAppResultObject = appResultObjectService.getNew();
+
                     if (_appConfig.yt.length > 0) {
 
                         if(! (appConfig.apiKeys || appConfig.apiKeys.youtube)) {
@@ -51,7 +53,6 @@ apingApp.directive('aping', function ($sce,
                             }
 
                             if (ytObject.channelId) {
-                                console.log(ytObject.channelId);
 
                                 youtubeFactory.getChannelById({
                                     'channelId': ytObject.channelId,
@@ -65,6 +66,9 @@ apingApp.directive('aping', function ($sce,
                                         }).success(function (_videosData) {
                                             if (_videosData) {
                                                 console.log(_videosData);
+
+
+
                                                 /*
                                                 var resultObject = youtubeFactory.getVideoFeedObjectByJsonData(
                                                     _videosData,
@@ -170,7 +174,12 @@ apingApp.directive('aping', function ($sce,
                      });
                      }
                      */
+
+                    runAppResultObject.appConfig = _appConfig;
+
+                    return runAppResultObject;
                 }
+
 
             }
             ,

@@ -18,7 +18,7 @@
                     - (nextPageToken, ...)
 
 
-    {} resultObject (return von run)
+    {} appResultObject (return von run)
         {} appConfigObject
 
         []
@@ -27,7 +27,7 @@
                     {} requestObject (1x pro request)
                         {} requestErrorObject
                         {} requestInfoObject
-                        {} outputObject
+                        {} outputObject (zB. socialObject)
 
 
 ## scope
