@@ -19641,12 +19641,12 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
-	"\/js\/aping\/helpers\/helper-module.js": {
+	"\/js\/aping\/helpers\/helpers-module.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/aping\/helpers\/helper-module.js",
-		"outputAbbreviatedPath": "\/js\/aping\/helpers\/helper-module.min.js",
+		"inputAbbreviatedPath": "\/js\/aping\/helpers\/helpers-module.js",
+		"outputAbbreviatedPath": "\/js\/aping\/helpers\/helpers-module.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -19717,23 +19717,23 @@
 		"randomFootnoteNumbers": 0,
 		"useCompatibilityMode": 0
 		},
-	"\/js\/aping\/objects\/baseObjects\/configObject\/appConfigObject\/appConfigObject-service.js": {
+	"\/js\/aping\/objects\/baseObjects\/configObjects\/appConfigObject-service.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/aping\/objects\/baseObjects\/configObject\/appConfigObject\/appConfigObject-service.js",
-		"outputAbbreviatedPath": "\/js\/aping\/objects\/baseObjects\/configObject\/appConfigObject\/appConfigObject-service.min.js",
+		"inputAbbreviatedPath": "\/js\/aping\/objects\/baseObjects\/configObjects\/appConfigObject-service.js",
+		"outputAbbreviatedPath": "\/js\/aping\/objects\/baseObjects\/configObjects\/appConfigObject-service.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
-	"\/js\/aping\/objects\/baseObjects\/configObject\/configObject-service.js": {
+	"\/js\/aping\/objects\/objects-module.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/aping\/objects\/baseObjects\/configObject\/configObject-service.js",
-		"outputAbbreviatedPath": "\/js\/aping\/objects\/baseObjects\/configObject\/configObject-service.min.js",
+		"inputAbbreviatedPath": "\/js\/aping\/objects\/objects-module.js",
+		"outputAbbreviatedPath": "\/js\/aping\/objects\/objects-module.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -19789,6 +19789,28 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/aping\/plattforms\/youtube\/youtube-module.js",
 		"outputAbbreviatedPath": "\/js\/aping\/plattforms\/youtube\/youtube-module.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
+	"\/js\/aping\/settings\/appSettings-service.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/aping\/settings\/appSettings-service.js",
+		"outputAbbreviatedPath": "\/js\/aping\/settings\/appSettings-service.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
+	"\/js\/aping\/settings\/settings-module.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/aping\/settings\/settings-module.js",
+		"outputAbbreviatedPath": "\/js\/aping\/settings\/settings-module.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,

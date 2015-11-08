@@ -2,7 +2,7 @@
 
 apingObjects.service('socialObjectService', function () {
 
-    this.getNewObject = function(_platform, _platform_id) {
+    this.getBlank = function(_platform, _platform_id) {
         var socialObject = {
             platform : _platform || false,
             platform_id : _platform_id || false,

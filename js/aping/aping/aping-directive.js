@@ -1,10 +1,16 @@
 "use strict";
 
-apingApp.directive('aping', function ($sce, apingDefaultSettings) {
+apingApp.directive('aping', function (
+    $sce,
+    appSettingsService,
+    appConfigObjectService
+) {
     return {
         restrict: 'E',
         replace: 'true',
         scope: {
+            type: '@',
+            items: '@',
             yt: '@',
             ig: '@',
         },
@@ -18,17 +24,25 @@ apingApp.directive('aping', function ($sce, apingDefaultSettings) {
                 scope.platforms = [];
             }
 
+            var appConfig = appConfigObjectService.getNew();
+
+            appConfig.items = appSettingsService.getItems(scope.items);
+            appConfig.type = appSettingsService.getType(scope.type);
+            appConfig.yt = appSettingsService.getYoutube(scope.yt);
+
+            console.log(appConfig);
 
 
+            run();
 
-            parseJsonAndGetData();
-
-            function parseJsonAndGetData() {
+            function run() {
                 if (scope.yt) {
 
                     var ytSettings = $.parseJSON(scope.yt.replace(/'/g, '"'));
 
                     ytSettings.forEach(function (ytObject) {
+
+
 
                         /*
 
@@ -126,7 +140,7 @@ apingApp.directive('aping', function ($sce, apingDefaultSettings) {
 
         },
         templateUrl: function (elem, attrs) {
-            return attrs.templateUrl || apingDefaultSettings.template;
+            return attrs.templateUrl || appSettingsService.getTemplateUrl();
         }
     };
 });
