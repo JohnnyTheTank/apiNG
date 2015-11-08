@@ -1,6 +1,6 @@
 "use strict";
 
-apingSettings.service('appSettingsService', function (apingDefaultSettings) {
+apingSettings.service('appSettingsService', function (apingDefaultSettings, apiKeys) {
     this.getTemplateUrl = function() {
         return apingDefaultSettings.templateUrl;
     };
@@ -30,5 +30,14 @@ apingSettings.service('appSettingsService', function (apingDefaultSettings) {
         }
         return apingDefaultSettings.yt || [];
     };
+
+    this.getApiKey = function (_platformName) {
+        if(apiKeys) {
+            if(apiKeys[_platformName]) {
+                return apiKeys[_platformName];
+            }
+        }
+        return false;
+    }
 
 });

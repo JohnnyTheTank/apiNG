@@ -19761,34 +19761,34 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
-	"\/js\/aping\/plattforms\/instagram\/instagram-factory.js": {
+	"\/js\/aping\/platforms\/instagram\/instagram-factory.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/aping\/plattforms\/instagram\/instagram-factory.js",
-		"outputAbbreviatedPath": "\/js\/aping\/plattforms\/instagram\/instagram-factory.min.js",
+		"inputAbbreviatedPath": "\/js\/aping\/platforms\/instagram\/instagram-factory.js",
+		"outputAbbreviatedPath": "\/js\/aping\/platforms\/instagram\/instagram-factory.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
-	"\/js\/aping\/plattforms\/instagram\/instagram-module.js": {
+	"\/js\/aping\/platforms\/instagram\/instagram-module.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/aping\/plattforms\/instagram\/instagram-module.js",
-		"outputAbbreviatedPath": "\/js\/aping\/plattforms\/instagram\/instagram-module.min.js",
+		"inputAbbreviatedPath": "\/js\/aping\/platforms\/instagram\/instagram-module.js",
+		"outputAbbreviatedPath": "\/js\/aping\/platforms\/instagram\/instagram-module.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
-	"\/js\/aping\/plattforms\/youtube\/youtube-module.js": {
+	"\/js\/aping\/platforms\/youtube\/youtube-module.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/aping\/plattforms\/youtube\/youtube-module.js",
-		"outputAbbreviatedPath": "\/js\/aping\/plattforms\/youtube\/youtube-module.min.js",
+		"inputAbbreviatedPath": "\/js\/aping\/platforms\/youtube\/youtube-module.js",
+		"outputAbbreviatedPath": "\/js\/aping\/platforms\/youtube\/youtube-module.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,

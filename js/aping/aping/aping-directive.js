@@ -1,10 +1,9 @@
 "use strict";
 
-apingApp.directive('aping', function (
-    $sce,
-    appSettingsService,
-    appConfigObjectService
-) {
+apingApp.directive('aping', function ($sce,
+                                      appSettingsService,
+                                      appConfigObjectService,
+                                      youtubeFactory) {
     return {
         restrict: 'E',
         replace: 'true',
@@ -30,21 +29,17 @@ apingApp.directive('aping', function (
             appConfig.type = appSettingsService.getType(scope.type);
             appConfig.yt = appSettingsService.getYoutube(scope.yt);
 
-            console.log(appConfig);
 
+            run(appConfig);
 
-            run();
+            function run(_appConfig) {
+                if (_appConfig.yt.length > 0) {
 
-            function run() {
-                if (scope.yt) {
+                    //var ytSettings = $.parseJSON(scope.yt.replace(/'/g, '"'));
 
-                    var ytSettings = $.parseJSON(scope.yt.replace(/'/g, '"'));
+                    _appConfig.yt.forEach(function (ytObject) {
 
-                    ytSettings.forEach(function (ytObject) {
-
-
-
-                        /*
+                        console.log(ytObject);
 
                         var searchString = false;
                         if (ytObject.search) {
@@ -53,89 +48,129 @@ apingApp.directive('aping', function (
 
                         if (ytObject.channelId) {
 
-                            youtubeFactory.getChannelById({'channelId': ytObject.channelId})
-                                .success(function (_channelData) {
-                                    if (_channelData) {
-                                        youtubeFactory.getVideosFromChannelById({
-                                                'channelId': ytObject.channelId,
-                                                'searchString': searchString
-                                            })
-                                            .success(function (_videosData) {
-                                                if (_videosData) {
-                                                    var resultObject = youtubeFactory.getVideoFeedObjectByJsonData(
-                                                        _videosData,
-                                                        apingService.getBlankChannelObject("jtt_youtube")
-                                                    );
 
-                                                    scope.results = scope.results.concat(resultObject.entries);
-                                                    scope.platforms.push(resultObject.platform);
-                                                }
-                                            });
-                                    }
-                                });
-                        } else if (searchString) {
-                            youtubeFactory.getVideosFromSearchByString({'searchString': searchString})
-                                .success(function (_videosData) {
-                                    if (_videosData) {
-
-                                        var resultObject = youtubeFactory.getVideoFeedObjectByJsonData(
-                                            _videosData,
-                                            apingService.getBlankChannelObject("jtt_youtube")
-                                        );
-
-                                        scope.results = scope.results.concat(resultObject.entries);
-                                        scope.platforms.push(resultObject.platform);
-                                    }
-                                });
-                        } else if (ytObject.playlistId) {
+                            youtubeFactory.getChannelById({
+                                'channelId': ytObject.channelId,
+                                'key':appSettingsService.getApiKey("youtube"),
+                            }).success(function (_channelData) {
+                                console.log(_channelData);
+                            });
 
 
-                            youtubeFactory.getVideosFromPlaylistById({'playlistId': ytObject.playlistId})
-                                .success(function (_videosData) {
-                                    if (_videosData) {
-                                        var resultObject = youtubeFactory.getVideoFeedObjectByJsonData(
-                                            _videosData,
-                                            apingService.getBlankChannelObject("jtt_youtube")
-                                        );
+                            /*
 
-                                        scope.results = scope.results.concat(resultObject.entries);
-                                        scope.platforms.push(resultObject.platform);
+                             youtubeFactory.getChannelById({'channelId': ytObject.channelId})
+                             .success(function (_channelData) {
+                             if (_channelData) {
+                             youtubeFactory.getVideosFromChannelById({
+                             'channelId': ytObject.channelId,
+                             'searchString': searchString
+                             })
+                             .success(function (_videosData) {
+                             if (_videosData) {
+                             var resultObject = youtubeFactory.getVideoFeedObjectByJsonData(
+                             _videosData,
+                             apingService.getBlankChannelObject("jtt_youtube")
+                             );
 
-                                    }
-                                });
+                             scope.results = scope.results.concat(resultObject.entries);
+                             scope.platforms.push(resultObject.platform);
+                             }
+                             });
+                             }
+                             });
+                             */
                         }
-                        */
+
+                        /*
+
+
+
+                         if (ytObject.channelId) {
+
+                         youtubeFactory.getChannelById({'channelId': ytObject.channelId})
+                         .success(function (_channelData) {
+                         if (_channelData) {
+                         youtubeFactory.getVideosFromChannelById({
+                         'channelId': ytObject.channelId,
+                         'searchString': searchString
+                         })
+                         .success(function (_videosData) {
+                         if (_videosData) {
+                         var resultObject = youtubeFactory.getVideoFeedObjectByJsonData(
+                         _videosData,
+                         apingService.getBlankChannelObject("jtt_youtube")
+                         );
+
+                         scope.results = scope.results.concat(resultObject.entries);
+                         scope.platforms.push(resultObject.platform);
+                         }
+                         });
+                         }
+                         });
+                         } else if (searchString) {
+                         youtubeFactory.getVideosFromSearchByString({'searchString': searchString})
+                         .success(function (_videosData) {
+                         if (_videosData) {
+
+                         var resultObject = youtubeFactory.getVideoFeedObjectByJsonData(
+                         _videosData,
+                         apingService.getBlankChannelObject("jtt_youtube")
+                         );
+
+                         scope.results = scope.results.concat(resultObject.entries);
+                         scope.platforms.push(resultObject.platform);
+                         }
+                         });
+                         } else if (ytObject.playlistId) {
+
+
+                         youtubeFactory.getVideosFromPlaylistById({'playlistId': ytObject.playlistId})
+                         .success(function (_videosData) {
+                         if (_videosData) {
+                         var resultObject = youtubeFactory.getVideoFeedObjectByJsonData(
+                         _videosData,
+                         apingService.getBlankChannelObject("jtt_youtube")
+                         );
+
+                         scope.results = scope.results.concat(resultObject.entries);
+                         scope.platforms.push(resultObject.platform);
+
+                         }
+                         });
+                         }
+                         */
                     });
 
 
                 }
                 /*
 
-                if (scope.ig) {
-                    var igSettings = $.parseJSON(scope.ig.replace(/'/g, '"'));
+                 if (scope.ig) {
+                 var igSettings = $.parseJSON(scope.ig.replace(/'/g, '"'));
 
 
-                    igSettings.forEach(function (igObject) {
-                        if (igObject.userId) {
-                            instagramFactory.getPostsFromUserById({'userId':igObject.userId})
-                                .success(function (_data) {
+                 igSettings.forEach(function (igObject) {
+                 if (igObject.userId) {
+                 instagramFactory.getPostsFromUserById({'userId':igObject.userId})
+                 .success(function (_data) {
 
-                                    var resultObject = instagramFactory.getVideoFeedObjectByJsonData(
-                                        _data,
-                                        apingService.getBlankChannelObject("jtt_instagram")
-                                    );
+                 var resultObject = instagramFactory.getVideoFeedObjectByJsonData(
+                 _data,
+                 apingService.getBlankChannelObject("jtt_instagram")
+                 );
 
-                                    scope.results = scope.results.concat(resultObject.entries);
-                                    scope.platforms.push(resultObject.platform);
+                 scope.results = scope.results.concat(resultObject.entries);
+                 scope.platforms.push(resultObject.platform);
 
-                                })
-                                .error(function (_error) {
-                                    console.info("Es gab ein problem", _error);
-                                })
-                        }
-                    });
-                }
-                */
+                 })
+                 .error(function (_error) {
+                 console.info("Es gab ein problem", _error);
+                 })
+                 }
+                 });
+                 }
+                 */
             }
 
         },
