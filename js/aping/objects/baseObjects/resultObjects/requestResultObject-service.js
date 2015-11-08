@@ -3,7 +3,7 @@ apingObjects.service('requestResultObjectService', function () {
         var requestResultObject = {
             errorObject: {},
             infoObject: {},
-            outputObject: {},
+            outputObjects: [],
         };
 
         return requestResultObject;

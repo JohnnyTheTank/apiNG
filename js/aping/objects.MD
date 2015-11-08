@@ -27,7 +27,8 @@
                     {} requestObject (1x pro request)
                         {} requestErrorObject
                         {} requestInfoObject
-                        {} outputObject (zB. socialObject)
+                        []
+                            {} outputObject (zB. socialObject)
 
 
 ## scope

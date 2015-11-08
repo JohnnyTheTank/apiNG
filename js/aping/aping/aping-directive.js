@@ -1,11 +1,14 @@
 "use strict";
 
 apingApp.directive('aping', function (
-        $sce,
-        appSettingsService,
-        appConfigObjectService,
-        appResultObjectService,
-        youtubeFactory
+    $sce,
+    appSettingsService,
+    appConfigObjectService,
+    appResultObjectService,
+    platformResultObjectService,
+    outputObjectYoutubeService,
+    socialObjectService,
+    youtubeFactory
     ) {
         return {
             restrict: 'E',
@@ -36,16 +39,19 @@ apingApp.directive('aping', function (
                 function run(_appConfig) {
 
                     var runAppResultObject = appResultObjectService.getNew();
+                    runAppResultObject.appConfig = _appConfig;
 
-                    if (_appConfig.yt.length > 0) {
 
-                        if(! (appConfig.apiKeys || appConfig.apiKeys.youtube)) {
+                    if (runAppResultObject.appConfig.yt.length > 0) {
+
+                        if(! (runAppResultObject.appConfig.apiKeys || runAppResultObject.appConfig.apiKeys.youtube)) {
                             /* TODO Error Handling */
                             return false;
                         }
 
-                        _appConfig.yt.forEach(function (ytObject) {
+                        var platformResultObject = platformResultObjectService.getNew();
 
+                        runAppResultObject.appConfig.yt.forEach(function (ytObject) {
 
                             var searchString = false;
                             if (ytObject.search) {
@@ -56,28 +62,27 @@ apingApp.directive('aping', function (
 
                                 youtubeFactory.getChannelById({
                                     'channelId': ytObject.channelId,
-                                    'key': appConfig.apiKeys.youtube,
+                                    'key': runAppResultObject.appConfig.apiKeys.youtube,
                                 }).success(function (_channelData) {
                                     if (_channelData) {
-                                        youtubeFactory.getVideosFromChannelById({
+
+                                        var youtubeSearchObject = {
                                             'channelId': ytObject.channelId,
                                             'searchString': searchString,
-                                            'key': appConfig.apiKeys.youtube,
-                                        }).success(function (_videosData) {
+                                            'key': runAppResultObject.appConfig.apiKeys.youtube,
+                                        };
+                                        if(ytObject.nextPageToken) {
+                                            youtubeSearchObject.nextPageToken = ytObject.nextPageToken;
+                                        }
+
+                                        youtubeFactory.getVideosFromChannelById(youtubeSearchObject).success(function (_videosData) {
                                             if (_videosData) {
-                                                console.log(_videosData);
 
-
-
-                                                /*
-                                                var resultObject = youtubeFactory.getVideoFeedObjectByJsonData(
-                                                    _videosData,
-                                                    apingService.getBlankChannelObject("jtt_youtube")
-                                                );
-
-                                                scope.results = scope.results.concat(resultObject.entries);
-                                                scope.platforms.push(resultObject.platform);
-                                                */
+                                                var requestResultObject = outputObjectYoutubeService.getObjectByJsonData(_videosData, runAppResultObject.appConfig.type);
+                                                console.log(scope.results);
+                                                scope.results = scope.results.concat(requestResultObject.outputObjects);
+                                                console.log(scope.results);
+                                                platformResultObject.requestObjects.push(requestResultObject);
                                             }
                                         });
                                     }
@@ -85,102 +90,15 @@ apingApp.directive('aping', function (
 
                             }
 
-                            /*
-
-
-
-                             if (ytObject.channelId) {
-
-                             youtubeFactory.getChannelById({'channelId': ytObject.channelId})
-                             .success(function (_channelData) {
-                             if (_channelData) {
-                             youtubeFactory.getVideosFromChannelById({
-                             'channelId': ytObject.channelId,
-                             'searchString': searchString
-                             })
-                             .success(function (_videosData) {
-                             if (_videosData) {
-                             var resultObject = youtubeFactory.getVideoFeedObjectByJsonData(
-                             _videosData,
-                             apingService.getBlankChannelObject("jtt_youtube")
-                             );
-
-                             scope.results = scope.results.concat(resultObject.entries);
-                             scope.platforms.push(resultObject.platform);
-                             }
-                             });
-                             }
-                             });
-                             } else if (searchString) {
-                             youtubeFactory.getVideosFromSearchByString({'searchString': searchString})
-                             .success(function (_videosData) {
-                             if (_videosData) {
-
-                             var resultObject = youtubeFactory.getVideoFeedObjectByJsonData(
-                             _videosData,
-                             apingService.getBlankChannelObject("jtt_youtube")
-                             );
-
-                             scope.results = scope.results.concat(resultObject.entries);
-                             scope.platforms.push(resultObject.platform);
-                             }
-                             });
-                             } else if (ytObject.playlistId) {
-
-
-                             youtubeFactory.getVideosFromPlaylistById({'playlistId': ytObject.playlistId})
-                             .success(function (_videosData) {
-                             if (_videosData) {
-                             var resultObject = youtubeFactory.getVideoFeedObjectByJsonData(
-                             _videosData,
-                             apingService.getBlankChannelObject("jtt_youtube")
-                             );
-
-                             scope.results = scope.results.concat(resultObject.entries);
-                             scope.platforms.push(resultObject.platform);
-
-                             }
-                             });
-                             }
-                             */
                         });
 
+                        runAppResultObject.platforms.push(platformResultObject);
+                        /* TODO: Hier sollte man eher mergen, statt zu pushen */
 
                     }
-                    /*
-
-                     if (scope.ig) {
-                     var igSettings = $.parseJSON(scope.ig.replace(/'/g, '"'));
-
-
-                     igSettings.forEach(function (igObject) {
-                     if (igObject.userId) {
-                     instagramFactory.getPostsFromUserById({'userId':igObject.userId})
-                     .success(function (_data) {
-
-                     var resultObject = instagramFactory.getVideoFeedObjectByJsonData(
-                     _data,
-                     apingService.getBlankChannelObject("jtt_instagram")
-                     );
-
-                     scope.results = scope.results.concat(resultObject.entries);
-                     scope.platforms.push(resultObject.platform);
-
-                     })
-                     .error(function (_error) {
-                     console.info("Es gab ein problem", _error);
-                     })
-                     }
-                     });
-                     }
-                     */
-
-                    runAppResultObject.appConfig = _appConfig;
 
                     return runAppResultObject;
                 }
-
-
             }
             ,
             templateUrl: function (elem, attrs) {
