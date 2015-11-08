@@ -31,10 +31,20 @@ apingSettings.service('appSettingsService', function (apingDefaultSettings, apiK
         return apingDefaultSettings.yt || [];
     };
 
-    this.getApiKey = function (_platformName) {
+    this.getApiKeys = function () {
         if(apiKeys) {
-            if(apiKeys[_platformName]) {
-                return apiKeys[_platformName];
+            return apiKeys;
+        }
+        return false;
+
+    };
+
+    this.getApiKey = function (_platformName) {
+        var _apiKeys = this.getApiKeys();
+
+        if(_apiKeys) {
+            if(_apiKeys[_platformName]) {
+                return _apiKeys[_platformName];
             }
         }
         return false;

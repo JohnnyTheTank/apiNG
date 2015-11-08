@@ -19983,38 +19983,44 @@
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/bower_components\/angular-sanitize\/angular-sanitize.js",
+			"linkedFileAbbreviatedPath": "\/bower_components\/angular\/angular.js",
 			"position": 1,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/bower_components\/angular-linkify\/angular-linkify.js",
+			"linkedFileAbbreviatedPath": "\/bower_components\/angular-sanitize\/angular-sanitize.js",
 			"position": 2,
-			"type": 1
+			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/bower_components\/angular-i18n\/angular-locale_de-de.js",
+			"linkedFileAbbreviatedPath": "\/bower_components\/angular-linkify\/angular-linkify.js",
 			"position": 3,
 			"type": 1
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/bower_components\/angular-timeago\/dist\/angular-timeago.js",
+			"linkedFileAbbreviatedPath": "\/bower_components\/angular-i18n\/angular-locale_de-de.js",
 			"position": 4,
 			"type": 1
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/bower_components\/bootstrap\/dist\/js\/bootstrap.js",
+			"linkedFileAbbreviatedPath": "\/bower_components\/angular-timeago\/dist\/angular-timeago.js",
 			"position": 5,
 			"type": 1
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/bower_components\/fastclick\/lib\/fastclick.js",
+			"linkedFileAbbreviatedPath": "\/bower_components\/bootstrap\/dist\/js\/bootstrap.js",
 			"position": 6,
+			"type": 1
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/bower_components\/fastclick\/lib\/fastclick.js",
+			"position": 7,
 			"type": 1
 			}
 		]

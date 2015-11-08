@@ -49,8 +49,6 @@ yttYoutube.factory('youtubeFactory', ['$http','youtubeSearchDataService', functi
 
     youtubeFactory.getChannelById = function (_params) {
 
-        console.log("Hi");
-
         var _youtubeSearchData = youtubeSearchDataService.getNew("channelById", _params);
 
         return $http({
