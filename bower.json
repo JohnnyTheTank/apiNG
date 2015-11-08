@@ -35,6 +35,7 @@
     "fastclick": "~1.0.6",
     "angular-i18n": "~1.4.7",
     "angular-timeago": "~0.2.4",
-    "angular-linkify": "~1.2.0"
+    "angular-linkify": "~1.2.0",
+    "jtt_youtube": "angular-jtt_youtube#*"
   }
 }
