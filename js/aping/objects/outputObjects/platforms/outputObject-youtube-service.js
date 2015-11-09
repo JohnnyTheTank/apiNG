@@ -67,18 +67,18 @@ apingObjects.service('outputObjectYoutubeService', function (socialObjectService
             timestamp: timeHelper.getTimestampFromDateString(_item.snippet.publishedAt, 1000, 7200),
         });
 
-        /*
+        if(_item.snippet.title !== "" && _item.snippet.description !== "") {
+            socialObject.caption = _item.snippet.title;
+            socialObject.text = _item.snippet.description;
+        } else {
+            if(_item.snippet.title !== "") {
+                socialObject.caption = _item.snippet.title;
+            } else {
+                socialObject.caption = _item.snippet.description;
+            }
+        }
 
-         if(yt.snippet.title !== "" && yt.snippet.description !== "") {
-         postObject.caption = yt.snippet.title;
-         postObject.text = yt.snippet.description;
-         } else {
-         if(yt.snippet.title !== "") {
-         postObject.caption = yt.snippet.title;
-         } else {
-         postObject.caption = yt.snippet.description;
-         }
-         }
+        /*
 
          if(yt.id.kind == "youtube#video") {
          postObject.type = "video";

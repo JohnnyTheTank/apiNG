@@ -10,7 +10,7 @@ apingApp.config(function ($provide) {
 
     $provide.constant("apingDefaultSettings", {
         templateUrl : 'js/aping/templates/default/aping-default-template.html',
-        items : 2,
+        items : 30,
         iconSet : 'miuGloss',
         inactiveIconSet : 'miuBlack',
     });

@@ -19707,7 +19707,7 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
-	"\/js\/aping\/objects.MD": {
+	"\/js\/aping\/objects.md": {
 		"criticStyle": 0,
 		"enableFootnotes": 1,
 		"enableLabels": 1,
@@ -19716,7 +19716,7 @@
 		"fileType": 4096,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/aping\/objects.MD",
+		"inputAbbreviatedPath": "\/js\/aping\/objects.md",
 		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/js\/aping\/objects.html",
 		"outputFormat": 0,
@@ -19855,6 +19855,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/aping\/settings\/appSettings-service.js",
 		"outputAbbreviatedPath": "\/js\/aping\/settings\/appSettings-service.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
+	"\/js\/aping\/settings\/requestSettings-service.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/aping\/settings\/requestSettings-service.js",
+		"outputAbbreviatedPath": "\/js\/aping\/settings\/requestSettings-service.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,

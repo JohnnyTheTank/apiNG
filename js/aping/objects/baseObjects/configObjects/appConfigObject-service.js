@@ -5,7 +5,6 @@ apingObjects.service('appConfigObjectService', function () {
 
         var appConfigObject = {
             items: false,
-            templateUrl: false,
             type: false,
             requestConfigObjects: [],
         };

@@ -23,6 +23,7 @@ apingSettings.service('appSettingsService', function (apingDefaultSettings, apiK
         return apingDefaultSettings.type || "social";
     };
 
+
     this.getYoutube = function(_string) {
         /* TODO check for type=string */
         if(_string) {
@@ -30,6 +31,8 @@ apingSettings.service('appSettingsService', function (apingDefaultSettings, apiK
         }
         return apingDefaultSettings.yt || [];
     };
+
+
 
     this.getApiKeys = function () {
         if(apiKeys) {
