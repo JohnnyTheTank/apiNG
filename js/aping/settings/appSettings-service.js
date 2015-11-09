@@ -53,4 +53,28 @@ apingSettings.service('appSettingsService', function (apingDefaultSettings, apiK
         return false;
     }
 
+    this.setMode = function (_mode) {
+        switch (_mode) {
+            case "all":
+            case "next":
+            case "new":
+            case "none":
+                return _mode;
+                break;
+        }
+        return "next";
+    }
+
+    this.setNextMode = function (_mode) {
+        switch (_mode) {
+            case "all":
+            case "next":
+            case "new":
+            case "none":
+                return _mode;
+                break;
+        }
+        return "none";
+    }
+
 });

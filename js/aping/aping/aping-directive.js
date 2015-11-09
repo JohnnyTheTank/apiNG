@@ -32,7 +32,6 @@ apingApp.directive('aping', function (
                 appConfig.type = appSettingsService.getType(scope.type);
                 appConfig.apiKeys = appSettingsService.getApiKeys();
 
-                //appConfig.yt = appSettingsService.getYoutube(scope.yt);
 
                 //first run
                 if(appConfig.requestConfigObjects.length <= 0) {
@@ -48,12 +47,13 @@ apingApp.directive('aping', function (
 
 
 
-                var appResult = run(appConfig, false);
+                var appResult = run(appConfig);
 
-                function run(_appConfig, _loadOnlyNextPages) {
+                function run(_appConfig) {
 
                     var runAppResultObject = appResultObjectService.getNew();
                     runAppResultObject.appConfig = _appConfig;
+                    runAppResultObject.appConfig.nextMode = appSettingsService.setNextMode("none");
 
                     if(! (runAppResultObject.appConfig.apiKeys)) {
                         // TODO Error Handling
@@ -79,6 +79,13 @@ apingApp.directive('aping', function (
                                     searchString = requestObject.search;
                                 }
 
+                                if(!requestObject.nextPage) {
+                                    if(appSettingsService.setMode(_appConfig.mode) == "next") {
+                                        console.log("es geht nicht mehr weiter");
+                                        return false;
+                                    }
+                                }
+
                                 if (requestObject.channelId) {
 
                                     youtubeFactory.getChannelById({
@@ -96,12 +103,6 @@ apingApp.directive('aping', function (
 
                                             if(requestObject.nextPage) {
                                                 youtubeSearchObject.nextPageToken = requestObject.nextPage;
-                                            } else {
-                                                //youtubeSearchObject.nextPageToken = false;
-                                                if(_loadOnlyNextPages) {
-                                                    console.log("es geht nicht mehr weiter");
-                                                    return false;
-                                                }
                                             }
 
                                             youtubeFactory.getVideosFromChannelById(youtubeSearchObject).success(function (_videosData) {
@@ -112,6 +113,7 @@ apingApp.directive('aping', function (
 
                                                     if(requestResultObject.infoObject.nextPage) {
                                                         requestObject.nextPage = requestResultObject.infoObject.nextPage;
+                                                        runAppResultObject.appConfig.nextMode = appSettingsService.setNextMode("next");
                                                     } else {
                                                         requestObject.nextPage = false;
                                                     }
@@ -130,13 +132,33 @@ apingApp.directive('aping', function (
 
                     });
 
-                    setTimeout(function () {
-                        //run(runAppResultObject.appConfig, true);
-                    }, 20000);
-                    //run(runAppResultObject.appConfig, true);
 
 
-                    return runAppResultObject;
+
+                    var apingRunInterval = setInterval(function(){ apingRunTimer() }, 1000);
+
+                    var counter = 0;
+
+                    function apingRunTimer() {
+                        runAppResultObject.appConfig.mode = appSettingsService.setNextMode(runAppResultObject.appConfig.nextMode);
+                        console.log(runAppResultObject.appConfig.nextMode);
+
+                        if(runAppResultObject.appConfig.mode != "none") {
+                            clearInterval(apingRunInterval);
+                            run(runAppResultObject.appConfig);
+                        } else {
+                            counter++;
+                        }
+
+                        if(counter >= 3) {
+                            clearInterval(apingRunInterval);
+                        }
+
+
+                    }
+
+
+                    //return runAppResultObject;
                 }
             }
             ,
