@@ -81,7 +81,6 @@ apingApp.directive('aping', function (
 
                                 if(!requestObject.nextPage) {
                                     if(appSettingsService.setMode(_appConfig.mode) == "next") {
-                                        console.log("es geht nicht mehr weiter");
                                         return false;
                                     }
                                 }
@@ -127,7 +126,6 @@ apingApp.directive('aping', function (
 
                                 };
                                 break;
-
                         }
 
                     });
@@ -141,7 +139,6 @@ apingApp.directive('aping', function (
 
                     function apingRunTimer() {
                         runAppResultObject.appConfig.mode = appSettingsService.setNextMode(runAppResultObject.appConfig.nextMode);
-                        console.log(runAppResultObject.appConfig.nextMode);
 
                         if(runAppResultObject.appConfig.mode != "none") {
                             clearInterval(apingRunInterval);
