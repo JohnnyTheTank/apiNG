@@ -1,6 +1,6 @@
 "use strict";
 
-apingObjects.service('outputObjectYoutubeService', function (socialObjectService, requestResultObjectService, requestInfoObjectService, timeHelper) {
+apingObjects.service('outputObjectYoutubeService', function (socialObjectService, requestResultObjectService, requestInfoObjectService, timeHelper, youtubeHelper) {
 
     this.getObjectByJsonData = function (_data, _type) {
 
@@ -13,7 +13,7 @@ apingObjects.service('outputObjectYoutubeService', function (socialObjectService
 
             var _this = this;
 
-            if(_data.items) {
+            if (_data.items) {
                 angular.forEach(_data.items, function (yt, i) {
                     requestResultObject.outputObjects.push(_this.getItemByJsonData(yt, _type));
                 });
@@ -27,23 +27,23 @@ apingObjects.service('outputObjectYoutubeService', function (socialObjectService
         /* TODO errorobject */
     };
 
-    this.getInfoByJsonData = function(_data) {
+    this.getInfoByJsonData = function (_data) {
 
         var infoObject = requestInfoObjectService.getNew();
 
-        if(_data.nextPageToken) {
+        if (_data.nextPageToken) {
             infoObject.nextPage = _data.nextPageToken;
         }
 
         return infoObject;
     };
 
-    this.getItemByJsonData = function(_item, _type) {
+    this.getItemByJsonData = function (_item, _type) {
 
         var returnObject = {};
 
-        if(_item && _type) {
-            switch(_type) {
+        if (_item && _type) {
+            switch (_type) {
                 case "social":
                     returnObject = this.getSocialItemByJsonData(_item);
                     break;
@@ -53,12 +53,12 @@ apingObjects.service('outputObjectYoutubeService', function (socialObjectService
         return returnObject;
     };
 
-    this.getSocialItemByJsonData = function(_item) {
+    this.getSocialItemByJsonData = function (_item) {
         var socialObject = socialObjectService.getNew();
 
 
         $.extend(true, socialObject, {
-            blog_name : _item.snippet.channelTitle || _item.snippet.channelId || false,
+            blog_name: _item.snippet.channelTitle || _item.snippet.channelId || false,
             blog_id: _item.snippet.channelId || false,
             blog_link: "https://www.youtube.com/channel/" + _item.snippet.channelId,
             intern_type: _item.id.kind,
@@ -67,32 +67,26 @@ apingObjects.service('outputObjectYoutubeService', function (socialObjectService
             timestamp: timeHelper.getTimestampFromDateString(_item.snippet.publishedAt, 1000, 7200),
         });
 
-        if(_item.snippet.title !== "" && _item.snippet.description !== "") {
+        if (_item.snippet.title !== "" && _item.snippet.description !== "") {
             socialObject.caption = _item.snippet.title;
             socialObject.text = _item.snippet.description;
         } else {
-            if(_item.snippet.title !== "") {
+            if (_item.snippet.title !== "") {
                 socialObject.caption = _item.snippet.title;
             } else {
                 socialObject.caption = _item.snippet.description;
             }
         }
 
-        /*
+        if (_item.id.kind == "youtube#video") {
+            socialObject.type = "video";
+        } else if (_item.kind == "youtube#playlistItem" && _item.snippet.resourceId && _item.snippet.resourceId.kind == "youtube#video") {
+            socialObject.type = "video";
+        }
 
-         if(yt.id.kind == "youtube#video") {
-         postObject.type = "video";
-         } else if(yt.kind == "youtube#playlistItem" && yt.snippet.resourceId && yt.snippet.resourceId.kind == "youtube#video") {
-         postObject.type = "video";
-         }
+        socialObject.img_url = youtubeHelper.getYoutubeImageFromId(socialObject.intern_id);
+        socialObject.post_url = "https://www.youtube.com/watch?v=" + socialObject.intern_id;
 
-         postObject.img_url = apingService.getYoutubeImageFromId(postObject.intern_id);
-         postObject.post_url = "https://www.youtube.com/watch?v="+postObject.intern_id;
-
-
-         _resultObject.entries.push(postObject);
-         });
-         */
 
         return socialObject;
     }

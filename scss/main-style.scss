@@ -1,8 +1,8 @@
 @charset "utf-8";
 
-@import "helper";
+@import "_helper";
 
-@import "../js/aping/templates/default/aping-default-template";
+@import "../js/aping/templates/default/_aping-default-template";
 
 /* HTML TAGS */
 
@@ -18,6 +18,9 @@ body{
     background-attachment:fixed;
     background-size:cover;
     */
+
+    background-color:#DDD;
+
     font-family: 'Roboto Condensed', sans-serif;
 
     a {

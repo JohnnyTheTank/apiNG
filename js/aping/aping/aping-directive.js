@@ -132,7 +132,7 @@ apingApp.directive('aping', function (
 
                     setTimeout(function () {
                         //run(runAppResultObject.appConfig, true);
-                    }, 600);
+                    }, 20000);
                     //run(runAppResultObject.appConfig, true);
 
 
@@ -149,6 +149,7 @@ apingApp.directive('aping', function (
 
 /**
  * TODO: Twitter https://github.com/pavelk2/social-feed/
+ * TODO: TweeCool (twitter api) http://tweecool.com/
  * TODO: Twitter https://github.com/jublonet/codebird-js
  * TODO: Youtube Fullscreen Angular Tool: https://github.com/kanzelm3/angular-video-bg
  */

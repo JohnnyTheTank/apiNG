@@ -1,22 +1,26 @@
-<div class="aping-default-template">
-    <em>Default Template</em>
-    <br><br>
+<div>
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+    <div class="aping-default-template">
+        <div class="row">
+            <div class="">
+                <div class="card-columns">
+                    <div class="card" ng-repeat="feed in results | orderBy: 'timestamp': true" ng-cloak>
+                        <a ng-href="{{::feed.post_url}}" target="_blank" class="aping-picture-link nohover"><img
+                                ng-src="{{::feed.img_url}}" class="card-img-top img-responsive" alt="Card image"></a>
 
-    <div class="row">
-        <div class="">
-            <div class="card-columns">
-                <div class="card" ng-repeat="feed in results | orderBy: 'timestamp': true" ng-cloak>
-                    <a ng-href="{{::feed.post_url}}" target="_blank" class="aping-picture-link nohover"><img ng-src="{{::feed.img_url}}" class="card-img-top img-responsive" alt="Card image"></a>
-                    <div class="card-block">
-                        <h4 class="card-title" ng-if="feed.caption">{{::feed.caption}}</h4>
-                        <h6 class="card-link">hochgeladen von <a href="{{::feed.blog_link}}" target="_blank">{{::feed.blog_name}}</a></h6>
-                        <p class="card-text" ng-if="feed.text" linkify>{{::feed.text | limitTo: 350 }}{{::feed.text.length > 350 ? '...' : ''}}</p>
+                        <div class="card-block">
+                            <h4 class="card-title" ng-if="feed.caption">{{::feed.caption}}</h4>
+                            <h6 class="card-link">hochgeladen von <a href="{{::feed.blog_link}}" target="_blank">{{::feed.blog_name}}</a>
+                            </h6>
 
-                        <time-ago lass="card-link text-muted" from-time="{{::feed.timestamp}}"></time-ago>
+                            <p class="card-text" ng-if="feed.text" linkify>{{::feed.text | limitTo: 350}}{{::feed.text.length > 350 ? '...' : ''}}</p>
+
+                            <time-ago lass="card-link text-muted" from-time="{{::feed.timestamp}}"></time-ago>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
+    </div>
 </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en_EN">
+<html lang="de_DE">
 <head>
     <!-- DNS Prefetches -->
     <link rel="dns-prefetch" href="//www.sme-cdn.com">
@@ -49,6 +49,7 @@
     <script src="js/aping/helpers/helpers-module.js"></script>
     <script src="js/aping/helpers/utilityHelper-service.js"></script>
     <script src="js/aping/helpers/timeHelper-service.js"></script>
+    <script src="js/aping/helpers/youtubeHelper-service.js"></script>
 
     <script src="js/aping/settings/settings-module.js"></script>
     <script src="js/aping/settings/appSettings-service.js"></script>
@@ -73,6 +74,15 @@
 <div class="container-wrapper">
     <div class="container">
         <div class="row-wrapper">
+
+            <br>
+
+            <aping
+                    type="social"
+                    yt="[{'playlistId':'PLzm_lfByuAEF5RTM5j94TLrbbF4a9PBG4'},
+                            {'channelId':'UCuGcxogeiX5DbfzBMTl_aZQ','search':'johannes oerding'}]">
+            </aping>
+
 
             <div ng-controller="eventsController">
 
@@ -100,24 +110,17 @@
                     </article>
                 </section>
 
-
                 <aping
-                        type="social"
-                        yt="[{'playlistId':'PLzm_lfByuAEF5RTM5j94TLrbbF4a9PBG4'},
-                            {'channelId':'UC0aK0D-lo2SmYB20haMogWw'}]">
+                        template-url="js/aping/templates/customNumberOne/aping-custom-template.html"
+                        yt="[{'search':'eminem'},
+                        {'search':'helene fischer'},
+                        {'channelId':'UC0aK0D-lo2SmYB20haMogWw'}]"
+
+                        ig="[{'userId':'1555226147'}]">
                 </aping>
-
-
             </div>
 
-            <aping
-                    template-url="js/aping/templates/customNumberOne/aping-custom-template.html"
-                    yt="[{'search':'eminem'},
-                        {'search':'helene fischer'},
-                        {'channelId':'UCuGcxogeiX5DbfzBMTl_aZQ','search':'johannes oerding'}]"
 
-                    ig="[{'userId':'1555226147'}]">
-            </aping>
 
         </div>
         <!-- ./ Row Wrapper -->

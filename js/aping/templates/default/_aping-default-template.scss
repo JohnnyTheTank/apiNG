@@ -1,6 +1,13 @@
 .aping-default-template {
+
+    font-family: 'Josefin Sans', sans-serif;
+
     .card {
-        border:1px solid black;
+        background-color:white;
+
+        @include box-shadow(0 0 5px 0 rgba(0,0,0,0.2));
+        border-radius: 0;
+        border:none;
 
         margin-bottom:1rem;
 
@@ -8,9 +15,14 @@
             &.aping-picture-link {
 
                 &:hover {
+                    opacity:1;
                     @include filter(grayscale(0.5) sepia(0.6));
                 }
             }
+        }
+
+        img.card-img-top {
+            border-radius: 0;
         }
     }
 }
