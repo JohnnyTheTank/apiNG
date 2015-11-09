@@ -78,12 +78,8 @@
 
 ### Run Methode
 
-FOLGENDER ABSCHNITT IST AUF TODO
+Vor dem ersten Aufruf von run() werden alle Configs geparsed und in die AppConfig (und dort in das Array der RequestConfigs) geschrieben.
 
-Beim ersten Run werden alle Configs geparsed und in AppConfig und in die Liste der RequestConfigs geschrieben.
+Nach dem Parsen wird die run() ausgeführt. Dabei werden durch die RequestConfigs durchgeloopt. Dabei werden die AppConfig (und dort die RequestConfigs)
+um neue Parameter/Werte angereichert. Bei einem erneuten Durchlauf wird nun die geänderte AppConfig als Parameter für run() übergeben
 
-Nach dem Parsen wird durch die RequestConfigs durchgeloopt und durchgearbeitet
-Diese Funktionen erweitern die RequestConfigs um neue Parameter/Werte.
-
-Wenn die run Funktion nun neu aufgerufen wird, dann werden die Einträge nicht mehr geparsed sondern nur die
-bestehenden RequestConfigs durchgeloopt
