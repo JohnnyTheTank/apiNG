@@ -5,8 +5,10 @@ apingObjects.service('appConfigObjectService', function () {
 
         var appConfigObject = {
             items: false,
+            maxItems: false,
             type: false,
-            mode: "all",
+            mode: false,
+            interval: false,
             nextMode: "none",
             requestConfigObjects: [],
         };
