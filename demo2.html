@@ -78,12 +78,53 @@
             <br>
 
             <aping
-                    
+                    items="10"
+                    max-items="50"
                     mode="this"
                     type="social"
                     yt="[{'playlistId':'PLzm_lfByuAEF5RTM5j94TLrbbF4a9PBG4'},
                             {'channelId':'UCuGcxogeiX5DbfzBMTl_aZQ','search':'johannes oerding'}]">
             </aping>
+
+
+            <div ng-controller="eventsController">
+
+
+                <br>
+                <section class="row">
+                    <article class="col-md-12">
+                        <div class="row" ng-repeat="event in events" ng-cloak>
+                            <div class="col-sm-2">
+                                {{event.date | date:'dd.MM.yyyy'}}
+                            </div>
+                            <div class="col-sm-4">
+                                {{event.city}}
+                            </div>
+                            <div class="col-sm-4">
+                                {{event.location | uppercase}}
+                            </div>
+                            <div class="col-sm-2">
+                                <a ng-href="{{event.link}}" target="_blank">Tickets</a>
+                            </div>
+                        </div>
+
+                        <br>
+
+                    </article>
+                </section>
+
+                <aping
+                        template-url="js/aping/templates/customNumberOne/aping-custom-template.html"
+                        yt="[{'search':'eminem'},
+                        {'search':'helene fischer'},
+                        {'channelId':'UC0aK0D-lo2SmYB20haMogWw'}]"
+
+                        ig="[{'userId':'1555226147'}]">
+                </aping>
+
+            </div>
+
+
 
         </div>
         <!-- ./ Row Wrapper -->

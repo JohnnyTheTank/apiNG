@@ -55,8 +55,6 @@ apingApp.directive('aping', function ($sce,
                 }
 
 
-                scope.appResult = run(appConfig);
-
                 scope.isMaxItemsLimitReached = function (_maxItems) {
 
                     while (scope.results.length > _maxItems) {
@@ -70,7 +68,9 @@ apingApp.directive('aping', function ($sce,
                     return false;
                 };
 
-                function run(_appConfig) {
+                scope.run = function(_appConfig) {
+
+                    console.log(_appConfig);
 
                     var runAppResultObject = appResultObjectService.getNew();
                     runAppResultObject.appConfig = _appConfig;
@@ -166,7 +166,7 @@ apingApp.directive('aping', function ($sce,
 
                         if (runAppResultObject.appConfig.mode != "none") {
                             clearInterval(apingRunInterval);
-                            run(runAppResultObject.appConfig);
+                            scope.run(runAppResultObject.appConfig);
                         } else {
                             counter++;
                         }
@@ -180,7 +180,15 @@ apingApp.directive('aping', function ($sce,
 
 
                     return runAppResultObject;
-                }
+                };
+
+                scope.loadMore = function () {
+                    scope.appResult.appConfig.mode = "this";
+                    scope.appResult = scope.run(scope.appResult.appConfig);
+                };
+
+                scope.appResult = scope.run(appConfig);
+
             }
             ,
             templateUrl: function (elem, attrs) {
