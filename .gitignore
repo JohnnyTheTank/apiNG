@@ -1,2 +1,4 @@
 /.idea
 /.codekit-cache
+/bower_components
+.sass-cache
