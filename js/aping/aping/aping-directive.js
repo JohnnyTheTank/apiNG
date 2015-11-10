@@ -273,4 +273,5 @@ apingApp.directive('aping', function ($sce,
  * TODO: TweeCool (twitter api) http://tweecool.com/
  * TODO: Twitter https://github.com/jublonet/codebird-js
  * TODO: Youtube Fullscreen Angular Tool: https://github.com/kanzelm3/angular-video-bg
+ * TODO: Creating a Plugin System: http://taoofcode.net/creating-a-plugin-system-with-the-compile-provider/
  */
