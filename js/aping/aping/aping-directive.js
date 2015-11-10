@@ -41,8 +41,6 @@ apingApp.directive('aping', function ($sce,
                 appConfig.mode = appSettingsService.getMode(scope.mode);
 
 
-
-
                 //first run
                 if (appConfig.requestConfigObjects.length <= 0) {
                     var requestConfigObjects = [];
@@ -62,7 +60,7 @@ apingApp.directive('aping', function ($sce,
                         scope.results.pop();
                     }
 
-                    if(scope.results.length >= _maxItems) {
+                    if (scope.results.length >= _maxItems) {
                         return true;
                     }
 
@@ -74,7 +72,7 @@ apingApp.directive('aping', function ($sce,
                     var requestResultObject = outputObjectYoutubeService.getObjectByJsonData(_videosData, _runAppResultObject.appConfig.type);
                     scope.results = scope.results.concat(requestResultObject.outputObjects);
 
-                    if(scope.isMaxItemsLimitReached(_runAppResultObject.appConfig.maxItems)) {
+                    if (scope.isMaxItemsLimitReached(_runAppResultObject.appConfig.maxItems)) {
                         _runAppResultObject.appConfig.mode = appSettingsService.getMode("none");
                         _runAppResultObject.appConfig.nextMode = appSettingsService.setNextMode("none");
                         _requestObject.done = true;
@@ -99,7 +97,7 @@ apingApp.directive('aping', function ($sce,
                 };
 
 
-                scope.run = function(_appConfig) {
+                scope.run = function (_appConfig) {
 
                     var runAppResultObject = appResultObjectService.getNew();
                     runAppResultObject.appConfig = _appConfig;
@@ -121,11 +119,11 @@ apingApp.directive('aping', function ($sce,
                             }
                         }
 
-                        if(appSettingsService.getMode(runAppResultObject.appConfig.mode) == "none") {
+                        if (appSettingsService.getMode(runAppResultObject.appConfig.mode) == "none") {
                             return false;
                         }
 
-                        if(requestObject.done) {
+                        if (requestObject.done) {
                             return false;
                         }
 
@@ -224,7 +222,9 @@ apingApp.directive('aping', function ($sce,
                     });
 
 
-                    var apingRunInterval = setInterval(function(){ apingRunTimer() }, appConfig.interval);
+                    var apingRunInterval = setInterval(function () {
+                        apingRunTimer()
+                    }, appConfig.interval);
 
                     var counter = 0;
 
@@ -239,7 +239,7 @@ apingApp.directive('aping', function ($sce,
                             counter++;
                         }
 
-                        if (counter >= 3000/appConfig.interval) {
+                        if (counter >= 3000 / appConfig.interval) {
                             clearInterval(apingRunInterval);
                         }
 
@@ -265,6 +265,8 @@ apingApp.directive('aping', function ($sce,
         };
     }
 );
+
+
 
 /**
  * TODO: Twitter https://github.com/pavelk2/social-feed/
