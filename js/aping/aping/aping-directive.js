@@ -8,6 +8,7 @@ apingApp.directive('aping', function ($sce,
                                       platformResultObjectService,
                                       outputObjectYoutubeService,
                                       socialObjectService,
+                                      utilityHelper,
                                       youtubeFactory) {
         return {
             restrict: 'E',
@@ -193,6 +194,29 @@ apingApp.directive('aping', function ($sce,
                                         }
                                     });
 
+                                } else if (requestObject.searchString) {
+                                    var youtubeSearchObject = {
+                                        'searchString': requestObject.searchString,
+                                        'key': runAppResultObject.appConfig.apiKeys.youtube,
+                                        'maxResults': runAppResultObject.appConfig.items,
+                                    };
+
+                                    if (requestObject.nextPage) {
+                                        youtubeSearchObject.nextPageToken = requestObject.nextPage;
+                                    }
+
+                                    youtubeFactory.getVideosFromSearchByString(youtubeSearchObject).success(function (_videosData) {
+                                        if (_videosData) {
+                                            var youtubeWorkerResult = scope.youtubeObjectWorker(_videosData, runAppResultObject, requestObject);
+
+                                            runAppResultObject = youtubeWorkerResult.runAppResultObject;
+                                            requestObject = youtubeWorkerResult.requestObject;
+
+                                            // TODO: PlatformObject klären und in auch noch zurückgeben
+                                            //var requestResultObject = youtubeWorkerResult.requestResultObject;
+                                            //platformResultObject.requestObjects.push(requestResultObject);
+                                        }
+                                    });
                                 }
                                 break;
                         }
