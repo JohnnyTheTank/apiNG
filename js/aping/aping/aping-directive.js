@@ -68,9 +68,37 @@ apingApp.directive('aping', function ($sce,
                     return false;
                 };
 
-                scope.run = function(_appConfig) {
+                scope.youtubeObjectWorker = function (_videosData, _runAppResultObject, _requestObject) {
 
-                    console.log(_appConfig);
+                    var requestResultObject = outputObjectYoutubeService.getObjectByJsonData(_videosData, _runAppResultObject.appConfig.type);
+                    scope.results = scope.results.concat(requestResultObject.outputObjects);
+
+                    if(scope.isMaxItemsLimitReached(_runAppResultObject.appConfig.maxItems)) {
+                        _runAppResultObject.appConfig.mode = appSettingsService.getMode("none");
+                        _runAppResultObject.appConfig.nextMode = appSettingsService.setNextMode("none");
+                        _requestObject.done = true;
+                    }
+
+                    if (requestResultObject.infoObject.nextPage) {
+                        _requestObject.nextPage = requestResultObject.infoObject.nextPage;
+                        if (_runAppResultObject.appConfig.mode == "all" || _runAppResultObject.appConfig.mode == "next") {
+                            _runAppResultObject.appConfig.nextMode = appSettingsService.setNextMode("next");
+                        }
+                    } else {
+                        _requestObject.nextPage = false;
+                        _requestObject.done = true;
+                    }
+
+                    return {
+                        runAppResultObject: _runAppResultObject,
+                        requestObject: _requestObject,
+                        requestResultObject: requestResultObject,
+                    };
+
+                };
+
+
+                scope.run = function(_appConfig) {
 
                     var runAppResultObject = appResultObjectService.getNew();
                     runAppResultObject.appConfig = _appConfig;
@@ -86,19 +114,23 @@ apingApp.directive('aping', function ($sce,
 
                     runAppResultObject.appConfig.requestConfigObjects.forEach(function (requestObject) {
 
+                        if (!requestObject.nextPage) {
+                            if (appSettingsService.getMode(runAppResultObject.appConfig.mode) == "next") {
+                                return false;
+                            }
+                        }
+
+                        if(appSettingsService.getMode(runAppResultObject.appConfig.mode) == "none") {
+                            return false;
+                        }
+
+                        if(requestObject.done) {
+                            return false;
+                        }
+
                         switch (requestObject.platform) {
 
                             case "youtube":
-
-                                if (!requestObject.nextPage) {
-                                    if (appSettingsService.getMode(runAppResultObject.appConfig.mode) == "next") {
-                                        return false;
-                                    }
-                                }
-
-                                if(appSettingsService.getMode(runAppResultObject.appConfig.mode) == "none") {
-                                    return false;
-                                }
 
                                 if (!(runAppResultObject.appConfig.apiKeys.youtube)) {
                                     // TODO Error Handling
@@ -125,26 +157,38 @@ apingApp.directive('aping', function ($sce,
                                     youtubeFactory.getVideosFromChannelById(youtubeSearchObject).success(function (_videosData) {
                                         if (_videosData) {
 
-                                            var requestResultObject = outputObjectYoutubeService.getObjectByJsonData(_videosData, runAppResultObject.appConfig.type);
-                                            scope.results = scope.results.concat(requestResultObject.outputObjects);
+                                            var youtubeWorkerResult = scope.youtubeObjectWorker(_videosData, runAppResultObject, requestObject);
 
-                                            if(scope.isMaxItemsLimitReached(runAppResultObject.appConfig.maxItems)) {
-                                                runAppResultObject.appConfig.mode = appSettingsService.getMode("none");
-                                                runAppResultObject.appConfig.nextMode = appSettingsService.setNextMode("none");
-                                                return false;
-                                            }
+                                            runAppResultObject = youtubeWorkerResult.runAppResultObject;
+                                            requestObject = youtubeWorkerResult.requestObject;
 
+                                            // TODO: PlatformObject klären und in auch noch zurückgeben
+                                            //var requestResultObject = youtubeWorkerResult.requestResultObject;
+                                            //platformResultObject.requestObjects.push(requestResultObject);
+                                        }
+                                    });
 
-                                            if (requestResultObject.infoObject.nextPage) {
-                                                requestObject.nextPage = requestResultObject.infoObject.nextPage;
-                                                if (runAppResultObject.appConfig.mode == "all" || runAppResultObject.appConfig.mode == "next") {
-                                                    runAppResultObject.appConfig.nextMode = appSettingsService.setNextMode("next");
-                                                }
-                                            } else {
-                                                requestObject.nextPage = false;
-                                            }
+                                } else if (requestObject.playlistId) {
 
-                                            // TODO: PlatformObject klären
+                                    var youtubeSearchObject = {
+                                        'playlistId': requestObject.playlistId,
+                                        'key': runAppResultObject.appConfig.apiKeys.youtube,
+                                        'maxResults': runAppResultObject.appConfig.items,
+                                    };
+
+                                    if (requestObject.nextPage) {
+                                        youtubeSearchObject.nextPageToken = requestObject.nextPage;
+                                    }
+
+                                    youtubeFactory.getVideosFromPlaylistById(youtubeSearchObject).success(function (_videosData) {
+                                        if (_videosData) {
+                                            var youtubeWorkerResult = scope.youtubeObjectWorker(_videosData, runAppResultObject, requestObject);
+
+                                            runAppResultObject = youtubeWorkerResult.runAppResultObject;
+                                            requestObject = youtubeWorkerResult.requestObject;
+
+                                            // TODO: PlatformObject klären und in auch noch zurückgeben
+                                            //var requestResultObject = youtubeWorkerResult.requestResultObject;
                                             //platformResultObject.requestObjects.push(requestResultObject);
                                         }
                                     });
