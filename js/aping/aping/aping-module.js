@@ -5,7 +5,7 @@ var apingApp = angular.module(
     [
         'jtt_aping_settings',
         'jtt_aping_objects',
-        'jtt_youtube',
+        'jtt_aping_youtube',
         'yaru22.angular-timeago',
         'linkify'
     ]);
