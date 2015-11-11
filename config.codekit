@@ -19628,6 +19628,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
+	"\/js\/aping\/aping\/aping-directive-old.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/aping\/aping\/aping-directive-old.js",
+		"outputAbbreviatedPath": "\/js\/aping\/aping\/aping-directive-old.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
 	"\/js\/aping\/aping\/aping-directive.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -19858,6 +19869,28 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
+	"\/js\/aping\/platforms\/youtube\/youtube-directive.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/aping\/platforms\/youtube\/youtube-directive.js",
+		"outputAbbreviatedPath": "\/js\/aping\/platforms\/youtube\/youtube-directive.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
+	"\/js\/aping\/platforms\/youtube\/youtube-module.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/aping\/platforms\/youtube\/youtube-module.js",
+		"outputAbbreviatedPath": "\/js\/aping\/platforms\/youtube\/youtube-module.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
 	"\/js\/aping\/settings\/appSettings-service.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -20025,7 +20058,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Hornung, Jonathan",
+"lastSavedByUser": "Jonathan Hornung",
 "manualImportLinks": {
 	},
 "projectAttributes": {
