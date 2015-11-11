@@ -19628,56 +19628,45 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
-	"\/js\/aping\/aping\/aping-directive.js": {
+	"\/js\/aping\/aping\/aping-directives.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/aping\/aping\/aping-directive.js",
-		"outputAbbreviatedPath": "\/js\/aping\/aping\/aping-directive.min.js",
+		"inputAbbreviatedPath": "\/js\/aping\/aping\/aping-directives.js",
+		"outputAbbreviatedPath": "\/js\/aping\/aping\/aping-directives.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
-	"\/js\/aping\/aping\/aping-module.js": {
+	"\/js\/aping\/aping\/aping-helpers.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/aping\/aping\/aping-module.js",
-		"outputAbbreviatedPath": "\/js\/aping\/aping\/aping-module.min.js",
+		"inputAbbreviatedPath": "\/js\/aping\/aping\/aping-helpers.js",
+		"outputAbbreviatedPath": "\/js\/aping\/aping\/aping-helpers.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
-	"\/js\/aping\/helpers\/helpers-module.js": {
+	"\/js\/aping\/aping\/aping-inputObjects.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/aping\/helpers\/helpers-module.js",
-		"outputAbbreviatedPath": "\/js\/aping\/helpers\/helpers-module.min.js",
+		"inputAbbreviatedPath": "\/js\/aping\/aping\/aping-inputObjects.js",
+		"outputAbbreviatedPath": "\/js\/aping\/aping\/aping-inputObjects.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
-	"\/js\/aping\/helpers\/time-helper.js": {
+	"\/js\/aping\/aping\/aping-outputObjects.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/aping\/helpers\/time-helper.js",
-		"outputAbbreviatedPath": "\/js\/aping\/helpers\/time-helper.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 0
-		},
-	"\/js\/aping\/helpers\/utility-helper.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/aping\/helpers\/utility-helper.js",
-		"outputAbbreviatedPath": "\/js\/aping\/helpers\/utility-helper.min.js",
+		"inputAbbreviatedPath": "\/js\/aping\/aping\/aping-outputObjects.js",
+		"outputAbbreviatedPath": "\/js\/aping\/aping\/aping-outputObjects.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -19704,28 +19693,6 @@
 		"randomFootnoteNumbers": 0,
 		"useCompatibilityMode": 0
 		},
-	"\/js\/aping\/objects\/objects-module.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/aping\/objects\/objects-module.js",
-		"outputAbbreviatedPath": "\/js\/aping\/objects\/objects-module.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 0
-		},
-	"\/js\/aping\/objects\/social-object.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/aping\/objects\/social-object.js",
-		"outputAbbreviatedPath": "\/js\/aping\/objects\/social-object.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 0
-		},
 	"\/js\/aping\/platforms\/instagram\/instagram-factory.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -19737,45 +19704,23 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
-	"\/js\/aping\/platforms\/instagram\/instagram-module.js": {
+	"\/js\/aping\/platforms\/youtube\/aping-youtube-directive.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/aping\/platforms\/instagram\/instagram-module.js",
-		"outputAbbreviatedPath": "\/js\/aping\/platforms\/instagram\/instagram-module.min.js",
+		"inputAbbreviatedPath": "\/js\/aping\/platforms\/youtube\/aping-youtube-directive.js",
+		"outputAbbreviatedPath": "\/js\/aping\/platforms\/youtube\/aping-youtube-directive.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
-	"\/js\/aping\/platforms\/youtube\/youtube-directive.js": {
+	"\/js\/aping\/platforms\/youtube\/aping-youtube-helper.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/aping\/platforms\/youtube\/youtube-directive.js",
-		"outputAbbreviatedPath": "\/js\/aping\/platforms\/youtube\/youtube-directive.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 0
-		},
-	"\/js\/aping\/platforms\/youtube\/youtube-helper.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/aping\/platforms\/youtube\/youtube-helper.js",
-		"outputAbbreviatedPath": "\/js\/aping\/platforms\/youtube\/youtube-helper.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 0
-		},
-	"\/js\/aping\/platforms\/youtube\/youtube-module.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/aping\/platforms\/youtube\/youtube-module.js",
-		"outputAbbreviatedPath": "\/js\/aping\/platforms\/youtube\/youtube-module.min.js",
+		"inputAbbreviatedPath": "\/js\/aping\/platforms\/youtube\/aping-youtube-helper.js",
+		"outputAbbreviatedPath": "\/js\/aping\/platforms\/youtube\/aping-youtube-helper.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,

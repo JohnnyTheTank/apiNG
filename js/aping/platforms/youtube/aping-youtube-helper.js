@@ -1,6 +1,6 @@
 "use strict";
 
-apingObjects.service('outputObjectYoutubeService', function (socialObjectService, requestResultObjectService, requestInfoObjectService, timeHelper, utilityHelper) {
+jjtApingYoutube.service('apingYoutubeHelper', function (apingOutputObjects, apingTimeHelper, apingUtilityHelper) {
 
     this.getObjectByJsonData = function (_data, _type) {
 
@@ -23,20 +23,6 @@ apingObjects.service('outputObjectYoutubeService', function (socialObjectService
         return requestResultObject;
     };
 
-    this.getErrorsByJsonData = function (_data) {
-        /* TODO errorobject */
-    };
-
-    this.getInfoByJsonData = function (_data) {
-
-        var infoObject = requestInfoObjectService.getNew();
-
-        if (_data.nextPageToken) {
-            infoObject.nextPage = _data.nextPageToken;
-        }
-
-        return infoObject;
-    };
 
     this.getItemByJsonData = function (_item, _type) {
 

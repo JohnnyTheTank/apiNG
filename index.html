@@ -42,32 +42,14 @@
     <script src="js/events/events-module.js"></script>
     <script src="js/events/events-controller.js"></script>
 
-    <script src="js/aping/aping/aping-module.js"></script>
+    <script src="js/aping/aping/aping-directives.js"></script>
     <script src="js/aping/aping/aping-config.js"></script>
-    <script src="js/aping/aping/aping-directive.js"></script>
+    <script src="js/aping/aping/aping-helpers.js"></script>
+    <script src="js/aping/aping/aping-inputObjects.js"></script>
+    <script src="js/aping/aping/aping-outputObjects.js"></script>
 
-    <script src="js/aping/platforms/youtube/youtube-module.js"></script>
-    <script src="js/aping/platforms/youtube/youtube-directive.js"></script>
-
-    <script src="js/aping/helpers/helpers-module.js"></script>
-    <script src="js/aping/helpers/utilityHelper-service.js"></script>
-    <script src="js/aping/helpers/timeHelper-service.js"></script>
-    <script src="js/aping/helpers/youtubeHelper-service.js"></script>
-
-    <script src="js/aping/settings/settings-module.js"></script>
-    <script src="js/aping/settings/appSettings-factory.js"></script>
-    <script src="js/aping/settings/appSettings-service.js"></script>
-    <script src="js/aping/aping/requestSettings-service.js"></script>
-
-    <script src="js/aping/objects/objects-module.js"></script>
-    <script src="js/aping/objects/baseObjects/configObjects/appConfigObject-service.js"></script>
-    <script src="js/aping/objects/baseObjects/configObjects/requestConfigObject-service.js"></script>
-    <script src="js/aping/objects/baseObjects/resultObjects/appResultObject-service.js"></script>
-    <script src="js/aping/objects/baseObjects/resultObjects/platformResultObject-service.js"></script>
-    <script src="js/aping/objects/baseObjects/resultObjects/requestResultObject-service.js"></script>
-    <script src="js/aping/objects/baseObjects/resultObjects/requestInfoObject-service.js"></script>
-    <script src="js/aping/objects/socialObject-service.js"></script>
-    <script src="js/aping/platforms/youtube/outputObject-youtube-service.js"></script>
+    <script src="js/aping/platforms/youtube/aping-youtube-directive.js"></script>
+    <script src="js/aping/platforms/youtube/aping-youtube-helper.js"></script>
 
 
     <script type="text/javascript" src="js/script.js"></script>
@@ -81,11 +63,10 @@
 
             <br>
             <aping
-                    items="3"
+                    items="10"
                     max-items="100"
-                    mode="this"
                     type="social"
-                    yt="[{'playlistId':'PLzm_lfByuAEF5RTM5j94TLrbbF4a9PBG4'},
+                    aping-youtube="[{'playlistId':'PLzm_lfByuAEF5RTM5j94TLrbbF4a9PBG4'},
                             {'channelId':'UCuGcxogeiX5DbfzBMTl_aZQ'}]">
             </aping>
 
