@@ -1,6 +1,6 @@
 "use strict";
 
-apingObjects.service('outputObjectYoutubeService', function (socialObjectService, requestResultObjectService, requestInfoObjectService, timeHelper, youtubeHelper) {
+apingObjects.service('outputObjectYoutubeService', function (socialObjectService, requestResultObjectService, requestInfoObjectService, timeHelper, utilityHelper) {
 
     this.getObjectByJsonData = function (_data, _type) {
 

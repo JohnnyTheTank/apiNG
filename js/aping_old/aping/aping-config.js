@@ -12,7 +12,10 @@ apingApp.config(function ($provide) {
         templateUrl : 'js/aping/templates/default/aping-default-template.html',
         items : 20,
         maxItems: 100,
-        type: "social",
+        mode: "this",
+        interval: 200,
+        iconSet : 'miuGloss',
+        inactiveIconSet : 'miuBlack',
     });
 
 });
