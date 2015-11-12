@@ -3,11 +3,8 @@
     DEADWOOD
 
     <div ng-controller="apingDeadwoodController">
-
-        <button ng-click="malSehen()">test</button>
-
         <div>
-            <div ng-repeat="feed in results | orderBy: 'timestamp': true | limitTo:1" ng-cloak>
+            <div ng-repeat="feed in workingCopy | orderBy: 'timestamp': true | limitTo:1" ng-cloak>
                 <div class="embed-responsive embed-responsive-16by9">
                     <video-bg video-id="feed.intern_id" ng-cloak>
 
@@ -16,14 +13,11 @@
             </div>
             <br>
             <div class="block-grid-xs-3">
-                <div ng-repeat="feed in results | orderBy: 'timestamp': true | limitTo:4" ng-if="$index >= 1" ng-cloak>
+                <div ng-repeat="feed in workingCopy | orderBy: 'timestamp': true | limitTo:4" ng-if="$index >= 1" ng-cloak>
                     <img ng-src="{{::feed.img_url}}" class="card-img-top img-responsive" alt="Card image">
                 </div>
             </div>
-
         </div>
     </div>
-
-
 
 </div>

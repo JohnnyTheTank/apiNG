@@ -33,6 +33,7 @@ var apingApp = angular.module('jtt_aping', [])
                     if(this.getAppSettings().maxItems > 0 && $scope.results.length > this.getAppSettings().maxItems) {
                         $scope.results = $scope.results.splice(0,this.getAppSettings().maxItems);
                     }
+                    $scope.$broadcast('resultMerged');
                 };
             },
             templateUrl: function (elem, attrs) {
