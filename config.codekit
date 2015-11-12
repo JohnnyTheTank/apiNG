@@ -16782,28 +16782,6 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
-	"\/bower_components\/angular-youtube-api-factory\/angular-youtube-api-factory.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/angular-youtube-api-factory\/angular-youtube-api-factory.js",
-		"outputAbbreviatedPath": "\/bower_components\/angular-youtube-api-factory\/angular-youtube-api-factory.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 0
-		},
-	"\/bower_components\/angular-youtube-api-factory\/angular-youtube-api-factory.min.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/angular-youtube-api-factory\/angular-youtube-api-factory.min.js",
-		"outputAbbreviatedPath": "\/bower_components\/angular-youtube-api-factory\/angular-youtube-api-factory.min.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 0
-		},
 	"\/bower_components\/angular-youtube-api-factory\/bower.json": {
 		"fileType": 524288,
 		"ignore": 1,
@@ -16814,6 +16792,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
+		},
+	"\/bower_components\/angular-youtube-api-factory\/dist\/angular-youtube-api-factory.min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/angular-youtube-api-factory\/dist\/angular-youtube-api-factory.min.js",
+		"outputAbbreviatedPath": "\/bower_components\/angular-youtube-api-factory\/dist\/angular-youtube-api-factory.min.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
 		},
 	"\/bower_components\/angular-youtube-api-factory\/README.md": {
 		"criticStyle": 0,
@@ -16835,6 +16824,17 @@
 		"processHTML": 0,
 		"randomFootnoteNumbers": 0,
 		"useCompatibilityMode": 0
+		},
+	"\/bower_components\/angular-youtube-api-factory\/src\/angular-youtube-api-factory.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/angular-youtube-api-factory\/src\/angular-youtube-api-factory.js",
+		"outputAbbreviatedPath": "\/bower_components\/angular-youtube-api-factory\/src\/angular-youtube-api-factory.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
 		},
 	"\/bower_components\/angular\/angular-csp.css": {
 		"fileType": 16,
@@ -16921,50 +16921,6 @@
 		"randomFootnoteNumbers": 0,
 		"useCompatibilityMode": 0
 		},
-	"\/bower_components\/apiNG-youtube-plugin\/aping-youtube-directive.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/apiNG-youtube-plugin\/aping-youtube-directive.js",
-		"outputAbbreviatedPath": "\/bower_components\/apiNG-youtube-plugin\/aping-youtube-directive.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 0
-		},
-	"\/bower_components\/apiNG-youtube-plugin\/aping-youtube-directive.min.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/apiNG-youtube-plugin\/aping-youtube-directive.min.js",
-		"outputAbbreviatedPath": "\/bower_components\/apiNG-youtube-plugin\/aping-youtube-directive.min.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 0
-		},
-	"\/bower_components\/apiNG-youtube-plugin\/aping-youtube-helper.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/apiNG-youtube-plugin\/aping-youtube-helper.js",
-		"outputAbbreviatedPath": "\/bower_components\/apiNG-youtube-plugin\/aping-youtube-helper.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 0
-		},
-	"\/bower_components\/apiNG-youtube-plugin\/aping-youtube-helper.min.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/apiNG-youtube-plugin\/aping-youtube-helper.min.js",
-		"outputAbbreviatedPath": "\/bower_components\/apiNG-youtube-plugin\/aping-youtube-helper.min.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 0
-		},
 	"\/bower_components\/apiNG-youtube-plugin\/bower.json": {
 		"fileType": 524288,
 		"ignore": 1,
@@ -16975,6 +16931,50 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
+		},
+	"\/bower_components\/apiNG-youtube-plugin\/dist\/aping-youtube-directive.min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/apiNG-youtube-plugin\/dist\/aping-youtube-directive.min.js",
+		"outputAbbreviatedPath": "\/bower_components\/apiNG-youtube-plugin\/dist\/aping-youtube-directive.min.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
+	"\/bower_components\/apiNG-youtube-plugin\/dist\/aping-youtube-helper.min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/apiNG-youtube-plugin\/dist\/aping-youtube-helper.min.js",
+		"outputAbbreviatedPath": "\/bower_components\/apiNG-youtube-plugin\/dist\/aping-youtube-helper.min.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
+	"\/bower_components\/apiNG-youtube-plugin\/src\/aping-youtube-directive.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/apiNG-youtube-plugin\/src\/aping-youtube-directive.js",
+		"outputAbbreviatedPath": "\/bower_components\/apiNG-youtube-plugin\/src\/aping-youtube-directive.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
+	"\/bower_components\/apiNG-youtube-plugin\/src\/aping-youtube-helper.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/apiNG-youtube-plugin\/src\/aping-youtube-helper.js",
+		"outputAbbreviatedPath": "\/bower_components\/apiNG-youtube-plugin\/src\/aping-youtube-helper.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
 		},
 	"\/bower_components\/bootstrap\/bower.json": {
 		"fileType": 524288,
