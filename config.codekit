@@ -19718,6 +19718,40 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
+	"\/js\/aping\/designs\/customNumberOne\/aping-custom-design.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/aping\/designs\/customNumberOne\/aping-custom-design.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/js\/aping\/designs\/default\/_aping-default-design.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/aping\/designs\/default\/_aping-default-design.scss",
+		"outputAbbreviatedPath": "\/js\/aping\/designs\/css\/_aping-default-design.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 3,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/js\/aping\/designs\/default\/aping-default-design.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/aping\/designs\/default\/aping-default-design.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/js\/aping\/platforms\/instagram\/instagram-factory.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -19728,40 +19762,6 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
-		},
-	"\/js\/aping\/templates\/customNumberOne\/aping-custom-template.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/aping\/templates\/customNumberOne\/aping-custom-template.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/js\/aping\/templates\/default\/_aping-default-template.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 10,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/aping\/templates\/default\/_aping-default-template.scss",
-		"outputAbbreviatedPath": "\/js\/aping\/templates\/css\/_aping-default-template.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 3,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
-	"\/js\/aping\/templates\/default\/aping-default-template.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/aping\/templates\/default\/aping-default-template.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
 		},
 	"\/js\/app.js": {
 		"fileType": 64,

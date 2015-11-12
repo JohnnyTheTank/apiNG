@@ -9,8 +9,10 @@ apingApp.config(function ($provide) {
     });
 
     $provide.constant("apingDefaultSettings", {
-        templateUrl : 'js/aping/templates/default/aping-default-template.html',
+        templateUrl : 'js/aping/designs/default/aping-default-design.html',
         items : 20,
+        orderBy : "timestamp",
+        orderReverse : "true",
         maxItems: 100,
         type: "social",
     });

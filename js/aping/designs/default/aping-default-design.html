@@ -1,8 +1,9 @@
-<div class="aping-default-template">
+<div class="aping-default-design">
 
     <div>
         <div class="card-columns">
-            <div class="card" ng-repeat="feed in results | orderBy: 'timestamp': true" ng-cloak>
+            <!--<div class="card" ng-repeat="feed in results | orderBy: 'timestamp': true" ng-cloak>-->
+            <div class="card" ng-repeat="feed in results" ng-cloak>
                 <a ng-href="{{::feed.post_url}}" target="_blank" class="aping-picture-link nohover"><img
                         ng-src="{{::feed.img_url}}" class="card-img-top img-responsive" alt="Card image"></a>
 

@@ -93,4 +93,16 @@ apingApp.service('apingTimeHelper', function () {
 
             return false;
         };
+
+        this.sortArrayByProperty = function(_property){
+            var sortOrder = 1;
+            if(_property[0] === "-") {
+                sortOrder = -1;
+                _property = _property.substr(1);
+            }
+            return function (a,b) {
+                var result = (a[_property] < b[_property]) ? -1 : (a[_property] > b[_property]) ? 1 : 0;
+                return result * sortOrder;
+            }
+        }
     });

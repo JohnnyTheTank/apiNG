@@ -1,7 +1,7 @@
 "use strict";
 
 var apingApp = angular.module('jtt_aping', [])
-    .directive('aping', function (apingDefaultSettings) {
+    .directive('aping', function (apingDefaultSettings, apingUtilityHelper) {
         return {
             restrict: 'E',
             replace: 'false',
@@ -9,6 +9,8 @@ var apingApp = angular.module('jtt_aping', [])
                 type: '@',
                 items: '@',
                 maxItems: '@',
+                orderBy: '@',
+                orderReverse: '@',
             },
             link: function (scope, element, attrs) {
             },
@@ -16,17 +18,42 @@ var apingApp = angular.module('jtt_aping', [])
 
                 $scope.results = [];
 
-                this.concatToResults = function (_array) {
-                    $scope.results = $scope.results.concat(_array);
-                };
-
                 this.getAppSettings = function () {
                     return {
                         type: $scope.type || apingDefaultSettings.type,
                         items: $scope.items || apingDefaultSettings.items,
                         maxItems: $scope.maxItems || apingDefaultSettings.maxItems,
+                        orderBy: $scope.orderBy || apingDefaultSettings.orderBy,
+                        orderReverse: $scope.orderReverse || apingDefaultSettings.orderReverse,
                     };
                 };
+
+
+
+                this.concatToResults = function (_array) {
+
+                    $scope.results = $scope.results.concat(_array);
+
+                    if(this.getAppSettings().orderBy) {
+                        $scope.results.sort(apingUtilityHelper.sortArrayByProperty(this.getAppSettings().orderBy));
+                        if(this.getAppSettings().orderReverse === true || this.getAppSettings().orderReverse == "true") {
+                            console.log("reverse");
+                            $scope.results.reverse();
+                        }
+                    }
+
+                    console.info("items before splicing", $scope.results.length);
+
+                    if(this.getAppSettings().maxItems > 0 && $scope.results.length > this.getAppSettings().maxItems) {
+                        $scope.results = $scope.results.splice(0,this.getAppSettings().maxItems);
+                    }
+
+                    console.info("items after splicing", $scope.results.length);
+
+
+                };
+
+
             },
             templateUrl: function (elem, attrs) {
                 return attrs.templateUrl || apingDefaultSettings.templateUrl;
