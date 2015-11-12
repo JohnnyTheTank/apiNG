@@ -10,10 +10,10 @@ apingApp.config(function ($provide) {
 
     $provide.constant("apingDefaultSettings", {
         templateUrl : 'js/aping/designs/default/aping-default-design.html',
-        items : 20,
+        items : 20, //items per request
+        maxItems: 100, //max items per aping
         orderBy : "timestamp",
         orderReverse : "true",
-        maxItems: 100,
         type: "social",
     });
 

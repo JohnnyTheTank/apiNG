@@ -1,5 +1,4 @@
 "use strict";
-
 var apingApp = angular.module('jtt_aping', [])
     .directive('aping', function (apingDefaultSettings, apingUtilityHelper) {
         return {
@@ -12,12 +11,8 @@ var apingApp = angular.module('jtt_aping', [])
                 orderBy: '@',
                 orderReverse: '@',
             },
-            link: function (scope, element, attrs) {
-            },
             controller: function ($scope) {
-
                 $scope.results = [];
-
                 this.getAppSettings = function () {
                     return {
                         type: $scope.type || apingDefaultSettings.type,
@@ -27,33 +22,18 @@ var apingApp = angular.module('jtt_aping', [])
                         orderReverse: $scope.orderReverse || apingDefaultSettings.orderReverse,
                     };
                 };
-
-
-
                 this.concatToResults = function (_array) {
-
                     $scope.results = $scope.results.concat(_array);
-
                     if(this.getAppSettings().orderBy) {
                         $scope.results.sort(apingUtilityHelper.sortArrayByProperty(this.getAppSettings().orderBy));
                         if(this.getAppSettings().orderReverse === true || this.getAppSettings().orderReverse == "true") {
-                            console.log("reverse");
                             $scope.results.reverse();
                         }
                     }
-
-                    console.info("items before splicing", $scope.results.length);
-
                     if(this.getAppSettings().maxItems > 0 && $scope.results.length > this.getAppSettings().maxItems) {
                         $scope.results = $scope.results.splice(0,this.getAppSettings().maxItems);
                     }
-
-                    console.info("items after splicing", $scope.results.length);
-
-
                 };
-
-
             },
             templateUrl: function (elem, attrs) {
                 return attrs.templateUrl || apingDefaultSettings.templateUrl;
