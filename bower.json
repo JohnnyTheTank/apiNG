@@ -35,6 +35,6 @@
     "angular-i18n": "~1.4.7",
     "angular-timeago": "~0.2.4",
     "angular-linkify": "~1.2.0",
-    "apiNG-youtube-plugin": "~0.1.0"
+    "apiNG-youtube-plugin": "*"
   }
 }
