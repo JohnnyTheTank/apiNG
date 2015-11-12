@@ -36,5 +36,8 @@
     "angular-timeago": "~0.2.4",
     "angular-linkify": "~1.2.0",
     "apiNG-youtube-plugin": "*"
+  },
+  "resolutions": {
+    "angular": "1.4.7"
   }
 }

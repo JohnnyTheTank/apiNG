@@ -1,0 +1,33 @@
+.aping-video-deadwood {
+
+    .card {
+        background-color:white;
+
+        @include transition(all 250ms ease);
+        @include box-shadow(0 0 5px 0 rgba(0,0,0,0.4));
+        border-radius: 0;
+        border:none;
+
+        margin-bottom:2rem;
+
+        a {
+            &.aping-picture-link {
+
+                &:hover {
+                    opacity:1;
+                    @include filter(grayscale(0.5) sepia(0.6));
+                }
+            }
+        }
+
+        img.card-img-top {
+            border-radius: 0;
+        }
+
+
+        &:hover {
+            @include box-shadow(0 0 5px 0 rgba(0,0,0,0.8));
+        }
+    }
+}
+

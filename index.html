@@ -20,8 +20,8 @@
 
     <!-- CSS Files -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" type="text/css" href="//www.sme-cdn.com/sme/sme.template/current/sme.template.css"
-          media="screen"/> -->
+    <link rel="stylesheet" type="text/css" href="//www.sme-cdn.com/sme/sme.template/current/sme.template.css"
+          media="screen"/>
     <link rel="stylesheet" type="text/css" href="css/main-style.css" media="screen"/>
 
     <!-- Fonts -->
@@ -37,6 +37,11 @@
     <script src="bower_components/apiNG-youtube-plugin/src/aping-youtube-directive.js"></script>
     <script src="bower_components/apiNG-youtube-plugin/src/aping-youtube-helper.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="js/aping/designs/video-deadwood/aping-deadwood.js"></script>
+    <script src="bower_components/angular-video-bg/angular-video-bg.js"></script>
+
+
 
 
     <script type="text/javascript" src="js/app.js"></script>
@@ -59,6 +64,17 @@
     <div class="container">
         <div class="row-wrapper">
 
+            <aping
+                    template-url="js/aping/designs/video-deadwood/video-deadwood.html"
+                    items="20"
+                    max-items="20"
+                    type="video"
+                    aping-youtube="[{'playlistId':'PLzm_lfByuAEF5RTM5j94TLrbbF4a9PBG4'}]">
+            </aping>
+
+            <!--
+            <br>
+            <hr>
             <br>
             <aping
                     items="20"
@@ -68,6 +84,8 @@
                             {'channelId':'UCuGcxogeiX5DbfzBMTl_aZQ'},
                             {'search':'fcbayern'}]">
             </aping>
+
+            -->
 
         </div>
     </div>
