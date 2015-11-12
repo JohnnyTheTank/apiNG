@@ -4,23 +4,21 @@ jjtApingYoutube.service('apingYoutubeHelper', function (apingOutputObjects, apin
 
     this.getObjectByJsonData = function (_data, _type) {
 
-        var requestResultObject = requestResultObjectService.getNew();
+        var requestResults = [];
+
 
         if (_data) {
-
-            requestResultObject.errorObject = this.getErrorsByJsonData(_data);
-            requestResultObject.infoObject = this.getInfoByJsonData(_data);
 
             var _this = this;
 
             if (_data.items) {
-                angular.forEach(_data.items, function (yt, i) {
-                    requestResultObject.outputObjects.push(_this.getItemByJsonData(yt, _type));
+                angular.forEach(_data.items, function (value, key) {
+                    requestResults.push(_this.getItemByJsonData(value, _type));
                 });
             }
         }
 
-        return requestResultObject;
+        return requestResults;
     };
 
 
@@ -40,7 +38,7 @@ jjtApingYoutube.service('apingYoutubeHelper', function (apingOutputObjects, apin
     };
 
     this.getSocialItemByJsonData = function (_item) {
-        var socialObject = socialObjectService.getNew();
+        var socialObject = apingOutputObjects.getNew("social", "youtube");
 
 
         $.extend(true, socialObject, {
@@ -50,7 +48,7 @@ jjtApingYoutube.service('apingYoutubeHelper', function (apingOutputObjects, apin
             intern_type: _item.id.kind,
             date: _item.snippet.publishedAt,
             intern_id: _item.id.videoId || _item.snippet.resourceId.videoId,
-            timestamp: timeHelper.getTimestampFromDateString(_item.snippet.publishedAt, 1000, 7200),
+            timestamp: apingTimeHelper.getTimestampFromDateString(_item.snippet.publishedAt, 1000, 7200),
         });
 
         if (_item.snippet.title !== "" && _item.snippet.description !== "") {
@@ -70,7 +68,7 @@ jjtApingYoutube.service('apingYoutubeHelper', function (apingOutputObjects, apin
             socialObject.type = "video";
         }
 
-        socialObject.img_url = youtubeHelper.getYoutubeImageFromId(socialObject.intern_id);
+        socialObject.img_url = apingUtilityHelper.getYoutubeImageFromId(socialObject.intern_id);
         socialObject.post_url = "https://www.youtube.com/watch?v=" + socialObject.intern_id;
 
 

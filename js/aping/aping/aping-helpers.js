@@ -48,22 +48,27 @@ apingApp.service('apingTimeHelper', function () {
             return time;
         };
     })
-    .service('apingUtilityHelper', function () {
+    .service('apingUtilityHelper', function (apingInputObjects) {
         this.parseJsonFromAttributes = function (_string, _platform) {
-            if (typeof _string !== "string") {
+            if (!(typeof _string === "string" && _string)) {
                 return [];
             }
 
-            var requestConfigs = [];
+            var requests = [];
 
-            if (_string) {
-                requestConfigs = $.parseJSON(_string.replace(/'/g, '"'));
+            var tempArray = $.parseJSON(_string.replace(/'/g, '"'));
 
-                angular.forEach(requestConfigs, function (value, key) {
-                    value.platform = _platform;
-                });
-            }
-            return requestConfigs;
+            angular.forEach(tempArray, function (value, key) {
+
+                value.platform = _platform;
+
+                var request = apingInputObjects.getNew("request", value);
+                requests.push(request);
+
+            });
+
+
+            return requests;
         };
 
         this.getYoutubeIdFromUrl = function (_url) {

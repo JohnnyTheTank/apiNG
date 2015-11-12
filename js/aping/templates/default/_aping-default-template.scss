@@ -1,7 +1,5 @@
 .aping-default-template {
 
-    font-family: 'Josefin Sans', sans-serif;
-
     .card {
         background-color:white;
 
@@ -30,19 +28,6 @@
         &:hover {
             @include box-shadow(0 0 5px 0 rgba(0,0,0,0.8));
         }
-    }
-
-    .debug-console {
-        position:fixed;
-        top: 10px;
-        right: 10px;
-        width: 230px;
-        opacity:0.95;
-
-        .list-group {
-            border:1px solid black;
-        }
-
     }
 }
 
