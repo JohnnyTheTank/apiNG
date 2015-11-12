@@ -16921,6 +16921,39 @@
 		"randomFootnoteNumbers": 0,
 		"useCompatibilityMode": 0
 		},
+	"\/bower_components\/apiNG-youtube-plugin\/aping-youtube-directive.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/apiNG-youtube-plugin\/aping-youtube-directive.js",
+		"outputAbbreviatedPath": "\/bower_components\/apiNG-youtube-plugin\/aping-youtube-directive.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
+	"\/bower_components\/apiNG-youtube-plugin\/aping-youtube-helper.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/apiNG-youtube-plugin\/aping-youtube-helper.js",
+		"outputAbbreviatedPath": "\/bower_components\/apiNG-youtube-plugin\/aping-youtube-helper.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
+	"\/bower_components\/apiNG-youtube-plugin\/bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/apiNG-youtube-plugin\/bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/bower_components\/apiNG-youtube-plugin\/bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/bower_components\/bootstrap\/bower.json": {
 		"fileType": 524288,
 		"ignore": 1,
@@ -19669,28 +19702,6 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/aping\/platforms\/instagram\/instagram-factory.js",
 		"outputAbbreviatedPath": "\/js\/aping\/platforms\/instagram\/instagram-factory.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 0
-		},
-	"\/js\/aping\/platforms\/youtube\/aping-youtube-directive.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/aping\/platforms\/youtube\/aping-youtube-directive.js",
-		"outputAbbreviatedPath": "\/js\/aping\/platforms\/youtube\/aping-youtube-directive.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 0
-		},
-	"\/js\/aping\/platforms\/youtube\/aping-youtube-helper.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/aping\/platforms\/youtube\/aping-youtube-helper.js",
-		"outputAbbreviatedPath": "\/js\/aping\/platforms\/youtube\/aping-youtube-helper.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
