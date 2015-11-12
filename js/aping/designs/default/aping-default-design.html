@@ -9,7 +9,7 @@
 
                 <div class="card-block">
                     <h4 class="card-title" ng-if="feed.caption">{{::feed.caption}}</h4>
-                    <h6 class="card-link">uploaded by <a href="{{::feed.blog_link}}" target="_blank">{{::feed.blog_name}}</a>
+                    <h6 ng-if="feed.blog_name" class="card-link">uploaded by <a href="{{::feed.blog_link}}" target="_blank">{{::feed.blog_name}}</a>
                     </h6>
 
                     <p class="card-text" ng-if="feed.text" linkify>{{::feed.text | limitTo: 250}}{{::feed.text.length > 350 ? '...' : ''}}</p>
