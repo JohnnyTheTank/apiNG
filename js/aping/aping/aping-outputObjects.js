@@ -9,20 +9,37 @@ apingApp.service('apingOutputObjects', function () {
         switch(_type) {
             case "social":
                 outputObject = {
-                    platform : _platform,
-                    blog_name : false,
-                    blog_id : false,
-                    blog_link : false,
-                    type : false,
+                    platform : _platform, //NAME of platform ( "youtube" / "facebook", "instagram" , ...)
+                    blog_name : false, //NAME of blog (channel / youtube uploader / facebook page, instagram account, ..)
+                    blog_id : false, //ID of channel / page / account, ...
+                    blog_link : false, //link to channel / uploader / page / account, ...
+                    type : false, //"video", "image", "post", "audio", "link", "event", ...
                     timestamp : false,
-                    post_url : false,
-                    intern_id : false,
+                    post_url : false, //URL to the post / video / tweet ...
+                    intern_id : false, // INTERN ID of post / video / tweet / ... (facebook id, youtube id, ...)
                     text : false,
                     caption : false,
                     img_url : false,
-                    img_isSmall : false,
-                    source : false,
-                    tag : false
+                    img_isSmall : false, //TRUE if image is small (like facebook 150px)
+                    source : false, //
+                };
+                break;
+
+            case "video":
+                outputObject = {
+                    platform : _platform, //NAME of platform ( "youtube" / "facebook", "instagram" , ...)
+                    blog_name : false, //NAME of blog (channel / youtube uploader / facebook page, instagram account, ..)
+                    blog_id : false, //ID of channel / page / account, ...
+                    blog_link : false, //link to channel / uploader / page / account, ...
+                    timestamp : false,
+                    post_url : false, //URL to the post / video / tweet ...
+                    intern_id : false, // INTERN ID of post / video / tweet / ... (facebook id, youtube id, ...)
+                    text : false,
+                    caption : false,
+                    img_url : false,
+                    img_isSmall : false, //TRUE if image is small (like facebook 150px)
+                    source : false, //
+                    markup: false,
                 };
                 break;
 
