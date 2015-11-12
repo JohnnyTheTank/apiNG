@@ -1,6 +1,0 @@
-User-Agent: *
-Disallow: /css/
-Disallow: /fonts/
-Disallow: /js/
-Disallow: /dl/
-Disallow: /scss/
