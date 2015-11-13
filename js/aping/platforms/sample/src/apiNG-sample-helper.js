@@ -42,7 +42,7 @@ jjtApingSample.service('apingSampleHelper', ['apingOutputObjects', 'apingTimeHel
     this.getVideoItemByJsonData = function (_item) {
         var videoObject = apingOutputObjects.getNew("video", "sample");
 
-        //fill _item in socialObject
+        //fill _item in videoObject
 
         return videoObject;
     };
@@ -50,7 +50,7 @@ jjtApingSample.service('apingSampleHelper', ['apingOutputObjects', 'apingTimeHel
     this.getImageItemByJsonData = function (_item) {
         var image = apingOutputObjects.getNew("video", "sample");
 
-        //fill _item in socialObject
+        //fill _item in imageObject
 
         return image;
     };
