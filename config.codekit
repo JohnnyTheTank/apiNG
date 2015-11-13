@@ -19739,17 +19739,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/js\/angular-instagram-api-factory\/src\/angular-instagram-api-factory.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/angular-instagram-api-factory\/src\/angular-instagram-api-factory.js",
-		"outputAbbreviatedPath": "\/js\/angular-instagram-api-factory\/src\/angular-instagram-api-factory.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 0
-		},
 	"\/js\/aping\/aping\/aping-config.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -19881,6 +19870,39 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/aping\/platforms\/instagram\/instagram-factory.js",
 		"outputAbbreviatedPath": "\/js\/aping\/platforms\/instagram\/instagram-factory.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
+	"\/js\/aping\/platforms\/sample\/bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/aping\/platforms\/sample\/bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/js\/aping\/platforms\/sample\/bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/js\/aping\/platforms\/sample\/src\/apiNG-sample-helper.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/aping\/platforms\/sample\/src\/apiNG-sample-helper.js",
+		"outputAbbreviatedPath": "\/js\/aping\/platforms\/sample\/src\/apiNG-sample-helper.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
+	"\/js\/aping\/platforms\/sample\/src\/apiNG-sample-plugin.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/aping\/platforms\/sample\/src\/apiNG-sample-plugin.js",
+		"outputAbbreviatedPath": "\/js\/aping\/platforms\/sample\/src\/apiNG-sample-plugin.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
