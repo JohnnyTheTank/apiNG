@@ -19739,6 +19739,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/js\/angular-instagram-api-factory\/src\/angular-instagram-api-factory.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/angular-instagram-api-factory\/src\/angular-instagram-api-factory.js",
+		"outputAbbreviatedPath": "\/js\/angular-instagram-api-factory\/src\/angular-instagram-api-factory.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
 	"\/js\/aping\/aping\/aping-config.js": {
 		"fileType": 64,
 		"ignore": 1,
