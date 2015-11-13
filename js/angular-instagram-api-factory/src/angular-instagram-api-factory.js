@@ -11,15 +11,41 @@ angular.module("jtt_instagram", [])
 
         var instagramFactory = {};
 
+        instagramFactory.getUserById = function (_params) {
+
+            var instagramSearchData = instagramSearchDataService.getNew("userById", _params);
+
+            return $http.jsonp(
+                instagramSearchData.url,
+                {
+                    method: 'GET',
+                    params: instagramSearchData.object,
+                }
+            );
+        };
+
         instagramFactory.getPostsFromUserById = function (_params) {
 
             var instagramSearchData = instagramSearchDataService.getNew("postsFromUserById", _params);
 
             return $http.jsonp(
-                url,
+                instagramSearchData.url,
                 {
                     method: 'GET',
-                    params: instagramSearchData,
+                    params: instagramSearchData.object,
+                }
+            );
+        };
+
+        instagramFactory.getPostsByTag = function (_params) {
+
+            var instagramSearchData = instagramSearchDataService.getNew("postsByTag", _params);
+
+            return $http.jsonp(
+                instagramSearchData.url,
+                {
+                    method: 'GET',
+                    params: instagramSearchData.object,
                 }
             );
         };
@@ -46,9 +72,13 @@ angular.module("jtt_instagram", [])
             };
 
             switch (_type) {
+                case "userById":
+                    instagramSearchData.url = this.getInstagramApiBaseUrl()+"users/" + _params.userId;
+                    break;
+
                 case "postsFromUserById":
 
-                    instagramSearchData.object.count = _params.client_id;
+                    instagramSearchData.object.count = _params.count || 20;
 
                     if (typeof _params.max_id != 'undefined') {
                         instagramSearchData.object.max_id = _params.max_id;
@@ -66,8 +96,30 @@ angular.module("jtt_instagram", [])
                         instagramSearchData.object.max_timestamp = _params.max_timestamp;
                     }
 
-                    var url = this.getInstagramApiBaseUrl()+"users/" + _params.userId + "/media/recent";
+                    instagramSearchData.url = this.getInstagramApiBaseUrl()+"users/" + _params.userId + "/media/recent";
+                    break;
 
+                case "postsByTag":
+
+                    instagramSearchData.object.count = _params.count || 20;
+
+                    if (typeof _params.max_tag_id != 'undefined') {
+                        instagramSearchData.object.max_tag_id = _params.max_tag_id;
+                    }
+
+                    if (typeof _params.min_tag_id != 'undefined') {
+                        instagramSearchData.object.min_tag_id = _params.min_tag_id;
+                    }
+
+                    if (typeof _params.min_timestamp != 'undefined') {
+                        instagramSearchData.object.min_timestamp = _params.min_timestamp;
+                    }
+
+                    if (typeof _params.max_timestamp != 'undefined') {
+                        instagramSearchData.object.max_timestamp = _params.max_timestamp;
+                    }
+
+                    instagramSearchData.url = this.getInstagramApiBaseUrl()+"tags/" + _params.tag + "/media/recent";
                     break;
 
             }
