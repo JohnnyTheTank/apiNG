@@ -1,5 +1,11 @@
 "use strict";
 
+/**
+ @author Jonathan Hornung (https://github.com/JohnnyTheTank)
+ @url https://github.com/JohnnyTheTank/angular-sample-api-factory
+ @licence MIT
+ */
+
 var jjtApingSample = angular.module("jtt_aping_sample", [])
     .directive('apingSample', ['apingApiKeys', 'apingSampleHelper', 'apingUtilityHelper', function (apingApiKeys, apingSampleHelper, apingUtilityHelper) {
         return {

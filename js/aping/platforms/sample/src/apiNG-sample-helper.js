@@ -1,4 +1,11 @@
 "use strict";
+
+/**
+ @author Jonathan Hornung (https://github.com/JohnnyTheTank)
+ @url https://github.com/JohnnyTheTank/angular-sample-api-factory
+ @licence MIT
+ */
+
 jjtApingSample.service('apingSampleHelper', ['apingOutputObjects', 'apingTimeHelper', 'apingUtilityHelper', function (apingOutputObjects, apingTimeHelper, apingUtilityHelper) {
     this.getObjectByJsonData = function (_data, _type) {
         var requestResults = [];
