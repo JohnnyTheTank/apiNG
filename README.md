@@ -20,6 +20,7 @@ apiNG is under development and not ready for public usage
  - [ ] Vimeo
  - [ ] Tumblr
  - [ ] Vine
+ - [ ] Spotify
  - [ ] GitHub
  - [ ] BandsInTown
  - maybe: EventFul (http://api.eventful.com/docs/formats)
@@ -34,6 +35,7 @@ apiNG is under development and not ready for public usage
  - [ ] post
  - [ ] event
  - [ ] news
+ - [ ] product
  - [ ] activity
  - [ ] match
  - [ ] rank
