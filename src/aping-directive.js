@@ -11,7 +11,7 @@ var apingApp = angular.module('jtt_aping', [])
                 orderBy: '@',
                 orderReverse: '@',
             },
-            controller: function ($scope) {
+            controller: ['$scope', function ($scope) {
                 $scope.results = [];
                 this.getAppSettings = function () {
                     return {
@@ -35,7 +35,7 @@ var apingApp = angular.module('jtt_aping', [])
                     }
                     $scope.$broadcast('resultMerged');
                 };
-            },
+            }],
             templateUrl: function (elem, attrs) {
                 return attrs.templateUrl || apingDefaultSettings.templateUrl;
             }

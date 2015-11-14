@@ -48,7 +48,7 @@ apingApp.service('apingTimeHelper', function () {
             return time;
         };
     })
-    .service('apingUtilityHelper', function (apingInputObjects) {
+    .service('apingUtilityHelper', ['apingInputObjects', function (apingInputObjects) {
         this.parseJsonFromAttributes = function (_string, _platform) {
             if (!(typeof _string === "string" && _string)) {
                 return [];
@@ -105,4 +105,4 @@ apingApp.service('apingTimeHelper', function () {
                 return result * sortOrder;
             }
         }
-    });
+    }]);
