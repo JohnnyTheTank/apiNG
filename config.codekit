@@ -19937,6 +19937,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/js\/aping\/designs\/default\/aping-default-design.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/aping\/designs\/default\/aping-default-design.js",
+		"outputAbbreviatedPath": "\/js\/aping\/designs\/default\/aping-default-design.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
 	"\/js\/aping\/designs\/video-deadwood\/_video-deadwood.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -20034,17 +20045,6 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/events\/events-module.js",
 		"outputAbbreviatedPath": "\/js\/events\/events-module.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 0
-		},
-	"\/js\/script.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/script.js",
-		"outputAbbreviatedPath": "\/js\/script.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
