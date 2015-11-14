@@ -4,7 +4,7 @@
   "authors": [
     "Jonathan Hornung <jonathan.hornung@gmail.com>"
   ],
-  "version": "0.3.1",
+  "version": "0.1.0",
   "description": "sample plugin for apiNG",
   "main": "dist/angular-sample-directive.min.js",
   "moduleType": [],

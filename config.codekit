@@ -17051,6 +17051,61 @@
 		"randomFootnoteNumbers": 0,
 		"useCompatibilityMode": 0
 		},
+	"\/bower_components\/apiNG-instagram-plugin\/bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/apiNG-instagram-plugin\/bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/bower_components\/apiNG-instagram-plugin\/bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/bower_components\/apiNG-instagram-plugin\/dist\/apiNG-instagram-directive.min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/apiNG-instagram-plugin\/dist\/apiNG-instagram-directive.min.js",
+		"outputAbbreviatedPath": "\/bower_components\/apiNG-instagram-plugin\/dist\/apiNG-instagram-directive.min.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
+	"\/bower_components\/apiNG-instagram-plugin\/dist\/apiNG-instagram-helper.min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/apiNG-instagram-plugin\/dist\/apiNG-instagram-helper.min.js",
+		"outputAbbreviatedPath": "\/bower_components\/apiNG-instagram-plugin\/dist\/apiNG-instagram-helper.min.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
+	"\/bower_components\/apiNG-instagram-plugin\/src\/apiNG-instagram-directive.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/apiNG-instagram-plugin\/src\/apiNG-instagram-directive.js",
+		"outputAbbreviatedPath": "\/bower_components\/apiNG-instagram-plugin\/src\/apiNG-instagram-directive.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
+	"\/bower_components\/apiNG-instagram-plugin\/src\/apiNG-instagram-helper.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/apiNG-instagram-plugin\/src\/apiNG-instagram-helper.js",
+		"outputAbbreviatedPath": "\/bower_components\/apiNG-instagram-plugin\/src\/apiNG-instagram-helper.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
 	"\/bower_components\/apiNG-youtube-plugin\/bower.json": {
 		"fileType": 524288,
 		"ignore": 1,
@@ -19918,50 +19973,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/js\/aping\/platforms\/instagram\/bower.json": {
-		"fileType": 524288,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/aping\/platforms\/instagram\/bower.json",
-		"orderOutput": 0,
-		"outputAbbreviatedPath": "\/js\/aping\/platforms\/instagram\/bower-min.json",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1
-		},
-	"\/js\/aping\/platforms\/instagram\/instagram-factory.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/aping\/platforms\/instagram\/instagram-factory.js",
-		"outputAbbreviatedPath": "\/js\/aping\/platforms\/instagram\/instagram-factory.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 0
-		},
-	"\/js\/aping\/platforms\/instagram\/src\/apiNG-instagram-helper.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/aping\/platforms\/instagram\/src\/apiNG-instagram-helper.js",
-		"outputAbbreviatedPath": "\/js\/aping\/platforms\/instagram\/src\/apiNG-instagram-helper.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 0
-		},
-	"\/js\/aping\/platforms\/instagram\/src\/apiNG-instagram-plugin.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/aping\/platforms\/instagram\/src\/apiNG-instagram-plugin.js",
-		"outputAbbreviatedPath": "\/js\/aping\/platforms\/instagram\/src\/apiNG-instagram-plugin.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 0
-		},
 	"\/js\/aping\/platforms\/sample\/bower.json": {
 		"fileType": 524288,
 		"ignore": 1,
@@ -19973,23 +19984,23 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
 		},
+	"\/js\/aping\/platforms\/sample\/src\/apiNG-sample-directive.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/aping\/platforms\/sample\/src\/apiNG-sample-directive.js",
+		"outputAbbreviatedPath": "\/js\/aping\/platforms\/sample\/src\/apiNG-sample-directive.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
 	"\/js\/aping\/platforms\/sample\/src\/apiNG-sample-helper.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/aping\/platforms\/sample\/src\/apiNG-sample-helper.js",
 		"outputAbbreviatedPath": "\/js\/aping\/platforms\/sample\/src\/apiNG-sample-helper.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 0
-		},
-	"\/js\/aping\/platforms\/sample\/src\/apiNG-sample-plugin.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/aping\/platforms\/sample\/src\/apiNG-sample-plugin.js",
-		"outputAbbreviatedPath": "\/js\/aping\/platforms\/sample\/src\/apiNG-sample-plugin.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
