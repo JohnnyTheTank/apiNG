@@ -1,6 +1,6 @@
 "use strict";
 
-apingApp.service('apingTimeHelper', function () {
+apingApp.service('apingTimeHelper', [function () {
         this.getTimestampFromDateString = function (_string, _multiplier, _add) {
 
             if (!_multiplier || isNaN(_multiplier)) {
@@ -47,8 +47,8 @@ apingApp.service('apingTimeHelper', function () {
 
             return time;
         };
-    })
-    .service('apingUtilityHelper', function (apingInputObjects) {
+    }])
+    .service('apingUtilityHelper', [function (apingInputObjects) {
         this.parseJsonFromAttributes = function (_string, _platform) {
             if (!(typeof _string === "string" && _string)) {
                 return [];
@@ -105,4 +105,4 @@ apingApp.service('apingTimeHelper', function () {
                 return result * sortOrder;
             }
         }
-    });
+    }]);

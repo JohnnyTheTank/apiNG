@@ -1,6 +1,6 @@
 "use strict";
 var apingApp = angular.module('jtt_aping', [])
-    .directive('aping', function (apingDefaultSettings, apingUtilityHelper) {
+    .directive('aping', ['apingDefaultSettings', 'apingUtilityHelper', function (apingDefaultSettings, apingUtilityHelper) {
         return {
             restrict: 'E',
             replace: 'false',
@@ -41,10 +41,4 @@ var apingApp = angular.module('jtt_aping', [])
             }
         };
     }
-);
-
-
-
-/**
- * TODO: Youtube Fullscreen Angular Tool: https://github.com/kanzelm3/angular-video-bg
- */
+    ]);

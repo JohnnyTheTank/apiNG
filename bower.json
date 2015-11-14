@@ -1,5 +1,6 @@
 {
-  "name": "aping",
+  "name": "apiNG",
+  "homepage": "https://github.com/JohnnyTheTank/apiNG",
   "authors": [
     "Jonathan Hornung <jonathan.hornung@gmail.com>"
   ],
@@ -9,7 +10,6 @@
     "globals"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/JohnnyTheTank/apiNG",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -30,13 +30,6 @@
   "dependencies": {
     "angular": "angularjs#~1.4.7",
     "angular-sanitize": "~1.4.7",
-    "jquery": "~2.1.4",
-    "bootstrap": "4.0.0-alpha",
-    "angular-i18n": "~1.4.7",
-    "angular-timeago": "~0.2.4",
-    "angular-linkify": "~1.2.0",
-    "apiNG-plugin-youtube": "*",
-    "apiNG-plugin-instagram": "*"
   },
   "resolutions": {
     "angular": "1.4.7"

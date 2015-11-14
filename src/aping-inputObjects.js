@@ -1,6 +1,6 @@
 "use strict";
 
-apingApp.service('apingInputObjects', function (apingDefaultSettings) {
+apingApp.service('apingInputObjects', ['apingDefaultSettings', function (apingDefaultSettings) {
 
     this.getNew = function (_type, _params) {
 
@@ -21,4 +21,4 @@ apingApp.service('apingInputObjects', function (apingDefaultSettings) {
 
         return inputObject;
     }
-});
+}]);

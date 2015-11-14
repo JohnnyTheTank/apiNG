@@ -1,11 +1,7 @@
 "use strict";
-
-apingApp.service('apingOutputObjects', function () {
-
+apingApp.service('apingOutputObjects', [function () {
     this.getNew = function(_type, _platform) {
-
         var outputObject = {};
-
         switch(_type) {
             case "social":
                 outputObject = {
@@ -72,8 +68,6 @@ apingApp.service('apingOutputObjects', function () {
             default:
                 break;
         }
-
         return outputObject;
     }
-
-});
+}]);
