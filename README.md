@@ -22,6 +22,9 @@ apiNG is under development and not ready for public usage
  - [ ] Vine
  - [ ] GitHub
  - [ ] BandsInTown
+ - maybe: EventFul (http://api.eventful.com/docs/formats)
+ - maybe: Gigulate (http://gigulate.com/api/)
+ - maybe: OpenLigaDB (http://www.openligadb.de/Help)
  - and much more coming soon ...
     
 ### output objects
@@ -32,6 +35,8 @@ apiNG is under development and not ready for public usage
  - [ ] event
  - [ ] news
  - [ ] activity
+ - [ ] (sport) match
+ - [ ] rank
  - and much more coming soon ...
  
  ### designs
