@@ -13,25 +13,25 @@ apiNG is under development and not ready for public usage
     - output objects: `social`, `video`
  - [x] **Instagram** ([apiNG-plugin-instagram](https://github.com/JohnnyTheTank/apiNG-plugin-instagram))
     - output objects: `social`, `video`, `image`
- - [ ] **Twitter**
- - [ ] **Facebook**
- - [ ] **Google+**
- - [ ] **Flickr**
- - [ ] **Vimeo**
- - [ ] **Tumblr**
- - [ ] **Vine**
- - [ ] **GitHub**
- - [ ] **BandsInTown**
+ - [ ] Twitter
+ - [ ] Facebook
+ - [ ] Google+
+ - [ ] Flickr
+ - [ ] Vimeo
+ - [ ] Tumblr
+ - [ ] Vine
+ - [ ] GitHub
+ - [ ] BandsInTown
  - and much more coming soon ...
     
 ### output objects
  - [x] **social**
  - [x] **video**
  - [x] **image**
- - [ ] **post**
- - [ ] **event**
- - [ ] **news**
- - [ ] **activity**
+ - [ ] post
+ - [ ] event
+ - [ ] news
+ - [ ] activity
  - and much more coming soon ...
  
  ### designs
