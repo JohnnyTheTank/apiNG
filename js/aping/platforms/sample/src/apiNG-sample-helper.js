@@ -2,7 +2,7 @@
 
 /**
  @author Jonathan Hornung (https://github.com/JohnnyTheTank)
- @url https://github.com/JohnnyTheTank/angular-sample-api-factory
+ @url https://github.com/JohnnyTheTank/apiNG-sample-plugin
  @licence MIT
  */
 
@@ -11,11 +11,16 @@ jjtApingSample.service('apingSampleHelper', ['apingOutputObjects', 'apingTimeHel
         var requestResults = [];
         if (_data) {
             var _this = this;
+
+            //replace '_data.items'
             if (_data.items) {
+
+                //replace '_data.items'
                 angular.forEach(_data.items, function (value, key) {
                     requestResults.push(_this.getItemByJsonData(value, _type));
                 });
             }
+
         }
         return requestResults;
     };
@@ -55,10 +60,10 @@ jjtApingSample.service('apingSampleHelper', ['apingOutputObjects', 'apingTimeHel
     };
 
     this.getImageItemByJsonData = function (_item) {
-        var image = apingOutputObjects.getNew("video", "sample");
+        var imageObject = apingOutputObjects.getNew("video", "sample");
 
         //fill _item in imageObject
 
-        return image;
+        return imageObject;
     };
 }]);

@@ -25,7 +25,7 @@
     <link rel="stylesheet" type="text/css" href="css/main-style.css" media="screen"/>
 
     <!-- Fonts -->
-    <link href='//fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+    <!--<link href='//fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>--->
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
@@ -34,8 +34,14 @@
     <script src="bower_components/angular-timeago/dist/angular-timeago.min.js"></script>
     <script src="bower_components/angular-i18n/angular-locale_de-de.js"></script>
     <script src="bower_components/angular-youtube-api-factory/src/angular-youtube-api-factory.js"></script>
+    <script src="bower_components/angular-instagram-api-factory/src/angular-instagram-api-factory.js"></script>
+
     <script src="bower_components/apiNG-youtube-plugin/src/aping-youtube-directive.js"></script>
     <script src="bower_components/apiNG-youtube-plugin/src/aping-youtube-helper.js"></script>
+
+    <script src="js/aping/platforms/instagram/src/apiNG-instagram-plugin.js"></script>
+    <script src="js/aping/platforms/instagram/src/apiNG-instagram-helper.js"></script>
+
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <script src="js/aping/designs/video-deadwood/aping-deadwood.js"></script>
@@ -65,9 +71,15 @@
         <div class="row-wrapper">
 
 
+            <aping
+                    items="20"
+                    max-items="100"
+                    type="social"
+                    aping-instagram="[{'tag':'fcbayern'}]">
+            </aping>
 
             <br>
-
+<!--
             <aping
                     items="20"
                     max-items="100"
@@ -88,6 +100,8 @@
                     type="video"
                     aping-youtube="[{'playlistId':'PLzm_lfByuAEF5RTM5j94TLrbbF4a9PBG4'}]">
             </aping>
+
+            -->
 
         </div>
     </div>

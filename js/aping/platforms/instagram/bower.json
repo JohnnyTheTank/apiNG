@@ -1,0 +1,29 @@
+{
+  "name": "apiNG-sample-plugin",
+  "homepage": "https://github.com/JohnnyTheTank/apiNG-sample-plugin",
+  "authors": [
+    "Jonathan Hornung <jonathan.hornung@gmail.com>"
+  ],
+  "version": "0.3.1",
+  "description": "sample plugin for apiNG",
+  "main": "dist/angular-sample-directive.min.js",
+  "moduleType": [],
+  "keywords": [
+    "sample",
+    "angularjs",
+    "rest",
+    "api",
+    "json"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-sample-api-factory": "*"
+  }
+}

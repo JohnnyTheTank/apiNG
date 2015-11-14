@@ -2,7 +2,7 @@
 
 /**
  @author Jonathan Hornung (https://github.com/JohnnyTheTank)
- @url https://github.com/JohnnyTheTank/angular-sample-api-factory
+ @url https://github.com/JohnnyTheTank/apiNG-sample-plugin
  @licence MIT
  */
 
