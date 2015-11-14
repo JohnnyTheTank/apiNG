@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "angular": "angularjs#~1.4.7",
-    "angular-sanitize": "~1.4.7",
+    "angular-sanitize": "~1.4.7"
   },
   "resolutions": {
     "angular": "1.4.7"
