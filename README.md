@@ -35,7 +35,7 @@ apiNG is under development and not ready for public usage
  - [ ] event
  - [ ] news
  - [ ] activity
- - [ ] (sport) match
+ - [ ] match
  - [ ] rank
  - and much more coming soon ...
  
