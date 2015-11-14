@@ -17051,111 +17051,111 @@
 		"randomFootnoteNumbers": 0,
 		"useCompatibilityMode": 0
 		},
-	"\/bower_components\/apiNG-instagram-plugin\/bower.json": {
+	"\/bower_components\/apiNG-plugin-instagram\/bower.json": {
 		"fileType": 524288,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/apiNG-instagram-plugin\/bower.json",
+		"inputAbbreviatedPath": "\/bower_components\/apiNG-plugin-instagram\/bower.json",
 		"orderOutput": 0,
-		"outputAbbreviatedPath": "\/bower_components\/apiNG-instagram-plugin\/bower-min.json",
+		"outputAbbreviatedPath": "\/bower_components\/apiNG-plugin-instagram\/bower-min.json",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
 		},
-	"\/bower_components\/apiNG-instagram-plugin\/dist\/apiNG-instagram-directive.min.js": {
+	"\/bower_components\/apiNG-plugin-instagram\/dist\/apiNG-instagram-directive.min.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/apiNG-instagram-plugin\/dist\/apiNG-instagram-directive.min.js",
-		"outputAbbreviatedPath": "\/bower_components\/apiNG-instagram-plugin\/dist\/apiNG-instagram-directive.min.min.js",
+		"inputAbbreviatedPath": "\/bower_components\/apiNG-plugin-instagram\/dist\/apiNG-instagram-directive.min.js",
+		"outputAbbreviatedPath": "\/bower_components\/apiNG-plugin-instagram\/dist\/apiNG-instagram-directive.min.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
-	"\/bower_components\/apiNG-instagram-plugin\/dist\/apiNG-instagram-helper.min.js": {
+	"\/bower_components\/apiNG-plugin-instagram\/dist\/apiNG-instagram-helper.min.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/apiNG-instagram-plugin\/dist\/apiNG-instagram-helper.min.js",
-		"outputAbbreviatedPath": "\/bower_components\/apiNG-instagram-plugin\/dist\/apiNG-instagram-helper.min.min.js",
+		"inputAbbreviatedPath": "\/bower_components\/apiNG-plugin-instagram\/dist\/apiNG-instagram-helper.min.js",
+		"outputAbbreviatedPath": "\/bower_components\/apiNG-plugin-instagram\/dist\/apiNG-instagram-helper.min.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
-	"\/bower_components\/apiNG-instagram-plugin\/src\/apiNG-instagram-directive.js": {
+	"\/bower_components\/apiNG-plugin-instagram\/src\/apiNG-instagram-directive.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/apiNG-instagram-plugin\/src\/apiNG-instagram-directive.js",
-		"outputAbbreviatedPath": "\/bower_components\/apiNG-instagram-plugin\/src\/apiNG-instagram-directive.min.js",
+		"inputAbbreviatedPath": "\/bower_components\/apiNG-plugin-instagram\/src\/apiNG-instagram-directive.js",
+		"outputAbbreviatedPath": "\/bower_components\/apiNG-plugin-instagram\/src\/apiNG-instagram-directive.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
-	"\/bower_components\/apiNG-instagram-plugin\/src\/apiNG-instagram-helper.js": {
+	"\/bower_components\/apiNG-plugin-instagram\/src\/apiNG-instagram-helper.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/apiNG-instagram-plugin\/src\/apiNG-instagram-helper.js",
-		"outputAbbreviatedPath": "\/bower_components\/apiNG-instagram-plugin\/src\/apiNG-instagram-helper.min.js",
+		"inputAbbreviatedPath": "\/bower_components\/apiNG-plugin-instagram\/src\/apiNG-instagram-helper.js",
+		"outputAbbreviatedPath": "\/bower_components\/apiNG-plugin-instagram\/src\/apiNG-instagram-helper.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
-	"\/bower_components\/apiNG-youtube-plugin\/bower.json": {
+	"\/bower_components\/apiNG-plugin-youtube\/bower.json": {
 		"fileType": 524288,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/apiNG-youtube-plugin\/bower.json",
+		"inputAbbreviatedPath": "\/bower_components\/apiNG-plugin-youtube\/bower.json",
 		"orderOutput": 0,
-		"outputAbbreviatedPath": "\/bower_components\/apiNG-youtube-plugin\/bower-min.json",
+		"outputAbbreviatedPath": "\/bower_components\/apiNG-plugin-youtube\/bower-min.json",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
 		},
-	"\/bower_components\/apiNG-youtube-plugin\/dist\/aping-youtube-directive.min.js": {
+	"\/bower_components\/apiNG-plugin-youtube\/dist\/aping-youtube-directive.min.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/apiNG-youtube-plugin\/dist\/aping-youtube-directive.min.js",
-		"outputAbbreviatedPath": "\/bower_components\/apiNG-youtube-plugin\/dist\/aping-youtube-directive.min.min.js",
+		"inputAbbreviatedPath": "\/bower_components\/apiNG-plugin-youtube\/dist\/aping-youtube-directive.min.js",
+		"outputAbbreviatedPath": "\/bower_components\/apiNG-plugin-youtube\/dist\/aping-youtube-directive.min.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
-	"\/bower_components\/apiNG-youtube-plugin\/dist\/aping-youtube-helper.min.js": {
+	"\/bower_components\/apiNG-plugin-youtube\/dist\/aping-youtube-helper.min.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/apiNG-youtube-plugin\/dist\/aping-youtube-helper.min.js",
-		"outputAbbreviatedPath": "\/bower_components\/apiNG-youtube-plugin\/dist\/aping-youtube-helper.min.min.js",
+		"inputAbbreviatedPath": "\/bower_components\/apiNG-plugin-youtube\/dist\/aping-youtube-helper.min.js",
+		"outputAbbreviatedPath": "\/bower_components\/apiNG-plugin-youtube\/dist\/aping-youtube-helper.min.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
-	"\/bower_components\/apiNG-youtube-plugin\/src\/aping-youtube-directive.js": {
+	"\/bower_components\/apiNG-plugin-youtube\/src\/aping-youtube-directive.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/apiNG-youtube-plugin\/src\/aping-youtube-directive.js",
-		"outputAbbreviatedPath": "\/bower_components\/apiNG-youtube-plugin\/src\/aping-youtube-directive.min.js",
+		"inputAbbreviatedPath": "\/bower_components\/apiNG-plugin-youtube\/src\/aping-youtube-directive.js",
+		"outputAbbreviatedPath": "\/bower_components\/apiNG-plugin-youtube\/src\/aping-youtube-directive.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
-	"\/bower_components\/apiNG-youtube-plugin\/src\/aping-youtube-helper.js": {
+	"\/bower_components\/apiNG-plugin-youtube\/src\/aping-youtube-helper.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/apiNG-youtube-plugin\/src\/aping-youtube-helper.js",
-		"outputAbbreviatedPath": "\/bower_components\/apiNG-youtube-plugin\/src\/aping-youtube-helper.min.js",
+		"inputAbbreviatedPath": "\/bower_components\/apiNG-plugin-youtube\/src\/aping-youtube-helper.js",
+		"outputAbbreviatedPath": "\/bower_components\/apiNG-plugin-youtube\/src\/aping-youtube-helper.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,

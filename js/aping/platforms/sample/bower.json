@@ -1,6 +1,6 @@
 {
-  "name": "apiNG-sample-plugin",
-  "homepage": "https://github.com/JohnnyTheTank/apiNG-sample-plugin",
+  "name": "apiNG-plugin-sample",
+  "homepage": "https://github.com/JohnnyTheTank/apiNG-plugin-sample",
   "authors": [
     "Jonathan Hornung <jonathan.hornung@gmail.com>"
   ],
