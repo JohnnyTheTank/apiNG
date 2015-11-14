@@ -1,5 +1,4 @@
 "use strict";
-
 apingApp.config(['$provide', function ($provide) {
 
     $provide.constant("apingApiKeys", {
