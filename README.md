@@ -44,7 +44,7 @@ apiNG is under development and not ready for public usage
  
  ### designs
  - [x] **default design**
- - [x] **deadwood** ([youtube video design](https://github.com/JohnnyTheTank/apiNG-design-deadwood)
+ - [x] **deadwood** ([youtube video design](https://github.com/JohnnyTheTank/apiNG-design-deadwood))
  - much more coming ...
  
 
