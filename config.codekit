@@ -89,23 +89,34 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
 		},
-	"\/samples\/platform\/src\/apiNG-sample-directive.js": {
+	"\/samples\/platform\/Gruntfile.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/samples\/platform\/src\/apiNG-sample-directive.js",
-		"outputAbbreviatedPath": "\/samples\/platform\/src\/apiNG-sample-directive.min.js",
+		"inputAbbreviatedPath": "\/samples\/platform\/Gruntfile.js",
+		"outputAbbreviatedPath": "\/samples\/platform\/Gruntfile.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
-	"\/samples\/platform\/src\/apiNG-sample-helper.js": {
+	"\/samples\/platform\/src\/aping-sample-directive.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/samples\/platform\/src\/apiNG-sample-helper.js",
-		"outputAbbreviatedPath": "\/samples\/platform\/src\/apiNG-sample-helper.min.js",
+		"inputAbbreviatedPath": "\/samples\/platform\/src\/aping-sample-directive.js",
+		"outputAbbreviatedPath": "\/samples\/platform\/src\/aping-sample-directive.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
+		},
+	"\/samples\/platform\/src\/aping-sample-helper.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/samples\/platform\/src\/aping-sample-helper.js",
+		"outputAbbreviatedPath": "\/samples\/platform\/src\/aping-sample-helper.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,

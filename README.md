@@ -41,11 +41,14 @@ apiNG is under development and not ready for public usage
  - [ ] rank
  - and much more coming soon ...
  
+ 
  ### designs
  - [x] **default design**
+ - [x] **deadwood** ([youtube video design](https://github.com/JohnnyTheTank/apiNG-design-deadwood)
  - much more coming ...
  
 
+### some stuff
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/JohnnyTheTank/aping/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
