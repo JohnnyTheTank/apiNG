@@ -21,6 +21,7 @@ apingApp.service('apingOutputObjects', [function () {
                     likes: false,
                     shares: false,
                     comments: false,
+                    position: false,
                 };
                 break;
 
@@ -42,6 +43,7 @@ apingApp.service('apingOutputObjects', [function () {
                     likes: false,
                     shares: false,
                     comments: false,
+                    position: false,
                 };
                 break;
 
@@ -62,6 +64,7 @@ apingApp.service('apingOutputObjects', [function () {
                     likes: false,
                     shares: false,
                     comments: false,
+                    position: false,
                 };
                 break;
 
