@@ -40,9 +40,8 @@ apiNG is under development and not ready for public usage
  - [ ] match
  - [ ] rank
  - and much more coming soon ...
- 
- 
- ### designs
+    
+### designs
  - [x] **[default](https://github.com/JohnnyTheTank/apiNG-design-default)**
  - [x] **deadwood** ([youtube video design](https://github.com/JohnnyTheTank/apiNG-design-deadwood))
  - much more coming ...
