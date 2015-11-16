@@ -8,8 +8,8 @@ apiNG is under development and not ready for public usage
 
 ## current status
 
-### platforms
- - [x] **Youtube** ([aping-plugin-youtube](https://github.com/JohnnyTheTank/apiNG-plugin-youtube))
+### sources (platforms)
+ - [x] **Youtube** ([apiNG-plugin-youtube](https://github.com/JohnnyTheTank/apiNG-plugin-youtube))
     - output objects: `social`, `video`
  - [x] **Instagram** ([apiNG-plugin-instagram](https://github.com/JohnnyTheTank/apiNG-plugin-instagram))
     - output objects: `social`, `video`, `image`
@@ -28,7 +28,7 @@ apiNG is under development and not ready for public usage
  - maybe: OpenLigaDB (http://www.openligadb.de/Help)
  - and much more coming soon ...
     
-### output objects
+### models (output objects)
  - [x] **social**
  - [x] **video**
  - [x] **image**
