@@ -9,8 +9,8 @@ apiNG is an AngularJS directive for getting some data from REST API's and displa
 ## how does it work?
 
 apiNG works as plugin platform.
- - **`plugin`**: receive some data (from REST API's) and converted this to any `model` and send the result to **apiNG**
- - **`design`**: receive the result from **apiNG** and display the `model's` data
+ - **`plugins`**: receives some data (from REST API's) and converted this to any `model` and send the result to **apiNG**
+ - **`designs`**: receives the result from **apiNG** and display the `model's` data
 
 everybody can create `plugins`, `models` and `designs`
 
