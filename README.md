@@ -12,7 +12,7 @@ apiNG works as plugin platform.
  - **`plugin`**: receive some data (from REST API's) and converted this to any `model` and send the result to **apiNG**
  - **`design`**: receive the result from **apiNG** and display the `model's` data
 
-everybody can create plugins, models and themes
+everybody can create plugins, models and designs (themes)
 
 ## current status
 
