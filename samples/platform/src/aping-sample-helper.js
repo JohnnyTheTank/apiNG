@@ -44,26 +44,26 @@ jjtApingSample.service('apingSampleHelper', ['apingModels', 'apingTimeHelper', '
     };
 
     this.getSocialItemByJsonData = function (_item) {
-        var socialModel = apingModels.getNew("social", "sample");
+        var socialObject = apingModels.getNew("social", "sample");
 
         //fill _item in socialObject
 
-        return socialModel;
+        return socialObject;
     };
 
     this.getVideoItemByJsonData = function (_item) {
-        var videoModel = apingModels.getNew("video", "sample");
+        var videoObject = apingModels.getNew("video", "sample");
 
         //fill _item in videoObject
 
-        return videoModel;
+        return videoObject;
     };
 
     this.getImageItemByJsonData = function (_item) {
-        var imageModel = apingModels.getNew("video", "sample");
+        var imageObject = apingModels.getNew("video", "sample");
 
         //fill _item in imageObject
 
-        return imageModel;
+        return imageObject;
     };
 }]);
