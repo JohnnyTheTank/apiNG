@@ -1,10 +1,10 @@
 "use strict";
-apingApp.service('apingOutputObjects', [function () {
+apingApp.service('apingModels', [function () {
     this.getNew = function(_type, _platform) {
-        var outputObject = {};
+        var model = {};
         switch(_type) {
             case "social":
-                outputObject = {
+                model = {
                     platform : _platform, //NAME of platform ( "youtube" / "facebook", "instagram" , ...)
                     blog_name : false, //NAME of blog (channel / youtube uploader / facebook page, instagram account, ..)
                     blog_id : false, //ID of channel / page / account, ...
@@ -26,7 +26,7 @@ apingApp.service('apingOutputObjects', [function () {
                 break;
 
             case "video":
-                outputObject = {
+                model = {
                     platform : _platform, //NAME of platform ( "youtube" / "facebook", "instagram" , ...)
                     blog_name : false, //NAME of blog (channel / youtube uploader / facebook page, instagram account, ..)
                     blog_id : false, //ID of channel / page / account, ...
@@ -48,7 +48,7 @@ apingApp.service('apingOutputObjects', [function () {
                 break;
 
             case "image":
-                outputObject = {
+                model = {
                     platform : _platform, //NAME of platform ( "youtube" / "facebook", "instagram" , ...)
                     blog_name : false, //NAME of blog (channel / youtube uploader / facebook page, instagram account, ..)
                     blog_id : false, //ID of channel / page / account, ...
@@ -71,6 +71,6 @@ apingApp.service('apingOutputObjects', [function () {
             default:
                 break;
         }
-        return outputObject;
+        return model;
     }
 }]);

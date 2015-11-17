@@ -11,7 +11,6 @@ apingApp.service('apingInputObjects', ['apingDefaultSettings', function (apingDe
                 inputObject = $.extend(true, {
                     type: apingDefaultSettings.type,
                     items: apingDefaultSettings.items,
-                    //maxItems: apingDefaultSettings.maxItems,
                 }, _params);
                 break;
 

@@ -28,7 +28,7 @@ apiNG is under development and not ready for public usage
  - maybe: OpenLigaDB (http://www.openligadb.de/Help)
  - and much more coming soon ...
     
-### models (output objects)
+### models
  - [x] **social**
  - [x] **video**
  - [x] **image**

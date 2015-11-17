@@ -6,7 +6,7 @@
  @licence MIT
  */
 
-jjtApingSample.service('apingSampleHelper', ['apingOutputObjects', 'apingTimeHelper', 'apingUtilityHelper', function (apingOutputObjects, apingTimeHelper, apingUtilityHelper) {
+jjtApingSample.service('apingSampleHelper', ['apingModels', 'apingTimeHelper', 'apingUtilityHelper', function (apingModels, apingTimeHelper, apingUtilityHelper) {
     this.getObjectByJsonData = function (_data, _type) {
         var requestResults = [];
         if (_data) {
@@ -44,26 +44,26 @@ jjtApingSample.service('apingSampleHelper', ['apingOutputObjects', 'apingTimeHel
     };
 
     this.getSocialItemByJsonData = function (_item) {
-        var socialObject = apingOutputObjects.getNew("social", "sample");
+        var socialModel = apingModels.getNew("social", "sample");
 
         //fill _item in socialObject
 
-        return socialObject;
+        return socialModel;
     };
 
     this.getVideoItemByJsonData = function (_item) {
-        var videoObject = apingOutputObjects.getNew("video", "sample");
+        var videoModel = apingModels.getNew("video", "sample");
 
         //fill _item in videoObject
 
-        return videoObject;
+        return videoModel;
     };
 
     this.getImageItemByJsonData = function (_item) {
-        var imageObject = apingOutputObjects.getNew("video", "sample");
+        var imageModel = apingModels.getNew("video", "sample");
 
         //fill _item in imageObject
 
-        return imageObject;
+        return imageModel;
     };
 }]);

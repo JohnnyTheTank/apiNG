@@ -9,7 +9,7 @@ module.exports = function(grunt) {
                         'src/aping-directive.js',
                         'src/aping-helpers.js',
                         'src/aping-inputObjects.js',
-                        'src/aping-outputObjects.js'
+                        'src/aping-models.js'
                     ]
                 }
             },
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
                     'src/aping-directive.js',
                     'src/aping-helpers.js',
                     'src/aping-inputObjects.js',
-                    'src/aping-outputObjects.js'
+                    'src/aping-models.js'
                 ],
                 tasks: ['uglify'],
                 options: {
