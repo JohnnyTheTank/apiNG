@@ -10,9 +10,9 @@ apiNG is under development and not ready for public usage
 
 ### sources (platforms)
  - [x] **Youtube** ([apiNG-plugin-youtube](https://github.com/JohnnyTheTank/apiNG-plugin-youtube))
-    - output objects: `social`, `video`
+    - mappings for `social`, `video`
  - [x] **Instagram** ([apiNG-plugin-instagram](https://github.com/JohnnyTheTank/apiNG-plugin-instagram))
-    - output objects: `social`, `video`, `image`
+    - mappings for `social`, `video`, `image`
  - [ ] Twitter
  - [ ] Facebook
  - [ ] Google+
