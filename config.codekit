@@ -57,6 +57,27 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
 		},
+	"\/README.md": {
+		"criticStyle": 0,
+		"enableFootnotes": 1,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
+		"fileType": 4096,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/README.md",
+		"maskEmailAddresses": 1,
+		"outputAbbreviatedPath": "\/README.html",
+		"outputFormat": 0,
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
+		},
 	"\/samples\/platform\/bower.json": {
 		"fileType": 524288,
 		"ignore": 1,
@@ -145,12 +166,12 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
-	"\/src\/aping-outputObjects.js": {
+	"\/src\/aping-models.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/src\/aping-outputObjects.js",
-		"outputAbbreviatedPath": "\/src\/aping-outputObjects.min.js",
+		"inputAbbreviatedPath": "\/src\/aping-models.js",
+		"outputAbbreviatedPath": "\/src\/aping-models.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
