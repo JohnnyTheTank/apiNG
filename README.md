@@ -18,11 +18,11 @@ everybody can create `plugins`, `models` and `designs`
 
 ### plugins (sources/platforms)
  - [x] **Youtube** ([apiNG-plugin-youtube](https://github.com/JohnnyTheTank/apiNG-plugin-youtube))
-    - convert result to this models: `social`, `video`
+    - converts results to this models: `social`, `video`
  - [x] **Instagram** ([apiNG-plugin-instagram](https://github.com/JohnnyTheTank/apiNG-plugin-instagram))
-    - convert result to this models: `social`, `video`, `image`
+    - converts results to this models: `social`, `video`, `image`
  - [x] **Facebook** ([apiNG-plugin-facebook](https://github.com/JohnnyTheTank/apiNG-plugin-facebook))
-    - convert result to this models: `social`, `video`, `image`, `event`
+    - converts results to this models: `social`, `video`, `image`, `event`
  - [ ] Twitter
  - [ ] Google+
  - [ ] Flickr
