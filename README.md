@@ -21,8 +21,9 @@ everybody can create `plugins`, `models` and `designs`
     - convert result to this models: `social`, `video`
  - [x] **Instagram** ([apiNG-plugin-instagram](https://github.com/JohnnyTheTank/apiNG-plugin-instagram))
     - convert result to this models: `social`, `video`, `image`
+ - [x] **Facebook** ([apiNG-plugin-facebook](https://github.com/JohnnyTheTank/apiNG-plugin-facebook))
+    - convert result to this models: `social`, `video`, `image`, `event`
  - [ ] Twitter
- - [ ] Facebook
  - [ ] Google+
  - [ ] Flickr
  - [ ] Vimeo
@@ -40,8 +41,8 @@ everybody can create `plugins`, `models` and `designs`
  - [x] **social**
  - [x] **video**
  - [x] **image**
+ - [x] **event**
  - [ ] post
- - [ ] event
  - [ ] news
  - [ ] product
  - [ ] activity
