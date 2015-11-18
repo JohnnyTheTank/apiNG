@@ -16,7 +16,6 @@ apingApp.service('apingModels', [function () {
                     text : false,
                     caption : false,
                     img_url : false,
-                    img_isSmall : false, //TRUE if image is small (like facebook 150px)
                     source : false, //
                     likes: false,
                     shares: false,
@@ -37,7 +36,6 @@ apingApp.service('apingModels', [function () {
                     text : false,
                     caption : false,
                     img_url : false,
-                    img_isSmall : false, //TRUE if image is small (like facebook 150px)
                     source : false, //
                     markup: false,
                     likes: false,
@@ -59,7 +57,6 @@ apingApp.service('apingModels', [function () {
                     text : false,
                     caption : false,
                     img_url : false,
-                    img_isSmall : false, //TRUE if image is small (like facebook 150px)
                     source : false, //
                     likes: false,
                     shares: false,
