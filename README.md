@@ -59,3 +59,7 @@ everybody can create `plugins`, `models` and `designs`
 create your own `plugin` or `design` from this samples:
 - [apiNG-plugin-sample](https://github.com/JohnnyTheTank/apiNG-plugin-sample)
 - [apiNG-design-sample](https://github.com/JohnnyTheTank/apiNG-design-sample)
+
+# Contributors
+- Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
+    - core system
