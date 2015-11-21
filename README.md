@@ -1,6 +1,4 @@
-# note
-
-apiNG is under development and not ready for public usage
+note: apiNG is under development and not ready for public usage
 
 # apiNG
 
