@@ -5,6 +5,8 @@ apingApp.config(['$provide', function ($provide) {
         youtube : "<YOUR_YOUTUBE_API_KEY>",
         instagram: "<YOUR_INSTAGRAM_API_KEY>",
         instagramClientId: "<YOUR_INSTAGRAM_CLIENT_ID>",
+        facebook: "<YOUR_FACEBOOK_TOKEN>",
+        twitter: "<YOUR_TWITTER_BEARER_TOKEN>",
     });
 
     $provide.constant("apingDefaultSettings", {
