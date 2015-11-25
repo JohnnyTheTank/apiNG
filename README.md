@@ -4,6 +4,9 @@ note: apiNG is under development and not ready for public usage
 
 apiNG is an AngularJS directive for receiving and displaying data from different REST API's'.
 
+# demo
+[very simple demo](http://johnnythetank.github.io/apiNG/#demo)
+
 ## how does it work?
 
 apiNG works as plugin platform.
