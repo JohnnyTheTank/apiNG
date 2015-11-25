@@ -1,0 +1,40 @@
+{
+  "name": "apiNG-plugin-facebook",
+  "homepage": "https://github.com/JohnnyTheTank/apiNG-plugin-facebook",
+  "authors": [
+    "Jonathan Hornung <jonathan.hornung@gmail.com>"
+  ],
+  "version": "0.1.2",
+  "description": "facebook plugin for apiNG",
+  "main": "dist/angular-plugin-facebook.min.js",
+  "moduleType": [],
+  "keywords": [
+    "aping",
+    "facebook",
+    "angularjs",
+    "rest",
+    "api",
+    "json"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "apiNG": "*",
+    "angular-facebook-api-factory": "*"
+  },
+  "_release": "0.1.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.1.2",
+    "commit": "ea59679861856d0787ae41647aedff7a5dd94c8b"
+  },
+  "_source": "git://github.com/JohnnyTheTank/apiNG-plugin-facebook.git",
+  "_target": "*",
+  "_originalSource": "apiNG-plugin-facebook"
+}

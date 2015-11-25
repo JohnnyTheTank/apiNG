@@ -1,0 +1,40 @@
+{
+  "name": "apiNG-plugin-youtube",
+  "homepage": "https://github.com/JohnnyTheTank/apiNG-plugin-youtube",
+  "authors": [
+    "Jonathan Hornung <jonathan.hornung@gmail.com>"
+  ],
+  "version": "0.4.4",
+  "description": "youtube plugin for apiNG",
+  "main": "dist/angular-plugin-youtube.min.js",
+  "moduleType": [],
+  "keywords": [
+    "aping",
+    "youtube",
+    "angularjs",
+    "rest",
+    "api",
+    "json"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "*",
+    "angular-youtube-api-factory": "*"
+  },
+  "_release": "0.4.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.4.4",
+    "commit": "31eb6cf641efb377f77744432dd1f79225c47ad2"
+  },
+  "_source": "git://github.com/JohnnyTheTank/apiNG-plugin-youtube.git",
+  "_target": "*",
+  "_originalSource": "apiNG-plugin-youtube"
+}

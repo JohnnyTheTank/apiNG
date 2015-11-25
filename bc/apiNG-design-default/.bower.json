@@ -1,0 +1,51 @@
+{
+  "name": "apiNG-design-default",
+  "homepage": "https://github.com/JohnnyTheTank/apiNG-design-default",
+  "authors": [
+    "Jonathan Hornung <jonathan.hornung@gmail.com>"
+  ],
+  "version": "0.2.3",
+  "description": "design for apiNG (default)",
+  "main": "dist/aping-design-default.min.js",
+  "moduleType": [],
+  "keywords": [
+    "aping",
+    "angularjs",
+    "rest",
+    "api",
+    "json"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "*",
+    "apiNG": "*",
+    "apiNG-plugin-youtube": "*",
+    "apiNG-plugin-instagram": "*",
+    "apiNG-plugin-facebook": "*",
+    "apiNG-plugin-codebird": "*",
+    "bootstrap": "~4",
+    "angular-linkify": "~1.2.0",
+    "angular-moment": "~0.10.3",
+    "moment": "~2.10.6",
+    "angular-masonry": "~0.13.0"
+  },
+  "resolutions": {
+    "angular": "~1.4.7"
+  },
+  "_release": "0.2.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.2.3",
+    "commit": "898d064f040ca401008c94ad6c34cba0727093f6"
+  },
+  "_source": "git://github.com/JohnnyTheTank/apiNG-design-default.git",
+  "_target": "*",
+  "_originalSource": "apiNG-design-default"
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Codebird Demo</title>
+
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <!--
+    <script src="../bower_components/apiNG/dist/aping.min.js"></script>
+    -->
+    <script src="../bower_components/apiNG/src/aping-directive.js"></script>
+    <script src="../bower_components/apiNG/src/aping-helpers.js"></script>
+    <script src="../bower_components/apiNG/src/aping-inputObjects.js"></script>
+    <script src="../bower_components/apiNG/src/aping-models.js"></script>
+    <script src="aping-config.js"></script>
+    <script src="app.js"></script>
+    <script src="../bower_components/codebird-js/codebird.js"></script>
+    <script src="../src/aping-codebird-directive.js"></script>
+    <script src="../src/aping-codebird-helper.js"></script>
+</head>
+<body ng-app="app">
+    <aping type="social" aping-codebird="[{'user':'ARD_Presse', 'result_type':'recent'}]"></aping>
+</body>
+</html>

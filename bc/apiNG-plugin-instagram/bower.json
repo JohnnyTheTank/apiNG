@@ -1,0 +1,31 @@
+{
+  "name": "apiNG-plugin-instagram",
+  "homepage": "https://github.com/JohnnyTheTank/apiNG-plugin-instagram",
+  "authors": [
+    "Jonathan Hornung <jonathan.hornung@gmail.com>"
+  ],
+  "version": "0.2.6",
+  "description": "instagram plugin for apiNG",
+  "main": "dist/angular-instagram-directive.min.js",
+  "moduleType": [],
+  "keywords": [
+    "aping",
+    "instagram",
+    "angularjs",
+    "rest",
+    "api",
+    "json"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-instagram-api-factory": "*",
+    "apiNG": "*"
+  }
+}

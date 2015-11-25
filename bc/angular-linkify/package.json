@@ -1,0 +1,33 @@
+{
+  "name": "angular-linkify",
+  "version": "1.2.0",
+  "description": "Angular filter to linkify urls, \"@\" usernames, and hashtags.",
+  "main": "angular-linkify.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scottcorgan/angular-linkify.git"
+  },
+  "keywords": [
+    "angularjs",
+    "angular",
+    "filter",
+    "linkify",
+    "twitter"
+  ],
+  "author": "Scott Corgan",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/scottcorgan/angular-linkify/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-uglify": "~0.2.2"
+  }
+}

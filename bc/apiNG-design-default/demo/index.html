@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>apiNG Default Design Demo</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../dist/aping-design-default.min.css">
+
+    <link href='//fonts.googleapis.com/css?family=Economica' rel='stylesheet' type='text/css'>
+
+    <!-- JS -->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/jquery-bridget/jquery.bridget.js"></script>
+    <script src="../bower_components/get-style-property/get-style-property.js"></script>
+    <script src="../bower_components/get-size/get-size.js"></script>
+    <script src="../bower_components/eventEmitter/EventEmitter.js"></script>
+    <script src="../bower_components/eventie/eventie.js"></script>
+    <script src="../bower_components/doc-ready/doc-ready.js"></script>
+    <script src="../bower_components/matches-selector/matches-selector.js"></script>
+    <script src="../bower_components/fizzy-ui-utils/utils.js"></script>
+    <script src="../bower_components/outlayer/item.js"></script>
+    <script src="../bower_components/outlayer/outlayer.js"></script>
+    <script src="../bower_components/masonry/masonry.js"></script>
+    <script src="../bower_components/imagesloaded/imagesloaded.js"></script>
+    <script src="../bower_components/angular-masonry/angular-masonry.js"></script>
+    <script src="../bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+
+    <script src="../bower_components/apiNG/dist/aping.min.js"></script>
+
+    <script src="../bower_components/apiNG-plugin-youtube/dist/aping-plugin-youtube.min.js"></script>
+    <script src="../bower_components/apiNG-plugin-instagram/dist/aping-plugin-instagram.min.js"></script>
+    <script src="../bower_components/apiNG-plugin-facebook/dist/aping-plugin-facebook.min.js"></script>
+    <script src="../bower_components/apiNG-plugin-codebird/dist/aping-plugin-codebird.min.js"></script>
+
+    <script src="../bower_components/angular-linkify/angular-linkify.min.js"></script>
+    <script src="../bower_components/moment/moment.js"></script>
+    <script src="../bower_components/angular-moment/angular-moment.min.js"></script>
+    <script src="../bower_components/moment/locale/de.js"></script>
+
+    <script src="../src/aping-design-default.js"></script>
+
+    <script src="js/aping-config.js"></script>
+    <script src="js/app.js"></script>
+
+</head>
+<body ng-app="app">
+    <div class="container">
+        <br>
+
+        <aping
+                type="social"
+                aping-youtube="[{'search':'sunset'}]"
+                aping-instagram="[{'tag':'cakephp'}]"
+                aping-facebook="[{'page':'namikamusik'}]"
+                aping-codebird="[{'search':'ocean', 'result_type':'popular'}]">
+        </aping>
+    </div>
+
+</body>
+</html>
