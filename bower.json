@@ -1,0 +1,22 @@
+{
+  "name": "apiNG-gh-pages",
+  "homepage": "https://github.com/JohnnyTheTank/apiNG",
+  "authors": [
+    "Jonathan Hornung <jonathan.hornung@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "apiNG-design-default": "*"
+  }
+}
