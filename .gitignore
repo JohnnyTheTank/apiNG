@@ -2,3 +2,4 @@
 /.codekit-cache
 .sass-cache
 /node_modules
+/bower_components

@@ -2,7 +2,7 @@
     <div masonry class="row" preserve-order ng-controller="apingDefaultDesignController">
         <div class="masonry-brick col-lg-4 col-sm-6" ng-repeat="feed in workingCopy | orderBy: 'timestamp': true" ng-cloak>
             <div class="box">
-                <div class="box-header">
+                <div class="box-header" ng-if="feed.img_url">
                     <a ng-href="{{::feed.post_url}}" target="_blank" class="aping-picture-link"><img
                             ng-src="{{::feed.img_url}}" class="main-image img-responsive" alt=""></a>
                 </div>
