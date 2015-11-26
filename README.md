@@ -25,7 +25,7 @@ everybody can create `plugins`, `models` and `designs`
  - [x] **Facebook** ([apiNG-plugin-facebook](https://github.com/JohnnyTheTank/apiNG-plugin-facebook))
     - converts results to this models: `social`, `video`, `image`, `event`
  - [x] **Twitter** ([apiNG-plugin-codebird](https://github.com/JohnnyTheTank/apiNG-plugin-codebird))
-    - converts results to this models: `social`
+    - converts results to this models: `social`, `image`
  - [ ] Google+
  - [ ] Flickr
  - [ ] Vimeo
