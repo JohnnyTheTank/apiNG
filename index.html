@@ -47,7 +47,7 @@
     <script src="bc/angular-moment/angular-moment.min.js"></script>
     <script src="bc/moment/locale/de.js"></script>
 
-    <script src="bc/apiNG-design-default/src/aping-design-default.js"></script>
+    <script src="bc/apiNG-design-default/dist/aping-design-default.min.js"></script>
 
     <script src="bc/apiNG-design-default/demo/js/aping-config.js"></script>
     <script src="bc/apiNG-design-default/demo/js/app.js"></script>
@@ -81,20 +81,22 @@
     <h3>HTML</h3>
     <pre>
 &lt;aping
+        template-url="aping_design_default.html"
         type="social"
         items="6"
         aping-youtube="[{'search':'filtr'}, {'channelId':'UCk9uI40bPBRkC7lo6y8wQ7Q'}]"
-        aping-instagram="[{'tag':'heimspiel'}]"
+        aping-instagram="[{'tag':'greenmile'}]"
         aping-facebook="[{'page':'namikamusik'}]"
         aping-codebird="[{'search':'angular', 'result_type':'popular'}]">
 &lt;/aping></pre>
 
     <h3>Result</h3>
-    <aping  template-url="bc/apiNG-design-default/src/aping_design_default.html"
+    <aping
+            template-url="bc/apiNG-design-default/dist/aping_design_default.html"
             type="social"
             items="6"
             aping-youtube="[{'search':'filtr'}, {'channelId':'UCk9uI40bPBRkC7lo6y8wQ7Q'}]"
-            aping-instagram="[{'tag':'heimspiel'}]"
+            aping-instagram="[{'tag':'greenmile'}]"
             aping-facebook="[{'page':'namikamusik'}]"
             aping-codebird="[{'search':'angular', 'result_type':'popular'}]">
     </aping>

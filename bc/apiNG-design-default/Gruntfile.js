@@ -32,6 +32,12 @@ module.exports = function(grunt) {
                 }
             }
         },
+        copy: {
+            default_template: {
+                src: 'src/aping_design_default.html',
+                dest: 'dist/aping_design_default.html',
+            },
+        },
         watch: {
             minifiyJs: {
                 files: [
@@ -50,6 +56,15 @@ module.exports = function(grunt) {
                 options: {
                     spawn: true,
                 },
+            },
+            copy_default_template: {
+                files: [
+                    'src/*.html'
+                ],
+                tasks: ['copy'],
+                options: {
+                    spawn: true,
+                },
             }
         },
     });
@@ -57,6 +72,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
     grunt.registerTask('default', ['watch']);
 
