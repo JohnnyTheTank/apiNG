@@ -1,10 +1,11 @@
-# note
-
-apiNG is under development and not ready for public usage
+note: apiNG is under development and not ready for public usage
 
 # apiNG
 
 apiNG is an AngularJS directive for receiving and displaying data from different REST API's'.
+
+# demo
+[very simple demo](http://johnnythetank.github.io/apiNG/#demo)
 
 ## how does it work?
 
@@ -18,11 +19,13 @@ everybody can create `plugins`, `models` and `designs`
 
 ### plugins (sources/platforms)
  - [x] **Youtube** ([apiNG-plugin-youtube](https://github.com/JohnnyTheTank/apiNG-plugin-youtube))
-    - convert result to this models: `social`, `video`
+    - converts results to this models: `social`, `video`
  - [x] **Instagram** ([apiNG-plugin-instagram](https://github.com/JohnnyTheTank/apiNG-plugin-instagram))
-    - convert result to this models: `social`, `video`, `image`
- - [ ] Twitter
- - [ ] Facebook
+    - converts results to this models: `social`, `video`, `image`
+ - [x] **Facebook** ([apiNG-plugin-facebook](https://github.com/JohnnyTheTank/apiNG-plugin-facebook))
+    - converts results to this models: `social`, `video`, `image`, `event`
+ - [x] **Twitter** ([apiNG-plugin-codebird](https://github.com/JohnnyTheTank/apiNG-plugin-codebird))
+    - converts results to this models: `social`, `image`
  - [ ] Google+
  - [ ] Flickr
  - [ ] Vimeo
@@ -40,8 +43,8 @@ everybody can create `plugins`, `models` and `designs`
  - [x] **social**
  - [x] **video**
  - [x] **image**
+ - [x] **event**
  - [ ] post
- - [ ] event
  - [ ] news
  - [ ] product
  - [ ] activity
@@ -53,3 +56,12 @@ everybody can create `plugins`, `models` and `designs`
  - [x] **[default](https://github.com/JohnnyTheTank/apiNG-design-default)**
  - [x] **[deadwood](https://github.com/JohnnyTheTank/apiNG-design-deadwood)** (youtube video design)
  - much more coming ...
+ 
+## samples
+create your own `plugin` or `design` from this samples:
+- [apiNG-plugin-sample](https://github.com/JohnnyTheTank/apiNG-plugin-sample)
+- [apiNG-design-sample](https://github.com/JohnnyTheTank/apiNG-design-sample)
+
+# Contributors
+- Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
+    - core system
