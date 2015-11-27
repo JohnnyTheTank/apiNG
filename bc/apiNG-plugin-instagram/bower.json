@@ -4,7 +4,7 @@
   "authors": [
     "Jonathan Hornung <jonathan.hornung@gmail.com>"
   ],
-  "version": "0.2.6",
+  "version": "0.2.8",
   "description": "instagram plugin for apiNG",
   "main": "dist/angular-instagram-directive.min.js",
   "moduleType": [],

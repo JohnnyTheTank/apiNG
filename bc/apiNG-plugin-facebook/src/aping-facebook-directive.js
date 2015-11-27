@@ -18,7 +18,7 @@ var jjtApingFacebook = angular.module("jtt_aping_facebook", ['jtt_facebook'])
 
                 var appSettings = apingController.getAppSettings();
 
-                var requests = apingUtilityHelper.parseJsonFromAttributes(attrs.apingFacebook, apingFacebookHelper.getThisPlattformString());
+                var requests = apingUtilityHelper.parseJsonFromAttributes(attrs.apingFacebook, apingFacebookHelper.getThisPlattformString(), appSettings);
 
                 requests.forEach(function (request) {
 

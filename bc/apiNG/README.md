@@ -4,6 +4,9 @@ note: apiNG is under development and not ready for public usage
 
 apiNG is an AngularJS directive for receiving and displaying data from different REST API's'.
 
+# demo
+[very simple demo](http://johnnythetank.github.io/apiNG/#demo)
+
 ## how does it work?
 
 apiNG works as plugin platform.
@@ -22,7 +25,7 @@ everybody can create `plugins`, `models` and `designs`
  - [x] **Facebook** ([apiNG-plugin-facebook](https://github.com/JohnnyTheTank/apiNG-plugin-facebook))
     - converts results to this models: `social`, `video`, `image`, `event`
  - [x] **Twitter** ([apiNG-plugin-codebird](https://github.com/JohnnyTheTank/apiNG-plugin-codebird))
-    - converts results to this models: `social`
+    - converts results to this models: `social`, `image`
  - [ ] Google+
  - [ ] Flickr
  - [ ] Vimeo

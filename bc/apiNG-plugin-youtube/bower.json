@@ -4,7 +4,7 @@
   "authors": [
     "Jonathan Hornung <jonathan.hornung@gmail.com>"
   ],
-  "version": "0.4.4",
+  "version": "0.4.5",
   "description": "youtube plugin for apiNG",
   "main": "dist/angular-plugin-youtube.min.js",
   "moduleType": [],

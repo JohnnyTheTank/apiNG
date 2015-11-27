@@ -7,6 +7,14 @@
  */
 
 jjtApingInstagram.service('apingInstagramHelper', ['apingModels', 'apingTimeHelper', 'apingUtilityHelper', function (apingModels, apingTimeHelper, apingUtilityHelper) {
+    this.getThisPlattformString = function () {
+        return "instagram";
+    };
+
+    this.getThisPlattformLink = function () {
+        return "https://instagram.com/";
+    };
+
     this.getObjectByJsonData = function (_data, _type) {
         var requestResults = [];
         if (_data) {
@@ -43,12 +51,12 @@ jjtApingInstagram.service('apingInstagramHelper', ['apingModels', 'apingTimeHelp
     };
 
     this.getSocialItemByJsonData = function (_item) {
-        var socialObject = apingModels.getNew("social", "instagram");
+        var socialObject = apingModels.getNew("social", this.getThisPlattformString());
 
         $.extend(true, socialObject, {
             blog_name: _item.user.full_name || "@" + _item.user.username,
             blog_id: "@" + _item.user.username,
-            blog_link: "https://instagram.com/" + _item.user.username,
+            blog_link: this.getThisPlattformLink() + _item.user.username,
             intern_type: _item.type,
             timestamp: parseInt(_item.created_time) * 1000,
             post_url: _item.link,
@@ -87,12 +95,12 @@ jjtApingInstagram.service('apingInstagramHelper', ['apingModels', 'apingTimeHelp
             return false;
         }
 
-        var videoObject = apingModels.getNew("video", "instagram");
+        var videoObject = apingModels.getNew("video", this.getThisPlattformString());
 
         $.extend(true, videoObject, {
             blog_name: _item.user.full_name || "@" + _item.user.username,
             blog_id: "@" + _item.user.username,
-            blog_link: "https://instagram.com/" + _item.user.username,
+            blog_link: this.getThisPlattformLink() + _item.user.username,
             intern_type: _item.type,
             timestamp: parseInt(_item.created_time) * 1000,
             post_url: _item.link,
@@ -118,11 +126,11 @@ jjtApingInstagram.service('apingInstagramHelper', ['apingModels', 'apingTimeHelp
             return false;
         }
 
-        var imageObject = apingModels.getNew("image", "instagram");
+        var imageObject = apingModels.getNew("image", this.getThisPlattformString());
         $.extend(true, imageObject, {
             blog_name: _item.user.full_name || "@" + _item.user.username,
             blog_id: "@" + _item.user.username,
-            blog_link: "https://instagram.com/" + _item.user.username,
+            blog_link: this.getThisPlattformLink() + _item.user.username,
             intern_type: _item.type,
             timestamp: parseInt(_item.created_time) * 1000,
             post_url: _item.link,

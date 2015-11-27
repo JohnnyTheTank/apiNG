@@ -49,11 +49,17 @@ jjtApingCodebird.service('apingCodebirdHelper', ['apingModels', 'apingTimeHelper
             if (_data.statuses) {
 
                 angular.forEach(_data.statuses, function (value, key) {
-                    requestResults.push(_this.getItemByJsonData(value, _type));
+                    var tempResult = _this.getItemByJsonData(value, _type);
+                    if(tempResult) {
+                        requestResults.push(tempResult);
+                    }
                 });
             } else if (_data.length > 0) {
                 angular.forEach(_data, function (value, key) {
-                    requestResults.push(_this.getItemByJsonData(value, _type));
+                    var tempResult = _this.getItemByJsonData(value, _type);
+                    if(tempResult) {
+                        requestResults.push(tempResult);
+                    }
                 });
             }
 
@@ -68,6 +74,10 @@ jjtApingCodebird.service('apingCodebirdHelper', ['apingModels', 'apingTimeHelper
             switch (_type) {
                 case "social":
                     returnObject = this.getSocialItemByJsonData(_item);
+                    break;
+
+                case "image":
+                    returnObject = this.getImageItemByJsonData(_item);
                     break;
             }
         }
@@ -106,5 +116,35 @@ jjtApingCodebird.service('apingCodebirdHelper', ['apingModels', 'apingTimeHelper
 
         return socialObject;
     };
+
+    this.getImageItemByJsonData = function (_item) {
+        var imageObject = apingModels.getNew("image", this.getThisPlattformString());
+
+        $.extend(true, imageObject, {
+            blog_name: _item.user.screen_name,
+            blog_id: _item.user.id_str,
+            blog_link: this.getThisPlattformLink() + _item.user.screen_name + "/",
+            intern_id: _item.id_str,
+            timestamp: new Date(Date.parse(_item.created_at.replace(/( \+)/, ' UTC$1'))).getTime(),
+            text: _item.text,
+            shares: _item.retweet_count,
+            likes: _item.favorite_count,
+        });
+
+        if(_item.entities && _item.entities.media && _item.entities.media.length>0) {
+            imageObject.source = _item.entities.media;
+            imageObject.img_url = this.getImageUrlFromMediaObject(_item.entities.media[0]);
+        }
+
+        if(!imageObject.img_url) {
+            return false;
+        }
+
+        imageObject.post_url = imageObject.blog_link+"status/"+imageObject.intern_id;
+
+        return imageObject;
+    }
+
+
 
 }]);

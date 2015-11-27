@@ -4,7 +4,7 @@
   "authors": [
     "Jonathan Hornung <jonathan.hornung@gmail.com>"
   ],
-  "version": "0.4.4",
+  "version": "0.4.5",
   "description": "youtube plugin for apiNG",
   "main": "dist/angular-plugin-youtube.min.js",
   "moduleType": [],
@@ -28,11 +28,11 @@
     "angular": "*",
     "angular-youtube-api-factory": "*"
   },
-  "_release": "0.4.4",
+  "_release": "0.4.5",
   "_resolution": {
     "type": "version",
-    "tag": "v0.4.4",
-    "commit": "31eb6cf641efb377f77744432dd1f79225c47ad2"
+    "tag": "v0.4.5",
+    "commit": "d464d1574e1edba483e74a7b6ea2119ee2672854"
   },
   "_source": "git://github.com/JohnnyTheTank/apiNG-plugin-youtube.git",
   "_target": "*",

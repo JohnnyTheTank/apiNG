@@ -4,7 +4,7 @@
   "authors": [
     "Jonathan Hornung <jonathan.hornung@gmail.com>"
   ],
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "twitter plugin for apiNG",
   "main": "dist/apiNG-plugin-codebird.min.js",
   "moduleType": [],
@@ -29,11 +29,11 @@
     "apiNG": "*",
     "codebird-js": "*"
   },
-  "_release": "0.1.0",
+  "_release": "0.1.2",
   "_resolution": {
     "type": "version",
-    "tag": "v0.1.0",
-    "commit": "34128ac118bc2ef7003e9dc0ad3f5a7eebc307db"
+    "tag": "v0.1.2",
+    "commit": "2f8a2912bf15e78c584e8bf4b72587e8384c3b10"
   },
   "_source": "git://github.com/JohnnyTheTank/apiNG-plugin-codebird.git",
   "_target": "*",

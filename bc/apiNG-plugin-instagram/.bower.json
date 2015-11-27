@@ -4,7 +4,7 @@
   "authors": [
     "Jonathan Hornung <jonathan.hornung@gmail.com>"
   ],
-  "version": "0.2.6",
+  "version": "0.2.8",
   "description": "instagram plugin for apiNG",
   "main": "dist/angular-instagram-directive.min.js",
   "moduleType": [],
@@ -28,11 +28,11 @@
     "angular-instagram-api-factory": "*",
     "apiNG": "*"
   },
-  "_release": "0.2.6",
+  "_release": "0.2.8",
   "_resolution": {
     "type": "version",
-    "tag": "v0.2.6",
-    "commit": "592648ff70746ec3db5b4ba34c9e254be1a30062"
+    "tag": "v0.2.8",
+    "commit": "2651f57e5d2e82888f24716406c4c57377d17bbe"
   },
   "_source": "git://github.com/JohnnyTheTank/apiNG-plugin-instagram.git",
   "_target": "*",

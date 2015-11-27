@@ -14,11 +14,9 @@ var jjtApingYoutube = angular.module("jtt_aping_youtube", ['jtt_youtube'])
             replace: 'false',
             link: function (scope, element, attrs, apingController) {
 
-                var platform = "youtube";
-
                 var appSettings = apingController.getAppSettings();
 
-                var requests = apingUtilityHelper.parseJsonFromAttributes(attrs.apingYoutube, platform);
+                var requests = apingUtilityHelper.parseJsonFromAttributes(attrs.apingYoutube, apingYoutubeHelper.getThisPlattformString(), appSettings);
 
                 requests.forEach(function (request) {
 

@@ -14,11 +14,9 @@ var jjtApingInstagram = angular.module("jtt_aping_instagram", ['jtt_instagram'])
             replace: 'false',
             link: function (scope, element, attrs, apingController) {
 
-                var platform = "instagram";
-
                 var appSettings = apingController.getAppSettings();
 
-                var requests = apingUtilityHelper.parseJsonFromAttributes(attrs.apingInstagram, platform);
+                var requests = apingUtilityHelper.parseJsonFromAttributes(attrs.apingInstagram, apingInstagramHelper.getThisPlattformString(), appSettings);
 
                 requests.forEach(function (request) {
 
