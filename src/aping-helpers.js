@@ -49,7 +49,8 @@ apingApp.service('apingTimeHelper', function () {
         };
     })
     .service('apingUtilityHelper', ['apingInputObjects', function (apingInputObjects) {
-        this.parseJsonFromAttributes = function (_string, _platform) {
+        this.parseJsonFromAttributes = function (_string, _platform, _appSettings) {
+
             if (!(typeof _string === "string" && _string)) {
                 return [];
             }
@@ -61,12 +62,15 @@ apingApp.service('apingTimeHelper', function () {
             angular.forEach(tempArray, function (value, key) {
 
                 value.platform = _platform;
+                if(typeof value.items == "undefined" && _appSettings && typeof _appSettings.items != "undefined") {
+                    value.items = _appSettings.items;
+                }
+
 
                 var request = apingInputObjects.getNew("request", value);
                 requests.push(request);
 
             });
-
 
             return requests;
         };
