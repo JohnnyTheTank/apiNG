@@ -20,14 +20,16 @@
 
                         <div class="box-footer text-muted">
                             <div class="pull-left text-left">
-                                <div ng-if="feed.blog_name">von <a href="{{::feed.blog_link}}" target="_blank">{{::feed.blog_name}}</a>
+                                <div ng-if="feed.blog_name">
+                                    von <a href="{{::feed.blog_link}}" target="_blank">{{::feed.blog_name}}</a>
                                 </div>
                                 <div am-time-ago="{{::feed.timestamp}}"></div>
                             </div>
                             <div class="pull-right platform-box">
-                                <a ng-href="{{::feed.post_url}}" target="_blank" class="platform-link"><img
-                                        ng-src="{{getPlatformIcon(feed.platform)}}" alt="{{feed.platform}}"
-                                        title="{{feed.platform}}" class="platform-icon"></a>
+                                <a ng-href="{{::feed.post_url}}" target="_blank" class="platform-link">
+                                    <img ng-src="{{getPlatformIcon(feed.platform)}}" alt="{{feed.platform}}"
+                                        title="{{feed.platform}}" class="platform-icon">
+                                </a>
                             </div>
                         </div>
 
@@ -35,7 +37,7 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
+    <div class="clearfix"><br></div>
 </div>
