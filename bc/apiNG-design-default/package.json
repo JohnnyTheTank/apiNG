@@ -1,6 +1,6 @@
 {
   "name": "aping-design-default",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "design for apiNG (default)",
   "main": "Gruntfile.js",
   "scripts": {

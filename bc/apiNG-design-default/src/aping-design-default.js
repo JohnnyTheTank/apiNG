@@ -20,7 +20,7 @@ angular.module('jtt_aping_design_default', ['wu.masonry', 'linkify', 'angularMom
             }
 
             return false;
-        }
+        };
 
     }])
     .filter('capitalize', function() {
