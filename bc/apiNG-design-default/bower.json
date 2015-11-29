@@ -4,7 +4,7 @@
   "authors": [
     "Jonathan Hornung <jonathan.hornung@gmail.com>"
   ],
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "design for apiNG (default)",
   "main": "dist/aping-design-default.min.js",
   "moduleType": [],

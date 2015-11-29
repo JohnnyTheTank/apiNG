@@ -4,10 +4,16 @@ angular.module('jtt_aping_design_default', ['wu.masonry', 'linkify', 'angularMom
     .run(['amMoment', function (amMoment) {
         amMoment.changeLocale('de');
     }])
-    .controller('apingDefaultDesignController', ['$scope', function ($scope) {
+    .controller('apingDefaultDesignController', ['$scope', '$timeout', function ($scope, $timeout) {
 
         $scope.$on('resultMerged', function () {
             $scope.workingCopy = $scope.results;
+
+            $timeout(function () {
+                // We need to give Masonry a little jump-start, otherwise the bricks
+                // will render in one big overlapped stack sometimes
+                $scope.$broadcast('masonry.reload');
+            }, 500);
         });
 
         $scope.getPlatformIcon = function (_platform) {
