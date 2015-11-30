@@ -1,0 +1,33 @@
+{
+  "name": "angular-masonry-packed",
+  "version": "0.13.0",
+  "main": "dist/angular-masonry-packed.min.js",
+  "repository": "https://github.com/JohnnyTheTank/angular-masonry-packed.git",
+  "description": "An AngularJS directive for Masonry.",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "src"
+  ],
+  "dependencies": {
+    "angular": "^1.3.0",
+    "jquery": "~2.1.0"
+  },
+  "devDependencies": {
+    "masonry": "~3.3.0",
+    "imagesloaded": "~3.1.0",
+    "jquery-bridget": "~1.1.0"
+  },
+  "homepage": "https://github.com/JohnnyTheTank/angular-masonry-packed",
+  "_release": "0.13.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.13.0",
+    "commit": "857c34e3b5114b8400847a089d26181bb03487f9"
+  },
+  "_source": "git://github.com/JohnnyTheTank/angular-masonry-packed.git",
+  "_target": "~0.13.0",
+  "_originalSource": "angular-masonry-packed"
+}

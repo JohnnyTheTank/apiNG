@@ -19,13 +19,13 @@ everybody can create `plugins`, `models` and `designs`
 
 ### plugins (sources/platforms)
  - [x] **Youtube** ([apiNG-plugin-youtube](https://github.com/JohnnyTheTank/apiNG-plugin-youtube))
-    - converts results to this models: `social`, `video`
+    - converts to this models: `social`, `video`
  - [x] **Instagram** ([apiNG-plugin-instagram](https://github.com/JohnnyTheTank/apiNG-plugin-instagram))
-    - converts results to this models: `social`, `video`, `image`
+    - converts to this models: `social`, `video`, `image`
  - [x] **Facebook** ([apiNG-plugin-facebook](https://github.com/JohnnyTheTank/apiNG-plugin-facebook))
-    - converts results to this models: `social`, `video`, `image`, `event`
+    - converts to this models: `social`, `video`, `image`, `event`
  - [x] **Twitter** ([apiNG-plugin-codebird](https://github.com/JohnnyTheTank/apiNG-plugin-codebird))
-    - converts results to this models: `social`, `image`
+    - converts to this models: `social`, `image`
  - [ ] Google+
  - [ ] Flickr
  - [ ] Vimeo
@@ -53,8 +53,11 @@ everybody can create `plugins`, `models` and `designs`
  - and much more coming soon ...
     
 ### designs
- - [x] **[default](https://github.com/JohnnyTheTank/apiNG-design-default)**
- - [x] **[deadwood](https://github.com/JohnnyTheTank/apiNG-design-deadwood)** (youtube video design)
+ - [x] **[default](https://github.com/JohnnyTheTank/apiNG-design-default)** (masonry layout)
+    - displays this models: `social`
+ - [x] **[deadwood](https://github.com/JohnnyTheTank/apiNG-design-deadwood)** (youtube player)
+    - displays this models: `video`
+        - only from youtube
  - much more coming ...
  
 ## samples

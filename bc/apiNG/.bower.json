@@ -31,16 +31,17 @@
     "jquery": "*",
     "angular": "*",
     "angular-sanitize": "*",
-    "apiNG-design-default": "~0.2.5"
+    "apiNG-design-default": "~0.3.0"
   },
   "resolutions": {
-    "angular": "1.4.8"
+    "angular": "1.4.8",
+    "apiNG-design-default": "~0.3.0"
   },
-  "_release": "7096cd177e",
+  "_release": "da78f84620",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "7096cd177e0015831af660ee9fdb67a6c17505ea"
+    "commit": "da78f846208dae5993c98a54307be7cb162f2e19"
   },
   "_source": "git://github.com/JohnnyTheTank/apiNG.git",
   "_target": "*",
