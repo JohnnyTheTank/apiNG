@@ -36,11 +36,11 @@
   "resolutions": {
     "angular": "1.4.8"
   },
-  "_release": "ad3613bb88",
+  "_release": "7096cd177e",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "ad3613bb88ae54ef4ea63da64dd89182a132a6dd"
+    "commit": "7096cd177e0015831af660ee9fdb67a6c17505ea"
   },
   "_source": "git://github.com/JohnnyTheTank/apiNG.git",
   "_target": "*",

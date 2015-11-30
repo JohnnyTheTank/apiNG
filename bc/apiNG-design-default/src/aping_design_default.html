@@ -1,7 +1,6 @@
 <div class="aping-design-default">
     <div ng-controller="apingDefaultDesignController">
-        <div masonry class="row" preserve-order reload-on-show ng-show="workingCopy">
-
+        <div data-images-loaded masonry class="row" preserve-order reload-on-show ng-show="workingCopy">
             <div class="masonry-brick col-lg-4 col-sm-6" ng-repeat="feed in workingCopy | orderBy: 'timestamp': true"
                  ng-cloak>
                 <div class="box">

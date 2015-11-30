@@ -4,7 +4,7 @@
   "authors": [
     "Jonathan Hornung <jonathan.hornung@gmail.com>"
   ],
-  "version": "0.2.9",
+  "version": "0.2.10",
   "description": "design for apiNG (default)",
   "main": "dist/aping-design-default.min.js",
   "moduleType": [],
@@ -39,11 +39,11 @@
   "resolutions": {
     "angular": "~1.4.7"
   },
-  "_release": "0.2.9",
+  "_release": "0.2.10",
   "_resolution": {
     "type": "version",
-    "tag": "v0.2.9",
-    "commit": "6f9daae3fe44d99c4b905008e633ef90277b937a"
+    "tag": "v0.2.10",
+    "commit": "79b07df1ce17c8e4f5af2d1ab7fee99225d805b7"
   },
   "_source": "git://github.com/JohnnyTheTank/apiNG-design-default.git",
   "_target": "~0.2.5",

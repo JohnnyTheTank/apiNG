@@ -37,7 +37,7 @@ var apingApp = angular.module('jtt_aping', [])
                 };
                 this.apply = function () {
                     $scope.$apply();
-                }
+                };
             }],
             templateUrl: function (elem, attrs) {
                 return attrs.templateUrl || apingDefaultSettings.templateUrl;

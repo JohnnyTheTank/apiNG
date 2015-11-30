@@ -4,7 +4,7 @@ angular.module('jtt_aping_design_default', ['wu.masonry', 'linkify', 'angularMom
     .run(['amMoment', function (amMoment) {
         amMoment.changeLocale('de');
     }])
-    .controller('apingDefaultDesignController', ['$scope', function ($scope) {
+    .controller('apingDefaultDesignController', ['$scope', '$timeout', function ($scope, $timeout) {
 
         $scope.$on('resultMerged', function () {
             $scope.workingCopy = $scope.results;
@@ -21,6 +21,17 @@ angular.module('jtt_aping_design_default', ['wu.masonry', 'linkify', 'angularMom
 
             return false;
         };
+
+        $scope.refresh = function () {
+            $scope.$broadcast("masonry.reload");
+        };
+
+        $scope.$on('imagesLoaded.SUCCESS', function() {
+            $scope.refresh();
+        });
+        $scope.$on('imagesLoaded.ALWAYS', function() {
+            $scope.refresh();
+        });
 
     }])
     .filter('capitalize', function() {
