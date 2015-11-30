@@ -38,13 +38,6 @@ var apingApp = angular.module('jtt_aping', [])
                 this.apply = function () {
                     $scope.$apply();
                 };
-
-                $scope.$on('apiNG.load.more', function(ev, args){
-                    console.log('apiNG.load.more fired');
-                    console.log(ev);
-                    console.log(args);
-                });
-
             }],
             templateUrl: function (elem, attrs) {
                 return attrs.templateUrl || apingDefaultSettings.templateUrl;
