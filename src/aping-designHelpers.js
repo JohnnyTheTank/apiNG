@@ -5,10 +5,10 @@ apingApp.directive('imagesLoaded', ['$timeout', '$rootScope', '$q', function($ti
     var cache = {};
 
     var broadcastMessages = {
-        progress : ['QUARTER', 'HALF', 'THREEQUARTERS', 'FULL'],
-        successful : 'SUCCESS',
-        complete : 'FAIL',
-        always : 'ALWAYS'
+        progress : ['imagesLoaded.QUARTER', 'imagesLoaded.HALF', 'imagesLoaded.THREEQUARTERS', 'imagesLoaded.FULL'],
+        successful : 'imagesLoaded.SUCCESS',
+        complete : 'imagesLoaded.FAIL',
+        always : 'imagesLoaded.ALWAYS'
     };
 
     /************* Helper functions **********/
@@ -182,16 +182,14 @@ apingApp.directive('imagesLoaded', ['$timeout', '$rootScope', '$q', function($ti
 
                                 },
                                 function(progress) {
-                                    useProgressEvents && $scope.$emit('PROGRESS', {status : progress});
+                                    useProgressEvents && $scope.$emit('imagesLoaded.PROGRESS', {status : progress});
                                 }
                             );
                         });
 
                     }
                 );
-
             }
         }
-
     }
 }]);
