@@ -1,12 +1,6 @@
 /* Vendor Prefixing */
 /* Custom Functions */
-.aping-design-default .masonry-brick {
-  display: none;
-}
-.aping-design-default .masonry-brick.loaded {
-  display: block;
-}
-.aping-design-default .masonry-brick.loaded .box {
+.aping-design-default .masonry-brick .box {
   background-color: white;
   font-family: 'Economica', sans-serif;
   -webkit-transition: all 250ms ease;
@@ -18,39 +12,39 @@
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
   margin-bottom: 2rem;
 }
-.aping-design-default .masonry-brick.loaded .box:hover {
+.aping-design-default .masonry-brick .box:hover {
   -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.8);
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.8);
 }
-.aping-design-default .masonry-brick.loaded .box a.aping-picture-link {
+.aping-design-default .masonry-brick .box a.aping-picture-link {
   -webkit-transition: all 250ms ease;
   -moz-transition: all 250ms ease;
   -ms-transition: all 250ms ease;
   -o-transition: all 250ms ease;
   transition: all 250ms ease;
 }
-.aping-design-default .masonry-brick.loaded .box a.aping-picture-link:hover {
+.aping-design-default .masonry-brick .box a.aping-picture-link:hover {
   opacity: 1;
   -webkit-filter: grayscale(0.5) sepia(0.6);
   filter: grayscale(0.5) sepia(0.6);
 }
-.aping-design-default .masonry-brick.loaded .box img.main-image {
+.aping-design-default .masonry-brick .box img.main-image {
   border-radius: 0;
   width: 100%;
   height: auto;
 }
-.aping-design-default .masonry-brick.loaded .box .box-content {
+.aping-design-default .masonry-brick .box .box-content {
   padding: 1rem;
   overflow: hidden;
 }
-.aping-design-default .masonry-brick.loaded .box .box-footer {
+.aping-design-default .masonry-brick .box .box-footer {
   height: 1em;
 }
-.aping-design-default .masonry-brick.loaded .box .box-footer .platform-box {
+.aping-design-default .masonry-brick .box .box-footer .platform-box {
   margin-left: 10px;
   margin-top: 10px;
 }
-.aping-design-default .masonry-brick.loaded .box .box-footer .platform-box a.platform-link {
+.aping-design-default .masonry-brick .box .box-footer .platform-box a.platform-link {
   display: inline-block;
   -webkit-transition: all 250ms ease;
   -moz-transition: all 250ms ease;
@@ -64,7 +58,7 @@
   -ms-border-radius: 40px;
   border-radius: 40px;
 }
-.aping-design-default .masonry-brick.loaded .box .box-footer .platform-box a.platform-link:hover {
+.aping-design-default .masonry-brick .box .box-footer .platform-box a.platform-link:hover {
   -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.8);
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.8);
 }
