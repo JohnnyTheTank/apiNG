@@ -54,7 +54,7 @@ everybody can create `plugins`, `models` and `designs`
     
 ### designs
  - [x] **[default](https://github.com/JohnnyTheTank/apiNG-design-default)** (masonry layout)
-    - displays this models: `social`
+    - displays this models: `social`, `image`
  - [x] **[deadwood](https://github.com/JohnnyTheTank/apiNG-design-deadwood)** (youtube player)
     - displays this models: `video`
         - only from youtube
