@@ -15,8 +15,5 @@
     "bower_components",
     "test",
     "tests"
-  ],
-  "dependencies": {
-    "apiNG-design-default": "*"
-  }
+  ]
 }
