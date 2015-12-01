@@ -4,7 +4,7 @@ note: apiNG is under development and not ready for public usage
 
 apiNG is an AngularJS directive for receiving and displaying data from different REST API's'.
 
-# demo
+# Demo
 [very simple demo](http://johnnythetank.github.io/apiNG/#demo)
 
 ## how does it work?
@@ -15,9 +15,9 @@ apiNG works as plugin platform.
 
 everybody can create `plugins`, `models` and `designs`
 
-## current status
+## Current status
 
-### plugins (sources/platforms)
+### Plugins (sources/platforms)
  - [x] **Youtube** ([apiNG-plugin-youtube](https://github.com/JohnnyTheTank/apiNG-plugin-youtube))
     - converts to this models: `social`, `video`
  - [x] **Instagram** ([apiNG-plugin-instagram](https://github.com/JohnnyTheTank/apiNG-plugin-instagram))
@@ -39,7 +39,7 @@ everybody can create `plugins`, `models` and `designs`
  - maybe: OpenLigaDB (http://www.openligadb.de/Help)
  - and much more coming soon ...
     
-### models
+### Models
  - [x] **social**
  - [x] **video**
  - [x] **image**
@@ -52,7 +52,7 @@ everybody can create `plugins`, `models` and `designs`
  - [ ] rank
  - and much more coming soon ...
     
-### designs
+### Designs
  - [x] **[default](https://github.com/JohnnyTheTank/apiNG-design-default)** (masonry layout)
     - displays this models: `social`, `image`
  - [x] **[deadwood](https://github.com/JohnnyTheTank/apiNG-design-deadwood)** (youtube player)
@@ -60,7 +60,7 @@ everybody can create `plugins`, `models` and `designs`
         - only from youtube
  - much more coming ...
  
-## community
+# Community
 create your own `plugin` or `design` from this samples:
 - [apiNG-plugin-sample](https://github.com/JohnnyTheTank/apiNG-plugin-sample)
 - [apiNG-design-sample](https://github.com/JohnnyTheTank/apiNG-design-sample)
