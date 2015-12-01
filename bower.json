@@ -31,7 +31,7 @@
     "jquery": "*",
     "angular": "*",
     "angular-sanitize": "*",
-    "apiNG-design-default": "~0.2.5"
+    "apiNG-design-default": "*"
   },
   "resolutions": {
     "angular": "1.4.8"
