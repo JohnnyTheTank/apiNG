@@ -39,7 +39,7 @@ everybody can create `plugins`, `models` and `designs`
      - [ ] Wunderlist
      - maybe: [EventFul](http://api.eventful.com/docs/formats), [Gigulate](http://gigulate.com/api/), [OpenLigaDB](http://www.openligadb.de/Help)
  - **OTHER DYNAMIC SOURCES**
-    - [ ] RSS feeds
+    - [ ] [RSS feeds](http://cyber.law.harvard.edu/rss/rss.html)
  - **FILE SOURCES**
     - [x] JSON file ([apiNG-plugin-jsonloader](https://github.com/JohnnyTheTank/apiNG-plugin-jsonloader))
         - supports any model
