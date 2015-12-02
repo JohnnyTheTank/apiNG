@@ -41,7 +41,8 @@ everybody can create `plugins`, `models` and `designs`
  - **OTHER DYNAMIC SOURCES**
     - [ ] RSS feeds
  - **FILE SOURCES**
-    - [ ] JSON file
+    - [x] JSON file ([apiNG-plugin-jsonloader](https://github.com/JohnnyTheTank/apiNG-plugin-jsonloader))
+        - supports any model
     - [ ] XML file
  - **OTHER STATIC SOURCES**
     - [ ] javascript array
