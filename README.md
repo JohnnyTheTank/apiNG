@@ -27,16 +27,17 @@ everybody can create `plugins`, `models` and `designs`
         - converts to this models: `social`, `video`, `image`, `event`
      - [x] **Twitter** ([apiNG-plugin-codebird](https://github.com/JohnnyTheTank/apiNG-plugin-codebird))
         - converts to this models: `social`, `image`
-     - [ ] Google+
-     - [ ] Flickr
-     - [ ] Vimeo
-     - [ ] Tumblr
-     - [ ] Vine
+     - [ ] [Google+](https://developers.google.com/+/web/api/rest/latest/)
+     - [ ] [Flickr](https://www.flickr.com/services/api/)
+     - [ ] [Vimeo](https://developer.vimeo.com/api/)
+     - [ ] [Tumblr](https://www.tumblr.com/docs/en/api/v2)
+     - [ ] [Vine](https://github.com/starlock/vino/wiki/API-Reference)
  - **REST API SOURCES (Other)**
-     - [ ] Spotify
-     - [ ] GitHub
-     - [ ] BandsInTown
-     - [ ] Wunderlist
+     - [ ] [Spotify](https://developer.spotify.com/web-api/)
+     - [ ] [GitHub](https://developer.github.com/v3/)
+     - [ ] [BandsInTown](https://www.bandsintown.com/api/overview)
+     - [ ] [Wunderlist](https://developer.wunderlist.com/documentation)
+     - [ ] [Yahoo](https://developer.yahoo.com/boss/search/)
      - maybe: [EventFul](http://api.eventful.com/docs/formats), [Gigulate](http://gigulate.com/api/), [OpenLigaDB](http://www.openligadb.de/Help)
  - **OTHER DYNAMIC SOURCES**
     - [ ] [RSS feeds](http://cyber.law.harvard.edu/rss/rss.html)
