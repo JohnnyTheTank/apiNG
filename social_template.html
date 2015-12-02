@@ -12,7 +12,7 @@
                         <h4 class="" ng-if="feed.caption">{{::feed.caption}}</h4>
 
                         <div class="" ng-if="feed.text" linkify>
-                            {{::feed.text | limitTo: 250}}{{::feed.text.length > 350 ? '...' : ''}}
+                            {{::feed.text | limitTo: 250}}{{::feed.text.length > 250 ? '...' : ''}}
                         </div>
 
                         <div class="clearfix"><br></div>
