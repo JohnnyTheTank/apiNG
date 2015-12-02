@@ -18,26 +18,34 @@ everybody can create `plugins`, `models` and `designs`
 ## Current status
 
 ### Plugins (sources/platforms)
- - [x] **Youtube** ([apiNG-plugin-youtube](https://github.com/JohnnyTheTank/apiNG-plugin-youtube))
-    - converts to this models: `social`, `video`
- - [x] **Instagram** ([apiNG-plugin-instagram](https://github.com/JohnnyTheTank/apiNG-plugin-instagram))
-    - converts to this models: `social`, `video`, `image`
- - [x] **Facebook** ([apiNG-plugin-facebook](https://github.com/JohnnyTheTank/apiNG-plugin-facebook))
-    - converts to this models: `social`, `video`, `image`, `event`
- - [x] **Twitter** ([apiNG-plugin-codebird](https://github.com/JohnnyTheTank/apiNG-plugin-codebird))
-    - converts to this models: `social`, `image`
- - [ ] Google+
- - [ ] Flickr
- - [ ] Vimeo
- - [ ] Tumblr
- - [ ] Vine
- - [ ] Spotify
- - [ ] GitHub
- - [ ] BandsInTown
- - maybe: EventFul (http://api.eventful.com/docs/formats)
- - maybe: Gigulate (http://gigulate.com/api/)
- - maybe: OpenLigaDB (http://www.openligadb.de/Help)
- - and much more coming soon ...
+ - **REST API SOURCES (Social Media)**
+     - [x] **Youtube** ([apiNG-plugin-youtube](https://github.com/JohnnyTheTank/apiNG-plugin-youtube))
+        - converts to this models: `social`, `video`
+     - [x] **Instagram** ([apiNG-plugin-instagram](https://github.com/JohnnyTheTank/apiNG-plugin-instagram))
+        - converts to this models: `social`, `video`, `image`
+     - [x] **Facebook** ([apiNG-plugin-facebook](https://github.com/JohnnyTheTank/apiNG-plugin-facebook))
+        - converts to this models: `social`, `video`, `image`, `event`
+     - [x] **Twitter** ([apiNG-plugin-codebird](https://github.com/JohnnyTheTank/apiNG-plugin-codebird))
+        - converts to this models: `social`, `image`
+     - [ ] Google+
+     - [ ] Flickr
+     - [ ] Vimeo
+     - [ ] Tumblr
+     - [ ] Vine
+ - **REST API SOURCES (Other)**
+     - [ ] Spotify
+     - [ ] GitHub
+     - [ ] BandsInTown
+     - [ ] Wunderlist
+     - maybe: [EventFul](http://api.eventful.com/docs/formats), [Gigulate](http://gigulate.com/api/), [OpenLigaDB](http://www.openligadb.de/Help)
+ - **OTHER DYNAMIC SOURCES**
+    - [ ] RSS feeds
+ - **FILE SOURCES**
+    - [ ] JSON file
+    - [ ] XML file
+ - **OTHER STATIC SOURCES**
+    - [ ] javascript array
+ - and much more coming ...
     
 ### Models
  - [x] **social**
@@ -46,11 +54,13 @@ everybody can create `plugins`, `models` and `designs`
  - [x] **event**
  - [ ] post
  - [ ] news
+ - [ ] link
  - [ ] product
  - [ ] activity
  - [ ] match
  - [ ] rank
- - and much more coming soon ...
+ - [ ] task
+ - and much more coming ...
     
 ### Designs
  - [x] **[default](https://github.com/JohnnyTheTank/apiNG-design-default)** (masonry layout)
@@ -58,7 +68,7 @@ everybody can create `plugins`, `models` and `designs`
  - [x] **[deadwood](https://github.com/JohnnyTheTank/apiNG-design-deadwood)** (youtube player)
     - displays this models: `video`
         - only from youtube
- - much more coming ...
+ - and much more coming ...
  
 # Community
 create your own `plugin` or `design` from this samples:
