@@ -32,6 +32,7 @@ everybody can create `plugins`, `models` and `designs`
      - [ ] [Vimeo](https://developer.vimeo.com/api/)
      - [ ] [Tumblr](https://www.tumblr.com/docs/en/api/v2)
      - [ ] [Vine](https://github.com/starlock/vino/wiki/API-Reference)
+     - [ ] [Vk](http://vk.com/dev)
  - **REST API SOURCES (Other)**
      - [ ] [Spotify](https://developer.spotify.com/web-api/)
      - [ ] [GitHub](https://developer.github.com/v3/)
