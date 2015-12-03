@@ -33,13 +33,18 @@ everybody can create `plugins`, `models` and `designs`
      - [ ] [Tumblr](https://www.tumblr.com/docs/en/api/v2)
      - [ ] [Vine](https://github.com/starlock/vino/wiki/API-Reference)
      - [ ] [Vk](http://vk.com/dev)
+     - maybe: [Blogger](https://developers.google.com/blogger/docs/3.0/using)
  - **REST API SOURCES (Other)**
      - [ ] [Spotify](https://developer.spotify.com/web-api/)
      - [ ] [GitHub](https://developer.github.com/v3/)
      - [ ] [BandsInTown](https://www.bandsintown.com/api/overview)
      - [ ] [Wunderlist](https://developer.wunderlist.com/documentation)
-     - [ ] [Yahoo](https://developer.yahoo.com/boss/search/)
-     - maybe: [EventFul](http://api.eventful.com/docs/formats), [Gigulate](http://gigulate.com/api/), [OpenLigaDB](http://www.openligadb.de/Help)
+     - [ ] [Wetter.com](http://www.wetter.com/apps_und_mehr/website/api/)
+     - [ ] [OpenWeatherMap](http://openweathermap.org/api)
+     - [ ] [Faroo](http://www.faroo.com/hp/api/api.html#json)
+     - [ ] [HackerNews](https://github.com/HackerNews/API)
+     - [ ] [New York Times](http://developer.nytimes.com/docs/read/times_newswire_api)
+     - maybe: [EventFul](http://api.eventful.com/docs/formats), [Gigulate](http://gigulate.com/api/), [OpenLigaDB](http://www.openligadb.de/Help), [Wikipedia/Wikimedia](https://www.mediawiki.org/wiki/API:Main_page/de), [Yahoo](https://developer.yahoo.com/boss/search/)
  - **OTHER DYNAMIC SOURCES**
     - [ ] [RSS feeds](http://cyber.law.harvard.edu/rss/rss.html)
  - **FILE SOURCES**
@@ -63,6 +68,7 @@ everybody can create `plugins`, `models` and `designs`
  - [ ] match
  - [ ] rank
  - [ ] task
+ - [ ] weather
  - and much more coming ...
     
 ### Designs
