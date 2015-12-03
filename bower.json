@@ -30,11 +30,9 @@
   "dependencies": {
     "jquery": "*",
     "angular": "*",
-    "angular-sanitize": "*",
-    "apiNG-design-default": "~0.3.0"
+    "angular-sanitize": "*"
   },
   "resolutions": {
-    "angular": "1.4.8",
-    "apiNG-design-default": "~0.3.0"
+    "angular": "1.4.8"
   }
 }
