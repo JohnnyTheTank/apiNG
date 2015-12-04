@@ -39,6 +39,7 @@ everybody can create `plugins`, `models` and `designs`
      - [ ] [GitHub](https://developer.github.com/v3/)
      - [ ] [BandsInTown](https://www.bandsintown.com/api/overview)
      - [ ] [Wunderlist](https://developer.wunderlist.com/documentation)
+     - [ ] [Amazon Wishlists](https://github.com/doitlikejustin/amazon-wish-lister)
      - [ ] [Wetter.com](http://www.wetter.com/apps_und_mehr/website/api/)
      - [ ] [OpenWeatherMap](http://openweathermap.org/api)
      - [ ] [Faroo](http://www.faroo.com/hp/api/api.html#json)
