@@ -7,6 +7,7 @@ apingApp.config(['$provide', function ($provide) {
         instagramClientId: "<YOUR_INSTAGRAM_CLIENT_ID>",
         facebook: "<YOUR_FACEBOOK_TOKEN>",
         twitter: "<YOUR_TWITTER_BEARER_TOKEN>",
+        vimeo: "<YOUR_VIMEO_TOKEN>",
     });
 
     $provide.constant("apingDefaultSettings", {
