@@ -29,11 +29,9 @@ everybody can create `plugins`, `models` and `designs`
         - converts to this models: `social`, `image`
      - [x] **Vimeo** ([apiNG-plugin-vimeo](https://github.com/JohnnyTheTank/apiNG-plugin-vimeo))
         - converts to this models: `social`, `video`
-     - [ ] [Google+](https://developers.google.com/+/web/api/rest/latest/), [Flickr](https://www.flickr.com/services/api/), [Dailymotion](https://developer.dailymotion.com/api), [Tumblr](https://www.tumblr.com/docs/en/api/v2), [Vine](https://github.com/starlock/vino/wiki/API-Reference), [Vk](http://vk.com/dev)
-     - maybe: [Blogger](https://developers.google.com/blogger/docs/3.0/using)
+     - [ ] [Google+](https://developers.google.com/+/web/api/rest/latest/), [Flickr](https://www.flickr.com/services/api/), [Dailymotion](https://developer.dailymotion.com/api), [Tumblr](https://www.tumblr.com/docs/en/api/v2), [Vine](https://github.com/starlock/vino/wiki/API-Reference), [Vk](http://vk.com/dev) ([Blogger](https://developers.google.com/blogger/docs/3.0/using))
  - **REST API SOURCES (Other)**
-     - [ ] [Spotify](https://developer.spotify.com/web-api/), [GitHub](https://developer.github.com/v3/), [BandsInTown](https://www.bandsintown.com/api/overview), [Wunderlist](https://developer.wunderlist.com/documentation), [Amazon Wishlists](https://github.com/doitlikejustin/amazon-wish-lister), [Wetter.com](http://www.wetter.com/apps_und_mehr/website/api/), [OpenWeatherMap](http://openweathermap.org/api), [Faroo](http://www.faroo.com/hp/api/api.html#json), [HackerNews](https://github.com/HackerNews/API), [New York Times](http://developer.nytimes.com/docs/read/times_newswire_api)
-     - maybe: [EventFul](http://api.eventful.com/docs/formats), [Gigulate](http://gigulate.com/api/), [OpenLigaDB](http://www.openligadb.de/Help), [Wikipedia/Wikimedia](https://www.mediawiki.org/wiki/API:Main_page/de), [Yahoo](https://developer.yahoo.com/boss/search/)
+     - [ ] [Spotify](https://developer.spotify.com/web-api/), [GitHub](https://developer.github.com/v3/), [BandsInTown](https://www.bandsintown.com/api/overview), [Wunderlist](https://developer.wunderlist.com/documentation), [Amazon Wishlists](https://github.com/doitlikejustin/amazon-wish-lister), [Wetter.com](http://www.wetter.com/apps_und_mehr/website/api/), [OpenWeatherMap](http://openweathermap.org/api), [Faroo](http://www.faroo.com/hp/api/api.html#json), [HackerNews](https://github.com/HackerNews/API), [New York Times](http://developer.nytimes.com/docs/read/times_newswire_api), ([EventFul](http://api.eventful.com/docs/formats), [Gigulate](http://gigulate.com/api/), [OpenLigaDB](http://www.openligadb.de/Help), [Wikipedia/Wikimedia](https://www.mediawiki.org/wiki/API:Main_page/de), [Yahoo](https://developer.yahoo.com/boss/search/))
  - **OTHER DYNAMIC SOURCES**
     - [ ] [RSS feeds](http://cyber.law.harvard.edu/rss/rss.html)
  - **FILE SOURCES**
@@ -43,23 +41,15 @@ everybody can create `plugins`, `models` and `designs`
  - **OTHER STATIC SOURCES**
     - [x] **javascript array** ([apiNG-plugin-ngArray](https://github.com/JohnnyTheTank/apiNG-plugin-ngArray))
         - supports any model
- - and much more coming ...
+ - _and much more coming ..._
     
 ### Models
  - [x] **social**
  - [x] **video**
  - [x] **image**
  - [x] **event**
- - [ ] post
- - [ ] news
- - [ ] link
- - [ ] product
- - [ ] activity
- - [ ] match
- - [ ] rank
- - [ ] task
- - [ ] weather
- - and much more coming ...
+ - [ ] post, news, link, product, activity, match, rank, task, weather
+ - _and much more coming ..._
     
 ### Designs
  - [x] **[default](https://github.com/JohnnyTheTank/apiNG-design-default)** (masonry layout)
@@ -67,7 +57,7 @@ everybody can create `plugins`, `models` and `designs`
  - [x] **[deadwood](https://github.com/JohnnyTheTank/apiNG-design-deadwood)** (youtube player)
     - displays this models: `video`
         - only from youtube
- - and much more coming ...
+ - _and much more coming ..._
  
 # Community
 create your own `plugin` or `design` from this samples:
