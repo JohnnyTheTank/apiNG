@@ -30,6 +30,7 @@ everybody can create `plugins`, `models` and `designs`
      - [ ] [Google+](https://developers.google.com/+/web/api/rest/latest/)
      - [ ] [Flickr](https://www.flickr.com/services/api/)
      - [ ] [Vimeo](https://developer.vimeo.com/api/)
+     - [ ] [Dailymotion](https://developer.dailymotion.com/api)
      - [ ] [Tumblr](https://www.tumblr.com/docs/en/api/v2)
      - [ ] [Vine](https://github.com/starlock/vino/wiki/API-Reference)
      - [ ] [Vk](http://vk.com/dev)
