@@ -10,27 +10,34 @@ var apingApp = angular.module('jtt_aping', [])
                 maxItems: '@',
                 orderBy: '@',
                 orderReverse: '@',
+                removeDoubles: '@',
             },
             controller: ['$scope', function ($scope) {
                 $scope.results = [];
                 this.getAppSettings = function () {
                     return {
-                        type: $scope.type || apingDefaultSettings.type,
+                        type: $scope.type || apingDefaultSettings.type || "custom",
                         items: $scope.items || apingDefaultSettings.items,
                         maxItems: $scope.maxItems || apingDefaultSettings.maxItems,
                         orderBy: $scope.orderBy || apingDefaultSettings.orderBy,
                         orderReverse: $scope.orderReverse || apingDefaultSettings.orderReverse,
+                        removeDoubles: $scope.removeDoubles || apingDefaultSettings.removeDoubles || true
                     };
                 };
                 this.concatToResults = function (_array) {
                     $scope.results = $scope.results.concat(_array);
+
+                    if(this.getAppSettings().removeDoubles === true ||  this.getAppSettings().removeDoubles === "true") {
+                        $scope.results = apingUtilityHelper.removeArrayDoubles($scope.results);
+                    }
+
                     if(this.getAppSettings().orderBy) {
                         $scope.results.sort(apingUtilityHelper.sortArrayByProperty(this.getAppSettings().orderBy));
-                        if(this.getAppSettings().orderReverse === true || this.getAppSettings().orderReverse == "true") {
+                        if(this.getAppSettings().orderReverse === true || this.getAppSettings().orderReverse === "true") {
                             $scope.results.reverse();
                         }
                     }
-                    if(this.getAppSettings().maxItems > 0 && $scope.results.length > this.getAppSettings().maxItems) {
+                    if(this.getAppSettings().maxItems > -1 && $scope.results.length > this.getAppSettings().maxItems) {
                         $scope.results = $scope.results.splice(0,this.getAppSettings().maxItems);
                     }
                     $scope.$broadcast('apiNG.resultMerged');

@@ -17,6 +17,7 @@ apingApp.config(['$provide', function ($provide) {
         orderBy : "timestamp",
         orderReverse : "true",
         type: "social",
+        removeDoubles: "true"
     });
 
 }]);

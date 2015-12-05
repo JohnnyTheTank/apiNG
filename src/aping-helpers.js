@@ -115,4 +115,16 @@ apingApp.service('apingTimeHelper', function () {
                 return result * sortOrder;
             }
         };
+
+        this.removeArrayDoubles = function(arr) {
+            var distinctArr = arr.filter(function(el) {
+                var isDup = el.inArray;
+                el.inArray = true;
+                return !isDup;
+            });
+            distinctArr.forEach(function(el) {
+                delete el.inArray;
+            });
+            return distinctArr;
+        };
     }]);
