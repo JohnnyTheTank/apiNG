@@ -51,11 +51,12 @@ everybody can create `plugins`, `models` and `designs`
  - **OTHER DYNAMIC SOURCES**
     - [ ] [RSS feeds](http://cyber.law.harvard.edu/rss/rss.html)
  - **FILE SOURCES**
-    - [x] JSON file ([apiNG-plugin-jsonloader](https://github.com/JohnnyTheTank/apiNG-plugin-jsonloader))
+    - [x] **JSON file** ([apiNG-plugin-jsonloader](https://github.com/JohnnyTheTank/apiNG-plugin-jsonloader))
         - supports any model
     - [ ] XML file
  - **OTHER STATIC SOURCES**
-    - [ ] javascript array
+    - [x] **javascript array** ([apiNG-plugin-ngArray](https://github.com/JohnnyTheTank/apiNG-plugin-ngArray))
+        - supports any model
  - and much more coming ...
     
 ### Models
