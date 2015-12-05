@@ -39,7 +39,7 @@ everybody can create `plugins`, `models` and `designs`
         - supports any model
     - [ ] XML file
  - **OTHER STATIC SOURCES**
-    - [x] **javascript array** ([apiNG-plugin-ngArray](https://github.com/JohnnyTheTank/apiNG-plugin-ngArray))
+    - [x] **JavaScript array** ([apiNG-plugin-ngArray](https://github.com/JohnnyTheTank/apiNG-plugin-ngArray))
         - supports any model
  - _and much more coming ..._
     
