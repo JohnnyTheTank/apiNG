@@ -27,10 +27,6 @@ var apingApp = angular.module('jtt_aping', [])
                 this.concatToResults = function (_array) {
                     $scope.results = $scope.results.concat(_array);
 
-                    if(this.getAppSettings().removeDoubles === true ||  this.getAppSettings().removeDoubles === "true") {
-                        $scope.results = apingUtilityHelper.removeArrayDoubles($scope.results);
-                    }
-
                     if(this.getAppSettings().orderBy) {
                         $scope.results.sort(apingUtilityHelper.sortArrayByProperty(this.getAppSettings().orderBy));
                         if(this.getAppSettings().orderReverse === true || this.getAppSettings().orderReverse === "true") {

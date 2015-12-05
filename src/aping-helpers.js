@@ -116,23 +116,4 @@ apingApp.service('apingTimeHelper', function () {
             }
         };
 
-
-        this.removeArrayDoubles = function(_array) {
-            function contains(array,obj) {
-                for(var i =0;i<array.length;i++) {
-                    if(isEqual(array[i],obj)) return true;
-                }
-                return false;
-            }
-            //comparator
-            function isEqual(obj1,obj2) {
-                if(obj1.name==obj2.name) return true;
-                return false;
-            }
-
-            var arr = [];
-            return _array.filter(function(x) {
-                return !contains(arr,x) && arr.push(x);
-            });
-        }
     }]);
