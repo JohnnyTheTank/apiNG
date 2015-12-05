@@ -27,9 +27,10 @@ everybody can create `plugins`, `models` and `designs`
         - converts to this models: `social`, `video`, `image`, `event`
      - [x] **Twitter** ([apiNG-plugin-codebird](https://github.com/JohnnyTheTank/apiNG-plugin-codebird))
         - converts to this models: `social`, `image`
+     - [x] **Vimeo** ([apiNG-plugin-vimeo](https://github.com/JohnnyTheTank/apiNG-plugin-vimeo))
+        - converts to this models: `social`, `video`
      - [ ] [Google+](https://developers.google.com/+/web/api/rest/latest/)
      - [ ] [Flickr](https://www.flickr.com/services/api/)
-     - [ ] [Vimeo](https://developer.vimeo.com/api/)
      - [ ] [Dailymotion](https://developer.dailymotion.com/api)
      - [ ] [Tumblr](https://www.tumblr.com/docs/en/api/v2)
      - [ ] [Vine](https://github.com/starlock/vino/wiki/API-Reference)
