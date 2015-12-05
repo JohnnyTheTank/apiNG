@@ -1,13 +1,13 @@
-note: apiNG is under development and not ready for public usage
+_**Note:** apiNG is under development and not ready for public usage_
 
 # apiNG
 
-apiNG is an AngularJS directive for receiving and displaying data from different REST API's'.
+**apiNG** is an AngularJS directive for receiving and displaying data from any source, like REST APIs, JSON files or just simple JavaScript arrays.
 
 # Demo
-[very simple demo](http://johnnythetank.github.io/apiNG/#demo)
+[Simple demo](http://johnnythetank.github.io/apiNG/#demo) (social wall)
 
-## how does it work?
+## How does it work?
 
 apiNG works as plugin platform.
  - **`plugins`**: receive some data (from REST API's) and convert this to any `model` and send the result to **apiNG**
@@ -29,24 +29,10 @@ everybody can create `plugins`, `models` and `designs`
         - converts to this models: `social`, `image`
      - [x] **Vimeo** ([apiNG-plugin-vimeo](https://github.com/JohnnyTheTank/apiNG-plugin-vimeo))
         - converts to this models: `social`, `video`
-     - [ ] [Google+](https://developers.google.com/+/web/api/rest/latest/)
-     - [ ] [Flickr](https://www.flickr.com/services/api/)
-     - [ ] [Dailymotion](https://developer.dailymotion.com/api)
-     - [ ] [Tumblr](https://www.tumblr.com/docs/en/api/v2)
-     - [ ] [Vine](https://github.com/starlock/vino/wiki/API-Reference)
-     - [ ] [Vk](http://vk.com/dev)
+     - [ ] [Google+](https://developers.google.com/+/web/api/rest/latest/), [Flickr](https://www.flickr.com/services/api/), [Dailymotion](https://developer.dailymotion.com/api), [Tumblr](https://www.tumblr.com/docs/en/api/v2), [Vine](https://github.com/starlock/vino/wiki/API-Reference), [Vk](http://vk.com/dev)
      - maybe: [Blogger](https://developers.google.com/blogger/docs/3.0/using)
  - **REST API SOURCES (Other)**
-     - [ ] [Spotify](https://developer.spotify.com/web-api/)
-     - [ ] [GitHub](https://developer.github.com/v3/)
-     - [ ] [BandsInTown](https://www.bandsintown.com/api/overview)
-     - [ ] [Wunderlist](https://developer.wunderlist.com/documentation)
-     - [ ] [Amazon Wishlists](https://github.com/doitlikejustin/amazon-wish-lister)
-     - [ ] [Wetter.com](http://www.wetter.com/apps_und_mehr/website/api/)
-     - [ ] [OpenWeatherMap](http://openweathermap.org/api)
-     - [ ] [Faroo](http://www.faroo.com/hp/api/api.html#json)
-     - [ ] [HackerNews](https://github.com/HackerNews/API)
-     - [ ] [New York Times](http://developer.nytimes.com/docs/read/times_newswire_api)
+     - [ ] [Spotify](https://developer.spotify.com/web-api/), [GitHub](https://developer.github.com/v3/), [BandsInTown](https://www.bandsintown.com/api/overview), [Wunderlist](https://developer.wunderlist.com/documentation), [Amazon Wishlists](https://github.com/doitlikejustin/amazon-wish-lister), [Wetter.com](http://www.wetter.com/apps_und_mehr/website/api/), [OpenWeatherMap](http://openweathermap.org/api), [Faroo](http://www.faroo.com/hp/api/api.html#json), [HackerNews](https://github.com/HackerNews/API), [New York Times](http://developer.nytimes.com/docs/read/times_newswire_api)
      - maybe: [EventFul](http://api.eventful.com/docs/formats), [Gigulate](http://gigulate.com/api/), [OpenLigaDB](http://www.openligadb.de/Help), [Wikipedia/Wikimedia](https://www.mediawiki.org/wiki/API:Main_page/de), [Yahoo](https://developer.yahoo.com/boss/search/)
  - **OTHER DYNAMIC SOURCES**
     - [ ] [RSS feeds](http://cyber.law.harvard.edu/rss/rss.html)
