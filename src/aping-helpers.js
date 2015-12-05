@@ -62,12 +62,18 @@ apingApp.service('apingTimeHelper', function () {
             angular.forEach(tempArray, function (value, key) {
 
                 value.platform = _platform;
-                if(typeof value.items == "undefined" && _appSettings && typeof _appSettings.items != "undefined") {
-                    value.items = _appSettings.items;
+
+                if(_appSettings) {
+                    if(typeof value.items == "undefined" && typeof _appSettings.items != "undefined") {
+                        value.items = _appSettings.items;
+                    }
+                    if(typeof value.type == "undefined" && typeof _appSettings.type != "undefined") {
+                        value.type = _appSettings.type;
+                    }
                 }
 
-
                 var request = apingInputObjects.getNew("request", value);
+
                 requests.push(request);
 
             });
@@ -108,5 +114,5 @@ apingApp.service('apingTimeHelper', function () {
                 var result = (a[_property] < b[_property]) ? -1 : (a[_property] > b[_property]) ? 1 : 0;
                 return result * sortOrder;
             }
-        }
+        };
     }]);
