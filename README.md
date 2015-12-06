@@ -30,7 +30,9 @@ everybody can create **_plugins_** and **_designs_**
         - converts to this models: `social`, `image`
      - [x] **Vimeo** ([apiNG-plugin-vimeo](https://github.com/JohnnyTheTank/apiNG-plugin-vimeo))
         - converts to this models: `social`, `video`
-     - [ ] [Google+](https://developers.google.com/+/web/api/rest/latest/), [Flickr](https://www.flickr.com/services/api/), [Dailymotion](https://developer.dailymotion.com/api), [Tumblr](https://www.tumblr.com/docs/en/api/v2), [Vine](https://github.com/starlock/vino/wiki/API-Reference), [Vk](http://vk.com/dev), [Pinterest](https://developers.pinterest.com/docs/getting-started/introduction/) ([Blogger](https://developers.google.com/blogger/docs/3.0/using))
+     - [x] **Vine** ([apiNG-plugin-vine](https://github.com/JohnnyTheTank/apiNG-plugin-vine))
+        - converts to this models: `social`, `video`
+     - [ ] [Google+](https://developers.google.com/+/web/api/rest/latest/), [Flickr](https://www.flickr.com/services/api/), [Dailymotion](https://developer.dailymotion.com/api), [Tumblr](https://www.tumblr.com/docs/en/api/v2), [Vk](http://vk.com/dev), [Pinterest](https://developers.pinterest.com/docs/getting-started/introduction/) ([Blogger](https://developers.google.com/blogger/docs/3.0/using))
  - **REST API SOURCES (Other)**
      - [ ] [Spotify](https://developer.spotify.com/web-api/), [GitHub](https://developer.github.com/v3/), [BandsInTown](https://www.bandsintown.com/api/overview), [Wunderlist](https://developer.wunderlist.com/documentation), [Amazon Wishlists](https://github.com/doitlikejustin/amazon-wish-lister), [Wetter.com](http://www.wetter.com/apps_und_mehr/website/api/), [OpenWeatherMap](http://openweathermap.org/api), [Faroo](http://www.faroo.com/hp/api/api.html#json), [HackerNews](https://github.com/HackerNews/API), [New York Times](http://developer.nytimes.com/docs/read/times_newswire_api), ([EventFul](http://api.eventful.com/docs/formats), [Gigulate](http://gigulate.com/api/), [OpenLigaDB](http://www.openligadb.de/Help), [Wikipedia/Wikimedia](https://www.mediawiki.org/wiki/API:Main_page/de), [Yahoo](https://developer.yahoo.com/boss/search/))
  - **OTHER DYNAMIC SOURCES**
