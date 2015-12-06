@@ -9,10 +9,12 @@
     <link rel="stylesheet" type="text/css" href="css/normalize.css" media="screen">
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="css/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/styles.min.css" media="screen">
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//rawgit.com/JohnnyTheTank/apiNG-design-default/master/demo/css/main.css">
-    <link rel="stylesheet" href="//rawgit.com/JohnnyTheTank/apiNG-design-default/master/dist/aping-design-default.min.css">
+    <link rel="stylesheet" href="//cdn.rawgit.com/JohnnyTheTank/apiNG-design-default/master/demo/css/main.css">
+    <link rel="stylesheet"
+          href="//cdn.rawgit.com/JohnnyTheTank/apiNG-design-default/master/dist/aping-design-default.min.css">
 
     <!-- Font -->
     <link href='//fonts.googleapis.com/css?family=Economica' rel='stylesheet' type='text/css'>
@@ -24,25 +26,25 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-sanitize.min.js"></script>
 
     <!-- apiNG -->
-    <script src="//rawgit.com/JohnnyTheTank/apiNG/master/dist/aping.min.js"></script>
-    <script src="//rawgit.com/JohnnyTheTank/apiNG-design-default/master/demo/js/aping-config.js"></script>
+    <script src="//cdn.rawgit.com/JohnnyTheTank/apiNG/master/dist/aping.min.js"></script>
+    <script src="//cdn.rawgit.com/JohnnyTheTank/apiNG-design-default/master/demo/js/aping-config.js"></script>
 
     <!-- apiNG plugins -->
-    <script src="//rawgit.com/JohnnyTheTank/apiNG-plugin-youtube/master/dist/aping-plugin-youtube.min.js"></script>
-    <script src="//rawgit.com/JohnnyTheTank/apiNG-plugin-instagram/master/dist/aping-plugin-instagram.min.js"></script>
-    <script src="//rawgit.com/JohnnyTheTank/apiNG-plugin-facebook/master/dist/aping-plugin-facebook.min.js"></script>
-    <script src="//rawgit.com/JohnnyTheTank/apiNG-plugin-codebird/master/dist/aping-plugin-codebird.min.js"></script>
-    <script src="//rawgit.com/JohnnyTheTank/apiNG-plugin-vimeo/master/dist/aping-plugin-vimeo.min.js"></script>
+    <script src="//cdn.rawgit.com/JohnnyTheTank/apiNG-plugin-youtube/master/dist/aping-plugin-youtube.min.js"></script>
+    <script src="//cdn.rawgit.com/JohnnyTheTank/apiNG-plugin-instagram/master/dist/aping-plugin-instagram.min.js"></script>
+    <script src="//cdn.rawgit.com/JohnnyTheTank/apiNG-plugin-facebook/master/dist/aping-plugin-facebook.min.js"></script>
+    <script src="//cdn.rawgit.com/JohnnyTheTank/apiNG-plugin-codebird/master/dist/aping-plugin-codebird.min.js"></script>
+    <script src="//cdn.rawgit.com/JohnnyTheTank/apiNG-plugin-vimeo/master/dist/aping-plugin-vimeo.min.js"></script>
+
+    <script src="//cdn.rawgit.com/JohnnyTheTank/apiNG-design-default/master/demo/js/app.js"></script>
 
     <!-- apiNG design & dependencies -->
-    <script src="//rawgit.com/JohnnyTheTank/angular-masonry-packed/master/dist/angular-masonry-packed.min.js"></script>
-    <script src="//rawgit.com/scottcorgan/angular-linkify/master/angular-linkify.min.js"></script>
+    <script src="//cdn.rawgit.com/JohnnyTheTank/angular-masonry-packed/master/dist/angular-masonry-packed.min.js"></script>
+    <script src="//cdn.rawgit.com/scottcorgan/angular-linkify/master/angular-linkify.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment-with-locales.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-moment/0.10.3/angular-moment.min.js"></script>
-    <script src="//rawgit.com/JohnnyTheTank/apiNG-design-default/master/dist/aping-design-default.min.js"></script>
+    <script src="//cdn.rawgit.com/JohnnyTheTank/apiNG-design-default/master/dist/aping-design-default.min.js"></script>
 
-    <!-- angular module -->
-    <script src="//rawgit.com/JohnnyTheTank/apiNG-design-default/master/demo/js/app.js"></script>
 
 </head>
 <body ng-app="app">
@@ -71,17 +73,17 @@
     <h2 id="demo">Demo</h2>
     Simple apiNG Demo with some plugins and default design
     <h3>HTML</h3>
-    <pre>
-&lt;aping
-        template-url="social_template.html"
-        type="social"
-        items="6"
-        aping-youtube="[{'channelId':'UCoxMr8CYaJY-om5eJ2RA_4g'}]"
-        aping-instagram="[{'tag':'greenmile'}, {'tag':'fcbayern', 'items':3}]"
-        aping-facebook="[{'page':'frittenbubu'}]"
-        aping-codebird="[{'search':'angular', 'result_type':'popular', 'showAvatar':false}]"
-        aping-vimeo="[{'tag':'sports'}]">
-&lt;/aping></pre>
+
+    <pre><code class="html"><span class="element">&lt;aping</span>
+    <span class="template">template-url="social_template.html"</span>
+    <span class="attr">type="social"</span>
+    <span class="attr">items="6"</span>
+    <span class="plugin">aping-youtube="[{'channelId':'UCoxMr8CYaJY-om5eJ2RA_4g'}]"
+    aping-instagram="[{'tag':'camping', 'items':2}, {'userId':'416104304'}]"
+    aping-facebook="[{'page':'frittenbubu'}]"
+    aping-codebird="[{'search':'eagle', 'result_type':'popular', 'showAvatar':false}]"
+    aping-vimeo="[{'tag':'soccer'}]"</span><span class="element">&gt;</span>
+<span class="element">&lt;/aping&gt;</span></code></pre>
 
     <h3>Result</h3>
     <aping
@@ -89,10 +91,10 @@
             type="social"
             items="6"
             aping-youtube="[{'channelId':'UCoxMr8CYaJY-om5eJ2RA_4g'}]"
-            aping-instagram="[{'tag':'greenmile'}, {'tag':'fcbayern', 'items':3}]"
+            aping-instagram="[{'tag':'camping', 'items':2}, {'userId':'416104304'}]"
             aping-facebook="[{'page':'frittenbubu'}]"
-            aping-codebird="[{'search':'angular', 'result_type':'popular', 'showAvatar':false}]"
-            aping-vimeo="[{'tag':'sports'}]">
+            aping-codebird="[{'search':'eagle', 'result_type':'popular', 'showAvatar':false}]"
+            aping-vimeo="[{'tag':'soccer'}]">
     </aping>
 
     <h2>
