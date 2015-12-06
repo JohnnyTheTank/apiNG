@@ -10,7 +10,7 @@ _**Note:** apiNG is under development and not ready for public usage_
 ## How it works
 
 apiNG works as plugin platform.
- - **_plugins_** receive and transform some data to any **_model_** and commit the result to **apiNG**
+ - **_plugins_** receive and transform data to any **_model_** and commit the result to **apiNG**
  - **_designs_** receive the result from **apiNG** and display the **_model's_** data
 
 everybody can create **_plugins_**, **_models_** and **_designs_**
