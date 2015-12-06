@@ -10,14 +10,14 @@ _**Note:** apiNG is under development and not ready for public usage_
 ## How does it work?
 
 apiNG works as plugin platform.
- - **`plugins`**: receive some data (from REST API's) and convert this to any `model` and send the result to **apiNG**
- - **`designs`**: receive the result from **apiNG** and display the `model's` data
+ - **_plugins_** receive and covert some data to any **_model_** and commit the result to **apiNG**
+ - **_designs_** receive the result from **apiNG** and display the **_model's_** data
 
-everybody can create `plugins`, `models` and `designs`
+everybody can create **_plugins_**, **_models_** and **_designs_**
 
 ## Current status
 
-### Plugins (sources/platforms)
+### Plugins (sources)
  - **REST API SOURCES (Social Media)**
      - [x] **Youtube** ([apiNG-plugin-youtube](https://github.com/JohnnyTheTank/apiNG-plugin-youtube))
         - converts to this models: `social`, `video`
@@ -60,7 +60,7 @@ everybody can create `plugins`, `models` and `designs`
  - _and much more coming ..._
  
 # Community
-create your own `plugin` or `design` from this samples:
+create your own **_plugins_** or **_designs_** by this samples:
 - [apiNG-plugin-sample](https://github.com/JohnnyTheTank/apiNG-plugin-sample)
 - [apiNG-design-sample](https://github.com/JohnnyTheTank/apiNG-design-sample)
 
