@@ -9,11 +9,12 @@ _**Note:** apiNG is under development and not ready for public usage_
 
 ## How it works
 
-apiNG works as plugin platform.
- - **_plugins_** receive and transform various data to any **_model_** and commit the result to **apiNG**
- - **_designs_** receive the result from **apiNG** and display the **_model's_** data
+apiNG works as plugin platform:
+ 1. **_plugins_** commit any data to  **apiNG**
+ 2. **apiNG** commits the data to **_designs_**
+ 3. **_designs_** display the data
 
-everybody can create **_plugins_**, **_models_** and **_designs_**
+everybody can create **_plugins_** and **_designs_**
 
 ## Current status
 
@@ -44,11 +45,11 @@ everybody can create **_plugins_**, **_models_** and **_designs_**
  - _and much more coming ..._
     
 ### Models
- - [x] **social**
- - [x] **video**
- - [x] **image**
- - [x] **event**
- - [ ] post, news, link, product, activity, match, rank, task, weather
+ - [x] `social`
+ - [x] `video`
+ - [x] `image`
+ - [x] `event`
+ - [ ] `post`, `news`, `link`, `product`, `activity`, `match`, `rank`, `task`, `weather`
  - _and much more coming ..._
     
 ### Designs
