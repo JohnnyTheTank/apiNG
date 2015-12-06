@@ -7,7 +7,7 @@ _**Note:** apiNG is under development and not ready for public usage_
 # Demo
 [Simple demo](http://johnnythetank.github.io/apiNG/#demo) (social wall)
 
-## How does it work?
+## How it works?
 
 apiNG works as plugin platform.
  - **_plugins_** receive and covert some data to any **_model_** and commit the result to **apiNG**
