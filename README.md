@@ -4,8 +4,9 @@ _**Note:** apiNG is under development and not ready for public usage_
 
 **apiNG** is an AngularJS directive for receiving and displaying data from any source, like REST APIs, JSON files or just simple JavaScript arrays.
 
-# Demo
-[Simple demo](http://johnnythetank.github.io/apiNG/#demo) (social wall)
+# Demos
+- [Social Wall](http://johnnythetank.github.io/apiNG/#demo) (default design)
+- [Image Gallery](https://rawgit.com/JohnnyTheTank/apiNG-design-xgallerify/master/demo/) (xgallerify design)
 
 ## How it works
 
@@ -57,6 +58,8 @@ everybody can create **_plugins_** and **_designs_**
 ### Designs
  - [x] **[default](https://github.com/JohnnyTheTank/apiNG-design-default)** (masonry layout)
     - displays this models: `social`, `image`, `event`
+ - [x] **[xgallerify](https://github.com/JohnnyTheTank/apiNG-design-xgallerify)** (xGallerify layout)
+    - displays this models: `image`
  - [x] **[deadwood](https://github.com/JohnnyTheTank/apiNG-design-deadwood)** (youtube player)
     - displays this models: `video`
         - only from youtube
