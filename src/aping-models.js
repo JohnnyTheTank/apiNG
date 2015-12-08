@@ -1,8 +1,8 @@
 "use strict";
 apingApp.service('apingModels', [function () {
-    this.getNew = function(_type, _platform) {
+    this.getNew = function(_model, _platform) {
         var model = {};
-        switch(_type) {
+        switch(_model) {
             case "social":
                 model = {
                     platform : _platform, //NAME of platform ( "youtube" / "facebook", "instagram" , ...)

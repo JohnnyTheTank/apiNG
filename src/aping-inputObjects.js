@@ -2,14 +2,14 @@
 
 apingApp.service('apingInputObjects', ['apingDefaultSettings', function (apingDefaultSettings) {
 
-    this.getNew = function (_type, _params) {
+    this.getNew = function (_model, _params) {
 
         var inputObject = {};
 
-        switch (_type) {
+        switch (_model) {
             case "request":
                 inputObject = $.extend(true, {
-                    type: apingDefaultSettings.type,
+                    model: apingDefaultSettings.model,
                     items: apingDefaultSettings.items,
                 }, _params);
                 break;

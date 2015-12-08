@@ -5,7 +5,7 @@ var apingApp = angular.module('jtt_aping', [])
             restrict: 'E',
             replace: 'false',
             scope: {
-                type: '@',
+                model: '@',
                 items: '@',
                 maxItems: '@',
                 orderBy: '@',
@@ -15,7 +15,7 @@ var apingApp = angular.module('jtt_aping', [])
                 $scope.results = [];
                 this.getAppSettings = function () {
                     return {
-                        type: $scope.type || apingDefaultSettings.type || "custom",
+                        model: $scope.model || apingDefaultSettings.model || "custom",
                         items: $scope.items || apingDefaultSettings.items,
                         maxItems: $scope.maxItems || apingDefaultSettings.maxItems,
                         orderBy: $scope.orderBy || apingDefaultSettings.orderBy,

@@ -67,8 +67,8 @@ apingApp.service('apingTimeHelper', function () {
                     if(typeof value.items == "undefined" && typeof _appSettings.items != "undefined") {
                         value.items = _appSettings.items;
                     }
-                    if(typeof value.type == "undefined" && typeof _appSettings.type != "undefined") {
-                        value.type = _appSettings.type;
+                    if(typeof value.model == "undefined" && typeof _appSettings.model != "undefined") {
+                        value.model = _appSettings.model;
                     }
                 }
 
