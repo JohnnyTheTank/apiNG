@@ -13,11 +13,10 @@ apingApp.config(['$provide', function ($provide) {
 
     $provide.constant("apingDefaultSettings", {
         templateUrl : "js/design-docs/docs-template.html",
-        items : 20, //items per request
-        maxItems: 100, //max items per aping
+        items : 100, //items per request
+        maxItems: -1, //max items per aping
         orderBy : false,
-        orderReverse : "false",
-        type: "social",
+        type: "custom",
     });
 
 }]);
