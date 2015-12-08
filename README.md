@@ -7,6 +7,7 @@ _**Note:** apiNG is under development and not ready for public usage_
 # Demos
 - [Social Wall](http://johnnythetank.github.io/apiNG/#demo) (default design)
 - [Image Gallery](https://rawgit.com/JohnnyTheTank/apiNG-design-xgallerify/master/demo/) (xgallerify design)
+- [Youtube Video Player](https://rawgit.com/JohnnyTheTank/apiNG-design-deadwood/master/demo/) (deadwood design)
 
 ## How it works
 
