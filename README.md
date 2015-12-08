@@ -1,4 +1,4 @@
-_**Note:** apiNG is under development and not ready for public usage. **Release: early 2016**_
+_**Note:** apiNG is under development and not ready for public usage. **Release in early 2016**_
 
 # apiNG
 
