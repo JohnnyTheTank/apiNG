@@ -1,7 +1,7 @@
 "use strict";
 
-angular.module('jtt_aping_design_docs', [])
-    .controller('apingDocsDesignController', ['$scope', function ($scope) {
+angular.module('docs_model', [])
+    .controller('docsModelController', ['$scope', function ($scope) {
 
         $scope.$on('apiNG.resultMerged', function () {
             $scope.workingCopy = $scope.results;

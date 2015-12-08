@@ -1,0 +1,161 @@
+{
+    "platform": "twitter",
+    "title": "Twitter",
+    "plugin": {
+        "name": "apiNG-plugin-codebird",
+        "url": "https://github.com/JohnnyTheTank/apiNG-plugin-codebird"
+    },
+    "required": [
+        "API_BEARER_TOKEN"
+    ],
+    "models": [
+        {
+            "name": "social",
+            "methods": [
+                {
+                    "name": "searchByString",
+                    "description": false,
+                    "descriptionUrl": false,
+                    "support": "full",
+                    "items": [
+                        {
+                            "keyword": "search",
+                            "description": false,
+                            "descriptionUrl": false,
+                            "optional": false,
+                            "sample": false
+                        },
+                        {
+                            "keyword": "items",
+                            "description": false,
+                            "descriptionUrl": false,
+                            "optional": true,
+                            "sample": false
+                        },
+                        {
+                            "keyword": "showAvatar",
+                            "description": false,
+                            "descriptionUrl": false,
+                            "optional": true,
+                            "sample": false,
+                            "default": false,
+                            "options": [
+                                true,
+                                false
+                            ]
+                        },
+                        {
+                            "keyword": "result_type",
+                            "description": false,
+                            "descriptionUrl": false,
+                            "optional": true,
+                            "sample": false,
+                            "default": "mixed",
+                            "options": [
+                                "mixed",
+                                "recent",
+                                "popular"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "searchByUser",
+                    "description": false,
+                    "descriptionUrl": false,
+                    "support": "full",
+                    "items": [
+                        {
+                            "keyword": "user",
+                            "description": false,
+                            "descriptionUrl": false,
+                            "optional": false,
+                            "sample": false,
+                        },
+                        {
+                            "keyword": "items",
+                            "description": false,
+                            "descriptionUrl": false,
+                            "optional": true,
+                            "sample": false,
+                        },
+                        {
+                            "keyword": "showAvatar",
+                            "description": false,
+                            "descriptionUrl": false,
+                            "optional": true,
+                            "sample": false,
+                            "default": false,
+                            "options": [
+                                true,
+                                false
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "image",
+            "methods": [
+                {
+                    "name": "searchByString",
+                    "description": false,
+                    "descriptionUrl": false,
+                    "support": "reduce",
+                    "items": [
+                        {
+                            "keyword": "search",
+                            "description": false,
+                            "descriptionUrl": false,
+                            "optional": false,
+                            "sample": false
+                        },
+                        {
+                            "keyword": "items",
+                            "description": false,
+                            "descriptionUrl": false,
+                            "optional": true,
+                            "sample": false
+                        },
+                        {
+                            "keyword": "result_type",
+                            "description": false,
+                            "descriptionUrl": false,
+                            "optional": true,
+                            "sample": false,
+                            "default": "mixed",
+                            "options": [
+                                "mixed",
+                                "recent",
+                                "popular"
+                            ]
+                        },
+                    ]
+                },
+                {
+                    "name": "searchByUser",
+                    "description": false,
+                    "descriptionUrl": false,
+                    "support": "reduce",
+                    "items": [
+                        {
+                            "keyword": "user",
+                            "description": false,
+                            "descriptionUrl": false,
+                            "optional": false,
+                            "sample": false
+                        },
+                        {
+                            "keyword": "items",
+                            "description": false,
+                            "descriptionUrl": false,
+                            "optional": true,
+                            "sample": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

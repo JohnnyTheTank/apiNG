@@ -1,0 +1,22 @@
+[
+    {
+        "name": "social",
+        "isActive": true
+    },
+    {
+        "name": "video",
+        "isActive": false
+    },
+    {
+        "name": "image",
+        "isActive": false
+    },
+    {
+        "name": "event",
+        "isActive": false
+    },
+    {
+        "name": "custom",
+        "isActive": false
+    }
+]

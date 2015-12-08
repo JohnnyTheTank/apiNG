@@ -29,16 +29,17 @@
     <script src="js/app.js"></script>
 
     <!-- apiNG design & dependencies -->
-    <script src="js/design-docs/apiNG-design-docs.js"></script>
+    <script src="js/design-docs/models/models.js"></script>
+    <script src="js/design-docs/models/model.js"></script>
 
 
 </head>
 <body ng-app="app">
     <div class="container">
         <aping
+                template-url="js/design-docs/models/models.html"
                 model="custom"
-                aping-jsonloader="[{'path':'//rawgit.com/JohnnyTheTank/apiNG-configurator/master/json/models.json'}]">>
-
+                aping-jsonloader="[{'path':'json/models.json'}]">>
         </aping>
 
     </div>

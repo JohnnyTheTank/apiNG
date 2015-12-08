@@ -1,0 +1,24 @@
+{
+  "name": "social",
+  "title": "Social Media",
+  "description": false,
+  "descriptionUrl": false,
+  "properties" : [
+    "platform",
+    "blog_name",
+    "blog_id",
+    "blog_link",
+    "type",
+    "timestamp",
+    "post_url",
+    "intern_id",
+    "text",
+    "caption",
+    "img_url",
+    "source",
+    "likes",
+    "shares",
+    "comments",
+    "position"
+  ]
+}
