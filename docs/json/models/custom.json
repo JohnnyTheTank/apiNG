@@ -1,0 +1,8 @@
+{
+  "name": "custom",
+  "title": "Custom",
+  "description": false,
+  "descriptionUrl": false,
+  "type": "dynamic",
+  "properties" : []
+}

@@ -1,6 +1,6 @@
 {
-  "name": "social",
-  "title": "Social Media",
+  "name": "image",
+  "title": "Image",
   "description": false,
   "descriptionUrl": false,
   "type": "static",
@@ -9,7 +9,6 @@
     "blog_name",
     "blog_id",
     "blog_link",
-    "type",
     "timestamp",
     "post_url",
     "intern_id",

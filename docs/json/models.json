@@ -5,18 +5,18 @@
     },
     {
         "name": "video",
-        "isActive": false
+        "isActive": true
     },
     {
         "name": "image",
-        "isActive": false
+        "isActive": true
     },
     {
         "name": "event",
-        "isActive": false
+        "isActive": true
     },
     {
         "name": "custom",
-        "isActive": false
+        "isActive": true
     }
 ]

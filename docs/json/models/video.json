@@ -1,6 +1,6 @@
 {
-  "name": "social",
-  "title": "Social Media",
+  "name": "video",
+  "title": "Video",
   "description": false,
   "descriptionUrl": false,
   "type": "static",
@@ -9,7 +9,7 @@
     "blog_name",
     "blog_id",
     "blog_link",
-    "type",
+    "markup",
     "timestamp",
     "post_url",
     "intern_id",
