@@ -21,7 +21,17 @@ apingApp
             return false;
         };
     })
-    .service('apingUtilityHelper', ['apingInputObjects', function (apingInputObjects) {
+    .service('apingUtilityHelper', ['apingInputObjects', 'apingApiKeys', function (apingInputObjects, apingApiKeys) {
+        this.getApiCredentials = function (_platform, _keyName) {
+            if(apingApiKeys) {
+                if(apingApiKeys[_platform] && apingApiKeys[_platform][_keyName]) {
+                    return apingApiKeys[_platform][_keyName][Math.floor(Math.random()*apingApiKeys[_platform].length)][_keyName];
+                }
+            }
+            return false;
+        };
+
+
         this.parseJsonFromAttributes = function (_string, _platform, _appSettings) {
 
             if (!(typeof _string === "string" && _string)) {
