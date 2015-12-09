@@ -10,6 +10,7 @@
     "blog_id",
     "blog_link",
     "timestamp",
+    "date_time",
     "post_url",
     "intern_id",
     "text",

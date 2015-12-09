@@ -11,6 +11,7 @@
     "blog_link",
     "type",
     "timestamp",
+    "date_time",
     "post_url",
     "intern_id",
     "text",
