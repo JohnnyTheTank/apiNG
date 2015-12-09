@@ -23,9 +23,10 @@ apingApp
     })
     .service('apingUtilityHelper', ['apingInputObjects', 'apingApiKeys', function (apingInputObjects, apingApiKeys) {
         this.getApiCredentials = function (_platform, _keyName) {
+
             if(apingApiKeys) {
                 if(apingApiKeys[_platform] && apingApiKeys[_platform][_keyName]) {
-                    return apingApiKeys[_platform][_keyName][Math.floor(Math.random()*apingApiKeys[_platform].length)][_keyName];
+                    return apingApiKeys[_platform][Math.floor(Math.random()*apingApiKeys[_platform].length)][_keyName];
                 }
             }
             return false;
