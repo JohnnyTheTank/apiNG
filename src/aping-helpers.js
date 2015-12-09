@@ -25,9 +25,8 @@ apingApp
         this.getApiCredentials = function (_platform, _keyName) {
 
             if(apingApiKeys) {
-                if(apingApiKeys[_platform] && apingApiKeys[_platform][_keyName]) {
-                    //return apingApiKeys[_platform][Math.floor(Math.random()*apingApiKeys[_platform].length)][_keyName];
-                    return apingApiKeys[_platform][0][_keyName];
+                if(apingApiKeys[_platform]) {
+                    return apingApiKeys[_platform][Math.floor(Math.random()*apingApiKeys[_platform].length)][_keyName];
                 }
             }
             return false;
