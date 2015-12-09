@@ -27,14 +27,16 @@ var apingApp = angular.module('jtt_aping', [])
                 this.concatToResults = function (_array) {
                     $scope.results = $scope.results.concat(_array);
 
-                    if (this.getAppSettings().orderBy) {
-                        $scope.results.sort(apingUtilityHelper.sortArrayByProperty(this.getAppSettings().orderBy));
-                        if (this.getAppSettings().orderReverse === true || this.getAppSettings().orderReverse === "true") {
+                    var appSettings = this.getAppSettings();
+
+                    if(appSettings.orderBy) {
+                        $scope.results.sort(apingUtilityHelper.sortArrayByProperty(appSettings.orderBy));
+                        if(appSettings.orderReverse === true || appSettings.orderReverse === "true") {
                             $scope.results.reverse();
                         }
                     }
-                    if (this.getAppSettings().maxItems > -1 && $scope.results.length > this.getAppSettings().maxItems) {
-                        $scope.results = $scope.results.splice(0, this.getAppSettings().maxItems);
+                    if(appSettings.maxItems > -1 && $scope.results.length > appSettings.maxItems) {
+                        $scope.results = $scope.results.splice(0,appSettings.maxItems);
                     }
                     $scope.$broadcast('apiNG.resultMerged');
                 };

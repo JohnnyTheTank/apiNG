@@ -14,7 +14,7 @@ apingApp.config(['$provide', function ($provide) {
         templateUrl : "<PATH_TO_YOUR_DEFAULT_DESIGN>",
         items : 20, //items per request
         maxItems: 100, //max items per aping
-        orderBy : "timestamp",
+        orderBy : "caption",
         orderReverse : "true",
         model: "social",
     });
