@@ -4,7 +4,7 @@ _**Note:** apiNG is under development and not ready for public usage. **Release 
 
 **apiNG** is an AngularJS directive for receiving and displaying data from any source, like REST APIs, JSON files or just simple JavaScript arrays.
 
-# Demos
+## Demos
 - [Social Wall](http://johnnythetank.github.io/apiNG/#demo) (default design)
 - [Image Gallery](https://rawgit.com/JohnnyTheTank/apiNG-design-xgallerify/master/demo/) (xgallerify design)
 - [Youtube Video Player](https://rawgit.com/JohnnyTheTank/apiNG-design-deadwood/master/demo/) (deadwood design)
@@ -65,7 +65,10 @@ everybody can create **_plugins_** and **_designs_**
     - displays this models: `video`
         - only from youtube
  - _and much more coming ..._
- 
+
+### Documentation
+Full documentation coming soon
+
 # Community
 create your own **_plugins_** or **_designs_** by this samples:
 - [apiNG-plugin-sample](https://github.com/JohnnyTheTank/apiNG-plugin-sample)
