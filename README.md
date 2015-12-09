@@ -67,7 +67,7 @@ everybody can create **_plugins_** and **_designs_**
  - _and much more coming ..._
 
 ### Documentation
-Full documentation coming soon
+_Full documentation coming soon ..._
 
 # Community
 create your own **_plugins_** or **_designs_** by this samples:
