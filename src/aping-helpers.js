@@ -57,7 +57,7 @@ apingApp.service('apingTimeHelper', function () {
 
             var requests = [];
 
-            var tempArray = this.replaceSingleQuotesAndParseJson(_string);
+            var tempArray = $.parseJSON(_string.replace(/'/g, '"'));
 
             angular.forEach(tempArray, function (value, key) {
 
@@ -79,10 +79,6 @@ apingApp.service('apingTimeHelper', function () {
             });
 
             return requests;
-        };
-
-        this.replaceSingleQuotesAndParseJson = function (_string) {
-            return $.parseJSON(_string.replace(/'/g, '"'));
         };
 
         this.getYoutubeIdFromUrl = function (_url) {
