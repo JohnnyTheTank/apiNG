@@ -112,6 +112,7 @@ apingApp.service('apingModels', [function () {
                     clone_url : false,
                     git_url : false,
                     ssh_url : false,
+                    svn_url : false,
                     isFork : false,
                     openIssues : false,
                     watchers : false,
@@ -121,6 +122,8 @@ apingApp.service('apingModels', [function () {
                     created_date_time: false,
                     updated_timestamp: false,
                     updated_date_time: false,
+                    pushed_timestamp: false,
+                    pushed_date_time: false,
                 };
                 break;
 
