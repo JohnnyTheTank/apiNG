@@ -127,6 +127,37 @@ apingApp.service('apingModels', [function () {
                 };
                 break;
 
+            case "activity":
+                model = {
+                    platform : _platform, //NAME of platform ( "youtube" / "facebook", "instagram" , ...)
+
+                    body : false,
+
+                    actor_name : false, //who?
+                    actor_id : false,
+                    actor_url : false,
+                    actor_img_url : false,
+                    actor_type: false,
+
+                    action_name : false, //what?
+                    action_id : false,
+                    action_url : false,
+                    action_img : false,
+                    action_type: false,
+
+                    object_name : false,
+                    object_id : false,
+                    object_img : false,
+                    object_url : false,
+                    object_type: false,
+
+                    context : false,
+                    timestamp : false,
+                    date_time: false,
+
+                };
+                break;
+
             default:
                 break;
         }
