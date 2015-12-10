@@ -95,6 +95,35 @@ apingApp.service('apingModels', [function () {
                 };
                 break;
 
+            case "repo":
+                model = {
+                    platform : _platform, //NAME of platform ( "youtube" / "facebook", "instagram" , ...)
+                    owner_name : false,
+                    owner_id : false,
+                    owner_link : false,
+                    owner_img_url : false,
+                    name : false,
+                    id: false,
+                    fullname: false,
+                    description : false,
+                    url : false,
+                    homepage : false,
+                    language : false,
+                    clone_url : false,
+                    git_url : false,
+                    ssh_url : false,
+                    isFork : false,
+                    openIssues : false,
+                    watchers : false,
+                    stargazers : false,
+                    forks : false,
+                    created_timestamp : false,
+                    created_date_time: false,
+                    updated_timestamp: false,
+                    updated_date_time: false,
+                };
+                break;
+
             default:
                 break;
         }

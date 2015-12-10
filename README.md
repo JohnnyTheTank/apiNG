@@ -53,6 +53,7 @@ everybody can create **_plugins_** and **_designs_**
  - [x] `video`
  - [x] `image`
  - [x] `event`
+ - [x] `repo`
  - [ ] `post`, `news`, `link`, `product`, `activity`, `match`, `rank`, `task`, `weather`
  - _and much more coming ..._
     
