@@ -10,6 +10,7 @@ var apingApp = angular.module('jtt_aping', [])
                 maxItems: '@',
                 orderBy: '@',
                 orderReverse: '@',
+                templateUrl: '@',
                 payload: '@',
             },
             controller: ['$scope', function ($scope) {
@@ -48,8 +49,8 @@ var apingApp = angular.module('jtt_aping', [])
                     $scope.$apply();
                 };
             }],
-            templateUrl: function (elem, attrs) {
-                return attrs.templateUrl || apingDefaultSettings.templateUrl;
+            templateUrl: function (elem, scope) {
+                return scope.templateUrl || apingDefaultSettings.templateUrl;
             }
         };
     }
