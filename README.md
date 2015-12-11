@@ -105,15 +105,15 @@ everybody can create **_plugins_** and **_designs_**
 _Full documentation coming soon ..._
 
 #### Parameters
-| Name | Sample | Type | Description |
+| Name | Type | Sample | Description |
 |---|---|---|---|
-| `template-url` | `templates/social_template.html` | `string` | Path to template file (design) |
-| `model` | `social` | `string` | Chosen model for this **apiNG instance** |
-| `items` | `20` | `int` | Number of displayed items **per request**. Use `-1` for no limitation |
-| `max-items` | `100` | `int` | Number of items of this **apiNG instance**. Use `-1` for no limitation |
-| `order-by` | `timestamp` | `string` | Order result by this attribute. Use `$NONE` for no order. Use `$RANDOM` for random order |
-| `order-revers` | `false` | `boolean` | `true`: order will be reversed |
-| `payload` | `{'key1':'value1'}` | `json` | Payload for design controller |
+| `template-url` | `string` | `template.html` | Path to template file (design) |
+| `model` | `string`| `social` | Chosen model for this **apiNG instance** |
+| `items` | `int` | `20` | Number of displayed items **per request**. Use `-1` for no limitation |
+| `max-items` | `int` | `100` | Number of items of this **apiNG instance**. Use `-1` for no limitation |
+| `order-by` | `string` | `timestamp` | Order result by this attribute. Use `$NONE` for no order. Use `$RANDOM` for random order |
+| `order-revers` | `boolean` | `false` | `true`: order will be reversed |
+| `payload` | `json` | `{'key1':'value1'}` | Payload for design controller |
 
 
 # Community
