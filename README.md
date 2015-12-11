@@ -83,7 +83,7 @@ everybody can create **_plugins_** and **_designs_**
     
 ### Designs
  - [x] **[default](https://github.com/JohnnyTheTank/apiNG-design-default)** (masonry layout)
-    - displays this models: `social`, `image`, `event`
+    - displays this models: `social`, `image`, `event`, `repo`
  - [x] **[xgallerify](https://github.com/JohnnyTheTank/apiNG-design-xgallerify)** (xGallerify layout)
     - displays this models: `image`
  - [x] **[deadwood](https://github.com/JohnnyTheTank/apiNG-design-deadwood)** (youtube player)
