@@ -34,7 +34,17 @@ everybody can create **_plugins_** and **_designs_**
         - converts to this models: `social`, `video`
      - [x] **Vine** ([apiNG-plugin-vine](https://github.com/JohnnyTheTank/apiNG-plugin-vine))
         - converts to this models: `social`, `video`
-     - [ ] [Google+](https://developers.google.com/+/web/api/rest/latest/), [Flickr](https://www.flickr.com/services/api/), [Dailymotion](https://developer.dailymotion.com/api), [Tumblr](https://www.tumblr.com/docs/en/api/v2), [Vk](http://vk.com/dev), [Pinterest](https://developers.pinterest.com/docs/getting-started/introduction/), [500px](https://github.com/500px/api-documentation), [Picasa](https://developers.google.com/picasa-web/docs/2.0/reference) ([Blogger](https://developers.google.com/blogger/docs/3.0/using), [Delicious](https://github.com/SciDevs/delicious-api), [Skyrock](http://www.skyrock.com/developer/documentation/))
+     - [ ] [Google+](https://developers.google.com/+/web/api/rest/latest/),
+     [Flickr](https://www.flickr.com/services/api/),
+     [Dailymotion](https://developer.dailymotion.com/api),
+     [Tumblr](https://www.tumblr.com/docs/en/api/v2),
+     [Vk](http://vk.com/dev),
+     [Pinterest](https://developers.pinterest.com/docs/getting-started/introduction/),
+     [500px](https://github.com/500px/api-documentation),
+     [Picasa](https://developers.google.com/picasa-web/docs/2.0/reference)
+     ([Blogger](https://developers.google.com/blogger/docs/3.0/using),
+     [Delicious](https://github.com/SciDevs/delicious-api),
+     [Skyrock](http://www.skyrock.com/developer/documentation/))
  - **OTHER REST API SOURCES**
      - [x] **GitHub** ([apiNG-plugin-github](https://github.com/JohnnyTheTank/apiNG-plugin-github))
         - converts to this models: `repo`
@@ -78,7 +88,7 @@ everybody can create **_plugins_** and **_designs_**
  - [x] `image`
  - [x] `event`
  - [x] `repo`
- - [ ] `post`, `news`, `link`, `product`, `activity`, `match`, `rank`, `task`, `weather`
+ - [ ] `post`, `news`, `link`, `product`, `activity`, `match`, `rank`, `task`, `weather`, `release`
  - _and much more coming ..._
     
 ### Designs
