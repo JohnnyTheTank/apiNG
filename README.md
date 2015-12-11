@@ -94,6 +94,18 @@ everybody can create **_plugins_** and **_designs_**
 ### Documentation
 _Full documentation coming soon ..._
 
+#### Parameters
+| Name | Default | Type | Description |
+|---|---|---|---|
+| `template-url` |  | `string` | Path to template file (design)  |
+| `model` | `social` | `string` | Chosen model for this **apiNG instance** |
+| `items` | `20` | `int` | Number of items **per request**. Use `-1` for no limitation |
+| `max-items` | `100` | `int` | Number of items **per apiNG instance**. Use `-1` for no limitation |
+| `order-by` | `timestamp` | `string` | Order result by this parameter. Use `$NONE` for no order. Use `$RANDOM` for random order |
+| `order-revers` | `false` | `boolean` | On `true`, order will be reverse |
+| `payload` | | `json` | Payload for use in design controller. format: `{'key':'value'}` |
+
+
 # Community
 create your own **_plugins_** or **_designs_** by this samples:
 - [apiNG-plugin-sample](https://github.com/JohnnyTheTank/apiNG-plugin-sample)
