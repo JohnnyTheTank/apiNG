@@ -99,7 +99,7 @@ _Full documentation coming soon ..._
 |---|---|---|---|
 | `template-url` |  | `string` | Path to template file (design) e.g. `templates/social_template.html` |
 | `model` | `social` | `string` | Chosen model for this **apiNG instance** |
-| `items` | `20` | `int` | Number of items **per request**. Use `-1` for no limitation |
+| `items` | `20` | `int` | Number of displayed items **per request**. Use `-1` for no limitation |
 | `max-items` | `100` | `int` | Number of items of this **apiNG instance**. Use `-1` for no limitation |
 | `order-by` | `timestamp` | `string` | Order result by this parameter. Use `$NONE` for no order. Use `$RANDOM` for random order |
 | `order-revers` | `false` | `boolean` | On `true`, order will be reverse |
