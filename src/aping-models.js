@@ -139,7 +139,6 @@ apingApp.service('apingModels', [function () {
                     actor_img_url : false,
                     actor_type: false,
 
-                    action_name : false, //what?
                     action_message : false, //what?
                     action_id : false,
                     action_url : false,
