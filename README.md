@@ -105,15 +105,15 @@ everybody can create **_plugins_** and **_designs_**
 _Full documentation coming soon ..._
 
 #### Parameters
-| Name | Default | Type | Description |
+| Name | Sample | Type | Description |
 |---|---|---|---|
-| `template-url` |  | `string` | Path to template file (design) e.g. `templates/social_template.html` |
+| `template-url` | `templates/social_template.html` | `string` | Path to template file (design) |
 | `model` | `social` | `string` | Chosen model for this **apiNG instance** |
 | `items` | `20` | `int` | Number of displayed items **per request**. Use `-1` for no limitation |
 | `max-items` | `100` | `int` | Number of items of this **apiNG instance**. Use `-1` for no limitation |
 | `order-by` | `timestamp` | `string` | Order result by this attribute. Use `$NONE` for no order. Use `$RANDOM` for random order |
 | `order-revers` | `false` | `boolean` | `true`: order will be reversed |
-| `payload` | | `json` | Payload for use in design controller. e.g. `{'key1':'value1'}` |
+| `payload` | `{'key1':'value1'}` | `json` | Payload for design controller |
 
 
 # Community
