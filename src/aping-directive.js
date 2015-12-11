@@ -29,10 +29,14 @@ var apingApp = angular.module('jtt_aping', [])
 
                     var appSettings = this.getAppSettings();
 
-                    if(appSettings.orderBy) {
-                        $scope.results.sort(apingUtilityHelper.sortArrayByProperty(appSettings.orderBy));
-                        if(appSettings.orderReverse === true || appSettings.orderReverse === "true") {
-                            $scope.results.reverse();
+                    if(appSettings.orderBy && appSettings.orderBy != "$NONE") {
+                        if(appSettings.orderBy == "$RANDOM") {
+                            $scope.results = apingUtilityHelper.shuffleArray($scope.results);
+                        } else {
+                            $scope.results.sort(apingUtilityHelper.sortArrayByProperty(appSettings.orderBy));
+                            if(appSettings.orderReverse === true || appSettings.orderReverse === "true") {
+                                $scope.results.reverse();
+                            }
                         }
                     }
                     if(appSettings.maxItems > -1 && $scope.results.length > appSettings.maxItems) {
