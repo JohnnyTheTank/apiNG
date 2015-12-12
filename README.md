@@ -109,10 +109,10 @@ _Full documentation coming soon ..._
 |---|---|---|---|
 | `template-url` | `string` | `template.html` | Path to template file (design) |
 | `model` | `string`| `social` | Chosen model for this **apiNG instance** |
-| `items` | `int` | `20` | Number of displayed items **per request**.<br>Use `-1` for no limitation |
-| `max-items` | `int` | `100` | Number of items of this **apiNG instance**.<br>Use `-1` for no limitation |
-| `order-by` | `string` | `timestamp` | Order result by this attribute.<br>Use `$NONE` for no order.<br>Use `$RANDOM` for random order |
-| `order-revers` | `boolean` | `false` | `true`: order will be reversed |
+| `items` | `int` | `20` | Number of displayed items **per request**<br>Use `-1` for no limitation |
+| `max-items` | `int` | `100` | Number of items of this **apiNG instance**<br>Use `-1` for no limitation |
+| `order-by` | `string` | `timestamp` | Order result by this attribute<br>Use `$NONE` for no order<br>Use `$RANDOM` for random order |
+| `order-revers` | `boolean` | `false` | Use `true` for reverse order |
 | `payload` | `json` | `{'key1':'value1'}` | Payload for design controller |
 
 
