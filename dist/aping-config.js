@@ -20,6 +20,9 @@ apingApp.config(['$provide', function ($provide) {
         github: [
             {'access_token':'<YOUR_GITHUB_TOKEN>'}
         ],
+        'openweathermap': [
+            {'appid':'<YOUR_OPENWEATHERMAP_APP_ID>'}
+        ],
     });
 
     $provide.constant("apingDefaultSettings", {

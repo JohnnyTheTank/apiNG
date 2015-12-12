@@ -48,6 +48,8 @@ everybody can create **_plugins_** and **_designs_**
  - **OTHER REST API SOURCES**
      - [x] **GitHub** ([apiNG-plugin-github](https://github.com/JohnnyTheTank/apiNG-plugin-github))
         - converts to this models: `repo`
+     - [x] **OpenWeatherMap** ([apiNG-plugin-openweathermap](https://github.com/JohnnyTheTank/apiNG-plugin-openweathermap))
+        - converts to this models: `weather`
      - [ ] [Spotify](https://developer.spotify.com/web-api/),
      [iTunes](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html),
      [Soundcloud](https://developers.soundcloud.com/docs),
@@ -55,9 +57,6 @@ everybody can create **_plugins_** and **_designs_**
      [Eventbrite](http://developer.eventbrite.com/),
      [Wunderlist](https://developer.wunderlist.com/documentation),
      [Amazon Wishlists](https://github.com/doitlikejustin/amazon-wish-lister),
-     [Wetter.com](http://www.wetter.com/apps_und_mehr/website/api/),
-     [Weather Underground](http://www.wunderground.com/weather/api/),
-     [OpenWeatherMap](http://openweathermap.org/api),
      [Faroo](http://www.faroo.com/hp/api/api.html#json),
      [HackerNews](https://github.com/HackerNews/API),
      [New York Times](http://developer.nytimes.com/docs/read/times_newswire_api),
@@ -88,7 +87,8 @@ everybody can create **_plugins_** and **_designs_**
  - [x] `image`
  - [x] `event`
  - [x] `repo`
- - [ ] `post`, `news`, `link`, `product`, `activity`, `match`, `rank`, `task`, `weather`, `release`
+ - [x] `weather`
+ - [ ] `post`, `news`, `link`, `product`, `activity`, `match`, `rank`, `task`, `release`
  - _and much more coming ..._
     
 ### Designs
