@@ -113,7 +113,7 @@ _Full documentation coming soon ..._
 | `max-items` | `int` | `100` | Number of items of this **apiNG instance**<br>Use `-1` for no limitation |
 | `order-by` | `string` | `timestamp` | Order result by this attribute<br>Use `$NONE` for no order<br>Use `$RANDOM` for random order |
 | `order-revers` | `boolean` | `false` | Use `true` for reverse order |
-| `payload` | `json` | `{'key1':'value1'}` | Payload for design controller |
+| `payload-json` | `json` | `{'key1':'value1'}` | Payload for design controller |
 
 
 # Community

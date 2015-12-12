@@ -11,11 +11,11 @@ var apingApp = angular.module('jtt_aping', [])
                 orderBy: '@',
                 orderReverse: '@',
                 templateUrl: '@',
-                payload: '@',
+                payloadJson: '@',
             },
             controller: ['$scope', function ($scope) {
                 $scope.results = [];
-                $scope.payload = $scope.payload ? apingUtilityHelper.replaceSingleQuotesAndParseJson($scope.payload) : {};
+                $scope.payload = $scope.payloadJson ? apingUtilityHelper.replaceSingleQuotesAndParseJson($scope.payloadJson) : {};
                 this.getAppSettings = function () {
                     return {
                         model: $scope.model || apingDefaultSettings.model || "custom",
