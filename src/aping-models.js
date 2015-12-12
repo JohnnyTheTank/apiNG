@@ -159,6 +159,45 @@ apingApp.service('apingModels', [function () {
                 };
                 break;
 
+            case "weather":
+                model = {
+                    platform : _platform, //NAME of platform ( "youtube" / "facebook", "instagram" , ...)
+                    weather_code: false,
+                    weather_caption: false, //rain
+                    weather_text : false, //light rain
+                    weather_icon_name: false,
+                    weather_icon_url: false,
+
+                    temp: false,
+                    pressure: 1017.58,
+                    humidity: 96,
+                    temp_min: 286.164,
+                    temp_max: 286.164,
+                    sea_level: 1027.69,
+                    grnd_level: 1017.58,
+                    wind_speed: false,
+                    wind_deg: false,
+                    rain_duration: false,
+                    rain_volume: false,
+                    clouds: false,
+
+                    timestamp: false,
+                    date_time: false,
+
+                    sunrise_timestamp : false,
+                    sunrise_date_time : false,
+                    sunset_timestamp : false,
+                    sunset_date_time : false,
+
+                    loc_city : false,
+                    loc_city_id: false,
+                    loc_country : false,
+                    loc_lat : false,
+                    loc_lng : false,
+                    loc_zip : false,
+                };
+                break;
+
             default:
                 break;
         }
