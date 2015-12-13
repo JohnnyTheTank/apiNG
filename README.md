@@ -5,12 +5,12 @@ _**Note:** apiNG is currently under development and not ready yet for public use
 **apiNG** is an AngularJS directive for receiving and displaying data from any source, like REST APIs, JSON files or just simple JavaScript arrays.
 
 ## How apiNG works
-**apiNG** works as plugin platform
+**apiNG** works as extendable platform, composed of three components:
  1. **_plugins_** pass various data on to **apiNG**
  2. **apiNG** passes the data on to **_designs_**
  3. **_designs_** display the data
 
-everybody can create **_plugins_** and **_designs_**
+Users can collaborate to create new **_plugins_** and **_designs_**
 
 ## Demos
 - [Social Wall](http://johnnythetank.github.io/apiNG/#demo) (default design)
@@ -20,11 +20,34 @@ everybody can create **_plugins_** and **_designs_**
 ## Installation
 You can choose your preferred method of installation:
 
-* Through bower: `bower install apiNG --save`
+* Via bower: `bower install apiNG --save`
 * Download from github: [apiNG.zip](https://github.com/JohnnyTheTank/apiNG/zipball/master)
 
-## Usage
+### Dependencies
+* jquery
+* angular
+* angular-sanitize
 
+
+### Include apiNG
+Include both **aping.min.js** and **aping-config.js** in your application.
+```html
+<!-- dependencies for apiNG -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+
+<!-- apiNG -->
+<script src="bower_components/apiNG/dist/aping.min.js"></script>
+<script src="bower_components/apiNG/dist/aping.config.js"></script>
+```
+
+Add the module `jtt_aping` as a dependency to your app module:
+```js
+var myapp = angular.module('myapp', ['jtt_aping']);
+```
+
+## Usage
 _Full documentation coming soon ..._
 
 ### Parameters
@@ -132,4 +155,3 @@ create your own **_plugins_** or **_designs_** by this samples:
 
 # Contributors
 - Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
-    - core system
