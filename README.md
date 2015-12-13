@@ -55,6 +55,7 @@ everybody can create **_plugins_** and **_designs_**
      [iTunes](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html),
      [Soundcloud](https://developers.soundcloud.com/docs),
      [BandsInTown](https://www.bandsintown.com/api/overview),
+     [MusicBrainz](https://wiki.musicbrainz.org/Development/JSON_Web_Service),
      [Eventbrite](http://developer.eventbrite.com/),
      [Wunderlist](https://developer.wunderlist.com/documentation),
      [Amazon Wishlists](https://github.com/doitlikejustin/amazon-wish-lister),
