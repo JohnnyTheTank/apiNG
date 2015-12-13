@@ -31,8 +31,5 @@
     "jquery": "*",
     "angular": "*",
     "angular-sanitize": "*"
-  },
-  "resolutions": {
-    "angular": "1.4.8"
   }
 }
