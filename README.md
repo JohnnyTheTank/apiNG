@@ -4,19 +4,39 @@ _**Note:** apiNG is under development and not ready for public usage. **Release 
 
 **apiNG** is an AngularJS directive for receiving and displaying data from any source, like REST APIs, JSON files or just simple JavaScript arrays.
 
+## How apiNG works
+**apiNG** works as plugin platform
+ 1. **_plugins_** pass various data on to **apiNG**
+ 2. **apiNG** passes the data on to **_designs_**
+ 3. **_designs_** display the data
+
+everybody can create **_plugins_** and **_designs_**
+
 ## Demos
 - [Social Wall](http://johnnythetank.github.io/apiNG/#demo) (default design)
 - [Image Gallery](https://rawgit.com/JohnnyTheTank/apiNG-design-xgallerify/master/demo/) (xgallerify design)
 - [Youtube Video Player](https://rawgit.com/JohnnyTheTank/apiNG-design-deadwood/master/demo/) (deadwood design)
 
-## How it works
+## Installation
+You can choose your preferred method of installation:
 
-apiNG works as plugin platform:
- 1. **_plugins_** commit any data to  **apiNG**
- 2. **apiNG** commits the data to **_designs_**
- 3. **_designs_** display the data
+* Through bower: `bower install apiNG --save`
+* Download from github: [apiNG.zip](https://github.com/JohnnyTheTank/apiNG/zipball/master)
 
-everybody can create **_plugins_** and **_designs_**
+## Usage
+
+_Full documentation coming soon ..._
+
+### Parameters
+| Name | Type | Sample | Description |
+|---|---|---|---|
+| `template-url` | `string` | `template.html` | Path to template file (design) |
+| `model` | `string`| `social` | Chosen model for this **apiNG instance** |
+| `items` | `int` | `20` | Number of displayed items **per request**<br>Use `-1` for no limitation |
+| `max-items` | `int` | `100` | Number of items of this **apiNG instance**<br>Use `-1` for no limitation |
+| `order-by` | `string` | `timestamp` | Order result by this attribute<br>Use `$NONE` for no order<br>Use `$RANDOM` for random order |
+| `order-revers` | `boolean` | `false` | Use `true` for reverse order |
+| `payload-json` | `json` | `{'key1':'value1'}` | Payload for design controller |
 
 ## Current status
 
@@ -103,19 +123,6 @@ everybody can create **_plugins_** and **_designs_**
         - only from youtube
  - _and much more coming ..._
 
-### Documentation
-_Full documentation coming soon ..._
-
-#### Parameters
-| Name | Type | Sample | Description |
-|---|---|---|---|
-| `template-url` | `string` | `template.html` | Path to template file (design) |
-| `model` | `string`| `social` | Chosen model for this **apiNG instance** |
-| `items` | `int` | `20` | Number of displayed items **per request**<br>Use `-1` for no limitation |
-| `max-items` | `int` | `100` | Number of items of this **apiNG instance**<br>Use `-1` for no limitation |
-| `order-by` | `string` | `timestamp` | Order result by this attribute<br>Use `$NONE` for no order<br>Use `$RANDOM` for random order |
-| `order-revers` | `boolean` | `false` | Use `true` for reverse order |
-| `payload-json` | `json` | `{'key1':'value1'}` | Payload for design controller |
 
 
 # Community
