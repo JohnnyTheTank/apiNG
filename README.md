@@ -18,37 +18,46 @@ Users can collaborate to create new **_plugins_** and **_designs_**
 - [Youtube Video Player](https://rawgit.com/JohnnyTheTank/apiNG-design-deadwood/master/demo/) (deadwood design)
 
 ## Installation
+
 You can choose your preferred method of installation:
 
 * Via bower: `bower install apiNG --save`
 * Download from github: [apiNG.zip](https://github.com/JohnnyTheTank/apiNG/zipball/master)
 
 ### Dependencies
+Include all dependencies in your application
 * jquery
 * angular
 * angular-sanitize
 
-
-### Include apiNG
-Include both **aping.min.js** and **aping-config.js** in your application.
 ```html
 <!-- dependencies for apiNG -->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/angular/angular.min.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+```
 
-<!-- apiNG -->
+### apiNG core
+Include both **aping.min.js** and **aping-config.js** in your application.
+```html
+<!-- apiNG core and config -->
 <script src="bower_components/apiNG/dist/aping.min.js"></script>
 <script src="bower_components/apiNG/dist/aping.config.js"></script>
 ```
 
 Add the module `jtt_aping` as a dependency to your app module:
 ```js
-var myapp = angular.module('myapp', ['jtt_aping']);
+var app = angular.module('app', ['jtt_aping']);
 ```
 
+### apiNG plugins
+_**plugins** documentation coming soon ..._
+
+### apiNG designs
+_**designs** documentation coming soon ..._
+
 ## Usage
-_Full documentation coming soon ..._
+_Full usage documentation coming soon ..._
 
 ### Parameters
 | Name | Type | Sample | Description |
