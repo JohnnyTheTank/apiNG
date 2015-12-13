@@ -34,8 +34,9 @@ everybody can create **_plugins_** and **_designs_**
         - converts to this models: `social`, `video`
      - [x] **Vine** ([apiNG-plugin-vine](https://github.com/JohnnyTheTank/apiNG-plugin-vine))
         - converts to this models: `social`, `video`
+     - [x] **Flickr** ([apiNG-plugin-flickr](https://github.com/JohnnyTheTank/apiNG-plugin-flickr))
+        - converts to this models: `social`, `image`
      - [ ] [Google+](https://developers.google.com/+/web/api/rest/latest/),
-     [Flickr](https://www.flickr.com/services/api/),
      [Dailymotion](https://developer.dailymotion.com/api),
      [Tumblr](https://www.tumblr.com/docs/en/api/v2),
      [Vk](http://vk.com/dev),
