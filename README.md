@@ -1,5 +1,3 @@
-[![Stories in Ready](https://badge.waffle.io/JohnnyTheTank/apiNG.png?label=ready&title=Ready)](https://waffle.io/JohnnyTheTank/apiNG)
-
 _**Note:** apiNG is currently under development and not ready yet for public use. **Release in early 2016**_
 
 # apiNG
