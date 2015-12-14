@@ -51,10 +51,10 @@ var app = angular.module('app', ['jtt_aping']);
 ```
 
 ### apiNG plugins
-_**plugins** documentation coming soon ..._
+_Documentation for **plugins** coming soon ..._
 
 ### apiNG designs
-_**designs** documentation coming soon ..._
+_Documentation for **designs** coming soon ..._
 
 ## Usage
 _Full usage documentation coming soon ..._
