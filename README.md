@@ -2,7 +2,7 @@ _**Note:** apiNG is currently under development and not ready yet for public use
 
 # apiNG
 
-**apiNG** is an AngularJS directive for receiving and displaying data from any source, like REST APIs, JSON files or just simple JavaScript arrays.
+**apiNG** is an AngularJS directive for receiving and displaying data from any source, like REST APIs, JSON files or just simple JavaScript objects.
 
 ## How apiNG works
 **apiNG** works as extendable platform, composed of three components:
@@ -18,7 +18,6 @@ Users can collaborate to create new **_plugins_** and **_designs_**
 - [Youtube Video Player](https://rawgit.com/JohnnyTheTank/apiNG-design-deadwood/master/demo/) (deadwood design)
 
 ## Installation
-
 You can choose your preferred method of installation:
 
 * Via bower: `bower install apiNG --save`
