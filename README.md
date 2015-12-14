@@ -38,9 +38,9 @@ Include all dependencies in your application
 ```
 
 ### apiNG core
-Create a new folder named `apiNG` in your application directory and copy
+Create a new folder named **`apiNG`** in your application directory and copy
 **aping-config.js** into it.
-Include both **aping.min.js** and **aping-config.js** in your application.
+Include both **`aping.min.js`** and **`aping-config.js`** in your application.
 ```html
 <!-- apiNG core and config -->
 <script src="bower_components/apiNG/dist/aping.min.js"></script>
