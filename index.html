@@ -1,130 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-us">
+<meta http-equiv="refresh" content="0; URL=//www.aping.io" />
 <head>
     <meta charset="UTF-8">
     <title>apiNG by JohnnyTheTank</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="css/normalize.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="css/github-light.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="css/styles.min.css" media="screen">
-
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//cdn.rawgit.com/JohnnyTheTank/apiNG-design-default/master/demo/css/main.css">
-    <link rel="stylesheet"
-          href="//cdn.rawgit.com/JohnnyTheTank/apiNG-design-default/master/dist/aping-design-default.min.css">
-
-    <!-- Font -->
-    <link href='//fonts.googleapis.com/css?family=Economica' rel='stylesheet' type='text/css'>
-
-
-    <!-- JavaScript -->
-    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-sanitize.min.js"></script>
-
-    <!-- apiNG -->
-    <script src="//rawgit.com/JohnnyTheTank/apiNG/master/dist/aping.min.js"></script>
-    <script src="//rawgit.com/JohnnyTheTank/apiNG-design-default/master/demo/js/aping-config.js"></script>
-
-    <!-- apiNG plugins -->
-    <script src="//rawgit.com/JohnnyTheTank/apiNG-plugin-youtube/master/dist/aping-plugin-youtube.min.js"></script>
-    <script src="//rawgit.com/JohnnyTheTank/apiNG-plugin-instagram/master/dist/aping-plugin-instagram.min.js"></script>
-    <script src="//rawgit.com/JohnnyTheTank/apiNG-plugin-facebook/master/dist/aping-plugin-facebook.min.js"></script>
-    <script src="//rawgit.com/JohnnyTheTank/apiNG-plugin-codebird/master/dist/aping-plugin-codebird.min.js"></script>
-    <script src="//rawgit.com/JohnnyTheTank/apiNG-plugin-vimeo/master/dist/aping-plugin-vimeo.min.js"></script>
-    <script src="//rawgit.com/JohnnyTheTank/apiNG-plugin-vine/master/dist/aping-plugin-vine.min.js"></script>
-    <script src="//rawgit.com/JohnnyTheTank/apiNG-plugin-flickr/master/dist/aping-plugin-flickr.min.js"></script>
-
-    <script src="//rawgit.com/JohnnyTheTank/apiNG-design-default/master/demo/js/social_app.js"></script>
-
-    <!-- apiNG design & dependencies -->
-    <script src="//rawgit.com/JohnnyTheTank/angular-masonry-packed/master/dist/angular-masonry-packed.min.js"></script>
-    <script src="//rawgit.com/scottcorgan/angular-linkify/master/angular-linkify.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment-with-locales.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-moment/0.10.3/angular-moment.min.js"></script>
-    <script src="//rawgit.com/JohnnyTheTank/apiNG-design-default/master/dist/aping-design-default.min.js"></script>
-
-
 </head>
-<body ng-app="app">
-<section class="page-header">
-    <h1 class="project-name">apiNG</h1>
+<body>
 
-    <h2 class="project-tagline">api directive for angularjs</h2>
-    <a href="https://github.com/JohnnyTheTank/apiNG" class="btn">View on GitHub</a>
-    <a href="https://github.com/JohnnyTheTank/apiNG/zipball/master" class="btn">Download .zip</a>
-    <a href="https://github.com/JohnnyTheTank/apiNG/tarball/master" class="btn">Download .tar.gz</a>
-</section>
-
-<section class="main-content">
-    <h1>
-        <a id="aping" class="anchor" href="#aping" aria-hidden="true"><span class="octicon octicon-link"></span></a>apiNG
-    </h1>
-
-    <p>apiNG is an AngularJS directive for receiving and displaying data from any source</p>
-
-    <h2>
-        <a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span
-                class="octicon octicon-link"></span></a>how to use</h2>
-
-    <p>coming ... </p>
-
-    <h2 id="demo">Demo</h2>
-    Simple apiNG Demo with some plugins and default design
-    <h3>HTML</h3>
-
-    <pre><code class="html"><span class="element">&lt;aping</span>
-    <span class="template">template-url="social_template.html"</span>
-    <span class="attr">model="social"</span>
-    <span class="attr">items="6"</span>
-    <span class="plugin">aping-youtube="[{'channelId':'UCoxMr8CYaJY-om5eJ2RA_4g'}]"
-    aping-instagram="[{'tag':'camping', 'items':2}, {'userId':'416104304'}]"
-    aping-facebook="[{'page':'frittenbubu'}]"
-    aping-codebird="[{'search':'eagle', 'result_type':'popular', 'showAvatar':false}]"
-    aping-flickr="[{'tags':'münchen'}]"
-    aping-vimeo="[{'tag':'soccer'}]"</span><span class="element">&gt;</span>
-<span class="element">&lt;/aping&gt;</span></code></pre>
-
-    <h3>Result</h3>
-    <aping
-            template-url="social_template.html"
-            model="social"
-            items="5"
-            aping-youtube="[{'channelId':'UCoxMr8CYaJY-om5eJ2RA_4g'}]"
-            aping-instagram="[{'tag':'camping', 'items':2}, {'userId':'416104304'}]"
-            aping-facebook="[{'page':'frittenbubu'}]"
-            aping-codebird="[{'search':'eagle', 'result_type':'popular', 'showAvatar':false}]"
-            aping-flickr="[{'tags':'münchen'}]"
-            aping-vimeo="[{'tag':'soccer'}]">
-    </aping>
-
-    <h2>
-        <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span
-                class="octicon octicon-link"></span></a>Authors and Contributors</h2>
-
-    <p>Jonathan Hornung (<a href="https://github.com/JohnnyTheTank" class="user-mention">@JohnnyTheTank</a>)</p>
-
-    <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/JohnnyTheTank/apiNG">apiNG</a> is maintained by <a
-                href="https://github.com/JohnnyTheTank">JohnnyTheTank</a>.</span>
-    </footer>
-
-</section>
-
-<script type="text/javascript">
-    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+<script>
+    window.top.location.href = '//www.aping.io';
 </script>
-<script type="text/javascript">
-    try {
-        var pageTracker = _gat._getTracker("UA-68396655-1");
-        pageTracker._trackPageview();
-    } catch (err) {
-    }
-</script>
+
+<a href="http://www.aping.io">apiNG.io</a>
+
 
 </body>
 </html>
