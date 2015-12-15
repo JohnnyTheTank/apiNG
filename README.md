@@ -13,7 +13,7 @@ _**Note:** apiNG is currently under development and not ready yet for public use
 Users can collaborate to create new **_plugins_** and **_designs_**
 
 ## Demos
-- [Social Wall](http://johnnythetank.github.io/apiNG/#demo) (default design)
+- [Social Wall](http://www.aping.io/#demo) (default design)
 - [Image Gallery](https://rawgit.com/JohnnyTheTank/apiNG-design-xgallerify/master/demo/) (xgallerify design)
 - [Youtube Video Player](https://rawgit.com/JohnnyTheTank/apiNG-design-deadwood/master/demo/) (deadwood design)
 
