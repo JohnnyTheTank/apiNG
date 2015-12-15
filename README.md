@@ -68,7 +68,7 @@ _Full usage documentation coming soon ..._
 | `items` | `int` | `20` | Number of displayed items **per request** |
 | `max-items` | `int` | `100` | Number of items of this **apiNG instance**<br>Use `-1` for no limitation |
 | `order-by` | `string` | `timestamp` | Order result by this attribute<br>Use `$NONE` for no order<br>Use `$RANDOM` for random order |
-| `order-revers` | `boolean` | `false` | Use `true` for reverse order |
+| `order-reverse` | `boolean` | `false` | Use `true` for reverse order |
 | `payload-json` | `json` | `{'key1':'value1'}` | Payload for design controller |
 
 ## Current status
