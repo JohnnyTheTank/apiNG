@@ -45,7 +45,7 @@ Include both **`aping.min.js`** and **`aping-config.js`** in your application.
 <script src="bower_components/apiNG/dist/aping.min.js"></script>
 <script src="<YOUR_APP>/js/apiNG/aping.config.js"></script>
 ```
-Configure the `apingDefaultSettings` in **`aping-config.js`**
+Configure the `apingDefaultSettings` in **`aping-config.js`**. This default settings could be overwritten by every aping instance via data-attributes.
 ```js
 $provide.constant("apingDefaultSettings", {
     templateUrl : "<PATH_TO_YOUR_DEFAULT_DESIGN>",
@@ -55,8 +55,7 @@ $provide.constant("apingDefaultSettings", {
     orderReverse : "<ORDER_REVERSE_FLAG>", //"true" or "false"
     model: "<CHOSEN_DATA_MODEL>", //e.g. "social", "event", "video", "picture", ....
 });
-```
-**The default settings could be overwritten by every aping instance via data-attributes**
+``
 
 Add the module `jtt_aping` as a dependency to your app module:
 ```js
