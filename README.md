@@ -45,6 +45,18 @@ Include both **`aping.min.js`** and **`aping-config.js`** in your application.
 <script src="bower_components/apiNG/dist/aping.min.js"></script>
 <script src="<YOUR_APP>/js/apiNG/aping.config.js"></script>
 ```
+Configure the `apingDefaultSettings` in **`aping-config.js`**
+```js
+$provide.constant("apingDefaultSettings", {
+    templateUrl : "<PATH_TO_YOUR_DEFAULT_DESIGN>",
+    items : "<ITEMS_PER_REQUEST>", //items per request
+    maxItems: "<MAX_ITEMS_PER_APING>", //max items per aping instance
+    orderBy : "<ORDER_BY_PROPERTY>", // order result list by this object property. e.g. "timestamp", "position", ...
+    orderReverse : "<ORDER_REVERSE_FLAG>", //"true" or "false"
+    model: "<CHOSEN_DATA_MODEL>", //e.g. "social", "event", "video", "picture", ....
+});
+```
+**The default settings could be overwritten by every aping instance via data-attributes**
 
 Add the module `jtt_aping` as a dependency to your app module:
 ```js
