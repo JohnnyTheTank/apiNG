@@ -118,6 +118,7 @@ _Full usage documentation coming soon ..._
      - [ ] [Spotify](https://developer.spotify.com/web-api/),
      [iTunes](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html),
      [Soundcloud](https://developers.soundcloud.com/docs),
+     [Meetup](http://www.meetup.com/de/meetup_api/),
      [BandsInTown](https://www.bandsintown.com/api/overview),
      [MusicBrainz](https://wiki.musicbrainz.org/Development/JSON_Web_Service),
      [Eventbrite](http://developer.eventbrite.com/),
