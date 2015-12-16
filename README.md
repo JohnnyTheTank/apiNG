@@ -55,7 +55,7 @@ $provide.constant("apingDefaultSettings", {
     orderReverse : "<ORDER_REVERSE_FLAG>", //"true" or "false"
     model: "<CHOSEN_DATA_MODEL>", //e.g. "social", "event", "video", "picture", ....
 });
-``
+```
 
 Add the module `jtt_aping` as a dependency to your app module:
 ```js
