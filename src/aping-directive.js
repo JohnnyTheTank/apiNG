@@ -6,6 +6,7 @@ var apingApp = angular.module('jtt_aping', [])
             replace: 'false',
             scope: {
                 model: '@',
+                getNativeData: '@',
                 items: '@',
                 maxItems: '@',
                 orderBy: '@',
@@ -17,12 +18,31 @@ var apingApp = angular.module('jtt_aping', [])
                 $scope.results = [];
                 $scope.payload = $scope.payloadJson ? apingUtilityHelper.replaceSingleQuotesAndParseJson($scope.payloadJson) : {};
                 this.getAppSettings = function () {
+
+                    var getNativeData;
+                    var orderReverse;
+
+                    if(typeof $scope.getNativeData !== "undefined") {
+                        getNativeData = $scope.getNativeData;
+                    } else if(typeof apingDefaultSettings.getNativeData !== "undefined") {
+                        getNativeData = apingDefaultSettings.getNativeData;
+                    } else {
+                        getNativeData = false;
+                    }
+
+                    if(typeof $scope.orderReverse !== "undefined") {
+                        orderReverse = $scope.orderReverse;
+                    } else {
+                        orderReverse = false;
+                    }
+
                     return {
-                        model: $scope.model || apingDefaultSettings.model || "custom",
+                        model: $scope.model || apingDefaultSettings.model || "native",
+                        getNativeData : getNativeData,
                         items: $scope.items || apingDefaultSettings.items,
                         maxItems: $scope.maxItems || apingDefaultSettings.maxItems,
                         orderBy: $scope.orderBy || apingDefaultSettings.orderBy,
-                        orderReverse: $scope.orderReverse || apingDefaultSettings.orderReverse,
+                        orderReverse: orderReverse,
                     };
                 };
                 this.concatToResults = function (_array) {
