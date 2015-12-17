@@ -54,6 +54,7 @@ $provide.constant("apingDefaultSettings", {
     orderBy : "<ORDER_BY_PROPERTY>", // order result list by this object property. e.g. "timestamp", "position", ...
     orderReverse : "<ORDER_REVERSE_FLAG>", //"true" or "false"
     model: "<CHOSEN_DATA_MODEL>", //e.g. "social", "event", "video", "picture", ....
+    getNativeData: false, // Use `true` for getting native data from plugins (no transformation to any model)
 });
 ```
 
@@ -76,6 +77,7 @@ _Full usage documentation coming soon ..._
 |---|---|---|---|
 | `template-url` | `string` | `template.html` | Path to template file (design) |
 | `model` | `string`| `social` | Chosen model for this **apiNG instance** |
+| `get-native-data` | `boolean`| `false` | Use `true` for getting native data from plugins |
 | `items` | `int` | `20` | Number of displayed items **per request** |
 | `max-items` | `int` | `100` | Number of items of this **apiNG instance**<br>Use `-1` for no limitation |
 | `order-by` | `string` | `timestamp` | Order result by this attribute<br>Use `$NONE` for no order<br>Use `$RANDOM` for random order |
