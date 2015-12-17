@@ -173,10 +173,11 @@ _Full usage documentation coming soon ..._
 
 
 # Community
-create your own **_plugins_** or **_designs_** by this samples:
+create your own **_plugins_** by this samples:
 - [apiNG-plugin-blanko](https://github.com/JohnnyTheTank/apiNG-plugin-blanko) (very clean sample)
 - [apiNG-plugin-sample](https://github.com/JohnnyTheTank/apiNG-plugin-sample) (advanced sample)
 
+create your own **_designs_** by this samples:
 - [apiNG-design-sample](https://github.com/JohnnyTheTank/apiNG-design-sample)
 
 # Contributors
