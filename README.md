@@ -120,6 +120,7 @@ _Full usage documentation coming soon ..._
      - [ ] [Spotify](https://developer.spotify.com/web-api/),
      [iTunes](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html),
      [Soundcloud](https://developers.soundcloud.com/docs),
+     [IMDb](http://www.omdbapi.com/),
      [Meetup](http://www.meetup.com/de/meetup_api/),
      [BandsInTown](https://www.bandsintown.com/api/overview),
      [MusicBrainz](https://wiki.musicbrainz.org/Development/JSON_Web_Service),
@@ -157,7 +158,7 @@ _Full usage documentation coming soon ..._
  - [x] `event`
  - [x] `repo`
  - [x] `weather`
- - [ ] `post`, `news`, `link`, `product`, `activity`, `match`, `rank`, `task`, `release`
+ - [ ] `post`, `news`, `link`, `product`, `activity`, `match`, `rank`, `task`, `release`, `movie`
  - _and much more coming ..._
     
 ### Designs
