@@ -126,6 +126,7 @@ _Full usage documentation coming soon ..._
      [MusicBrainz](https://wiki.musicbrainz.org/Development/JSON_Web_Service),
      [Eventbrite](http://developer.eventbrite.com/),
      [Wunderlist](https://developer.wunderlist.com/documentation),
+     [Evernote](https://dev.evernote.com/doc/),
      [Amazon Wishlists](https://github.com/doitlikejustin/amazon-wish-lister),
      [Faroo](http://www.faroo.com/hp/api/api.html#json),
      [HackerNews](https://github.com/HackerNews/API),
