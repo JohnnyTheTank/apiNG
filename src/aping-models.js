@@ -2,128 +2,128 @@
 apingApp.service('apingModels', [function () {
     this.getNew = function(_model, _platform) {
         var model = {};
-        switch(_model) {
+        switch(_model) { 
             case "social":
                 model = {
                     platform : _platform, //NAME of platform ( "youtube" / "facebook", "instagram" , ...)
-                    blog_name : false, //NAME of blog (channel / youtube uploader / facebook page, instagram account, ..)
-                    blog_id : false, //ID of channel / page / account, ...
-                    blog_link : false, //link to channel / uploader / page / account, ...
-                    type : false, //"video", "image", "post", "audio", "link", "event", ...
-                    timestamp : false,
-                    date_time: false,
-                    post_url : false, //URL to the post / video / tweet ...
-                    intern_id : false, // INTERN ID of post / video / tweet / ... (facebook id, youtube id, ...)
-                    text : false,
-                    caption : false,
-                    img_url : false,
-                    source : false, //
-                    likes: false,
-                    shares: false,
-                    comments: false,
-                    position: false,
+                    blog_name : undefined, //NAME of blog (channel / youtube uploader / facebook page, instagram account, ..)
+                    blog_id : undefined, //ID of channel / page / account, ...
+                    blog_link : undefined, //link to channel / uploader / page / account, ...
+                    type : undefined, //"video", "image", "post", "audio", "link", "event", ...
+                    timestamp : undefined,
+                    date_time: undefined,
+                    post_url : undefined, //URL to the post / video / tweet ...
+                    intern_id : undefined, // INTERN ID of post / video / tweet / ... (facebook id, youtube id, ...)
+                    text : undefined,
+                    caption : undefined,
+                    img_url : undefined,
+                    source : undefined, //
+                    likes: undefined,
+                    shares: undefined,
+                    comments: undefined,
+                    position: undefined,
                 };
                 break;
 
             case "video":
                 model = {
                     platform : _platform, //NAME of platform ( "youtube" / "facebook", "instagram" , ...)
-                    blog_name : false, //NAME of blog (channel / youtube uploader / facebook page, instagram account, ..)
-                    blog_id : false, //ID of channel / page / account, ...
-                    blog_link : false, //link to channel / uploader / page / account, ...
-                    timestamp : false,
-                    date_time: false,
-                    post_url : false, //URL to the post / video / tweet ...
-                    intern_id : false, // INTERN ID of video (facebook id, youtube id, ...)
-                    text : false,
-                    caption : false,
-                    img_url : false,
-                    source : false, //
-                    markup: false,
-                    likes: false,
-                    shares: false,
-                    comments: false,
-                    position: false,
+                    blog_name : undefined, //NAME of blog (channel / youtube uploader / facebook page, instagram account, ..)
+                    blog_id : undefined, //ID of channel / page / account, ...
+                    blog_link : undefined, //link to channel / uploader / page / account, ...
+                    timestamp : undefined,
+                    date_time: undefined,
+                    post_url : undefined, //URL to the post / video / tweet ...
+                    intern_id : undefined, // INTERN ID of video (facebook id, youtube id, ...)
+                    text : undefined,
+                    caption : undefined,
+                    img_url : undefined,
+                    source : undefined, //
+                    markup: undefined,
+                    likes: undefined,
+                    shares: undefined,
+                    comments: undefined,
+                    position: undefined,
                 };
                 break;
 
             case "image":
                 model = {
                     platform : _platform, //NAME of platform ( "youtube" / "facebook", "instagram" , ...)
-                    blog_name : false, //NAME of blog (channel / youtube uploader / facebook page, instagram account, ..)
-                    blog_id : false, //ID of channel / page / account, ...
-                    blog_link : false, //link to channel / uploader / page / account, ...
-                    timestamp : false,
-                    date_time: false,
-                    post_url : false, //URL to the post / video / tweet ...
-                    intern_id : false, // INTERN ID of image (facebook id, instagram id, ...)
-                    text : false,
-                    caption : false,
-                    img_url : false,
-                    source : false, //
-                    likes: false,
-                    shares: false,
-                    comments: false,
-                    position: false,
+                    blog_name : undefined, //NAME of blog (channel / youtube uploader / facebook page, instagram account, ..)
+                    blog_id : undefined, //ID of channel / page / account, ...
+                    blog_link : undefined, //link to channel / uploader / page / account, ...
+                    timestamp : undefined,
+                    date_time: undefined,
+                    post_url : undefined, //URL to the post / video / tweet ...
+                    intern_id : undefined, // INTERN ID of image (facebook id, instagram id, ...)
+                    text : undefined,
+                    caption : undefined,
+                    img_url : undefined,
+                    source : undefined, //
+                    likes: undefined,
+                    shares: undefined,
+                    comments: undefined,
+                    position: undefined,
                 };
                 break;
 
             case "event":
                 model = {
                     platform : _platform, //NAME of platform ( "youtube" / "facebook", "instagram" , ...)
-                    blog_name : false, //NAME of blog (channel / facebook page, instagram account, ..)
-                    blog_id : false, //ID of channel / page / account, ...
-                    blog_link : false, //link to channel / uploader / page / account, ...
-                    start_timestamp : false,
-                    start_date_time: false,
-                    end_timestamp: false,
-                    end_date_time: false,
-                    event_url : false, //URL to the event
-                    ticket_url : false, //URL to the ticket
-                    intern_id : false, // INTERN ID of event (facebook id, instagram id, ...)
-                    text : false,
-                    caption : false,
-                    img_url : false,
-                    place_name : false,
-                    city: false,
-                    country: false,
-                    latitude: false,
-                    longitude : false,
-                    street: false,
-                    zip : false,
-                    source : false,
+                    blog_name : undefined, //NAME of blog (channel / facebook page, instagram account, ..)
+                    blog_id : undefined, //ID of channel / page / account, ...
+                    blog_link : undefined, //link to channel / uploader / page / account, ...
+                    start_timestamp : undefined,
+                    start_date_time: undefined,
+                    end_timestamp: undefined,
+                    end_date_time: undefined,
+                    event_url : undefined, //URL to the event
+                    ticket_url : undefined, //URL to the ticket
+                    intern_id : undefined, // INTERN ID of event (facebook id, instagram id, ...)
+                    text : undefined,
+                    caption : undefined,
+                    img_url : undefined,
+                    place_name : undefined,
+                    city: undefined,
+                    country: undefined,
+                    latitude: undefined,
+                    longitude : undefined,
+                    street: undefined,
+                    zip : undefined,
+                    source : undefined,
                 };
                 break;
 
             case "repo":
                 model = {
                     platform : _platform, //NAME of platform ( "youtube" / "facebook", "instagram" , ...)
-                    owner_name : false,
-                    owner_id : false,
-                    owner_link : false,
-                    owner_img_url : false,
-                    name : false,
-                    id: false,
-                    fullname: false,
-                    description : false,
-                    url : false,
-                    homepage : false,
-                    language : false,
-                    clone_url : false,
-                    git_url : false,
-                    ssh_url : false,
-                    svn_url : false,
-                    isFork : false,
-                    openIssues : false,
-                    watchers : false,
-                    stargazers : false,
-                    forks : false,
-                    created_timestamp : false,
-                    created_date_time: false,
-                    updated_timestamp: false,
-                    updated_date_time: false,
-                    pushed_timestamp: false,
-                    pushed_date_time: false,
+                    owner_name : undefined,
+                    owner_id : undefined,
+                    owner_link : undefined,
+                    owner_img_url : undefined,
+                    name : undefined,
+                    id: undefined,
+                    fullname: undefined,
+                    description : undefined,
+                    url : undefined,
+                    homepage : undefined,
+                    language : undefined,
+                    clone_url : undefined,
+                    git_url : undefined,
+                    ssh_url : undefined,
+                    svn_url : undefined,
+                    isFork : undefined,
+                    openIssues : undefined,
+                    watchers : undefined,
+                    stargazers : undefined,
+                    forks : undefined,
+                    created_timestamp : undefined,
+                    created_date_time: undefined,
+                    updated_timestamp: undefined,
+                    updated_date_time: undefined,
+                    pushed_timestamp: undefined,
+                    pushed_date_time: undefined,
                 };
                 break;
 
@@ -131,30 +131,30 @@ apingApp.service('apingModels', [function () {
                 model = {
                     platform : _platform, //NAME of platform ( "youtube" / "facebook", "instagram" , ...)
 
-                    body : false,
+                    body : undefined,
 
-                    actor_name : false, //who?
-                    actor_id : false,
-                    actor_url : false,
-                    actor_img_url : false,
-                    actor_type: false,
+                    actor_name : undefined, //who?
+                    actor_id : undefined,
+                    actor_url : undefined,
+                    actor_img_url : undefined,
+                    actor_type: undefined,
 
-                    action_name: false,
-                    action_message : false, //what?
-                    action_id : false,
-                    action_url : false,
-                    action_img : false,
-                    action_type: false,
+                    action_name: undefined,
+                    action_message : undefined, //what?
+                    action_id : undefined,
+                    action_url : undefined,
+                    action_img : undefined,
+                    action_type: undefined,
 
-                    object_name : false,
-                    object_id : false,
-                    object_img : false,
-                    object_url : false,
-                    object_type: false,
+                    object_name : undefined,
+                    object_id : undefined,
+                    object_img : undefined,
+                    object_url : undefined,
+                    object_type: undefined,
 
-                    context : false,
-                    timestamp : false,
-                    date_time: false,
+                    context : undefined,
+                    timestamp : undefined,
+                    date_time: undefined,
 
                 };
                 break;
@@ -162,39 +162,39 @@ apingApp.service('apingModels', [function () {
             case "weather":
                 model = {
                     platform : _platform, //NAME of platform ( "youtube" / "facebook", "instagram" , ...)
-                    weather_code: false,
-                    weather_caption: false, //rain
-                    weather_text : false, //light rain
-                    weather_icon_name: false,
-                    weather_icon_url: false,
+                    weather_code: undefined,
+                    weather_caption: undefined, //rain
+                    weather_text : undefined, //light rain
+                    weather_icon_name: undefined,
+                    weather_icon_url: undefined,
 
-                    temp: false,
-                    pressure: false,
-                    humidity: false,
-                    temp_min: false,
-                    temp_max: false,
-                    sea_level: false,
-                    grnd_level: false,
-                    wind_speed: false,
-                    wind_deg: false,
-                    rain_duration: false,
-                    rain_volume: false,
-                    clouds: false,
+                    temp: undefined,
+                    pressure: undefined,
+                    humidity: undefined,
+                    temp_min: undefined,
+                    temp_max: undefined,
+                    sea_level: undefined,
+                    grnd_level: undefined,
+                    wind_speed: undefined,
+                    wind_deg: undefined,
+                    rain_duration: undefined,
+                    rain_volume: undefined,
+                    clouds: undefined,
 
-                    timestamp: false,
-                    date_time: false,
+                    timestamp: undefined,
+                    date_time: undefined,
 
-                    sunrise_timestamp : false,
-                    sunrise_date_time : false,
-                    sunset_timestamp : false,
-                    sunset_date_time : false,
+                    sunrise_timestamp : undefined,
+                    sunrise_date_time : undefined,
+                    sunset_timestamp : undefined,
+                    sunset_date_time : undefined,
 
-                    loc_city : false,
-                    loc_city_id: false,
-                    loc_country : false,
-                    loc_lat : false,
-                    loc_lng : false,
-                    loc_zip : false,
+                    loc_city : undefined,
+                    loc_city_id: undefined,
+                    loc_country : undefined,
+                    loc_lat : undefined,
+                    loc_lng : undefined,
+                    loc_zip : undefined,
                 };
                 break;
 
