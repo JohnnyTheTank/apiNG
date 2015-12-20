@@ -180,7 +180,7 @@ create your own **_plugins_** by this samples:
 - [apiNG-plugin-sample](https://github.com/JohnnyTheTank/apiNG-plugin-sample) (advanced sample)
 
 create your own **_designs_** by this samples:
-- [apiNG-design-sample](https://github.com/JohnnyTheTank/apiNG-design-sample)
+- [apiNG-design-blanko](https://github.com/JohnnyTheTank/apiNG-design-blanko)
 
 # Contributors
 - Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
