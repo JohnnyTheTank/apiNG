@@ -2,6 +2,13 @@
 
 apingApp.service('apingInputObjects', ['apingDefaultSettings', function (apingDefaultSettings) {
 
+    /**
+     * * return new clean apiNG input object by _model and _params
+     *
+     * @param _model {String}
+     * @param _params {Object}
+     * @returns {Object}
+     */
     this.getNew = function (_model, _params) {
 
         var inputObject = {};

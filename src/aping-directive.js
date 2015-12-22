@@ -18,6 +18,11 @@ var apingApp = angular.module('jtt_aping', [])
             controller: ['$scope', function ($scope) {
                 $scope.results = [];
                 $scope.payload = $scope.payloadJson ? apingUtilityHelper.replaceSingleQuotesAndParseJson($scope.payloadJson) : {};
+
+                /**
+                 * return current appSettings by merging 'apingDefaultSettings' and '$scope params'
+                 * @returns {Object}
+                 */
                 this.getAppSettings = function () {
 
                     var items;
@@ -76,6 +81,12 @@ var apingApp = angular.module('jtt_aping', [])
                         removeDoubles: removeDoubles,
                     };
                 };
+
+                /**
+                 * merge current '$scope.results' with '_array' and do some operations
+                 *
+                 * @param _array
+                 */
                 this.concatToResults = function (_array) {
                     $scope.results = $scope.results.concat(_array);
 

@@ -1,5 +1,12 @@
 "use strict";
 apingApp.service('apingModels', [function () {
+    /**
+     * return new clean apiNG model object by _model and _platform
+     *
+     * @param _model {String}
+     * @param _platform {String}
+     * @returns {Object}
+     */
     this.getNew = function(_model, _platform) {
         var model = {};
         switch(_model) { 
