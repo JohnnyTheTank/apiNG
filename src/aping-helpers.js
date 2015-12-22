@@ -2,6 +2,15 @@
 
 apingApp
     .service('apingTimeHelper', function () {
+
+        /**
+         * Parse Timestamp from DateString and do some math
+         *
+         * @param _string {String}
+         * @param _multiplier {Int}
+         * @param _add {Int}
+         * @returns timestamp {Int}
+         */
         this.getTimestampFromDateString = function (_string, _multiplier, _add) {
             if (!_multiplier || isNaN(_multiplier)) {
                 _multiplier = 1;
@@ -22,6 +31,14 @@ apingApp
         };
     })
     .service('apingUtilityHelper', ['apingInputObjects', 'apingApiKeys', function (apingInputObjects, apingApiKeys) {
+
+        /**
+         * Return random matching API Key from Constant "apingApiKeys". If there is no matching API Key, the function returns 'false'
+         *
+         * @param _platform {String}
+         * @param _keyName {String}
+         * @returns apiKey {String}
+         */
         this.getApiCredentials = function (_platform, _keyName) {
 
             if(apingApiKeys) {
@@ -32,8 +49,27 @@ apingApp
             return false;
         };
 
-
+        /**
+         * legagy function for this.parseRequestsFromAttributes()
+         *
+         * @param _string {String}
+         * @param _platform {String}
+         * @param _appSettings {Object}
+         * @returns {Array}
+         */
         this.parseJsonFromAttributes = function (_string, _platform, _appSettings) {
+            return this.parseRequestsFromAttributes(_string, _platform, _appSettings);
+        };
+
+        /**
+         * Parse JSON from Attributes and create requests
+         *
+         * @param _string {String}
+         * @param _platform {String}
+         * @param _appSettings {Object}
+         * @returns {Array}
+         */
+        this.parseRequestsFromAttributes = function (_string, _platform, _appSettings) {
 
             if (!(typeof _string === "string" && _string)) {
                 return [];
@@ -64,10 +100,22 @@ apingApp
             return requests;
         };
 
+        /**
+         * replace single quotes in string and parse JSON
+         *
+         * @param _string {String}
+         * @returns {Array/Object}
+         */
         this.replaceSingleQuotesAndParseJson = function (_string) {
             return $.parseJSON(_string.replace(/'/g, '"'));
         };
 
+        /**
+         * filter function to sort an array by a property
+         *
+         * @param _property {Function}
+         * @returns {Function}
+         */
         this.sortArrayByProperty = function (_property) {
             var sortOrder = 1;
             if (_property[0] === "-") {
@@ -80,6 +128,12 @@ apingApp
             }
         };
 
+        /**
+         * shuffle array
+         *
+         * @param _array {Array}
+         * @returns {Array}
+         */
         this.shuffleArray = function(_array) {
             for (var i = _array.length - 1; i > 0; i--) {
                 var j = Math.floor(Math.random() * (i + 1));
@@ -88,6 +142,6 @@ apingApp
                 _array[j] = temp;
             }
             return _array;
-        }
+        };
 
     }]);
