@@ -33,6 +33,7 @@ apingApp.config(['$provide', function ($provide) {
         orderReverse : "true",
         model: "social",
         getNativeData: false,
+        removeDoubles: false,
     });
 
 }]);

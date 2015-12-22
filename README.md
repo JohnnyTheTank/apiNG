@@ -55,6 +55,7 @@ $provide.constant("apingDefaultSettings", {
     orderReverse : "<ORDER_REVERSE_FLAG>", //"true" or "false"
     model: "<CHOSEN_DATA_MODEL>", //e.g. "social", "event", "video", "picture", ....
     getNativeData: false, // Use "true" for getting native data from plugins (no transformation to any model)
+    removeDoubles: false, // Use "true" to remove identical objects
 });
 ```
 
@@ -82,6 +83,7 @@ _Full usage documentation coming soon ..._
 | `max-items` | `int` | `100` | Number of items of this **apiNG instance**<br>Use `-1` for no limitation |
 | `order-by` | `string` | `timestamp` | Order result by this attribute<br>Use `$NONE` for no order<br>Use `$RANDOM` for random order |
 | `order-reverse` | `boolean` | `false` | Use `true` for reverse order |
+| `remove-doubles` | `boolean` | `false` | Use `true` to remove identical objects |
 | `payload-json` | `json` | `{'key1':'value1'}` | Payload for design controller |
 
 ## Current status

@@ -13,14 +13,34 @@ var apingApp = angular.module('jtt_aping', [])
                 orderReverse: '@',
                 templateUrl: '@',
                 payloadJson: '@',
+                removeDoubles: '@',
             },
             controller: ['$scope', function ($scope) {
                 $scope.results = [];
                 $scope.payload = $scope.payloadJson ? apingUtilityHelper.replaceSingleQuotesAndParseJson($scope.payloadJson) : {};
                 this.getAppSettings = function () {
 
+                    var items;
+                    var maxItems;
                     var getNativeData;
                     var orderReverse;
+                    var removeDoubles;
+
+                    if(typeof $scope.items !== "undefined") {
+                        items = $scope.items;
+                    } else if(typeof apingDefaultSettings.items !== "undefined") {
+                        items = apingDefaultSettings.items;
+                    } else {
+                        items = 20;
+                    }
+
+                    if(typeof $scope.maxItems !== "undefined") {
+                        maxItems = $scope.maxItems;
+                    } else if(typeof apingDefaultSettings.maxItems !== "undefined") {
+                        maxItems = apingDefaultSettings.maxItems;
+                    } else {
+                        maxItems = -1;
+                    }
 
                     if(typeof $scope.getNativeData !== "undefined") {
                         getNativeData = $scope.getNativeData;
@@ -32,17 +52,28 @@ var apingApp = angular.module('jtt_aping', [])
 
                     if(typeof $scope.orderReverse !== "undefined") {
                         orderReverse = $scope.orderReverse;
+                    } else if(typeof apingDefaultSettings.orderReverse !== "undefined") {
+                        orderReverse = apingDefaultSettings.orderReverse;
                     } else {
                         orderReverse = false;
+                    }
+
+                    if(typeof $scope.removeDoubles !== "undefined") {
+                        removeDoubles = $scope.removeDoubles;
+                    } else if(typeof apingDefaultSettings.removeDoubles !== "undefined") {
+                        removeDoubles = apingDefaultSettings.removeDoubles;
+                    } else {
+                        removeDoubles = false;
                     }
 
                     return {
                         model: $scope.model || apingDefaultSettings.model || "native",
                         getNativeData : getNativeData,
-                        items: $scope.items || apingDefaultSettings.items,
-                        maxItems: $scope.maxItems || apingDefaultSettings.maxItems,
+                        items: items,
+                        maxItems: maxItems,
                         orderBy: $scope.orderBy || apingDefaultSettings.orderBy,
                         orderReverse: orderReverse,
+                        removeDoubles: removeDoubles,
                     };
                 };
                 this.concatToResults = function (_array) {
@@ -50,7 +81,11 @@ var apingApp = angular.module('jtt_aping', [])
 
                     var appSettings = this.getAppSettings();
 
-                    if(appSettings.orderBy && appSettings.orderBy != "$NONE") {
+                    if(appSettings.removeDoubles === true || appSettings.removeDoubles === "true") {
+                        $scope.results = apingUtilityHelper.removeDuplicateObjectsFromArray($scope.results, (appSettings.orderBy === false || appSettings.orderBy === "false" || appSettings.orderBy === "$NONE"));
+                    }
+
+                    if(appSettings.orderBy !== false && appSettings.orderBy !== "false" && appSettings.orderBy != "$NONE") {
                         if(appSettings.orderBy == "$RANDOM") {
                             $scope.results = apingUtilityHelper.shuffleArray($scope.results);
                         } else {

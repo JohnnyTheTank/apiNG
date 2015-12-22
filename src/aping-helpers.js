@@ -4,7 +4,7 @@ apingApp
     .service('apingTimeHelper', function () {
 
         /**
-         * Parse Timestamp from DateString and do some math
+         * parse Timestamp from DateString and do some math
          *
          * @param _string {String}
          * @param _multiplier {Int}
@@ -33,7 +33,7 @@ apingApp
     .service('apingUtilityHelper', ['apingInputObjects', 'apingApiKeys', function (apingInputObjects, apingApiKeys) {
 
         /**
-         * Return random matching API Key from Constant "apingApiKeys". If there is no matching API Key, the function returns 'false'
+         * return random matching API Key from Constant "apingApiKeys". If there is no matching API Key, the function returns 'false'
          *
          * @param _platform {String}
          * @param _keyName {String}
@@ -41,9 +41,9 @@ apingApp
          */
         this.getApiCredentials = function (_platform, _keyName) {
 
-            if(apingApiKeys) {
-                if(apingApiKeys[_platform]) {
-                    return apingApiKeys[_platform][Math.floor(Math.random()*apingApiKeys[_platform].length)][_keyName];
+            if (apingApiKeys) {
+                if (apingApiKeys[_platform]) {
+                    return apingApiKeys[_platform][Math.floor(Math.random() * apingApiKeys[_platform].length)][_keyName];
                 }
             }
             return false;
@@ -134,7 +134,7 @@ apingApp
          * @param _array {Array}
          * @returns {Array}
          */
-        this.shuffleArray = function(_array) {
+        this.shuffleArray = function (_array) {
             for (var i = _array.length - 1; i > 0; i--) {
                 var j = Math.floor(Math.random() * (i + 1));
                 var temp = _array[i];
@@ -143,5 +143,61 @@ apingApp
             }
             return _array;
         };
+
+
+        /**
+         * remove double objects from array
+         *
+         * @param _array {Array}
+         * @param _keepOrder {Boolean}
+         * @returns {Array}
+         */
+        this.removeDuplicateObjectsFromArray = function (_array, _keepOrder) {
+            var sortedArray = [];
+
+            var stringifyPropertyName = 'apingStringified';
+            var orderPropertyName = 'apingTempOrder';
+
+            if (_array.length === 1) {
+                return _array;
+            }
+
+            $.each(_array, function (firstIndex, firstValue) {
+                firstValue['$$hashKey'] = undefined;
+                firstValue[stringifyPropertyName] = JSON.stringify(firstValue);
+
+                if (typeof _keepOrder !== "undefined" && _keepOrder === true) {
+                    firstValue[orderPropertyName] = firstIndex;
+                }
+                sortedArray.push(firstValue);
+            });
+
+            sortedArray.sort(this.sortArrayByProperty(stringifyPropertyName));
+
+            var lastValue;
+
+            var reducedArray = [];
+            $.each(sortedArray, function (secondIndex, secondValue) {
+                if (typeof lastValue !== "undefined") {
+                    if (typeof secondValue[stringifyPropertyName] !== "undefined" && secondValue[stringifyPropertyName] != lastValue) {
+                        reducedArray.push(secondValue);
+                    }
+                } else {
+                    reducedArray.push(secondValue);
+                }
+                lastValue = secondValue[stringifyPropertyName];
+                secondValue[stringifyPropertyName] = undefined;
+            });
+
+            if (typeof _keepOrder !== "undefined" && _keepOrder === true) {
+                sortedArray.sort(this.sortArrayByProperty(orderPropertyName));
+
+                $.each(sortedArray, function (thirdIndex, thirdValue) {
+                    thirdValue[orderPropertyName] = undefined;
+                });
+            }
+
+            return reducedArray;
+        }
 
     }]);
