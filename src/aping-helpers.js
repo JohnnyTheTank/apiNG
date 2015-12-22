@@ -7,9 +7,9 @@ apingApp
          * parse Timestamp from DateString and do some math
          *
          * @param _string {String}
-         * @param _multiplier {Int}
-         * @param _add {Int}
-         * @returns timestamp {Int}
+         * @param _multiplier {int}
+         * @param _add {int}
+         * @returns timestamp {int}
          */
         this.getTimestampFromDateString = function (_string, _multiplier, _add) {
             if (!_multiplier || isNaN(_multiplier)) {
@@ -198,6 +198,18 @@ apingApp
             }
 
             return reducedArray;
-        }
+        };
+
+        /**
+         * transform an html string to plain text
+         *
+         * @param _string {String}
+         * @returns {String}
+         */
+        this.getTextFromHtml = function(_string) {
+            _string = _string.replace(/&lt;br ?\/\>|&lt;br ?\/&rt;|\<br ?\/\>/g, " ");
+            _string = _string.replace(/<(?:.|\n)*?>/gm, '');
+            return _string;
+        };
 
     }]);
