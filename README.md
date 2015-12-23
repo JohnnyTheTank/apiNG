@@ -65,7 +65,10 @@ var app = angular.module('app', ['jtt_aping']);
 ```
 
 ### apiNG plugins
-_Documentation for **plugins** coming soon ..._
+* Every **apiNG plugin** expects an array of **requests** as html attribute.
+* Every **request** is defined as single API call or something like that.
+
+_Full documentation for **plugins** coming soon ..._
 
 ### apiNG designs
 _Documentation for **designs** coming soon ..._
