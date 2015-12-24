@@ -9,18 +9,18 @@ apingApp
          * @param _string {String}
          * @param _multiplier {int}
          * @param _add {int}
-         * @returns timestamp {int}
+         * @returns {timestamp}
          */
         this.getTimestampFromDateString = function (_string, _multiplier, _add) {
-            if (!_multiplier || isNaN(_multiplier)) {
+            if (typeof _multiplier === "undefined" || isNaN(_multiplier)) {
                 _multiplier = 1;
             }
 
-            if (!_add || isNaN(_add)) {
+            if (typeof _add === "undefined" || isNaN(_add)) {
                 _add = 0;
             }
 
-            if (_string) {
+            if (typeof _string === "string") {
                 var a = _string.split(/[^0-9]/);
                 try {
                     return parseInt(Math.round(new Date(a[0], a[1] - 1, a[2], a[3], a[4], a[5]) / 1000 * _multiplier) + _add);
@@ -37,7 +37,7 @@ apingApp
          *
          * @param _platform {String}
          * @param _keyName {String}
-         * @returns apiKey {String}
+         * @returns {String}
          */
         this.getApiCredentials = function (_platform, _keyName) {
 
@@ -201,7 +201,7 @@ apingApp
         };
 
         /**
-         * transform an html string to plain text
+         * transform html string to plain text
          *
          * @param _string {String}
          * @returns {String}

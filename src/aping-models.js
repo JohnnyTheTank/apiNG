@@ -50,7 +50,8 @@ apingApp.service('apingModels', [function () {
                     likes: undefined,
                     shares: undefined,
                     duration: undefined,
-                    ratio: undefined,
+                    width: undefined,
+                    height: undefined,
                     comments: undefined,
                     position: undefined,
                 };
