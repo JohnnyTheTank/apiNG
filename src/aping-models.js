@@ -49,6 +49,8 @@ apingApp.service('apingModels', [function () {
                     markup: undefined,
                     likes: undefined,
                     shares: undefined,
+                    duration: undefined,
+                    ratio: undefined,
                     comments: undefined,
                     position: undefined,
                 };
