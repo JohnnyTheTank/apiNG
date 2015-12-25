@@ -17,6 +17,9 @@ Users can collaborate to create new **_plugins_** and **_designs_**
 - [Image Gallery](https://rawgit.com/JohnnyTheTank/apiNG-design-xgallerify/master/demo/) (xgallerify design)
 - [Youtube Video Player](https://rawgit.com/JohnnyTheTank/apiNG-design-deadwood/master/demo/) (deadwood design)
 
+## In The Wild
+- [sonymusic.de/videos](https://sonymusic.de/videos) (youtube video player) based on apiNG
+
 ## Installation
 You can choose your preferred method of installation:
 
