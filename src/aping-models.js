@@ -69,12 +69,15 @@ apingApp.service('apingModels', [function () {
                     intern_id : undefined, // INTERN ID of image (facebook id, instagram id, ...)
                     text : undefined,
                     caption : undefined,
-                    img_url : undefined,
-                    width: undefined,
-                    height: undefined,
-                    thumb_url : undefined,
+                    thumb_url : undefined, // best case 200px
                     thumb_width: undefined,
                     thumb_height: undefined,
+                    img_url : undefined, // best case 700px
+                    img_width: undefined,
+                    img_height: undefined,
+                    native_url: undefined,
+                    native_width: undefined,
+                    native_height: undefined,
                     source : undefined, //
                     likes: undefined,
                     shares: undefined,
@@ -217,5 +220,5 @@ apingApp.service('apingModels', [function () {
                 break;
         }
         return model;
-    }
+    };
 }]);
