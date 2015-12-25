@@ -70,6 +70,11 @@ apingApp.service('apingModels', [function () {
                     text : undefined,
                     caption : undefined,
                     img_url : undefined,
+                    width: undefined,
+                    height: undefined,
+                    thumb_url : undefined,
+                    thumb_width: undefined,
+                    thumb_height: undefined,
                     source : undefined, //
                     likes: undefined,
                     shares: undefined,
