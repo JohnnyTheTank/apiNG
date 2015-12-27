@@ -212,4 +212,19 @@ apingApp
             return _string;
         };
 
+        /**
+         * Parses URL Parameters from ULR (string)
+         * @param _string {String}
+         * @returns {Object}
+         */
+        this.parseParametersFromUrl = function (_string) {
+
+            var result = {};
+
+            if(typeof _string === 'string') {
+                result = JSON.parse('{"' + decodeURI(_string.replace(/&/g, "\",\"").replace(/=/g,"\":\"")) + '"}');
+            }
+
+            return result;
+        }
     }]);
