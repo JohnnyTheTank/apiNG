@@ -18,7 +18,7 @@ Users can collaborate to create new **_plugins_** and **_designs_**
 - [Youtube Video Player](https://rawgit.com/JohnnyTheTank/apiNG-design-deadwood/master/demo/) (deadwood design)
 
 ## References
-- [sonymusic.de/videos](https://sonymusic.de/videos) (youtube video player) based on apiNG
+- [sonymusic.de/videos](https://sonymusic.de/videos) (youtube video playlist) based on apiNG
 
 ## Installation
 You can choose your preferred method of installation:
