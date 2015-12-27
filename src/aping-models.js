@@ -49,7 +49,7 @@ apingApp.service('apingModels', [function () {
                     markup: undefined,
                     likes: undefined,
                     shares: undefined,
-                    duration: undefined,
+                    duration: undefined, // in seconds
                     width: undefined,
                     height: undefined,
                     comments: undefined,
@@ -69,7 +69,7 @@ apingApp.service('apingModels', [function () {
                     intern_id : undefined, // INTERN ID of image (facebook id, instagram id, ...)
                     text : undefined,
                     caption : undefined,
-                    thumb_url : undefined, // best case 200px
+                    thumb_url : undefined, // best case 200px (min)
                     thumb_width: undefined,
                     thumb_height: undefined,
                     img_url : undefined, // best case 700px

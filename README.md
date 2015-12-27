@@ -117,7 +117,8 @@ _Full usage documentation coming soon ..._
      [Vk](http://vk.com/dev),
      [Pinterest](https://developers.pinterest.com/docs/getting-started/introduction/),
      [500px](https://github.com/500px/api-documentation),
-     [Picasa](https://developers.google.com/picasa-web/docs/2.0/reference)
+     [Picasa](https://developers.google.com/picasa-web/docs/2.0/reference),
+     [dribbble](http://developer.dribbble.com/v1/)
      ([Blogger](https://developers.google.com/blogger/docs/3.0/using),
      [Delicious](https://github.com/SciDevs/delicious-api),
      [Skyrock](http://www.skyrock.com/developer/documentation/))
@@ -129,6 +130,7 @@ _Full usage documentation coming soon ..._
      - [ ] [Spotify](https://developer.spotify.com/web-api/),
      [iTunes](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html),
      [Soundcloud](https://developers.soundcloud.com/docs),
+     [Last.fm](http://www.last.fm/en/api),
      [IMDb](http://www.omdbapi.com/),
      [Meetup](http://www.meetup.com/de/meetup_api/),
      [BandsInTown](https://www.bandsintown.com/api/overview),
@@ -143,7 +145,7 @@ _Full usage documentation coming soon ..._
      ([EventFul](http://api.eventful.com/docs/formats),
      [Gigulate](http://gigulate.com/api/),
      [OpenLigaDB](http://www.openligadb.de/Help),
-     [Wikipedia/Wikimedia](https://www.mediawiki.org/wiki/API:Main_page/de)
+     [Wikipedia/Wikimedia](https://www.mediawiki.org/wiki/API:Main_page/de),
      [Yahoo](https://developer.yahoo.com/boss/search/),
      [Bing](http://www.bing.com/developers/s/APIBasics.html),
      [EchoNest](http://developer.echonest.com/docs/v4),
