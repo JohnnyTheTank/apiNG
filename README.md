@@ -83,7 +83,7 @@ _Full usage documentation coming soon ..._
 | Name | Type | Sample | Description |
 |---|---|---|---|
 | `template-url` | `string` | `template.html` | Path to template file (design) |
-| `model` | `string`| `social` | Chosen model for this **apiNG instance** |
+| `model` | `string`| `social` | Chosen data model for this **apiNG instance** |
 | `get-native-data` | `boolean`| `false` | Use `true` for getting native data from plugins |
 | `items` | `int` | `20` | Number of displayed items **per request** |
 | `max-items` | `int` | `100` | Number of items of this **apiNG instance**<br>Use `-1` for no limitation |
