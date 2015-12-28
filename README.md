@@ -106,8 +106,6 @@ _Full usage documentation coming soon ..._
         - converts to this models: `social`, `image`
      - [x] **Vimeo** ([apiNG-plugin-vimeo](https://github.com/JohnnyTheTank/apiNG-plugin-vimeo))
         - converts to this models: `social`, `video`
-     - [x] **Vine** ([apiNG-plugin-vine](https://github.com/JohnnyTheTank/apiNG-plugin-vine))
-        - converts to this models: `social`, `video`
      - [x] **Flickr** ([apiNG-plugin-flickr](https://github.com/JohnnyTheTank/apiNG-plugin-flickr))
         - converts to this models: `social`, `image`
      - [x] **Dailymotion** ([apiNG-plugin-dailymotion](https://github.com/JohnnyTheTank/apiNG-plugin-dailymotion))
