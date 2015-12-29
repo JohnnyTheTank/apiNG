@@ -3,12 +3,13 @@ _**Note:** apiNG is currently under development and not ready yet for public use
 # apiNG
 
 [![Join the chat at https://gitter.im/JohnnyTheTank/apiNG](https://badges.gitter.im/JohnnyTheTank/apiNG.svg)](https://gitter.im/JohnnyTheTank/apiNG?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Stories in Ready](https://badge.waffle.io/JohnnyTheTank/apiNG.svg?label=ready&title=Ready)](http://waffle.io/JohnnyTheTank/apiNG)
 
 **apiNG** is an AngularJS directive for receiving and displaying data from any source, like REST APIs, JSON files or just simple JavaScript objects.
 
 ## How apiNG works
 **apiNG** works as extendable platform, composed of three components:
- 1. **_plugins_** pass various data on to **apiNG**
+ 1. **_plugins_** pass various data on to **apiNG**docs
  2. **apiNG** passes the data on to **_designs_**
  3. **_designs_** display the data
 
