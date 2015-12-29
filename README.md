@@ -155,7 +155,8 @@ _Full usage documentation coming soon ..._
      [Rdio](http://www.rdio.com/developers/docs/),
      [Rhapsody](https://developer.rhapsody.com/api))
  - **OTHER DYNAMIC SOURCES**
-    - [ ] [RSS feeds](http://cyber.law.harvard.edu/rss/rss.html)
+    - [x] **RSS feeds** ([apiNG-plugin-rss](https://github.com/JohnnyTheTank/apiNG-plugin-rss))
+        - converts to this models: `social`, `native`
  - **FILE SOURCES**
     - [x] **JSON file** ([apiNG-plugin-jsonloader](https://github.com/JohnnyTheTank/apiNG-plugin-jsonloader))
         - supports any model
