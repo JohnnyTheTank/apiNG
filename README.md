@@ -110,8 +110,9 @@ _Full usage documentation coming soon ..._
         - converts to this models: `social`, `image`
      - [x] **Dailymotion** ([apiNG-plugin-dailymotion](https://github.com/JohnnyTheTank/apiNG-plugin-dailymotion))
         - converts to this models: `social`, `video`
+     - [x] **Tumblr** ([apiNG-plugin-tumblr](https://github.com/JohnnyTheTank/apiNG-plugin-tumblr))
+        - converts to this models: `social`, `video`, `image`
      - [ ] [Google+](https://developers.google.com/+/web/api/rest/latest/),
-     [Tumblr](https://www.tumblr.com/docs/en/api/v2),
      [Vk](http://vk.com/dev),
      [Pinterest](https://developers.pinterest.com/docs/getting-started/introduction/),
      [500px](https://github.com/500px/api-documentation),
