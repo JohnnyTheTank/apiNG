@@ -98,7 +98,7 @@ apingApp.service('apingModels', [function () {
                     end_date_time: undefined,
                     event_url : undefined, //URL to the event
                     ticket_url : undefined, //URL to the ticket
-                    sold : undefined,
+                    sold_out : undefined,
                     intern_id : undefined, // INTERN ID of event (facebook id, instagram id, ...)
                     text : undefined,
                     caption : undefined,
