@@ -88,16 +88,17 @@ apingApp.service('apingModels', [function () {
 
             case "event":
                 model = {
-                    platform : _platform, //NAME of platform ( "youtube" / "facebook", "instagram" , ...)
-                    blog_name : undefined, //NAME of blog (channel / facebook page, instagram account, ..)
-                    blog_id : undefined, //ID of channel / page / account, ...
-                    blog_link : undefined, //link to channel / uploader / page / account, ...
+                    platform : _platform, //NAME of platform ( "facebook", "bandsintown" , ...)
+                    artist_name : undefined,
+                    artist_id : undefined,
+                    artist_link : undefined,
                     start_timestamp : undefined,
                     start_date_time: undefined,
                     end_timestamp: undefined,
                     end_date_time: undefined,
                     event_url : undefined, //URL to the event
                     ticket_url : undefined, //URL to the ticket
+                    sold : undefined,
                     intern_id : undefined, // INTERN ID of event (facebook id, instagram id, ...)
                     text : undefined,
                     caption : undefined,
