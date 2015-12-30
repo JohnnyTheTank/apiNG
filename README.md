@@ -1,7 +1,5 @@
 _**Note:** apiNG is currently under development and not ready yet for public use. **Release in Q1 2016**_
 
-# apiNG
-
 [logo]: http://aping.io/logo/500/aping-logo.png "apiNG"
 ![apiNG][logo]
 
