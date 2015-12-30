@@ -1,6 +1,6 @@
-_**Note:** apiNG is currently under development and not ready yet for public use. **Release in Q1 2016**_
+_**Note:** apiNG is currently under development and not ready yet for public use. **Release in January 2016**_
 
-[logo]: http://aping.io/logo/500/aping-logo.png "apiNG"
+[logo]: http://aping.io/logo/320/aping-logo.png "apiNG"
 ![apiNG][logo]
 
 [![Join the chat at https://gitter.im/JohnnyTheTank/apiNG](https://badges.gitter.im/JohnnyTheTank/apiNG.svg)](https://gitter.im/JohnnyTheTank/apiNG?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
@@ -200,3 +200,4 @@ create your own **_designs_** by this samples:
 
 # Contributors
 - Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
+- Daniel Moon ([teadragon](https://github.com/teadragon))
