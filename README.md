@@ -129,13 +129,14 @@ _Full usage documentation coming soon ..._
         - converts to this models: `repo`
      - [x] **OpenWeatherMap** ([apiNG-plugin-openweathermap](https://github.com/JohnnyTheTank/apiNG-plugin-openweathermap))
         - converts to this models: `weather`
+     - [x] **BandsInTown** ([apiNG-plugin-bandsintown](https://github.com/JohnnyTheTank/apiNG-plugin-bandsintown))
+        - converts to this models: `event`
      - [ ] [Spotify](https://developer.spotify.com/web-api/),
      [iTunes](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html),
      [Soundcloud](https://developers.soundcloud.com/docs),
      [Last.fm](http://www.last.fm/en/api),
      [IMDb](http://www.omdbapi.com/),
      [Meetup](http://www.meetup.com/de/meetup_api/),
-     [BandsInTown](https://www.bandsintown.com/api/overview),
      [MusicBrainz](https://wiki.musicbrainz.org/Development/JSON_Web_Service),
      [Eventbrite](http://developer.eventbrite.com/),
      [Wunderlist](https://developer.wunderlist.com/documentation),
