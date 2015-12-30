@@ -2,6 +2,9 @@ _**Note:** apiNG is currently under development and not ready yet for public use
 
 # apiNG
 
+[logo]: http://aping.io/logo/500/aping-logo.png "apiNG"
+![apiNG][logo]
+
 [![Join the chat at https://gitter.im/JohnnyTheTank/apiNG](https://badges.gitter.im/JohnnyTheTank/apiNG.svg)](https://gitter.im/JohnnyTheTank/apiNG?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Stories in Ready](https://badge.waffle.io/JohnnyTheTank/apiNG.svg?label=ready&title=Ready)](http://waffle.io/JohnnyTheTank/apiNG)
 
