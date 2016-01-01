@@ -7,8 +7,8 @@ apingApp
          * parse Timestamp from DateString and do some math
          *
          * @param _string {String}
-         * @param _multiplier {int}
-         * @param _add {int}
+         * @param _multiplier {number}
+         * @param _add {number}
          * @returns {timestamp}
          */
         this.getTimestampFromDateString = function (_string, _multiplier, _add) {
@@ -50,7 +50,7 @@ apingApp
         };
 
         /**
-         * legagy function for this.parseRequestsFromAttributes()
+         * legacy function for this.parseRequestsFromAttributes()
          *
          * @param _string {String}
          * @param _platform {String}
@@ -214,6 +214,7 @@ apingApp
 
         /**
          * Parses URL Parameters from ULR (string)
+         *
          * @param _string {String}
          * @returns {Object}
          */
