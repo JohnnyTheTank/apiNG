@@ -290,7 +290,7 @@ apingApp
                 firstValue['$$hashKey'] = undefined;
                 firstValue[stringifyPropertyName] = JSON.stringify(firstValue);
 
-                if (typeof _keepOrder !== "undefined" && _keepOrder === true) {
+                if (_keepOrder === true) {
                     firstValue[orderPropertyName] = firstIndex;
                 }
                 sortedArray.push(firstValue);
@@ -313,7 +313,7 @@ apingApp
                 secondValue[stringifyPropertyName] = undefined;
             });
 
-            if (typeof _keepOrder !== "undefined" && _keepOrder === true) {
+            if (_keepOrder === true) {
                 sortedArray.sort(this.sortArrayByProperty(orderPropertyName));
 
                 $.each(sortedArray, function (thirdIndex, thirdValue) {
