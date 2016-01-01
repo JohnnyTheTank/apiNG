@@ -52,16 +52,23 @@ Include both **`aping.min.js`** and **`aping-config.js`** in your application.
 ```
 Configure the `apingDefaultSettings` in **`aping-config.js`**. This default settings could be overwritten by every aping instance via data-attributes.
 ```js
-$provide.constant("apingDefaultSettings", {
-    templateUrl : "<PATH_TO_YOUR_DEFAULT_DESIGN>",
-    items : "<ITEMS_PER_REQUEST>", //items per request
-    maxItems: "<MAX_ITEMS_PER_APING>", //max items per aping instance
-    orderBy : "<ORDER_BY_PROPERTY>", // order result list by this object property. e.g. "timestamp", "position", ...
-    orderReverse : "<ORDER_REVERSE_FLAG>", //"true" or "false"
-    model: "<CHOSEN_DATA_MODEL>", //e.g. "social", "event", "video", "picture", ....
-    getNativeData: false, // Use "true" for getting native data from plugins (no transformation to any model)
-    removeDoubles: false, // Use "true" to remove identical objects
-});
+"use strict";
+apingApp.config(['$provide', function ($provide) {
+    $provide.constant("apingApiKeys", {
+        // ...
+    });
+
+    $provide.constant("apingDefaultSettings", {
+        templateUrl : "<PATH_TO_YOUR_DEFAULT_DESIGN>",
+        items : "<ITEMS_PER_REQUEST>", //items per request
+        maxItems: "<MAX_ITEMS_PER_APING>", //max items per aping instance
+        orderBy : "<ORDER_BY_PROPERTY>", // order result list by this object property. e.g. "timestamp", "position", ...
+        orderReverse : "<ORDER_REVERSE_FLAG>", //"true" or "false"
+        model: "<CHOSEN_DATA_MODEL>", //e.g. "social", "event", "video", "picture", ....
+        getNativeData: false, // Use "true" for getting native data from plugins (no transformation to any model)
+        removeDoubles: false, // Use "true" to remove identical objects
+    });
+}]);
 ```
 
 Add the module `jtt_aping` as a dependency to your app module:
