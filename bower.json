@@ -30,6 +30,5 @@
   "dependencies": {
     "jquery": "*",
     "angular": "*",
-    "angular-sanitize": "*"
   }
 }

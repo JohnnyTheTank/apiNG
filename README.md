@@ -34,13 +34,11 @@ You can choose your preferred method of installation:
 Include all dependencies in your application
 * jquery
 * angular
-* angular-sanitize
 
 ```html
 <!-- dependencies for apiNG -->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/angular/angular.min.js"></script>
-<script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
 ```
 
 ### apiNG core
