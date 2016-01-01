@@ -1,5 +1,9 @@
 "use strict";
 
+/**
+ * this directive "imagesLoaded" is just a custom version of https://github.com/bimal1331/angular-images-loaded
+ */
+
 apingApp.directive('imagesLoaded', ['$timeout', '$rootScope', '$q', function($timeout, $rootScope, $q) {
 
     var cache = {};
@@ -132,13 +136,9 @@ apingApp.directive('imagesLoaded', ['$timeout', '$rootScope', '$q', function($ti
                     cache[source] = new ImageNode(source, increment);
 
                 }
-
             }
-
             return defer.promise;
         }
-
-
     };
 
     //Directive configuration object
@@ -186,7 +186,6 @@ apingApp.directive('imagesLoaded', ['$timeout', '$rootScope', '$q', function($ti
                                 }
                             );
                         });
-
                     }
                 );
             }
