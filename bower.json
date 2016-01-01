@@ -29,6 +29,6 @@
   },
   "dependencies": {
     "jquery": "*",
-    "angular": "*",
+    "angular": "*"
   }
 }
