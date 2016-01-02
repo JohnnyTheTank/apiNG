@@ -206,4 +206,6 @@ create your own **_designs_** by this samples:
 
 # Contributors
 - Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
+    - Core, Plugins, Designs, Docs
 - Daniel Moon ([teadragon](https://github.com/teadragon))
+    - Logos
