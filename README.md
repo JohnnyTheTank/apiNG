@@ -126,7 +126,8 @@ _Full usage documentation coming soon ..._
      [Pinterest](https://developers.pinterest.com/docs/getting-started/introduction/),
      [500px](https://github.com/500px/api-documentation),
      [Picasa](https://developers.google.com/picasa-web/docs/2.0/reference),
-     [dribbble](http://developer.dribbble.com/v1/)
+     [dribbble](http://developer.dribbble.com/v1/),
+     [Disqus](https://disqus.com/api/docs/),
      ([Blogger](https://developers.google.com/blogger/docs/3.0/using),
      [Delicious](https://github.com/SciDevs/delicious-api),
      [Skyrock](http://www.skyrock.com/developer/documentation/))
