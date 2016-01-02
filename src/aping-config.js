@@ -24,7 +24,7 @@ apingApp.config(['$provide', function ($provide) {
             {'access_token':'<YOUR_GITHUB_TOKEN>'}
         ],
         'openweathermap': [
-            {'appid':'<YOUR_OPENWEATHERMAP_APP_ID>'}
+            {'api_key':'<YOUR_OPENWEATHERMAP_API_KEY>'}
         ],
     });
 
