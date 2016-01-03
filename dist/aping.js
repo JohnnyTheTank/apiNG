@@ -133,7 +133,7 @@ apingApp
          * @param _string {String}
          * @param _multiplier {number}
          * @param _add {number}
-         * @returns {timestamp}
+         * @returns {Number}
          */
         this.getTimestampFromDateString = function (_string, _multiplier, _add) {
             if (typeof _multiplier === "undefined" || isNaN(_multiplier)) {
@@ -147,11 +147,12 @@ apingApp
             if (typeof _string === "string") {
                 var a = _string.split(/[^0-9]/);
                 try {
-                    return parseInt(Math.round(new Date(a[0], a[1] - 1, a[2], a[3], a[4], a[5]) / 1000 * _multiplier) + _add);
+                    return parseInt(Math.round(new Date(a[0], a[1] - 1, a[2], a[3], a[4], a[5]) / 1000 * _multiplier) + _add, 10);
                 } catch (e) {
+                    return 0;
                 }
             }
-            return false;
+            return 0;
         };
     })
     .service('apingUtilityHelper', ['apingInputObjects', 'apingApiKeys', function (apingInputObjects, apingApiKeys) {
