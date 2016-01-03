@@ -326,7 +326,7 @@ apingApp
         };
 
         /**
-         * transform html string to plain text
+         * Transforms html string to plain text
          *
          * @param _string {String}
          * @returns {String}
@@ -335,6 +335,17 @@ apingApp
             _string = _string.replace(/&lt;br ?\/\>|&lt;br ?\/&rt;|\<br ?\/\>/g, " ");
             _string = _string.replace(/<(?:.|\n)*?>/gm, '');
             return _string;
+        };
+
+        /**
+         * Parses images from html string
+         *
+         * @param _string
+         * @returns {Array|{index: number, input: string}}
+         */
+        this.getImagesFormHtml = function (_string) {
+            var re = /<img[^>]+src="http:\/\/([^">]+)/g;
+            return re.exec(_string);
         };
 
         /**
