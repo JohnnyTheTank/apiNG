@@ -15,7 +15,7 @@ var apingApp = angular.module('jtt_aping', [])
                 orderReverse: '@',
                 templateUrl: '@',
                 payloadJson: '@',
-                removeDoubles: '@',
+                removeDoubles: '@'
             },
             controller: ['$scope', function ($scope) {
                 $scope.results = [];
@@ -80,7 +80,7 @@ var apingApp = angular.module('jtt_aping', [])
                         maxItems: maxItems,
                         orderBy: $scope.orderBy || apingDefaultSettings.orderBy,
                         orderReverse: orderReverse,
-                        removeDoubles: removeDoubles,
+                        removeDoubles: removeDoubles
                     };
                 };
 
@@ -208,10 +208,10 @@ apingApp
                 value.platform = _platform;
 
                 if (_appSettings) {
-                    if (typeof value.items === "undefined" && typeof _appSettings.items != "undefined") {
+                    if (typeof value.items === "undefined" && typeof _appSettings.items !== "undefined") {
                         value.items = _appSettings.items;
                     }
-                    if (typeof value.model === "undefined" && typeof _appSettings.model != "undefined") {
+                    if (typeof value.model === "undefined" && typeof _appSettings.model !== "undefined") {
                         value.model = _appSettings.model;
                     }
                 }
@@ -371,7 +371,7 @@ apingApp.service('apingInputObjects', ['apingDefaultSettings', function (apingDe
             case "request":
                 inputObject = $.extend(true, {
                     model: apingDefaultSettings.model,
-                    items: apingDefaultSettings.items,
+                    items: apingDefaultSettings.items
                 }, _params);
                 break;
 
@@ -411,7 +411,7 @@ apingApp.service('apingModels', [function () {
                     likes: undefined,
                     shares: undefined,
                     comments: undefined,
-                    position: undefined,
+                    position: undefined
                 };
                 break;
 
@@ -436,7 +436,7 @@ apingApp.service('apingModels', [function () {
                     width: undefined,
                     height: undefined,
                     comments: undefined,
-                    position: undefined,
+                    position: undefined
                 };
                 break;
 
@@ -465,7 +465,7 @@ apingApp.service('apingModels', [function () {
                     likes: undefined,
                     shares: undefined,
                     comments: undefined,
-                    position: undefined,
+                    position: undefined
                 };
                 break;
 
@@ -493,7 +493,7 @@ apingApp.service('apingModels', [function () {
                     longitude : undefined,
                     street: undefined,
                     zip : undefined,
-                    source : undefined,
+                    source : undefined
                 };
                 break;
 
@@ -525,7 +525,7 @@ apingApp.service('apingModels', [function () {
                     updated_timestamp: undefined,
                     updated_date_time: undefined,
                     pushed_timestamp: undefined,
-                    pushed_date_time: undefined,
+                    pushed_date_time: undefined
                 };
                 break;
 
@@ -556,7 +556,7 @@ apingApp.service('apingModels', [function () {
 
                     context : undefined,
                     timestamp : undefined,
-                    date_time: undefined,
+                    date_time: undefined
 
                 };
                 break;
@@ -596,7 +596,7 @@ apingApp.service('apingModels', [function () {
                     loc_country : undefined,
                     loc_lat : undefined,
                     loc_lng : undefined,
-                    loc_zip : undefined,
+                    loc_zip : undefined
                 };
                 break;
 

@@ -25,7 +25,7 @@ apingApp.config(['$provide', function ($provide) {
         ],
         'openweathermap': [
             {'api_key':'<YOUR_OPENWEATHERMAP_API_KEY>'}
-        ],
+        ]
     });
 
     $provide.constant("apingDefaultSettings", {
@@ -36,7 +36,7 @@ apingApp.config(['$provide', function ($provide) {
         orderReverse : "true",
         model: "social",
         getNativeData: false,
-        removeDoubles: false,
+        removeDoubles: false
     });
 
 }]);

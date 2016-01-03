@@ -17,7 +17,7 @@ apingApp.service('apingInputObjects', ['apingDefaultSettings', function (apingDe
             case "request":
                 inputObject = $.extend(true, {
                     model: apingDefaultSettings.model,
-                    items: apingDefaultSettings.items,
+                    items: apingDefaultSettings.items
                 }, _params);
                 break;
 

@@ -13,7 +13,7 @@ var apingApp = angular.module('jtt_aping', [])
                 orderReverse: '@',
                 templateUrl: '@',
                 payloadJson: '@',
-                removeDoubles: '@',
+                removeDoubles: '@'
             },
             controller: ['$scope', function ($scope) {
                 $scope.results = [];
@@ -78,7 +78,7 @@ var apingApp = angular.module('jtt_aping', [])
                         maxItems: maxItems,
                         orderBy: $scope.orderBy || apingDefaultSettings.orderBy,
                         orderReverse: orderReverse,
-                        removeDoubles: removeDoubles,
+                        removeDoubles: removeDoubles
                     };
                 };
 

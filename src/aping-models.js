@@ -28,7 +28,7 @@ apingApp.service('apingModels', [function () {
                     likes: undefined,
                     shares: undefined,
                     comments: undefined,
-                    position: undefined,
+                    position: undefined
                 };
                 break;
 
@@ -53,7 +53,7 @@ apingApp.service('apingModels', [function () {
                     width: undefined,
                     height: undefined,
                     comments: undefined,
-                    position: undefined,
+                    position: undefined
                 };
                 break;
 
@@ -82,7 +82,7 @@ apingApp.service('apingModels', [function () {
                     likes: undefined,
                     shares: undefined,
                     comments: undefined,
-                    position: undefined,
+                    position: undefined
                 };
                 break;
 
@@ -110,7 +110,7 @@ apingApp.service('apingModels', [function () {
                     longitude : undefined,
                     street: undefined,
                     zip : undefined,
-                    source : undefined,
+                    source : undefined
                 };
                 break;
 
@@ -142,7 +142,7 @@ apingApp.service('apingModels', [function () {
                     updated_timestamp: undefined,
                     updated_date_time: undefined,
                     pushed_timestamp: undefined,
-                    pushed_date_time: undefined,
+                    pushed_date_time: undefined
                 };
                 break;
 
@@ -173,7 +173,7 @@ apingApp.service('apingModels', [function () {
 
                     context : undefined,
                     timestamp : undefined,
-                    date_time: undefined,
+                    date_time: undefined
 
                 };
                 break;
@@ -213,7 +213,7 @@ apingApp.service('apingModels', [function () {
                     loc_country : undefined,
                     loc_lat : undefined,
                     loc_lng : undefined,
-                    loc_zip : undefined,
+                    loc_zip : undefined
                 };
                 break;
 
