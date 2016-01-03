@@ -341,11 +341,18 @@ apingApp
          * Parses images from html string
          *
          * @param _string
-         * @returns {Array|{index: number, input: string}}
+         * @returns {Array}
          */
-        this.getImagesFormHtml = function (_string) {
-            var re = /<img[^>]+src="http:\/\/([^">]+)/g;
-            return re.exec(_string);
+        this.getImagesFromHtml = function (_string) {
+            var m;
+            var urls = [];
+            var rex = /<img[^>]+src="?([^"\s]+)"?\s*\/>/g;
+
+            while ( m = rex.exec( _string ) ) {
+                urls.push( m[1] );
+            }
+
+            return urls;
         };
 
         /**
