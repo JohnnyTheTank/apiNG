@@ -96,8 +96,8 @@ var apingApp = angular.module('jtt_aping', [])
                         $scope.results = apingUtilityHelper.removeDuplicateObjectsFromArray($scope.results, (appSettings.orderBy === false || appSettings.orderBy === "false" || appSettings.orderBy === "$NONE"));
                     }
 
-                    if(appSettings.orderBy !== false && appSettings.orderBy !== "false" && appSettings.orderBy != "$NONE") {
-                        if(appSettings.orderBy == "$RANDOM") {
+                    if(appSettings.orderBy !== false && appSettings.orderBy !== "false" && appSettings.orderBy !== "$NONE") {
+                        if(appSettings.orderBy === "$RANDOM") {
                             $scope.results = apingUtilityHelper.shuffleArray($scope.results);
                         } else {
                             $scope.results.sort(apingUtilityHelper.sortArrayByProperty(appSettings.orderBy));
@@ -119,5 +119,4 @@ var apingApp = angular.module('jtt_aping', [])
                 return scope.templateUrl || apingDefaultSettings.templateUrl;
             }
         };
-    }
-    ]);
+    }]);

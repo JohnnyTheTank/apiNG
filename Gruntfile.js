@@ -31,14 +31,14 @@ module.exports = function(grunt) {
                     'src/aping-models.js',
                     'src/aping-designHelpers.js'
                 ],
-                dest: 'dist/aping.js',
-            },
+                dest: 'dist/aping.js'
+            }
         },
         copy: {
             main: {
                 src: 'src/aping-config.js',
-                dest: 'dist/aping-config.js',
-            },
+                dest: 'dist/aping-config.js'
+            }
         },
         watch: {
             minifiyJs: {
@@ -51,17 +51,17 @@ module.exports = function(grunt) {
                 ],
                 tasks: ['uglify', 'concat'],
                 options: {
-                    spawn: true,
-                },
+                    spawn: true
+                }
             },
             copyConfig: {
                 files: ['src/aping-config.js'],
                 tasks: ['copy'],
                 options: {
-                    spawn: true,
-                },
-            },
-        },
+                    spawn: true
+                }
+            }
+        }
     });
 
     grunt.loadNpmTasks('grunt-contrib-uglify');

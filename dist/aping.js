@@ -1,5 +1,5 @@
 
-/*! aping v0.1.0 (01-01-2016) by Jonathan Hornung */
+/*! aping v0.1.0 (03-01-2016) by Jonathan Hornung */
 "use strict";
 var apingApp = angular.module('jtt_aping', [])
     .directive('aping', ['apingDefaultSettings', 'apingUtilityHelper', function (apingDefaultSettings, apingUtilityHelper) {
@@ -98,8 +98,8 @@ var apingApp = angular.module('jtt_aping', [])
                         $scope.results = apingUtilityHelper.removeDuplicateObjectsFromArray($scope.results, (appSettings.orderBy === false || appSettings.orderBy === "false" || appSettings.orderBy === "$NONE"));
                     }
 
-                    if(appSettings.orderBy !== false && appSettings.orderBy !== "false" && appSettings.orderBy != "$NONE") {
-                        if(appSettings.orderBy == "$RANDOM") {
+                    if(appSettings.orderBy !== false && appSettings.orderBy !== "false" && appSettings.orderBy !== "$NONE") {
+                        if(appSettings.orderBy === "$RANDOM") {
                             $scope.results = apingUtilityHelper.shuffleArray($scope.results);
                         } else {
                             $scope.results.sort(apingUtilityHelper.sortArrayByProperty(appSettings.orderBy));
@@ -121,8 +121,8 @@ var apingApp = angular.module('jtt_aping', [])
                 return scope.templateUrl || apingDefaultSettings.templateUrl;
             }
         };
-    }
-    ]);;"use strict";
+    }]);
+;"use strict";
 
 apingApp
     .service('apingTimeHelper', function () {
@@ -208,10 +208,10 @@ apingApp
                 value.platform = _platform;
 
                 if (_appSettings) {
-                    if (typeof value.items == "undefined" && typeof _appSettings.items != "undefined") {
+                    if (typeof value.items === "undefined" && typeof _appSettings.items != "undefined") {
                         value.items = _appSettings.items;
                     }
-                    if (typeof value.model == "undefined" && typeof _appSettings.model != "undefined") {
+                    if (typeof value.model === "undefined" && typeof _appSettings.model != "undefined") {
                         value.model = _appSettings.model;
                     }
                 }
@@ -303,7 +303,7 @@ apingApp
             var reducedArray = [];
             $.each(sortedArray, function (secondIndex, secondValue) {
                 if (typeof lastValue !== "undefined") {
-                    if (typeof secondValue[stringifyPropertyName] !== "undefined" && secondValue[stringifyPropertyName] != lastValue) {
+                    if (typeof secondValue[stringifyPropertyName] !== "undefined" && secondValue[stringifyPropertyName] !== lastValue) {
                         reducedArray.push(secondValue);
                     }
                 } else {

@@ -84,10 +84,10 @@ apingApp
                 value.platform = _platform;
 
                 if (_appSettings) {
-                    if (typeof value.items == "undefined" && typeof _appSettings.items != "undefined") {
+                    if (typeof value.items === "undefined" && typeof _appSettings.items != "undefined") {
                         value.items = _appSettings.items;
                     }
-                    if (typeof value.model == "undefined" && typeof _appSettings.model != "undefined") {
+                    if (typeof value.model === "undefined" && typeof _appSettings.model != "undefined") {
                         value.model = _appSettings.model;
                     }
                 }
@@ -179,7 +179,7 @@ apingApp
             var reducedArray = [];
             $.each(sortedArray, function (secondIndex, secondValue) {
                 if (typeof lastValue !== "undefined") {
-                    if (typeof secondValue[stringifyPropertyName] !== "undefined" && secondValue[stringifyPropertyName] != lastValue) {
+                    if (typeof secondValue[stringifyPropertyName] !== "undefined" && secondValue[stringifyPropertyName] !== lastValue) {
                         reducedArray.push(secondValue);
                     }
                 } else {
