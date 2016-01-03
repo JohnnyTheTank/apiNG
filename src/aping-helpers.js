@@ -214,12 +214,12 @@ apingApp
         };
 
         /**
-         * Parses images from html string
+         * Parses first image from html string
          *
          * @param _string
-         * @returns {Array|{index: number, input: string}}
+         * @returns {Array}
          */
-        this.getImagesFromHtml = function (_string) {
+        this.getFirstImageFromHtml = function (_string) {
             var re = /<img[^>]+src="([^">]+)/g;
             return re.exec(_string);
         };
