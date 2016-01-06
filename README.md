@@ -78,13 +78,20 @@ var app = angular.module('app', ['jtt_aping']);
 ```
 
 ### apiNG plugins
+**Plugins** works as data sources for apiNG.
+
 * Every **apiNG plugin** expects an array of **requests** as html attribute.
 * Every **request** is defined as single API call or something like that.
 
 _Full documentation for **plugins** coming soon ..._
 
+### apiNG models
+_Full Documentation for **models** coming soon ..._
+
 ### apiNG designs
-_Documentation for **designs** coming soon ..._
+**Designs** displays the the models
+
+_Full Documentation for **designs** coming soon ..._
 
 ## Usage
 _Full usage documentation coming soon ..._

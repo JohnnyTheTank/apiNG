@@ -1,5 +1,10 @@
-
-/*! aping v0.1.0 (03-01-2016) by Jonathan Hornung */
+/**
+    @name: aping 
+    @version: 0.1.0 (06-01-2016) 
+    @author: Jonathan Hornung <jonathan.hornung@gmail.com> 
+    @url: https://github.com/JohnnyTheTank/apiNG#readme 
+    @license: MIT
+*/
 "use strict";
 var apingApp = angular.module('jtt_aping', [])
     .directive('aping', ['apingDefaultSettings', 'apingUtilityHelper', function (apingDefaultSettings, apingUtilityHelper) {

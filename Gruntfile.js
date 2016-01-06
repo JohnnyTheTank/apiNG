@@ -1,36 +1,34 @@
 module.exports = function(grunt) {
 
-    grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
-        uglify: {
-            js: {
-                files : {
-                    'dist/aping.min.js' : [
+    var banner = '/**\n    @name: <%= pkg.name %> \n    @version: <%= pkg.version %> (<%= grunt.template.today("dd-mm-yyyy") %>) \n    @author: <%= pkg.author %> \n    @url: <%= pkg.homepage %> \n    @license: <%= pkg.license %>\n*/\n';
+
+    var sources = [
                         'src/aping-directive.js',
                         'src/aping-helpers.js',
                         'src/aping-inputObjects.js',
                         'src/aping-models.js',
                         'src/aping-designHelpers.js'
-                    ]
+                    ];
+
+    grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
+        uglify: {
+            js: {
+                files : {
+                    'dist/aping.min.js' : sources
                 }
             },
             options: {
-                banner: '\n/*! <%= pkg.name %> v<%= pkg.version %> (<%= grunt.template.today("dd-mm-yyyy") %>) by <%= pkg.author %> */\n'
+                banner: banner
             }
         },
         concat: {
             options: {
                 separator: ';',
-                banner: '\n/*! <%= pkg.name %> v<%= pkg.version %> (<%= grunt.template.today("dd-mm-yyyy") %>) by <%= pkg.author %> */\n'
+                banner: banner
             },
             dist: {
-                src: [
-                    'src/aping-directive.js',
-                    'src/aping-helpers.js',
-                    'src/aping-inputObjects.js',
-                    'src/aping-models.js',
-                    'src/aping-designHelpers.js'
-                ],
+                src: sources,
                 dest: 'dist/aping.js'
             }
         },
@@ -42,13 +40,7 @@ module.exports = function(grunt) {
         },
         watch: {
             minifiyJs: {
-                files: [
-                    'src/aping-directive.js',
-                    'src/aping-helpers.js',
-                    'src/aping-inputObjects.js',
-                    'src/aping-models.js',
-                    'src/aping-designHelpers.js'
-                ],
+                files: sources,
                 tasks: ['uglify', 'concat'],
                 options: {
                     spawn: true

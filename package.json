@@ -1,6 +1,6 @@
 {
   "name": "aping",
-  "version": "0.1.0",
+  "version": "0.7.0",
   "description": "apiNG is an AngularJS platform for getting some data from REST APIs and displays it in various designs (templates)",
   "main": "Gruntfile.js",
   "scripts": {
@@ -16,7 +16,7 @@
     "api",
     "json"
   ],
-  "author": "Jonathan Hornung",
+  "author": "Jonathan Hornung <jonathan.hornung@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/JohnnyTheTank/apiNG/issues"
@@ -28,5 +28,9 @@
     "grunt-contrib-copy": "^0.8.2",
     "grunt-contrib-uglify": "^0.11.0",
     "grunt-contrib-watch": "^0.6.1"
+  },
+  "dependencies": {
+    "jquery": "*",
+    "angular": "*"
   }
 }
