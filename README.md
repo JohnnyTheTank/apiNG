@@ -89,8 +89,6 @@ _Full documentation for **plugins** coming soon ..._
 _Full Documentation for **models** coming soon ..._
 
 ### apiNG designs
-**Designs** displays the the models
-
 _Full Documentation for **designs** coming soon ..._
 
 ## Usage
