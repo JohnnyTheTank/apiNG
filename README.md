@@ -29,50 +29,10 @@ Users can collaborate to create new **_plugins_** and **_designs_**
 **Full documentation comes up at [aping.readme.io](https://aping.readme.io)**
 
 ## Plugins
-- **SOCIAL MEDIA SOURCES**
-     - [x] **Youtube** ([apiNG-plugin-youtube](https://github.com/JohnnyTheTank/apiNG-plugin-youtube))
-        - converts to this models: `social`, `video`
-     - [x] **Instagram** ([apiNG-plugin-instagram](https://github.com/JohnnyTheTank/apiNG-plugin-instagram))
-        - converts to this models: `social`, `video`, `image`
-     - [x] **Facebook** ([apiNG-plugin-facebook](https://github.com/JohnnyTheTank/apiNG-plugin-facebook))
-        - converts to this models: `social`, `video`, `image`, `event`
-     - [x] **Twitter** ([apiNG-plugin-codebird](https://github.com/JohnnyTheTank/apiNG-plugin-codebird))
-        - converts to this models: `social`, `image`
-     - [x] **Vimeo** ([apiNG-plugin-vimeo](https://github.com/JohnnyTheTank/apiNG-plugin-vimeo))
-        - converts to this models: `social`, `video`
-     - [x] **Flickr** ([apiNG-plugin-flickr](https://github.com/JohnnyTheTank/apiNG-plugin-flickr))
-        - converts to this models: `social`, `image`
-     - [x] **Dailymotion** ([apiNG-plugin-dailymotion](https://github.com/JohnnyTheTank/apiNG-plugin-dailymotion))
-        - converts to this models: `social`, `video`
-     - [x] **Tumblr** ([apiNG-plugin-tumblr](https://github.com/JohnnyTheTank/apiNG-plugin-tumblr))
-        - converts to this models: `social`, `video`, `image`
- - **OTHER REST API SOURCES**
-     - [x] **GitHub** ([apiNG-plugin-github](https://github.com/JohnnyTheTank/apiNG-plugin-github))
-        - converts to this models: `repo`
-     - [x] **OpenWeatherMap** ([apiNG-plugin-openweathermap](https://github.com/JohnnyTheTank/apiNG-plugin-openweathermap))
-        - converts to this models: `weather`
-     - [x] **BandsInTown** ([apiNG-plugin-bandsintown](https://github.com/JohnnyTheTank/apiNG-plugin-bandsintown))
-        - converts to this models: `event`
- - **OTHER DYNAMIC SOURCES**
-    - [x] **RSS feeds** ([apiNG-plugin-rss](https://github.com/JohnnyTheTank/apiNG-plugin-rss))
-        - converts to this models: `social`, `native`
- - **FILE SOURCES**
-    - [x] **JSON file** ([apiNG-plugin-jsonloader](https://github.com/JohnnyTheTank/apiNG-plugin-jsonloader))
-        - supports any model
- - **OTHER STATIC SOURCES**
-    - [x] **JavaScript array** ([apiNG-plugin-ngArray](https://github.com/JohnnyTheTank/apiNG-plugin-ngArray))
-        - supports any model
- - _and much more coming ..._
+**All apiNG plugins are listed at [aping.readme.io/docs/all-plugins](https://aping.readme.io/docs/all-plugins)**
 
 ## Designs
-- [x] **[default](https://github.com/JohnnyTheTank/apiNG-design-default)** (masonry layout)
-    - displays this models: `social`, `video`, `image`, `event`, `repo`
-- [x] **[xgallerify](https://github.com/JohnnyTheTank/apiNG-design-xgallerify)** (xGallerify layout)
-    - displays this models: `image`
-- [x] **[deadwood](https://github.com/JohnnyTheTank/apiNG-design-deadwood)** (youtube player)
-    - displays this models: `video`
-        - only from youtube
-- _and much more coming ..._
+**All apiNG designs are listed at [aping.readme.io/docs/all-designs](https://aping.readme.io/docs/all-designs)**
 
 # Contributors
 - Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
