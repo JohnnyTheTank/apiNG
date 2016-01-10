@@ -6,6 +6,9 @@ _**Note:** apiNG is currently under development and not ready yet for public use
 [![Join the chat at https://gitter.im/JohnnyTheTank/apiNG](https://badges.gitter.im/JohnnyTheTank/apiNG.svg)](https://gitter.im/JohnnyTheTank/apiNG?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Stories in Ready](https://badge.waffle.io/JohnnyTheTank/apiNG.svg?label=ready&title=Ready)](http://waffle.io/JohnnyTheTank/apiNG)
 [![Code Climate](https://codeclimate.com/github/JohnnyTheTank/apiNG/badges/gpa.svg)](https://codeclimate.com/github/JohnnyTheTank/apiNG)
+[![npm version](https://badge.fury.io/js/aping.png)](https://badge.fury.io/js/aping)
+[![Bower version](https://badge.fury.io/bo/apiNG.png)](https://badge.fury.io/bo/apiNG)
+
 
 **apiNG** is an AngularJS directive for receiving and displaying data from any source, like REST APIs, JSON files or just simple JavaScript objects.
 
