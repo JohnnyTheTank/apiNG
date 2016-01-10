@@ -6,7 +6,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//rawgit.com/JohnnyTheTank/apiNG-design-default/master/dist/aping-design-default.min.css">
+    <link rel="stylesheet"
+          href="//rawgit.com/JohnnyTheTank/apiNG-design-default/master/dist/aping-design-default.min.css">
 
     <link href='//fonts.googleapis.com/css?family=Economica' rel='stylesheet' type='text/css'>
 
@@ -48,25 +49,25 @@
 
 </head>
 <body ng-app="app">
-<div class="container">
-    <br>
 
-    <aping
-            template-url="social_template.html"
-            items="3"
-            model="social"
-            remove-doubles="false"
-            aping-youtube="[{'channelId':'UCoxMr8CYaJY-om5eJ2RA_4g'}]"
-            aping-instagram="[{'tag':'camping', 'items':2}, {'userId':'416104304', 'items':2}]"
-            aping-facebook="[{'page':'frittenbubu'}]"
-            aping-codebird="[{'search':'eagle', 'result_type':'popular', 'showAvatar':true}]"
-            aping-flickr="[{'tags':'münchen'}]"
-            aping-dailymotion="[{'tags':'samsung'}]"
-            aping-tumblr="[{'page':'namikamusik'}]"
-            aping-rss="[{'path':'http://blog.hackerearth.com/feed'}]"
-            aping-vimeo="[{'tag':'arizona cardinals'}]">
-    </aping>
-</div>
+<br>
+
+<aping
+        template-url="social_template.html"
+        items="3"
+        model="social"
+        remove-doubles="false"
+        aping-youtube="[{'channelId':'UCoxMr8CYaJY-om5eJ2RA_4g'}]"
+        aping-instagram="[{'userId':'416104304', 'items':2}]"
+        aping-facebook="[{'page':'frittenbubu'}]"
+        aping-codebird="[{'search':'eagle', 'result_type':'popular', 'showAvatar':true}]"
+        aping-flickr="[{'tags':'münchen'}]"
+        aping-dailymotion="[{'tags':'samsung'}]"
+        aping-tumblr="[{'page':'namikamusik'}]"
+        aping-rss="[{'path':'http://blog.hackerearth.com/feed'}]"
+        aping-vimeo="[{'tag':'arizona cardinals'}]">
+</aping>
+
 
 </body>
 </html>
