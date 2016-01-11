@@ -19,8 +19,13 @@
 <body ng-app="app">
 
 <aping
-        template-url="template.html"
-        aping-jsonloader="[{'path':'https://commons.wikimedia.org/w/api.php?action=query&list=allimages&format=json&aifrom=berlin', 'format':'jsonp', 'callback':'JSON_CALLBACK'}]">
+    template-url="template.html"
+    order-by="id"
+    order-reverse="true"
+    aping-jsonloader="[
+        {'path':'http://jsonplaceholder.typicode.com/posts/1', 'format':'jsonp'},
+        {'path':'http://jsonplaceholder.typicode.com/posts/2', 'format':'jsonp'},
+        {'path':'http://jsonplaceholder.typicode.com/posts/3', 'format':'jsonp'}]">
 </aping>
 
 
