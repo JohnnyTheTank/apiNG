@@ -15,10 +15,27 @@ angular.module("jtt_aping_ng_array", [])
 
                     if (request.name && scope[request.name]) {
 
+                        var requestObject = {};
+
+                        if(typeof request.items !== "undefined") {
+                            requestObject.count = request.items;
+                        } else {
+                            requestObject.count = appSettings.items;
+                        }
+
+                        if(requestObject.count === 0 || requestObject.count === '0') {
+                            return false;
+                        }
+
+                        // -1 is "no explicit limit". same for NaN value
+                        if(requestObject.count < 0 || isNaN(requestObject.count)) {
+                            requestObject.count = undefined;
+                        }
+
                         var resultArray = [];
 
                         if (scope[request.name].constructor === Array) {
-                            if (request.items < 0) {
+                            if (requestObject.items < 0 || typeof requestObject.items === "undefined") {
                                 resultArray = scope[request.name];
                             } else {
                                 angular.forEach(scope[request.name], function (value, key) {

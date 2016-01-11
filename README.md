@@ -9,7 +9,7 @@ _**Note:** apiNG is currently under development and not ready yet for public use
 [![npm version](https://badge.fury.io/js/aping.png)](https://badge.fury.io/js/aping)
 [![Bower version](https://badge.fury.io/bo/apiNG.png)](https://badge.fury.io/bo/apiNG)
 
-**apiNG** is an AngularJS directive that helps displaying your $http.get results (and much more!)
+**apiNG** is an AngularJS directive that helps displaying your $http.get results (and much more)
 
 ## Advanced Demos
 - [Social Wall](http://aping.io/#demo) (default design)

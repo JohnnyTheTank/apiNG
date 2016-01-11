@@ -1,6 +1,6 @@
 {
   "name": "aping",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "apiNG is an AngularJS platform for getting some data from REST APIs and displays it in various designs (templates)",
   "main": "dist/aping.min.js",
   "scripts": {

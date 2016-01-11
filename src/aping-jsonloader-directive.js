@@ -31,14 +31,30 @@ angular.module("jtt_aping_jsonloader", [])
                             requestObject.callback = 'JSON_CALLBACK';
                         }
 
+                        if(typeof request.items !== "undefined") {
+                            requestObject.count = request.items;
+                        } else {
+                            requestObject.count = appSettings.items;
+                        }
+
+                        if(requestObject.count === 0 || requestObject.count === '0') {
+                            return false;
+                        }
+
+                        // -1 is "no explicit limit". same for NaN value
+                        if(requestObject.count < 0 || isNaN(requestObject.count)) {
+                            requestObject.count = undefined;
+                        }
+
                         jsonloaderFactory.getJsonData(requestObject)
                             .then(function (_data) {
+
                                 var resultArray = [];
                                 if (_data.data) {
                                     if (_data.data.constructor !== Array) {
                                         resultArray.push(_data.data);
                                     } else {
-                                        if (request.items < 0) {
+                                        if (request.items < 0 || typeof request.items === "undefined" ) {
                                             resultArray = _data.data;
                                         } else {
                                             angular.forEach(_data.data, function (value, key) {
