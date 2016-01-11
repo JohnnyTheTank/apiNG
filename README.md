@@ -9,18 +9,9 @@ _**Note:** apiNG is currently under development and not ready yet for public use
 [![npm version](https://badge.fury.io/js/aping.png)](https://badge.fury.io/js/aping)
 [![Bower version](https://badge.fury.io/bo/apiNG.png)](https://badge.fury.io/bo/apiNG)
 
+**apiNG** helps you displaying $http.get results (and much much more ...)
 
-**apiNG** is an AngularJS directive for receiving and displaying data from any source, like REST APIs, JSON files or just simple JavaScript objects.
-
-## How apiNG works
-**apiNG** works as extendable platform, composed of three components:
- 1. **_plugins_** pass various data on to **apiNG**
- 2. **apiNG** passes the data on to **_designs_**
- 3. **_designs_** display the data
-
-Users can collaborate to create new **_plugins_** and **_designs_**
-
-## Demos
+## Advanced Demos
 - [Social Wall](http://aping.io/#demo) (default design)
 - [Image Gallery](https://rawgit.com/JohnnyTheTank/apiNG-design-xgallerify/master/demo/) (xgallerify design)
 - [Youtube Video Player](https://rawgit.com/JohnnyTheTank/apiNG-design-deadwood/master/demo/) (deadwood design)

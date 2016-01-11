@@ -1,12 +1,21 @@
 /**
     @name: aping 
-    @version: 0.1.0 (06-01-2016) 
+    @version: 0.8.0 (11-01-2016) 
     @author: Jonathan Hornung <jonathan.hornung@gmail.com> 
     @url: https://github.com/JohnnyTheTank/apiNG#readme 
     @license: MIT
 */
 "use strict";
-var apingApp = angular.module('jtt_aping', [])
+var apingApp = angular.module('jtt_aping', ['jtt_aping_jsonloader', 'jtt_aping_ng_array'])
+
+    .config(['$provide', function ($provide) {
+
+        $provide.value("apingDefaultSettings", {
+            apingApiKeys: {}
+        });
+
+
+    }])
     .directive('aping', ['apingDefaultSettings', 'apingUtilityHelper', function (apingDefaultSettings, apingUtilityHelper) {
         return {
             restrict: 'E',
@@ -36,43 +45,60 @@ var apingApp = angular.module('jtt_aping', [])
                     var maxItems;
                     var getNativeData;
                     var orderReverse;
+                    var orderBy;
                     var removeDoubles;
 
-                    if(typeof $scope.items !== "undefined") {
+                    if (typeof $scope.items !== "undefined") {
                         items = $scope.items;
-                    } else if(typeof apingDefaultSettings.items !== "undefined") {
+                    } else if (typeof apingDefaultSettings.items !== "undefined") {
                         items = apingDefaultSettings.items;
                     } else {
-                        items = 20;
+                        items = undefined;
                     }
 
-                    if(typeof $scope.maxItems !== "undefined") {
+                    if (typeof $scope.maxItems !== "undefined") {
                         maxItems = $scope.maxItems;
-                    } else if(typeof apingDefaultSettings.maxItems !== "undefined") {
+                    } else if (typeof apingDefaultSettings.maxItems !== "undefined") {
                         maxItems = apingDefaultSettings.maxItems;
                     } else {
-                        maxItems = -1;
+                        maxItems = undefined;
                     }
 
-                    if(typeof $scope.getNativeData !== "undefined") {
+                    if (typeof $scope.getNativeData !== "undefined") {
                         getNativeData = $scope.getNativeData;
-                    } else if(typeof apingDefaultSettings.getNativeData !== "undefined") {
+                    } else if (typeof apingDefaultSettings.getNativeData !== "undefined") {
                         getNativeData = apingDefaultSettings.getNativeData;
                     } else {
                         getNativeData = false;
                     }
 
-                    if(typeof $scope.orderReverse !== "undefined") {
+                    if (typeof $scope.maxItems !== "undefined") {
+                        maxItems = $scope.maxItems;
+                    } else if (typeof apingDefaultSettings.maxItems !== "undefined") {
+                        maxItems = apingDefaultSettings.maxItems;
+                    } else {
+                        maxItems = undefined;
+                    }
+
+                    if (typeof $scope.orderBy !== "undefined") {
+                        orderBy = $scope.orderBy;
+                    } else if (typeof apingDefaultSettings.orderBy !== "undefined") {
+                        orderBy = apingDefaultSettings.orderBy;
+                    } else {
+                        orderBy = "undefined";
+                    }
+
+                    if (typeof $scope.orderReverse !== "undefined") {
                         orderReverse = $scope.orderReverse;
-                    } else if(typeof apingDefaultSettings.orderReverse !== "undefined") {
+                    } else if (typeof apingDefaultSettings.orderReverse !== "undefined") {
                         orderReverse = apingDefaultSettings.orderReverse;
                     } else {
                         orderReverse = false;
                     }
 
-                    if(typeof $scope.removeDoubles !== "undefined") {
+                    if (typeof $scope.removeDoubles !== "undefined") {
                         removeDoubles = $scope.removeDoubles;
-                    } else if(typeof apingDefaultSettings.removeDoubles !== "undefined") {
+                    } else if (typeof apingDefaultSettings.removeDoubles !== "undefined") {
                         removeDoubles = apingDefaultSettings.removeDoubles;
                     } else {
                         removeDoubles = false;
@@ -80,10 +106,10 @@ var apingApp = angular.module('jtt_aping', [])
 
                     return {
                         model: $scope.model || apingDefaultSettings.model || "native",
-                        getNativeData : getNativeData,
+                        getNativeData: getNativeData,
                         items: items,
                         maxItems: maxItems,
-                        orderBy: $scope.orderBy || apingDefaultSettings.orderBy,
+                        orderBy: orderBy,
                         orderReverse: orderReverse,
                         removeDoubles: removeDoubles
                     };
@@ -99,22 +125,22 @@ var apingApp = angular.module('jtt_aping', [])
 
                     var appSettings = this.getAppSettings();
 
-                    if(appSettings.removeDoubles === true || appSettings.removeDoubles === "true") {
+                    if (appSettings.removeDoubles === true || appSettings.removeDoubles === "true") {
                         $scope.results = apingUtilityHelper.removeDuplicateObjectsFromArray($scope.results, (appSettings.orderBy === false || appSettings.orderBy === "false" || appSettings.orderBy === "$NONE"));
                     }
 
-                    if(appSettings.orderBy !== false && appSettings.orderBy !== "false" && appSettings.orderBy !== "$NONE") {
-                        if(appSettings.orderBy === "$RANDOM") {
+                    if (appSettings.orderBy !== "undefined" && appSettings.orderBy !== false && appSettings.orderBy !== "false" && appSettings.orderBy !== "$NONE") {
+                        if (appSettings.orderBy === "$RANDOM") {
                             $scope.results = apingUtilityHelper.shuffleArray($scope.results);
                         } else {
                             $scope.results.sort(apingUtilityHelper.sortArrayByProperty(appSettings.orderBy));
-                            if(appSettings.orderReverse === true || appSettings.orderReverse === "true") {
+                            if (appSettings.orderReverse === true || appSettings.orderReverse === "true") {
                                 $scope.results.reverse();
                             }
                         }
                     }
-                    if(appSettings.maxItems > -1 && $scope.results.length > appSettings.maxItems) {
-                        $scope.results = $scope.results.splice(0,appSettings.maxItems);
+                    if (appSettings.maxItems > -1 && $scope.results.length > appSettings.maxItems) {
+                        $scope.results = $scope.results.splice(0, appSettings.maxItems);
                     }
                     $scope.$broadcast('apiNG.resultMerged');
                 };
@@ -127,6 +153,7 @@ var apingApp = angular.module('jtt_aping', [])
             }
         };
     }]);
+
 ;"use strict";
 
 apingApp
@@ -160,7 +187,7 @@ apingApp
             return 0;
         };
     })
-    .service('apingUtilityHelper', ['apingInputObjects', 'apingApiKeys', function (apingInputObjects, apingApiKeys) {
+    .service('apingUtilityHelper', ['apingInputObjects', 'apingDefaultSettings', function (apingInputObjects, apingDefaultSettings) {
 
         /**
          * return random matching API Key from Constant "apingApiKeys". If there is no matching API Key, the function returns 'false'
@@ -171,9 +198,9 @@ apingApp
          */
         this.getApiCredentials = function (_platform, _keyName) {
 
-            if (apingApiKeys) {
-                if (apingApiKeys[_platform]) {
-                    return apingApiKeys[_platform][Math.floor(Math.random() * apingApiKeys[_platform].length)][_keyName];
+            if (apingDefaultSettings.apingApiKeys) {
+                if (apingDefaultSettings.apingApiKeys[_platform]) {
+                    return apingDefaultSettings.apingApiKeys[_platform][Math.floor(Math.random() * apingDefaultSettings.apingApiKeys[_platform].length)][_keyName];
                 }
             }
             return false;
@@ -624,195 +651,122 @@ apingApp.service('apingModels', [function () {
     };
 }]);;"use strict";
 
-/**
- * this directive "imagesLoaded" is just a custom version of https://github.com/bimal1331/angular-images-loaded
- */
+angular.module("jtt_aping_jsonloader", [])
+    .directive('apingJsonloader', ['apingUtilityHelper', 'jsonloaderFactory', function (apingUtilityHelper, jsonloaderFactory) {
+        return {
+            require: '?aping',
+            restrict: 'A',
+            replace: 'false',
+            link: function (scope, element, attrs, apingController) {
 
-apingApp.directive('imagesLoaded', ['$timeout', '$rootScope', '$q', function($timeout, $rootScope, $q) {
+                var appSettings = apingController.getAppSettings();
+                var requests = apingUtilityHelper.parseJsonFromAttributes(attrs.apingJsonloader, "jsonloader", appSettings);
 
-    var cache = {};
+                requests.forEach(function (request) {
 
-    var broadcastMessages = {
-        progress : ['imagesLoaded.QUARTER', 'imagesLoaded.HALF', 'imagesLoaded.THREEQUARTERS', 'imagesLoaded.FULL'],
-        successful : 'imagesLoaded.SUCCESS',
-        complete : 'imagesLoaded.FAIL',
-        always : 'imagesLoaded.ALWAYS'
-    };
+                    if (request.path) {
+                        //create requestObject for factory function call
+                        var requestObject = {
+                            path: request.path,
+                        };
 
-    /************* Helper functions **********/
-    function digestPromise(func) {
-        $timeout(func, 0);
-    }
+                        if (!request.format || request.format.toLowerCase() != "jsonp") {
+                            requestObject.format = "json";
+                        } else {
+                            requestObject.format = "jsonp";
+                        }
 
-    /*********** Constructors ************/
-    function ImageNode(src, func, inBrowserCache) {
-        this.loaded = undefined;
-        this.loading = true;
+                        if (request.callback && request.format === "jsonp") {
+                            requestObject.callback = request.callback;
+                        } else {
+                            requestObject.callback = 'JSON_CALLBACK';
+                        }
 
-        if(!inBrowserCache) {
-            this.node = new Image();
-            this.bind(func);
-            this.node.src = src;
-        }
-        else {
-            this.__onload(func, true);
-        }
-
-    }
-
-    ImageNode.prototype = {
-        constructor : ImageNode,
-
-        bind : function(func) {
-            var _this = this;
-            this.node.addEventListener('load', function() { _this.__onload(func, true) }, false);
-            this.node.addEventListener('error', function() { _this.__onload(func, false) }, false);
-        },
-
-        __onload : function(func, success) {
-            this.loaded = true;
-            this.loading = false;
-
-            if(success && this.node) {
-                delete this.node;
-            }
-
-            func(success);
-        }
-    };
-
-    function ImagesCollection(useProgressEvents) {
-        this.imagesCount = 0;
-        this.imagesLoaded = 0;
-        this.imagesFailed = 0;
-        this.useProgressEvents = useProgressEvents;
-    }
-
-    ImagesCollection.prototype = {
-        constructor : ImagesCollection,
-
-        whenImagesLoaded : function(imageNodes) {
-            var defer = $q.defer(),
-                totalImages = imageNodes.length,
-                _this = this,
-                imgElem, proxyImage;
-
-            this.imagesCount = totalImages;
-
-            for(var i = 0; i < this.imagesCount; i++) {
-                imgElem = imageNodes[i];
-
-                check(imgElem);
-            }
-
-            function increment(bool) {
-                var progress;
-
-                if(bool) {
-                    _this.imagesLoaded++;
-                }
-                else {
-                    _this.imagesFailed++;
-                }
-
-                if(_this.useProgressEvents && (progress = (_this.imagesLoaded + _this.imagesFailed)/Math.ceil(totalImages/4)) && (progress % 1 === 0) && progress < 4) {
-                    digestPromise(function() {
-                        defer.notify(broadcastMessages.progress[progress-1]);
-                    });
-                }
-
-                if(_this.imagesLoaded + _this.imagesFailed === _this.imagesCount) {
-                    digestPromise(function() {
-                        defer.notify(broadcastMessages.progress[3]);
-                        defer.resolve((_this.imagesFailed > 0) ? broadcastMessages.complete : broadcastMessages.success);
-                    });
-                }
-
-            }
-
-            function check(img) {
-                var source = img.src,
-                    cachedElement = cache[source],
-                    proxyImage;
-
-                if(cachedElement ) {
-
-                    if(cachedElement.loaded) {
-                        //Image is in local cache and is loaded
-                        increment(true);
-                    }
-                    else if(cachedElement.loading) {
-                        //Image is currently being loaded and it's being checked again before successful load, so we wait for the image to load
-                        cachedElement.bind(increment);
-                    }
-                    else if(cachedElement.loaded === false) {
-                        // cachedElement.bind(increment);
-                        // cachedElement.node.src = source;
-                    }
-
-                }
-                else if(img.complete && img.naturalWidth > 0) {
-                    //Image is not in local cache but is present in browser's cache
-                    cache[source] = new ImageNode(source, increment, true);
-                }
-                else {
-                    //Image has not been loaded before, so we make a proxy image element and attach load listeners to it
-                    cache[source] = new ImageNode(source, increment);
-
-                }
-            }
-            return defer.promise;
-        }
-    };
-
-    //Directive configuration object
-    return {
-        restrict : 'A',
-        compile: function(tElem, tAttrs) {
-
-            return function($scope, $element, $attrs) {
-
-                var descendents = $element[0].childNodes,
-                    useProgressEvents = $attrs.useProgressEvents === 'yes',
-                    oldImageNodesCount = 0,
-                    documentImages = document.images,
-                    imageNodes;
-
-                $scope.$watch(
-                    function() {
-                        return documentImages.length;
-                    },
-                    function(newVal, oldVal) {
-
-                        var newImageNodesCount, collection;
-
-                        if(newVal === oldVal) return;
-
-                        imageNodes = $element.find('img');
-                        newImageNodesCount = imageNodes.length;
-
-                        if(newImageNodesCount === oldImageNodesCount) return;
-                        oldImageNodesCount = newImageNodesCount;
-
-                        collection = new ImagesCollection(useProgressEvents);
-
-                        digestPromise(function() {
-                            collection.whenImagesLoaded(imageNodes).then(
-                                function(data) {
-                                    $scope.$emit(data);
-                                    $scope.$emit(broadcastMessages.always);
-                                },
-                                function(error) {
-
-                                },
-                                function(progress) {
-                                    useProgressEvents && $scope.$emit('imagesLoaded.PROGRESS', {status : progress});
+                        jsonloaderFactory.getJsonData(requestObject)
+                            .then(function (_data) {
+                                var resultArray = [];
+                                if (_data.data) {
+                                    if (_data.data.constructor !== Array) {
+                                        resultArray.push(_data.data);
+                                    } else {
+                                        if (request.items < 0) {
+                                            resultArray = _data.data;
+                                        } else {
+                                            angular.forEach(_data.data, function (value, key) {
+                                                if (key < request.items) {
+                                                    resultArray.push(value);
+                                                }
+                                            });
+                                        }
+                                    }
                                 }
-                            );
-                        });
+                                apingController.concatToResults(resultArray);
+                            });
+                    }
+                });
+            }
+        }
+    }])
+    .factory('jsonloaderFactory', ['$http', function ($http) {
+        var jsonloaderFactory = {};
+
+        jsonloaderFactory.getJsonData = function (_requestObject) {
+            if (_requestObject.format == "jsonp") {
+
+                return $http.jsonp(
+                    _requestObject.path,
+                    {
+                        method: 'GET',
+                        params: {callback: _requestObject.callback},
                     }
                 );
+
+            } else {
+                return $http({
+                    method: 'GET',
+                    url: _requestObject.path
+                });
+            }
+        };
+        return jsonloaderFactory;
+    }]);;"use strict";
+
+angular.module("jtt_aping_ng_array", [])
+    .directive('apingNgArray', ['apingUtilityHelper', function (apingUtilityHelper) {
+        return {
+            require: '?aping',
+            restrict: 'A',
+            replace: 'false',
+            link: function (scope, element, attrs, apingController) {
+
+                var appSettings = apingController.getAppSettings();
+                var requests = apingUtilityHelper.parseJsonFromAttributes(attrs.apingNgArray, "ngArray", appSettings);
+
+                requests.forEach(function (request) {
+
+                    if (request.name && scope[request.name]) {
+
+                        var resultArray = [];
+
+                        if (scope[request.name].constructor === Array) {
+                            if (request.items < 0) {
+                                resultArray = scope[request.name];
+                            } else {
+                                angular.forEach(scope[request.name], function (value, key) {
+                                    if (key < request.items) {
+                                        resultArray.push(value);
+                                    }
+                                });
+                            }
+                        } else if (typeof scope[request.name] === 'object' && scope[request.name] !== null) {
+                            resultArray.push(scope[request.name]);
+                        }
+
+                        if (resultArray.length > 0) {
+                            apingController.concatToResults(resultArray);
+                        }
+                    }
+                });
             }
         }
-    }
-}]);
+    }]);

@@ -31,7 +31,7 @@ apingApp
             return 0;
         };
     })
-    .service('apingUtilityHelper', ['apingInputObjects', 'apingApiKeys', function (apingInputObjects, apingApiKeys) {
+    .service('apingUtilityHelper', ['apingInputObjects', 'apingDefaultSettings', function (apingInputObjects, apingDefaultSettings) {
 
         /**
          * return random matching API Key from Constant "apingApiKeys". If there is no matching API Key, the function returns 'false'
@@ -42,9 +42,9 @@ apingApp
          */
         this.getApiCredentials = function (_platform, _keyName) {
 
-            if (apingApiKeys) {
-                if (apingApiKeys[_platform]) {
-                    return apingApiKeys[_platform][Math.floor(Math.random() * apingApiKeys[_platform].length)][_keyName];
+            if (apingDefaultSettings.apingApiKeys) {
+                if (apingDefaultSettings.apingApiKeys[_platform]) {
+                    return apingDefaultSettings.apingApiKeys[_platform][Math.floor(Math.random() * apingDefaultSettings.apingApiKeys[_platform].length)][_keyName];
                 }
             }
             return false;

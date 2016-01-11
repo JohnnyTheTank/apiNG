@@ -1,8 +1,8 @@
 {
   "name": "aping",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "apiNG is an AngularJS platform for getting some data from REST APIs and displays it in various designs (templates)",
-  "main": "Gruntfile.js",
+  "main": "dist/aping.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
