@@ -1,11 +1,11 @@
 {
   "name": "apiNG",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "homepage": "https://github.com/JohnnyTheTank/apiNG",
   "authors": [
     "Jonathan Hornung <jonathan.hornung@gmail.com>"
   ],
-  "description": "apiNG is an AngularJS platform for getting some data from REST APIs and displays it in various designs",
+  "description": "apiNG is an AngularJS directive that helps displaying your $http.get results (and much more)",
   "main": "dist/aping.min.js",
   "moduleType": [
     "globals"

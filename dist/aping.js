@@ -1,6 +1,6 @@
 /**
     @name: aping 
-    @version: 0.8.1 (11-01-2016) 
+    @version: 0.8.2 (12-01-2016) 
     @author: Jonathan Hornung <jonathan.hornung@gmail.com> 
     @url: https://github.com/JohnnyTheTank/apiNG#readme 
     @license: MIT
@@ -702,13 +702,20 @@ angular.module("jtt_aping_jsonloader", [])
 
                                 var resultArray = [];
                                 if (_data.data) {
+
+                                    var results = _data.data;
+
+                                    if(typeof request.resultProperty !== "undefined") {
+                                        results = _data.data[request.resultProperty];
+                                    }
+
                                     if (_data.data.constructor !== Array) {
-                                        resultArray.push(_data.data);
+                                        resultArray.push(results);
                                     } else {
                                         if (request.items < 0 || typeof request.items === "undefined" ) {
-                                            resultArray = _data.data;
+                                            resultArray = results;
                                         } else {
-                                            angular.forEach(_data.data, function (value, key) {
+                                            angular.forEach(results, function (value, key) {
                                                 if (key < request.items) {
                                                     resultArray.push(value);
                                                 }

@@ -1,7 +1,7 @@
 {
   "name": "aping",
-  "version": "0.8.1",
-  "description": "apiNG is an AngularJS platform for getting some data from REST APIs and displays it in various designs (templates)",
+  "version": "0.8.2",
+  "description": "apiNG is an AngularJS directive that helps displaying your $http.get results (and much more)",
   "main": "dist/aping.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
