@@ -11,9 +11,9 @@ _**Note:** apiNG is currently under development and not ready yet for public use
 
 **apiNG** is an AngularJS directive that enables you to receive, aggregate, limit, order and display data from one ore more sources. The complete setup is dead simple, just by adding data-attributes to your html.
 
-There are two level of usage: basic and advanced.
-* The basic usage is focused on keeping it simple and easy.
-* The advanced usage turns apiNG into a plugin system for data-sources and designs, focused on re-usable modules.
+There are two level of usage: _basic_ and _advanced_
+* The _basic_ usage is focused on keeping it simple and easy with enough power for most usecases
+* The _advanced_ usage turns apiNG into a plugin system for data-sources and designs, focused on re-usable modules.
 
 ## Advanced Demos
 - [Social Wall](http://aping.io/#demo) (default design)
