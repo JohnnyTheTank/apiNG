@@ -15,6 +15,9 @@ There are two level of usage: _basic_ and _advanced_
 * The _basic_ usage is focused on keeping it simple and easy, but with enough power for most use cases
 * The _advanced_ usage turns apiNG into a plugin system for data-sources and designs, focused on re-usable modules
 
+## Basic Demos
+- [Demo: Random Users (plnkr)](http://plnkr.co/xmflhJ)
+
 ## Advanced Demos
 - [Social Wall](http://aping.io/#demo) (default design)
 - [Image Gallery](https://rawgit.com/JohnnyTheTank/apiNG-design-xgallerify/master/demo/) (xgallerify design)
