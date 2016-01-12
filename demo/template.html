@@ -1,15 +1,15 @@
 <div ng-cloak style="text-align: center;">
-    <div ng-repeat="item in results[0].results">
-        <img ng-src="{{item.user.picture.medium}}" alt="{{item.user.name.title + ' ' + item.user.name.first + ' ' + item.user.name.last}}">
+    <div ng-repeat="item in results" style="float: left; width: 45%; border:1px solid yellow; padding:10px;">
+        <img ng-src="{{item.results[0].user.picture.medium}}" alt="{{item.results[0].user.name.title + ' ' + item.results[0].user.name.first + ' ' + item.results[0].user.name.last}}">
         <p>
-            <strong>{{item.user.name.title + ' ' + item.user.name.first + ' ' + item.user.name.last | uppercase}} ({{item.user.gender}})</strong>
+            <strong>{{item.results[0].user.name.title + ' ' + item.results[0].user.name.first + ' ' + item.results[0].user.name.last | uppercase}} ({{item.results[0].user.gender}})</strong>
         </p>
         <p>
             <strong>Address:</strong>
-            <br>Street: {{item.user.location.street}}
-            <br>City: {{item.user.location.city}}
-            <br>State: {{item.user.location.state}}
-            <br>ZIP: {{item.user.location.zip}}
+            <br>Street: {{item.results[0].user.location.street}}
+            <br>City: {{item.results[0].user.location.city}}
+            <br>State: {{item.results[0].user.location.state}}
+            <br>ZIP: {{item.results[0].user.location.zip}}
         </p>
         <p><a href="#">click here for more information</a></p>
     </div>

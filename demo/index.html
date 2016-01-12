@@ -18,17 +18,17 @@
 </head>
 <body ng-app="app" style="background:black; color:white; padding:10px;">
 
-<h1>Unstyled</h1>
+<h1>Unstyled, one result</h1>
 <aping
     template-url="unstyled_template.html"
     aping-jsonloader="[{ 'path': 'https://randomuser.me/api/' }]">
 </aping>
 
 <hr>
-<h1>Styled</h1>
+<h1>Styled, but two results</h1>
 <aping
     template-url="template.html"
-    aping-jsonloader="[{ 'path': 'https://randomuser.me/api/' }]">
+    aping-jsonloader="[{ 'path': 'https://randomuser.me/api/' }, { 'path': 'https://randomuser.me/api/' }]">
 </aping>
 
 
