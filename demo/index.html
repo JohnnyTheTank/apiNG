@@ -14,9 +14,24 @@
     <!-- angular module -->
     <script src="app.js"></script>
 
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+
+
+    <style>
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background:#0d3349;
+            color:white;
+            padding:10px;
+        }
+
+        a:link {
+            color:yellow;
+        }
+    </style>
 
 </head>
-<body ng-app="app" style="background:black; color:white; padding:10px;">
+<body ng-app="app">
 
 <h1>Unstyled, one result</h1>
 <aping
@@ -31,6 +46,7 @@
     aping-jsonloader="[{ 'path': 'https://randomuser.me/api/' }, { 'path': 'https://randomuser.me/api/' }]">
 </aping>
 
+<br><br>
 
 </body>
 </html>
