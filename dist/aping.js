@@ -670,7 +670,7 @@ angular.module("jtt_aping_jsonloader", [])
                             path: request.path,
                         };
 
-                        if (!request.format || request.format.toLowerCase() != "jsonp") {
+                        if (!request.format || request.format.toLowerCase() !== "jsonp") {
                             requestObject.format = "json";
                         } else {
                             requestObject.format = "jsonp";
@@ -734,7 +734,7 @@ angular.module("jtt_aping_jsonloader", [])
         var jsonloaderFactory = {};
 
         jsonloaderFactory.getJsonData = function (_requestObject) {
-            if (_requestObject.format == "jsonp") {
+            if (_requestObject.format === "jsonp") {
 
                 return $http.jsonp(
                     _requestObject.path,
