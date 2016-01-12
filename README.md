@@ -13,7 +13,7 @@ _**Note:** apiNG is currently under development and not ready yet for public use
 
 There are two level of usage: _basic_ and _advanced_
 * The _basic_ usage is focused on keeping it simple and easy, but with enough power for most use cases
-* The _advanced_ usage turns apiNG into a plugin system for data-sources and designs, focused on re-usable modules.
+* The _advanced_ usage turns apiNG into a plugin system for data-sources and designs, focused on re-usable modules
 
 ## Advanced Demos
 - [Social Wall](http://aping.io/#demo) (default design)
