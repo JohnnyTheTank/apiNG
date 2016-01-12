@@ -18,6 +18,7 @@ There are two level of usage: _basic_ and _advanced_
 
 ## Advanced Demos
 - [Social Wall](http://aping.io/#demo) (default design)
+- [Image Gallery](https://rawgit.com/JohnnyTheTank/apiNG-design-xgallerify/master/demo/) (images from twitter)
 - [Youtube Video Player](https://rawgit.com/JohnnyTheTank/apiNG-design-deadwood/master/demo/) (deadwood design)
 
 ## References
