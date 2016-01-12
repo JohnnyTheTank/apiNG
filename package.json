@@ -1,6 +1,6 @@
 {
   "name": "aping",
-  "version": "0.8.2",
+  "version": "1.0.0",
   "description": "apiNG is an AngularJS directive that helps displaying your $http.get results (and much more)",
   "main": "dist/aping.min.js",
   "scripts": {
