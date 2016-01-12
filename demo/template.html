@@ -1,5 +1,16 @@
-<div>
-    <div ng-repeat="item in results" ng-cloak>
-        <pre>{{item | json}}</pre>
+<div ng-cloak style="text-align: center;">
+    <div ng-repeat="item in results[0].results">
+        <img ng-src="{{item.user.picture.medium}}" alt="{{item.user.name.title + ' ' + item.user.name.first + ' ' + item.user.name.last}}">
+        <p>
+            <strong>{{item.user.name.title + ' ' + item.user.name.first + ' ' + item.user.name.last | uppercase}} ({{item.user.gender}})</strong>
+        </p>
+        <p>
+            <strong>Address:</strong>
+            <br>Street: {{item.user.location.street}}
+            <br>City: {{item.user.location.city}}
+            <br>State: {{item.user.location.state}}
+            <br>ZIP: {{item.user.location.zip}}
+        </p>
+        <p><a href="#">click here for more information</a></p>
     </div>
 </div>
