@@ -33,3 +33,6 @@ _**Note:** apiNG is currently under development and not ready yet for public use
     - Core, Plugins, Designs, Docs
 - Daniel Moon ([teadragon](https://github.com/teadragon))
     - Logos
+
+# License
+MIT
