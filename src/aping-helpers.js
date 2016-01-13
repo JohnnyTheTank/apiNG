@@ -34,7 +34,7 @@ apingApp
     .service('apingUtilityHelper', ['apingInputObjects', 'apingDefaultSettings', function (apingInputObjects, apingDefaultSettings) {
 
         /**
-         * return random matching API Key from Constant "apingApiKeys". If there is no matching API Key, the function returns 'false'
+         * return random matching API Key from apingDefaultSettings property "apingApiKeys". If there is no matching API Key, the function returns 'false'
          *
          * @param _platform {String}
          * @param _keyName {String}
@@ -225,7 +225,7 @@ apingApp
         };
 
         /**
-         * Parses URL Parameters from ULR (string)
+         * Parses URL Parameters from URL (string)
          *
          * @param _string {String}
          * @returns {Object}

@@ -109,7 +109,7 @@ var apingApp = angular.module('jtt_aping', ['jtt_aping_jsonloader', 'jtt_aping_n
                 };
 
                 /**
-                 * merge current '$scope.results' with '_array' and do some operations
+                 * merge current '$scope.results' with '_array' and sorts, limits and filters the data
                  *
                  * @param _array
                  */

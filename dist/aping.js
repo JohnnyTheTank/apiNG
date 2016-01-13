@@ -1,6 +1,6 @@
 /**
     @name: aping 
-    @version: 1.0.0 (12-01-2016) 
+    @version: 1.0.0 (14-01-2016) 
     @author: Jonathan Hornung <jonathan.hornung@gmail.com> 
     @url: https://github.com/JohnnyTheTank/apiNG#readme 
     @license: MIT
@@ -116,7 +116,7 @@ var apingApp = angular.module('jtt_aping', ['jtt_aping_jsonloader', 'jtt_aping_n
                 };
 
                 /**
-                 * merge current '$scope.results' with '_array' and do some operations
+                 * merge current '$scope.results' with '_array' and sorts, limits and filters the data
                  *
                  * @param _array
                  */
@@ -190,7 +190,7 @@ apingApp
     .service('apingUtilityHelper', ['apingInputObjects', 'apingDefaultSettings', function (apingInputObjects, apingDefaultSettings) {
 
         /**
-         * return random matching API Key from Constant "apingApiKeys". If there is no matching API Key, the function returns 'false'
+         * return random matching API Key from apingDefaultSettings property "apingApiKeys". If there is no matching API Key, the function returns 'false'
          *
          * @param _platform {String}
          * @param _keyName {String}
@@ -381,7 +381,7 @@ apingApp
         };
 
         /**
-         * Parses URL Parameters from ULR (string)
+         * Parses URL Parameters from URL (string)
          *
          * @param _string {String}
          * @returns {Object}
@@ -401,17 +401,17 @@ apingApp
 apingApp.service('apingInputObjects', ['apingDefaultSettings', function (apingDefaultSettings) {
 
     /**
-     * * return new clean apiNG input object by _model and _params
+     * * return new clean apiNG input object by _type and _params
      *
-     * @param _model {String}
+     * @param _type {String}
      * @param _params {Object}
      * @returns {Object}
      */
-    this.getNew = function (_model, _params) {
+    this.getNew = function (_type, _params) {
 
         var inputObject = {};
 
-        switch (_model) {
+        switch (_type) {
             case "request":
                 inputObject = $.extend(true, {
                     model: apingDefaultSettings.model,
