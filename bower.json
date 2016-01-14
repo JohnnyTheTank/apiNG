@@ -5,7 +5,7 @@
   "authors": [
     "Jonathan Hornung <jonathan.hornung@gmail.com>"
   ],
-  "description": "apiNG is an AngularJS directive that helps displaying your $http.get results (and much more)",
+  "description": "apiNG is an AngularJS directive that enables you to receive, aggregate, limit, order and display data from one or more sources. The complete setup is dead simple, just by adding data-attributes to your html",
   "main": "dist/aping.min.js",
   "moduleType": [
     "globals"

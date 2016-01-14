@@ -1,7 +1,7 @@
 {
   "name": "aping",
   "version": "1.0.0",
-  "description": "apiNG is an AngularJS directive that helps displaying your $http.get results (and much more)",
+  "description": "apiNG is an AngularJS directive that enables you to receive, aggregate, limit, order and display data from one or more sources. The complete setup is dead simple, just by adding data-attributes to your html",
   "main": "dist/aping.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/JohnnyTheTank/apiNG/issues"
   },
-  "homepage": "https://github.com/JohnnyTheTank/apiNG#readme",
+  "homepage": "https://github.com/JohnnyTheTank/apiNG",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-concat": "^0.5.1",
