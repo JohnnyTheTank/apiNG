@@ -4,6 +4,7 @@
 
 [![npm version](https://badge.fury.io/js/aping.png)](https://badge.fury.io/js/aping)
 [![Bower version](https://badge.fury.io/bo/apiNG.png)](https://badge.fury.io/bo/apiNG)
+[![Docs](https://img.shields.io/docs/90%.png)](https://aping.readme.io)
 
 **apiNG** is an AngularJS directive that enables you to receive and display data from one or more sources. The data can be aggregated, limited and ordered. The complete setup is dead simple, just by adding data-attributes to your html.
 
