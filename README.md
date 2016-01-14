@@ -1,11 +1,10 @@
 [logo]: http://aping.io/logo/320/aping-logo.png "apiNG"
 ![apiNG][logo]
 
-[![Join the chat at https://gitter.im/JohnnyTheTank/apiNG](https://badges.gitter.im/JohnnyTheTank/apiNG.svg)](https://gitter.im/JohnnyTheTank/apiNG?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Stories in Ready](https://badge.waffle.io/JohnnyTheTank/apiNG.svg?label=ready&title=Ready)](http://waffle.io/JohnnyTheTank/apiNG)
-[![Code Climate](https://codeclimate.com/github/JohnnyTheTank/apiNG/badges/gpa.svg)](https://codeclimate.com/github/JohnnyTheTank/apiNG)
+
 [![npm version](https://badge.fury.io/js/aping.png)](https://badge.fury.io/js/aping)
 [![Bower version](https://badge.fury.io/bo/apiNG.png)](https://badge.fury.io/bo/apiNG)
+[![npm](https://img.shields.io/npm/dt/express.svg)](https://www.npmjs.com/package/aping)
 
 **apiNG** is an AngularJS directive that enables you to receive and display data from one or more sources. The data can be aggregated, limited and ordered. The complete setup is dead simple, just by adding data-attributes to your html.
 
