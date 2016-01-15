@@ -32,11 +32,5 @@ There are two level of usage: _basic_ and _advanced_
 ## Designs
 **All apiNG designs are listed at [aping.readme.io/docs/all-designs](https://aping.readme.io/docs/all-designs)**
 
-# Contributors
-- Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
-    - Core, Plugins, Designs, Docs
-- Daniel Moon ([teadragon](https://github.com/teadragon))
-    - Logos
-
 # License
 MIT
