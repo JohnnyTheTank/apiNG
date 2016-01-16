@@ -19,18 +19,19 @@ There are two level of usage: _basic_ and _advanced_
 - [Social Wall](http://aping.io/#demo) (default design)
 - [Image Gallery](https://rawgit.com/JohnnyTheTank/apiNG-design-xgallerify/master/demo/) (images from twitter)
 - [Youtube Video Player](https://rawgit.com/JohnnyTheTank/apiNG-design-deadwood/master/demo/) (deadwood design)
+- [Demo: Socal Wall (plnkr)](http://plnkr.co/dz3Dru)
 
 ## References
-- [sonymusic.de/videos](https://sonymusic.de/videos) (Youtube video playlist & player) based on apiNG
+- [Sonymusic.de/videos](https://sonymusic.de/videos) (Youtube video playlist & player) based on apiNG
 
 ## Documentation
 **Full documentation comes up at [aping.readme.io](https://aping.readme.io)**
 
 ## Plugins
-All apiNG plugins are listed at [aping.readme.io/docs/all-plugins](https://aping.readme.io/docs/all-plugins)
+**All apiNG plugins are listed at [aping.readme.io/docs/all-plugins](https://aping.readme.io/docs/all-plugins)**
 
 ## Designs
-All apiNG designs are listed at [aping.readme.io/docs/all-designs](https://aping.readme.io/docs/all-designs)
+**All apiNG designs are listed at [aping.readme.io/docs/all-designs](https://aping.readme.io/docs/all-designs)**
 
 # License
 MIT
