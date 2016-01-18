@@ -1,5 +1,5 @@
 "use strict";
-apingApp.config(['$provide', function ($provide) {
+angular.module('jtt_aping').config(['$provide', function ($provide) {
 
     $provide.value("apingDefaultSettings", {
         //templateUrl: "<PATH_TO_YOUR_DEFAULT_DESIGN>",

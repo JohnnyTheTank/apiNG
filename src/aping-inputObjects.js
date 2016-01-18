@@ -1,6 +1,6 @@
 "use strict";
 
-apingApp.service('apingInputObjects', ['apingDefaultSettings', function (apingDefaultSettings) {
+angular.module('jtt_aping').service('apingInputObjects', ['apingDefaultSettings', function (apingDefaultSettings) {
 
     /**
      * * return new clean apiNG input object by _type and _params

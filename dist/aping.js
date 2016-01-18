@@ -1,8 +1,8 @@
 /**
     @name: aping 
-    @version: 1.0.0 (14-01-2016) 
+    @version: 1.0.1 (18-01-2016) 
     @author: Jonathan Hornung <jonathan.hornung@gmail.com> 
-    @url: https://github.com/JohnnyTheTank/apiNG#readme 
+    @url: https://github.com/JohnnyTheTank/apiNG 
     @license: MIT
 */
 "use strict";
@@ -156,8 +156,7 @@ var apingApp = angular.module('jtt_aping', ['jtt_aping_jsonloader', 'jtt_aping_n
 
 ;"use strict";
 
-apingApp
-    .service('apingTimeHelper', function () {
+angular.module('jtt_aping').service('apingTimeHelper', function () {
 
         /**
          * parse Timestamp from DateString and do some math
@@ -398,7 +397,7 @@ apingApp
         }
     }]);;"use strict";
 
-apingApp.service('apingInputObjects', ['apingDefaultSettings', function (apingDefaultSettings) {
+angular.module('jtt_aping').service('apingInputObjects', ['apingDefaultSettings', function (apingDefaultSettings) {
 
     /**
      * * return new clean apiNG input object by _type and _params
@@ -426,7 +425,7 @@ apingApp.service('apingInputObjects', ['apingDefaultSettings', function (apingDe
         return inputObject;
     }
 }]);;"use strict";
-apingApp.service('apingModels', [function () {
+angular.module('jtt_aping').service('apingModels', [function () {
     /**
      * return new clean apiNG model object by _model and _platform
      *

@@ -1,7 +1,6 @@
 "use strict";
 
-apingApp
-    .service('apingTimeHelper', function () {
+angular.module('jtt_aping').service('apingTimeHelper', function () {
 
         /**
          * parse Timestamp from DateString and do some math
