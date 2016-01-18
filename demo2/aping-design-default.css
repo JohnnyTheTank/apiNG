@@ -1,0 +1,80 @@
+.aping-design-default .video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+.aping-design-default .video-container iframe, .aping-design-default .video-container object, .aping-design-default .video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.aping-design-default video {
+  width: 100%    !important;
+  height: auto   !important;
+}
+.aping-design-default .masonry-brick .box {
+  background-color: white;
+  font-family: 'Economica', sans-serif;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -ms-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  transition: all 250ms ease;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+  margin-bottom: 2rem;
+}
+.aping-design-default .masonry-brick .box:hover {
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.8);
+}
+.aping-design-default .masonry-brick .box a.aping-picture-link {
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -ms-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+.aping-design-default .masonry-brick .box a.aping-picture-link:hover {
+  opacity: 1;
+  -webkit-filter: grayscale(0.5) sepia(0.6);
+  filter: grayscale(0.5) sepia(0.6);
+}
+.aping-design-default .masonry-brick .box img.main-image {
+  border-radius: 0;
+  width: 100%;
+  height: auto;
+}
+.aping-design-default .masonry-brick .box .box-content {
+  padding: 1rem;
+  overflow: hidden;
+}
+.aping-design-default .masonry-brick .box .box-footer {
+  height: 1em;
+}
+.aping-design-default .masonry-brick .box .box-footer .platform-box {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.aping-design-default .masonry-brick .box .box-footer .platform-box a.platform-link {
+  display: inline-block;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -ms-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  transition: all 250ms ease;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  border-radius: 40px;
+}
+.aping-design-default .masonry-brick .box .box-footer .platform-box a.platform-link:hover {
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.8);
+}
