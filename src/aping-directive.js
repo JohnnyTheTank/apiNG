@@ -47,57 +47,57 @@ var apingApp = angular.module('jtt_aping', ['jtt_aping_jsonloader', 'jtt_aping_n
                     var orderBy;
                     var removeDoubles;
 
-                    if (typeof $scope.items !== "undefined") {
+                    if (angular.isDefined($scope.items)) {
                         items = $scope.items;
-                    } else if (typeof apingDefaultSettings.items !== "undefined") {
+                    } else if (angular.isDefined(apingDefaultSettings.items)) {
                         items = apingDefaultSettings.items;
                     } else {
                         items = undefined;
                     }
 
-                    if (typeof $scope.maxItems !== "undefined") {
+                    if (angular.isDefined($scope.maxItems)) {
                         maxItems = $scope.maxItems;
-                    } else if (typeof apingDefaultSettings.maxItems !== "undefined") {
+                    } else if (angular.isDefined(apingDefaultSettings.maxItems)) {
                         maxItems = apingDefaultSettings.maxItems;
                     } else {
                         maxItems = undefined;
                     }
 
-                    if (typeof $scope.getNativeData !== "undefined") {
+                    if (angular.isDefined($scope.getNativeData)) {
                         getNativeData = $scope.getNativeData;
-                    } else if (typeof apingDefaultSettings.getNativeData !== "undefined") {
+                    } else if (angular.isDefined(apingDefaultSettings.getNativeData)) {
                         getNativeData = apingDefaultSettings.getNativeData;
                     } else {
                         getNativeData = false;
                     }
 
-                    if (typeof $scope.maxItems !== "undefined") {
+                    if (angular.isDefined($scope.maxItems)) {
                         maxItems = $scope.maxItems;
-                    } else if (typeof apingDefaultSettings.maxItems !== "undefined") {
+                    } else if (angular.isDefined(apingDefaultSettings.maxItems)) {
                         maxItems = apingDefaultSettings.maxItems;
                     } else {
                         maxItems = undefined;
                     }
 
-                    if (typeof $scope.orderBy !== "undefined") {
+                    if (angular.isDefined($scope.orderBy)) {
                         orderBy = $scope.orderBy;
-                    } else if (typeof apingDefaultSettings.orderBy !== "undefined") {
+                    } else if (angular.isDefined(apingDefaultSettings.orderBy)) {
                         orderBy = apingDefaultSettings.orderBy;
                     } else {
-                        orderBy = "undefined";
+                        orderBy = undefined;
                     }
 
-                    if (typeof $scope.orderReverse !== "undefined") {
+                    if (angular.isDefined($scope.orderReverse)) {
                         orderReverse = $scope.orderReverse;
-                    } else if (typeof apingDefaultSettings.orderReverse !== "undefined") {
+                    } else if (angular.isDefined(apingDefaultSettings.orderReverse)) {
                         orderReverse = apingDefaultSettings.orderReverse;
                     } else {
                         orderReverse = false;
                     }
 
-                    if (typeof $scope.removeDoubles !== "undefined") {
+                    if (angular.isDefined($scope.removeDoubles)) {
                         removeDoubles = $scope.removeDoubles;
-                    } else if (typeof apingDefaultSettings.removeDoubles !== "undefined") {
+                    } else if (angular.isDefined(apingDefaultSettings.removeDoubles)) {
                         removeDoubles = apingDefaultSettings.removeDoubles;
                     } else {
                         removeDoubles = false;
@@ -128,7 +128,7 @@ var apingApp = angular.module('jtt_aping', ['jtt_aping_jsonloader', 'jtt_aping_n
                         $scope.results = apingUtilityHelper.removeDuplicateObjectsFromArray($scope.results, (appSettings.orderBy === false || appSettings.orderBy === "false" || appSettings.orderBy === "$NONE"));
                     }
 
-                    if (appSettings.orderBy !== "undefined" && appSettings.orderBy !== false && appSettings.orderBy !== "false" && appSettings.orderBy !== "$NONE") {
+                    if (angular.isDefined(appSettings.orderBy) && appSettings.orderBy !== false && appSettings.orderBy !== "false" && appSettings.orderBy !== "$NONE") {
                         if (appSettings.orderBy === "$RANDOM") {
                             $scope.results = apingUtilityHelper.shuffleArray($scope.results);
                         } else {

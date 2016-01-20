@@ -17,7 +17,7 @@ angular.module("jtt_aping_ng_array", [])
 
                         var requestObject = {};
 
-                        if(typeof request.items !== "undefined") {
+                        if(angular.isDefined(request.items)) {
                             requestObject.count = request.items;
                         } else {
                             requestObject.count = appSettings.items;
@@ -35,7 +35,7 @@ angular.module("jtt_aping_ng_array", [])
                         var resultArray = [];
 
                         if (scope[request.name].constructor === Array) {
-                            if (requestObject.items < 0 || typeof requestObject.items === "undefined") {
+                            if (requestObject.items < 0 || angular.isUndefined(requestObject.items)) {
                                 resultArray = scope[request.name];
                             } else {
                                 angular.forEach(scope[request.name], function (value, key) {

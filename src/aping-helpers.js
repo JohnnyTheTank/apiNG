@@ -11,11 +11,11 @@ angular.module('jtt_aping').service('apingTimeHelper', function () {
          * @returns {Number}
          */
         this.getTimestampFromDateString = function (_string, _multiplier, _add) {
-            if (typeof _multiplier === "undefined" || isNaN(_multiplier)) {
+            if (angular.isUndefined(_multiplier) || isNaN(_multiplier)) {
                 _multiplier = 1;
             }
 
-            if (typeof _add === "undefined" || isNaN(_add)) {
+            if (angular.isUndefined(_add) || isNaN(_add)) {
                 _add = 0;
             }
 
@@ -84,10 +84,10 @@ angular.module('jtt_aping').service('apingTimeHelper', function () {
                 value.platform = _platform;
 
                 if (_appSettings) {
-                    if (typeof value.items === "undefined" && typeof _appSettings.items !== "undefined") {
+                    if (angular.isUndefined(value.items) && angular.isDefined(_appSettings.items)) {
                         value.items = _appSettings.items;
                     }
-                    if (typeof value.model === "undefined" && typeof _appSettings.model !== "undefined") {
+                    if (angular.isUndefined(value.model) && angular.isDefined(_appSettings.model)) {
                         value.model = _appSettings.model;
                     }
                 }
@@ -178,8 +178,8 @@ angular.module('jtt_aping').service('apingTimeHelper', function () {
 
             var reducedArray = [];
             $.each(sortedArray, function (secondIndex, secondValue) {
-                if (typeof lastValue !== "undefined") {
-                    if (typeof secondValue[stringifyPropertyName] !== "undefined" && secondValue[stringifyPropertyName] !== lastValue) {
+                if (angular.isDefined(lastValue)) {
+                    if (angular.isDefined(secondValue[stringifyPropertyName]) && secondValue[stringifyPropertyName] !== lastValue) {
                         reducedArray.push(secondValue);
                     }
                 } else {

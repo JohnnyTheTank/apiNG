@@ -54,57 +54,57 @@ var apingApp = angular.module('jtt_aping', ['jtt_aping_jsonloader', 'jtt_aping_n
                     var orderBy;
                     var removeDoubles;
 
-                    if (typeof $scope.items !== "undefined") {
+                    if (angular.isDefined($scope.items)) {
                         items = $scope.items;
-                    } else if (typeof apingDefaultSettings.items !== "undefined") {
+                    } else if (angular.isDefined(apingDefaultSettings.items)) {
                         items = apingDefaultSettings.items;
                     } else {
                         items = undefined;
                     }
 
-                    if (typeof $scope.maxItems !== "undefined") {
+                    if (angular.isDefined($scope.maxItems)) {
                         maxItems = $scope.maxItems;
-                    } else if (typeof apingDefaultSettings.maxItems !== "undefined") {
+                    } else if (angular.isDefined(apingDefaultSettings.maxItems)) {
                         maxItems = apingDefaultSettings.maxItems;
                     } else {
                         maxItems = undefined;
                     }
 
-                    if (typeof $scope.getNativeData !== "undefined") {
+                    if (angular.isDefined($scope.getNativeData)) {
                         getNativeData = $scope.getNativeData;
-                    } else if (typeof apingDefaultSettings.getNativeData !== "undefined") {
+                    } else if (angular.isDefined(apingDefaultSettings.getNativeData)) {
                         getNativeData = apingDefaultSettings.getNativeData;
                     } else {
                         getNativeData = false;
                     }
 
-                    if (typeof $scope.maxItems !== "undefined") {
+                    if (angular.isDefined($scope.maxItems)) {
                         maxItems = $scope.maxItems;
-                    } else if (typeof apingDefaultSettings.maxItems !== "undefined") {
+                    } else if (angular.isDefined(apingDefaultSettings.maxItems)) {
                         maxItems = apingDefaultSettings.maxItems;
                     } else {
                         maxItems = undefined;
                     }
 
-                    if (typeof $scope.orderBy !== "undefined") {
+                    if (angular.isDefined($scope.orderBy)) {
                         orderBy = $scope.orderBy;
-                    } else if (typeof apingDefaultSettings.orderBy !== "undefined") {
+                    } else if (angular.isDefined(apingDefaultSettings.orderBy)) {
                         orderBy = apingDefaultSettings.orderBy;
                     } else {
-                        orderBy = "undefined";
+                        orderBy = undefined;
                     }
 
-                    if (typeof $scope.orderReverse !== "undefined") {
+                    if (angular.isDefined($scope.orderReverse)) {
                         orderReverse = $scope.orderReverse;
-                    } else if (typeof apingDefaultSettings.orderReverse !== "undefined") {
+                    } else if (angular.isDefined(apingDefaultSettings.orderReverse)) {
                         orderReverse = apingDefaultSettings.orderReverse;
                     } else {
                         orderReverse = false;
                     }
 
-                    if (typeof $scope.removeDoubles !== "undefined") {
+                    if (angular.isDefined($scope.removeDoubles)) {
                         removeDoubles = $scope.removeDoubles;
-                    } else if (typeof apingDefaultSettings.removeDoubles !== "undefined") {
+                    } else if (angular.isDefined(apingDefaultSettings.removeDoubles)) {
                         removeDoubles = apingDefaultSettings.removeDoubles;
                     } else {
                         removeDoubles = false;
@@ -135,7 +135,7 @@ var apingApp = angular.module('jtt_aping', ['jtt_aping_jsonloader', 'jtt_aping_n
                         $scope.results = apingUtilityHelper.removeDuplicateObjectsFromArray($scope.results, (appSettings.orderBy === false || appSettings.orderBy === "false" || appSettings.orderBy === "$NONE"));
                     }
 
-                    if (appSettings.orderBy !== "undefined" && appSettings.orderBy !== false && appSettings.orderBy !== "false" && appSettings.orderBy !== "$NONE") {
+                    if (angular.isDefined(appSettings.orderBy) && appSettings.orderBy !== false && appSettings.orderBy !== "false" && appSettings.orderBy !== "$NONE") {
                         if (appSettings.orderBy === "$RANDOM") {
                             $scope.results = apingUtilityHelper.shuffleArray($scope.results);
                         } else {
@@ -169,11 +169,11 @@ angular.module('jtt_aping').service('apingTimeHelper', function () {
          * @returns {Number}
          */
         this.getTimestampFromDateString = function (_string, _multiplier, _add) {
-            if (typeof _multiplier === "undefined" || isNaN(_multiplier)) {
+            if (angular.isUndefined(_multiplier) || isNaN(_multiplier)) {
                 _multiplier = 1;
             }
 
-            if (typeof _add === "undefined" || isNaN(_add)) {
+            if (angular.isUndefined(_add) || isNaN(_add)) {
                 _add = 0;
             }
 
@@ -242,10 +242,10 @@ angular.module('jtt_aping').service('apingTimeHelper', function () {
                 value.platform = _platform;
 
                 if (_appSettings) {
-                    if (typeof value.items === "undefined" && typeof _appSettings.items !== "undefined") {
+                    if (angular.isUndefined(value.items) && angular.isDefined(_appSettings.items)) {
                         value.items = _appSettings.items;
                     }
-                    if (typeof value.model === "undefined" && typeof _appSettings.model !== "undefined") {
+                    if (angular.isUndefined(value.model) && angular.isDefined(_appSettings.model)) {
                         value.model = _appSettings.model;
                     }
                 }
@@ -336,8 +336,8 @@ angular.module('jtt_aping').service('apingTimeHelper', function () {
 
             var reducedArray = [];
             $.each(sortedArray, function (secondIndex, secondValue) {
-                if (typeof lastValue !== "undefined") {
-                    if (typeof secondValue[stringifyPropertyName] !== "undefined" && secondValue[stringifyPropertyName] !== lastValue) {
+                if (angular.isDefined(lastValue)) {
+                    if (angular.isDefined(secondValue[stringifyPropertyName]) && secondValue[stringifyPropertyName] !== lastValue) {
                         reducedArray.push(secondValue);
                     }
                 } else {
@@ -683,7 +683,7 @@ angular.module("jtt_aping_jsonloader", [])
                             requestObject.callback = 'JSON_CALLBACK';
                         }
 
-                        if(typeof request.items !== "undefined") {
+                        if(angular.isDefined(request.items)) {
                             requestObject.count = request.items;
                         } else {
                             requestObject.count = appSettings.items;
@@ -706,14 +706,14 @@ angular.module("jtt_aping_jsonloader", [])
 
                                     var results = _data.data;
 
-                                    if(typeof request.resultProperty !== "undefined") {
+                                    if(angular.isDefined(request.resultProperty)) {
                                         results = _data.data[request.resultProperty];
                                     }
 
                                     if (_data.data.constructor !== Array) {
                                         resultArray.push(results);
                                     } else {
-                                        if (request.items < 0 || typeof request.items === "undefined" ) {
+                                        if (request.items < 0 || angular.isDefined(request.items) ) {
                                             resultArray = results;
                                         } else {
                                             angular.forEach(results, function (value, key) {
@@ -772,7 +772,7 @@ angular.module("jtt_aping_ng_array", [])
 
                         var requestObject = {};
 
-                        if(typeof request.items !== "undefined") {
+                        if(angular.isDefined(request.items)) {
                             requestObject.count = request.items;
                         } else {
                             requestObject.count = appSettings.items;
@@ -790,7 +790,7 @@ angular.module("jtt_aping_ng_array", [])
                         var resultArray = [];
 
                         if (scope[request.name].constructor === Array) {
-                            if (requestObject.items < 0 || typeof requestObject.items === "undefined") {
+                            if (requestObject.items < 0 || angular.isUndefined(requestObject.items)) {
                                 resultArray = scope[request.name];
                             } else {
                                 angular.forEach(scope[request.name], function (value, key) {

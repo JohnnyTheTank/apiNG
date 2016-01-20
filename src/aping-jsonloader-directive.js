@@ -31,7 +31,7 @@ angular.module("jtt_aping_jsonloader", [])
                             requestObject.callback = 'JSON_CALLBACK';
                         }
 
-                        if(typeof request.items !== "undefined") {
+                        if(angular.isDefined(request.items)) {
                             requestObject.count = request.items;
                         } else {
                             requestObject.count = appSettings.items;
@@ -54,14 +54,14 @@ angular.module("jtt_aping_jsonloader", [])
 
                                     var results = _data.data;
 
-                                    if(typeof request.resultProperty !== "undefined") {
+                                    if(angular.isDefined(request.resultProperty)) {
                                         results = _data.data[request.resultProperty];
                                     }
 
                                     if (_data.data.constructor !== Array) {
                                         resultArray.push(results);
                                     } else {
-                                        if (request.items < 0 || typeof request.items === "undefined" ) {
+                                        if (request.items < 0 || angular.isDefined(request.items) ) {
                                             resultArray = results;
                                         } else {
                                             angular.forEach(results, function (value, key) {
