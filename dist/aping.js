@@ -1,6 +1,6 @@
 /**
     @name: aping 
-    @version: 1.0.1 (18-01-2016) 
+    @version: 1.0.2 (20-01-2016) 
     @author: Jonathan Hornung <jonathan.hornung@gmail.com> 
     @url: https://github.com/JohnnyTheTank/apiNG 
     @license: MIT
@@ -14,9 +14,8 @@ var apingApp = angular.module('jtt_aping', ['jtt_aping_jsonloader', 'jtt_aping_n
             apingApiKeys: {}
         });
 
-
     }])
-    .directive('aping', ['apingDefaultSettings', 'apingUtilityHelper', function (apingDefaultSettings, apingUtilityHelper) {
+    .directive('aping', ['apingDefaultSettings', 'apingUtilityHelper', '$templateRequest', '$compile', function (apingDefaultSettings, apingUtilityHelper, $templateRequest, $compile) {
         return {
             restrict: 'E',
             replace: 'false',
@@ -30,6 +29,13 @@ var apingApp = angular.module('jtt_aping', ['jtt_aping_jsonloader', 'jtt_aping_n
                 templateUrl: '@',
                 payloadJson: '@',
                 removeDoubles: '@'
+            },
+            link: function (scope, element, attrs) {
+                $templateRequest(scope.templateUrl || apingDefaultSettings.templateUrl).then(function (html) {
+                    var template = angular.element(html);
+                    element.append(template);
+                    $compile(template)(scope);
+                });
             },
             controller: ['$scope', function ($scope) {
                 $scope.results = [];
@@ -147,13 +153,9 @@ var apingApp = angular.module('jtt_aping', ['jtt_aping_jsonloader', 'jtt_aping_n
                 this.apply = function () {
                     $scope.$apply();
                 };
-            }],
-            templateUrl: function (elem, scope) {
-                return scope.templateUrl || apingDefaultSettings.templateUrl;
-            }
+            }]
         };
     }]);
-
 ;"use strict";
 
 angular.module('jtt_aping').service('apingTimeHelper', function () {
