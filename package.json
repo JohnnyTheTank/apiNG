@@ -35,7 +35,7 @@
     "karma-ng-html2js-preprocessor": "^0.2.0"
   },
   "dependencies": {
-    "jquery": "*",
-    "angular": "*"
+    "angular": "^1.4.9",
+    "jquery": "^2.2.0"
   }
 }
