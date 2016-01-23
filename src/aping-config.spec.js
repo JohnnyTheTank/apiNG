@@ -1,3 +1,4 @@
+/*
 describe('A apingDefaultSettings Config', function(){
 
     var apingDefaultSettings;
@@ -21,8 +22,10 @@ describe('A apingDefaultSettings Config', function(){
                 {'apiKey': '<YOUR_YOUTUBE_API_KEY>'}
             ];
 
+
             expect(apingDefaultSettings.apingApiKeys.youtube).toBeDefined();
             expect(apingDefaultSettings.apingApiKeys.youtube).toEqual(jasmine.any(Object));
+
             //expect(apingDefaultSettings.apingApiKeys.youtube.apiKey).toBeDefined();
             //expect(apingDefaultSettings.apingApiKeys.youtube.apiKey).toEqual('<YOUR_YOUTUBE_API_KEY>');
             //expect(apingDefaultSettings.apingApiKeys.youtube).toEqual(youtubeApiKeyData);
@@ -37,3 +40,4 @@ describe('A apingDefaultSettings Config', function(){
     });
 
 });
+    */
