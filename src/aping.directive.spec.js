@@ -144,6 +144,7 @@ angular.module('jtt_aping')
                     }
                     $scope.$broadcast('apiNG.resultMerged');
                 };
+                // TODO: Äähm... no! no! no no!
                 this.apply = function () {
                     $scope.$apply();
                 };

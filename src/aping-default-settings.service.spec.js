@@ -30,7 +30,7 @@ describe('A apingDefaultSettings Service', function(){
           // TODO: Why are the API Keys in an array?
           expect(apingDefaultSettings.apingApiKeys.youtube[0].apiKey).toBeDefined();
           expect(apingDefaultSettings.apingApiKeys.youtube[0].apiKey).toEqual('<YOUR_YOUTUBE_API_KEY>');
-          
+
           expect(apingDefaultSettings.apingApiKeys.youtube).toEqual(youtubeApiKeyData);
         })
 
