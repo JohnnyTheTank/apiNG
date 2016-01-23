@@ -1,12 +1,15 @@
 /**
     @name: aping 
-    @version: 1.0.3 (21-01-2016) 
+    @version: 1.0.3 (23-01-2016) 
     @author: Jonathan Hornung <jonathan.hornung@gmail.com> 
     @url: https://github.com/JohnnyTheTank/apiNG 
     @license: MIT
 */
-"use strict";
-var apingApp = angular.module('jtt_aping', ['jtt_aping_jsonloader', 'jtt_aping_ng_array'])
+angular.module('jtt_aping', [
+  'jtt_aping_jsonloader',
+  'jtt_aping_ng_array'
+]);;"use strict";
+angular.module('jtt_aping')
 
     .config(['$provide', function ($provide) {
 
@@ -155,8 +158,7 @@ var apingApp = angular.module('jtt_aping', ['jtt_aping_jsonloader', 'jtt_aping_n
                 };
             }]
         };
-    }]);
-;"use strict";
+    }]);;"use strict";
 
 angular.module('jtt_aping').service('apingTimeHelper', function () {
 
@@ -650,9 +652,9 @@ angular.module('jtt_aping').service('apingModels', [function () {
         }
         return model;
     };
-}]);;"use strict";
+}]);;angular.module("jtt_aping_jsonloader", []);"use strict";
 
-angular.module("jtt_aping_jsonloader", [])
+angular.module("jtt_aping_jsonloader")
     .directive('apingJsonloader', ['apingUtilityHelper', 'jsonloaderFactory', function (apingUtilityHelper, jsonloaderFactory) {
         return {
             require: '?aping',
@@ -762,9 +764,9 @@ angular.module("jtt_aping_jsonloader", [])
             }
         };
         return jsonloaderFactory;
-    }]);;"use strict";
+    }]);;angular.module("jtt_aping_ng_array", []);"use strict";
 
-angular.module("jtt_aping_ng_array", [])
+angular.module("jtt_aping_ng_array")
     .directive('apingNgArray', ['apingUtilityHelper', function (apingUtilityHelper) {
         return {
             require: '?aping',
