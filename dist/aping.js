@@ -1,6 +1,6 @@
 /**
     @name: aping 
-    @version: 1.0.3 (23-01-2016) 
+    @version: 1.0.4 (23-01-2016) 
     @author: Jonathan Hornung <jonathan.hornung@gmail.com> 
     @url: https://github.com/JohnnyTheTank/apiNG 
     @license: MIT
@@ -18,7 +18,8 @@ angular.module('jtt_aping')
         });
 
     }])
-    .directive('aping', ['apingDefaultSettings', 'apingUtilityHelper', '$templateRequest', '$compile', function (apingDefaultSettings, apingUtilityHelper, $templateRequest, $compile) {
+    .value("apingResults", {})
+    .directive('aping', ['apingResults', 'apingDefaultSettings', 'apingUtilityHelper', '$templateRequest', '$compile', function (apingResults, apingDefaultSettings, apingUtilityHelper, $templateRequest, $compile) {
         return {
             restrict: 'E',
             replace: 'false',
@@ -31,7 +32,8 @@ angular.module('jtt_aping')
                 orderReverse: '@',
                 templateUrl: '@',
                 payloadJson: '@',
-                removeDoubles: '@'
+                removeDoubles: '@',
+                valueName: '@'
             },
             link: function (scope, element, attrs) {
                 $templateRequest(scope.templateUrl || apingDefaultSettings.templateUrl).then(function (html) {
@@ -56,6 +58,14 @@ angular.module('jtt_aping')
                     var orderReverse;
                     var orderBy;
                     var removeDoubles;
+                    var valueName;
+
+
+                    if (angular.isDefined($scope.valueName)) {
+                        valueName = $scope.valueName;
+                    } else {
+                        valueName = undefined;
+                    }
 
                     if (angular.isDefined($scope.items)) {
                         items = $scope.items;
@@ -120,7 +130,8 @@ angular.module('jtt_aping')
                         maxItems: maxItems,
                         orderBy: orderBy,
                         orderReverse: orderReverse,
-                        removeDoubles: removeDoubles
+                        removeDoubles: removeDoubles,
+                        valueName: valueName
                     };
                 };
 
@@ -158,6 +169,11 @@ angular.module('jtt_aping')
                     if (appSettings.maxItems > -1 && $scope.results.length > appSettings.maxItems) {
                         $scope.results = $scope.results.splice(0, appSettings.maxItems);
                     }
+
+                    if(angular.isDefined(appSettings.valueName)) {
+                        apingResults[appSettings.valueName] = $scope.results;
+                    }
+
                     $scope.$broadcast('apiNG.resultMerged');
                 };
                 this.apply = function () {
