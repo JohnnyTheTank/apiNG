@@ -1,13 +1,14 @@
 "use strict";
-var apingApp = angular.module('jtt_aping', ['jtt_aping_jsonloader', 'jtt_aping_ng_array'])
+angular.module('jtt_aping')
 
-    .config(['$provide', function ($provide) {
-
-        $provide.value("apingDefaultSettings", {
-            apingApiKeys: {}
-        });
-
-    }])
+// TODO: this coolidates with defaultSettingsService
+    //.config(['$provide', function ($provide) {
+    //
+    //    $provide.value("apingDefaultSettings", {
+    //        apingApiKeys: {}
+    //    });
+    //
+    //}])
     .directive('aping', ['apingDefaultSettings', 'apingUtilityHelper', '$templateRequest', '$compile', function (apingDefaultSettings, apingUtilityHelper, $templateRequest, $compile) {
         return {
             restrict: 'E',

@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module("jtt_aping_jsonloader", [])
+angular.module("jtt_aping_jsonloader")
     .directive('apingJsonloader', ['apingUtilityHelper', 'jsonloaderFactory', function (apingUtilityHelper, jsonloaderFactory) {
         return {
             require: '?aping',

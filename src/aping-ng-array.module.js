@@ -1,0 +1,1 @@
+angular.module("jtt_aping_ng_array", [])
