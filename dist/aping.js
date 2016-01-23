@@ -134,20 +134,27 @@ angular.module('jtt_aping')
 
                     var appSettings = this.getAppSettings();
 
+                    //remove doubles
                     if (appSettings.removeDoubles === true || appSettings.removeDoubles === "true") {
                         $scope.results = apingUtilityHelper.removeDuplicateObjectsFromArray($scope.results, (appSettings.orderBy === false || appSettings.orderBy === "false" || appSettings.orderBy === "$NONE"));
                     }
 
+                    //order array
                     if (angular.isDefined(appSettings.orderBy) && appSettings.orderBy !== false && appSettings.orderBy !== "false" && appSettings.orderBy !== "$NONE") {
+                        //order random
                         if (appSettings.orderBy === "$RANDOM") {
                             $scope.results = apingUtilityHelper.shuffleArray($scope.results);
-                        } else {
+                        }
+                        //order by attribute
+                        else {
                             $scope.results.sort(apingUtilityHelper.sortArrayByProperty(appSettings.orderBy));
                             if (appSettings.orderReverse === true || appSettings.orderReverse === "true") {
+                                //order desc
                                 $scope.results.reverse();
                             }
                         }
                     }
+                    //crop spare
                     if (appSettings.maxItems > -1 && $scope.results.length > appSettings.maxItems) {
                         $scope.results = $scope.results.splice(0, appSettings.maxItems);
                     }
