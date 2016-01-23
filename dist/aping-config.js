@@ -1,4 +1,5 @@
 "use strict";
+
 angular.module('jtt_aping')
     .config(['$provide', function ($provide) {
 
@@ -42,7 +43,9 @@ angular.module('jtt_aping')
 
 }]);
 
+
 /*
+
 angular.module('jtt_aping').value("apingDefaultSettings", {
         //templateUrl: "<PATH_TO_YOUR_DEFAULT_DESIGN>",
         //items: 20, //items per request
@@ -80,4 +83,5 @@ angular.module('jtt_aping').value("apingDefaultSettings", {
         }
 
 });
+
     */
