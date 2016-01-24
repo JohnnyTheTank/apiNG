@@ -1,6 +1,6 @@
 /**
     @name: aping 
-    @version: 1.0.4 (23-01-2016) 
+    @version: 1.0.5 (24-01-2016) 
     @author: Jonathan Hornung <jonathan.hornung@gmail.com> 
     @url: https://github.com/JohnnyTheTank/apiNG 
     @license: MIT
@@ -36,11 +36,28 @@ angular.module('jtt_aping')
                 valueName: '@'
             },
             link: function (scope, element, attrs) {
-                $templateRequest(scope.templateUrl || apingDefaultSettings.templateUrl).then(function (html) {
-                    var template = angular.element(html);
-                    element.append(template);
-                    $compile(template)(scope);
-                });
+
+                var templatePath = scope.templateUrl || undefined;
+                if (angular.isUndefined(templatePath)) {
+                    if (angular.isDefined(apingDefaultSettings.templateUrl)) {
+                        templatePath = apingDefaultSettings.templateUrl;
+                    }
+                }
+
+                if (angular.isDefined(templatePath) && templatePath !== "$NONE") {
+                    $templateRequest(templatePath).then(function (html) {
+                        var template = angular.element(html);
+                        element.append(template);
+                        $compile(template)(scope);
+                    });
+                } else {
+                    var html = element.html();
+                    html = html.replace(/\[\[(\w+)\]\]/g, function (_, text) {
+                        return '<span translate="' + text + '"></span>';
+                    });
+                    element.html(html);
+                    $compile(element.contents())(scope);
+                }
             },
             controller: ['$scope', function ($scope) {
                 $scope.results = [];
@@ -170,7 +187,7 @@ angular.module('jtt_aping')
                         $scope.results = $scope.results.splice(0, appSettings.maxItems);
                     }
 
-                    if(angular.isDefined(appSettings.valueName)) {
+                    if (angular.isDefined(appSettings.valueName)) {
                         apingResults[appSettings.valueName] = $scope.results;
                     }
 
