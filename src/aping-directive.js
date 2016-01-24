@@ -48,32 +48,6 @@ angular.module('jtt_aping')
                   });
                 }
             },
-            /*
-
-            link: function (scope, element, attrs) {
-
-                var templatePath = scope.templateUrl || undefined;
-                if (angular.isUndefined(templatePath)) {
-                    if (angular.isDefined(apingDefaultSettings.templateUrl)) {
-                        templatePath = apingDefaultSettings.templateUrl;
-                    }
-                }
-
-                if (angular.isDefined(templatePath) && templatePath !== "$NONE") {
-                    $templateRequest(templatePath).then(function (html) {
-                        var template = angular.element(html);
-                        element.append(template);
-                        $compile(template)(scope);
-                    });
-                } else {
-                    var html = element.html();
-                    html = html.replace(/\[\[(\w+)\]\]/g, function (_, text) {
-                        return '<span translate="' + text + '"></span>';
-                    });
-                    element.html(html);
-                    $compile(element.contents())(scope);
-                }
-            },*/
             controller: ['$scope', function ($scope) {
                 $scope.results = [];
                 $scope.payload = $scope.payloadJson ? apingUtilityHelper.replaceSingleQuotesAndParseJson($scope.payloadJson) : {};
