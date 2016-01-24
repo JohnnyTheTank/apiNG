@@ -12,7 +12,8 @@ angular.module('jtt_aping')
     .directive('aping', ['apingResults', 'apingDefaultSettings', 'apingUtilityHelper', '$templateRequest', '$compile', function (apingResults, apingDefaultSettings, apingUtilityHelper, $templateRequest, $compile) {
         return {
             restrict: 'E',
-            replace: 'false',
+            transclude: true,
+            template: '<ng-transclude></ng-transclude>',
             scope: {
                 model: '@',
                 getNativeData: '@',
@@ -25,6 +26,30 @@ angular.module('jtt_aping')
                 removeDoubles: '@',
                 valueName: '@'
             },
+            link: function (scope, element, attrs, controller, transcludeFn) {
+
+                var templatePath = scope.templateUrl;
+                if (angular.isUndefined(templatePath)) {
+                    if (angular.isDefined(apingDefaultSettings.templateUrl)) {
+                        templatePath = apingDefaultSettings.templateUrl;
+                    }
+                }
+
+                if (angular.isDefined(templatePath) && templatePath !== "$NONE") {
+                    $templateRequest(templatePath).then(function (html) {
+                        var template = angular.element(html);
+                        element.append(template);
+                        $compile(template)(scope);
+                    });
+                } else {
+                  transcludeFn(scope, function (clone, innerScope) {
+                    element.append(clone);
+                    $compile(clone)(innerScope);
+                  });
+                }
+            },
+            /*
+
             link: function (scope, element, attrs) {
 
                 var templatePath = scope.templateUrl || undefined;
@@ -48,7 +73,7 @@ angular.module('jtt_aping')
                     element.html(html);
                     $compile(element.contents())(scope);
                 }
-            },
+            },*/
             controller: ['$scope', function ($scope) {
                 $scope.results = [];
                 $scope.payload = $scope.payloadJson ? apingUtilityHelper.replaceSingleQuotesAndParseJson($scope.payloadJson) : {};
