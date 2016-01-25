@@ -1,6 +1,6 @@
 /**
     @name: aping 
-    @version: 1.0.6 (24-01-2016) 
+    @version: 1.0.7 (25-01-2016) 
     @author: Jonathan Hornung <jonathan.hornung@gmail.com> 
     @url: https://github.com/JohnnyTheTank/apiNG 
     @license: MIT
@@ -503,7 +503,7 @@ angular.module('jtt_aping').service('apingModels', [function () {
 
             case "video":
                 model = {
-                    platform : undefined, //NAME of platform ( "youtube" / "facebook", "instagram" , ...)
+                    platform : _platform, //NAME of platform ( "youtube" / "facebook", "instagram" , ...)
                     blog_name : undefined, //NAME of blog (channel / page / instagram account / ..)
                     blog_id : undefined, //ID of channel / page / account, ...
                     blog_link : undefined, //link to channel / uploader / page / account, ...
