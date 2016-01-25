@@ -29,26 +29,36 @@ angular.module('jtt_aping')
             link: function (scope, element, attrs, controller, transcludeFn) {
 
                 var templatePath = scope.templateUrl;
+
+                scope.$watch('templateUrl', function () {
+                    renderTemplate(scope.templateUrl);
+                });
+
                 if (angular.isUndefined(templatePath)) {
                     if (angular.isDefined(apingDefaultSettings.templateUrl)) {
                         templatePath = apingDefaultSettings.templateUrl;
+                        renderTemplate(templatePath);
                     }
                 }
 
-                if (angular.isDefined(templatePath) && templatePath !== "$NONE") {
-                    $templateRequest(templatePath).then(function (html) {
-                        var template = angular.element(html);
-                        element.append(template);
-                        $compile(template)(scope);
-                    });
-                } else {
-                  transcludeFn(scope, function (clone, innerScope) {
-                    element.append(clone);
-                    $compile(clone)(innerScope);
-                  });
+                function renderTemplate(_templatePath) {
+                    if (angular.isDefined(_templatePath) && _templatePath !== "$NONE") {
+                        $templateRequest(_templatePath).then(function (html) {
+                            var template = angular.element(html);
+                            element.empty().append(template);
+                            $compile(template)(scope);
+                        });
+                    } else {
+                        transcludeFn(scope, function (clone, innerScope) {
+                            element.append(clone);
+                            $compile(clone)(innerScope);
+                        });
+                    }
                 }
+
             },
             controller: ['$scope', function ($scope) {
+
                 $scope.results = [];
                 $scope.payload = $scope.payloadJson ? apingUtilityHelper.replaceSingleQuotesAndParseJson($scope.payloadJson) : {};
 
