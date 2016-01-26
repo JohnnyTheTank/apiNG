@@ -14,6 +14,7 @@ There are two level of usage: _basic_ and _advanced_
 
 ## Basic Demos
 - [Demo: Random Users (plnkr)](http://plnkr.co/xmflhJ)
+- [Demo: Read Json Files (plnkr)](http://plnkr.co/k3DPNc)
 
 ## Advanced Demos
 - [Social Wall](http://aping.io/#demo) (default design)
