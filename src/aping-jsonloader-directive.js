@@ -63,7 +63,7 @@ angular.module("jtt_aping_jsonloader")
                                     if (_data.data.constructor !== Array) {
                                         resultArray.push(results);
                                     } else {
-                                        if (request.items < 0 || angular.isDefined(request.items)) {
+                                        if (request.items < 0 || angular.isUndefined(request.items)) {
                                             resultArray = results;
                                         } else {
                                             angular.forEach(results, function (value, key) {
