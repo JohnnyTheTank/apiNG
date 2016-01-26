@@ -525,6 +525,7 @@ angular.module('jtt_aping').service('apingModels', [function () {
                     text : undefined, // video description
                     img_url : undefined, // preview image url (best case 700px)
                     thumb_url : undefined, // best case 200px (min)
+                    native_url: undefined, // native image url
                     source : undefined, // url to .mp4 file
                     markup: undefined, // markup to embed video
                     duration: undefined, // in seconds
