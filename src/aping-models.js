@@ -23,7 +23,9 @@ angular.module('jtt_aping').service('apingModels', [function () {
                     intern_id : undefined, // INTERN ID of post / video / tweet / ... (facebook id, youtube id, ...)
                     text : undefined,
                     caption : undefined,
-                    img_url : undefined,
+                    img_url : undefined, // preview image url (best case 700px)
+                    thumb_url : undefined, // best case 200px (min)
+                    native_url: undefined, // native image url
                     source : undefined, //
                     likes: undefined,
                     shares: undefined,
