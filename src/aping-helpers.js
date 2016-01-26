@@ -62,6 +62,21 @@ angular.module('jtt_aping').service('apingTimeHelper', function () {
         };
 
         /**
+         * returns the difference between two integers
+         *
+         * @param _int1 {number}
+         * @param _int2 {number}
+         * @returns {number}
+         */
+        this.getDifference = function (_int1, _int2) {
+            if (_int1 > _int2) {
+                return _int1 - _int2;
+            } else {
+                return _int2 - _int1;
+            }
+        };
+
+        /**
          * Parse JSON from Attributes and create requests
          *
          * @param _string {String}

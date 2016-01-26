@@ -1,6 +1,6 @@
 /**
     @name: aping 
-    @version: 1.0.8 (26-01-2016) 
+    @version: 1.0.9 (26-01-2016) 
     @author: Jonathan Hornung <jonathan.hornung@gmail.com> 
     @url: https://github.com/JohnnyTheTank/apiNG 
     @license: MIT
@@ -268,6 +268,21 @@ angular.module('jtt_aping').service('apingTimeHelper', function () {
          */
         this.parseJsonFromAttributes = function (_string, _platform, _appSettings) {
             return this.parseRequestsFromAttributes(_string, _platform, _appSettings);
+        };
+
+        /**
+         * returns the difference between two integers
+         *
+         * @param _int1 {number}
+         * @param _int2 {number}
+         * @returns {number}
+         */
+        this.getDifference = function (_int1, _int2) {
+            if (_int1 > _int2) {
+                return _int1 - _int2;
+            } else {
+                return _int2 - _int1;
+            }
         };
 
         /**
