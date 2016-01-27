@@ -18,10 +18,6 @@ angular.module('jtt_aping').service('apingInputObjects', ['apingDefaultSettings'
                 inputObject = angular.extend({
                     model: apingDefaultSettings.model
                 }, _params);
-
-
-                console.log(inputObject);
-
                 break;
 
             default:
