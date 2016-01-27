@@ -15,10 +15,13 @@ angular.module('jtt_aping').service('apingInputObjects', ['apingDefaultSettings'
 
         switch (_type) {
             case "request":
-                inputObject = $.extend(true, {
-                    model: apingDefaultSettings.model,
-                    items: apingDefaultSettings.items
+                inputObject = angular.extend({
+                    model: apingDefaultSettings.model
                 }, _params);
+
+
+                console.log(inputObject);
+
                 break;
 
             default:

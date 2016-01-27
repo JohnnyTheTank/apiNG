@@ -122,7 +122,7 @@ angular.module('jtt_aping').service('apingTimeHelper', function () {
          * @returns {Array/Object}
          */
         this.replaceSingleQuotesAndParseJson = function (_string) {
-            return $.parseJSON(_string.replace(/'/g, '"'));
+            return angular.fromJson(_string.replace(/'/g, '"'));
         };
 
         /**
@@ -177,7 +177,7 @@ angular.module('jtt_aping').service('apingTimeHelper', function () {
                 return _array;
             }
 
-            $.each(_array, function (firstIndex, firstValue) {
+            angular.forEach(_array, function (firstValue, firstIndex) {
                 firstValue['$$hashKey'] = undefined;
                 firstValue[stringifyPropertyName] = JSON.stringify(firstValue);
 
@@ -192,7 +192,8 @@ angular.module('jtt_aping').service('apingTimeHelper', function () {
             var lastValue;
 
             var reducedArray = [];
-            $.each(sortedArray, function (secondIndex, secondValue) {
+
+            angular.forEach(sortedArray, function (secondValue, secondIndex) {
                 if (angular.isDefined(lastValue)) {
                     if (angular.isDefined(secondValue[stringifyPropertyName]) && secondValue[stringifyPropertyName] !== lastValue) {
                         reducedArray.push(secondValue);
@@ -204,10 +205,11 @@ angular.module('jtt_aping').service('apingTimeHelper', function () {
                 secondValue[stringifyPropertyName] = undefined;
             });
 
+
             if (_keepOrder === true) {
                 sortedArray.sort(this.sortArrayByProperty(orderPropertyName));
 
-                $.each(sortedArray, function (thirdIndex, thirdValue) {
+                angular.forEach(sortedArray, function (thirdValue, thirdIndex) {
                     thirdValue[orderPropertyName] = undefined;
                 });
             }
