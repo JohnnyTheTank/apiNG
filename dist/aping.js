@@ -1,6 +1,6 @@
 /**
     @name: aping 
-    @version: 1.0.11 (27-01-2016) 
+    @version: 1.0.11 (28-01-2016) 
     @author: Jonathan Hornung <jonathan.hornung@gmail.com> 
     @url: https://github.com/JohnnyTheTank/apiNG 
     @license: MIT
@@ -642,38 +642,6 @@ angular.module('jtt_aping').service('apingModels', [function () {
                     updated_date_time: undefined,
                     pushed_timestamp: undefined,
                     pushed_date_time: undefined
-                };
-                break;
-
-            case "activity":
-                model = {
-                    platform : _platform, //NAME of platform ( "youtube" / "facebook", "instagram" , ...)
-
-                    body : undefined,
-
-                    actor_name : undefined, //who?
-                    actor_id : undefined,
-                    actor_url : undefined,
-                    actor_img_url : undefined,
-                    actor_type: undefined,
-
-                    action_name: undefined,
-                    action_message : undefined, //what?
-                    action_id : undefined,
-                    action_url : undefined,
-                    action_img : undefined,
-                    action_type: undefined,
-
-                    object_name : undefined,
-                    object_id : undefined,
-                    object_img : undefined,
-                    object_url : undefined,
-                    object_type: undefined,
-
-                    context : undefined,
-                    timestamp : undefined,
-                    date_time: undefined
-
                 };
                 break;
 

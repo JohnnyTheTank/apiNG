@@ -150,38 +150,6 @@ angular.module('jtt_aping').service('apingModels', [function () {
                 };
                 break;
 
-            case "activity":
-                model = {
-                    platform : _platform, //NAME of platform ( "youtube" / "facebook", "instagram" , ...)
-
-                    body : undefined,
-
-                    actor_name : undefined, //who?
-                    actor_id : undefined,
-                    actor_url : undefined,
-                    actor_img_url : undefined,
-                    actor_type: undefined,
-
-                    action_name: undefined,
-                    action_message : undefined, //what?
-                    action_id : undefined,
-                    action_url : undefined,
-                    action_img : undefined,
-                    action_type: undefined,
-
-                    object_name : undefined,
-                    object_id : undefined,
-                    object_img : undefined,
-                    object_url : undefined,
-                    object_type: undefined,
-
-                    context : undefined,
-                    timestamp : undefined,
-                    date_time: undefined
-
-                };
-                break;
-
             case "weather":
                 model = {
                     platform : _platform, //NAME of platform ( "youtube" / "facebook", "instagram" , ...)
