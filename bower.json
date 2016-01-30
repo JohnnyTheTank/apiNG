@@ -29,7 +29,6 @@
     "url": "git://github.com/JohnnyTheTank/apiNG.git"
   },
   "dependencies": {
-    "jquery": "*",
-    "angular": "*"
+    "angular": "^1.4.9"
   }
 }
