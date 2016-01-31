@@ -1,6 +1,6 @@
 /**
     @name: aping 
-    @version: 1.1.0 (28-01-2016) 
+    @version: 1.1.1 (31-01-2016) 
     @author: Jonathan Hornung <jonathan.hornung@gmail.com> 
     @url: https://github.com/JohnnyTheTank/apiNG 
     @license: MIT
@@ -716,14 +716,6 @@ angular.module("jtt_aping_jsonloader")
                             requestObject.format = "jsonp";
                         }
 
-                        if (request.callback) {
-                            requestObject.callback = request.callback;
-                        }
-
-                        if (request.format === "jsonp" && !request.callback) {
-                            requestObject.callback = 'JSON_CALLBACK';
-                        }
-
                         if (angular.isDefined(request.items)) {
                             requestObject.count = request.items;
                         } else {
@@ -740,6 +732,7 @@ angular.module("jtt_aping_jsonloader")
                         }
 
                         jsonloaderFactory.getJsonData(requestObject)
+
                             .then(function (_data) {
 
                                 var resultArray = [];
@@ -777,10 +770,6 @@ angular.module("jtt_aping_jsonloader")
 
         jsonloaderFactory.getJsonData = function (_requestObject) {
             var params = {};
-            if (angular.isDefined(_requestObject.callback)) {
-                params[_requestObject.callback] = 'JSON_CALLBACK';
-            }
-
 
             if (_requestObject.format === "jsonp") {
 
@@ -788,9 +777,17 @@ angular.module("jtt_aping_jsonloader")
                     _requestObject.path,
                     {
                         method: 'GET',
-                        params: params,
+                        params: {callback: "JSON_CALLBACK"},
                     }
                 );
+
+                /*
+                return $http({
+                    method: 'JSONP',
+                    url: _requestObject.path,
+                    params: {callback: "JSON_CALLBACK"'},
+                });
+                */
 
             } else {
                 return $http({
