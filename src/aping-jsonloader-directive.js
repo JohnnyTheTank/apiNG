@@ -25,20 +25,27 @@ angular.module("jtt_aping_jsonloader")
                             requestObject.format = "jsonp";
                         }
 
-                        if (angular.isDefined(request.items)) {
-                            requestObject.count = request.items;
-                        } else {
-                            requestObject.count = appSettings.items;
+                        if (angular.isUndefined(request.items)) {
+                            request.items = appSettings.items;
                         }
 
-                        if (requestObject.count === 0 || requestObject.count === '0') {
+                        if (request.items === 0 || request.items === '0') {
                             return false;
                         }
 
                         // -1 is "no explicit limit". same for NaN value
-                        if (requestObject.count < 0 || isNaN(requestObject.count)) {
-                            requestObject.count = undefined;
+                        if (request.items < 0 || isNaN(request.items)) {
+                            request.items = undefined;
                         }
+
+                        if (angular.isDefined(request.orderBy) && !angular.isString(request.orderBy)) {
+                            request.orderBy = undefined;
+                        }
+
+                        if (angular.isDefined(request.orderReverse) && (request.orderReverse === true || request.orderReverse === 'true')) {
+                            request.orderReverse === true;
+                        }
+
 
                         jsonloaderFactory.getJsonData(requestObject)
 
@@ -56,14 +63,27 @@ angular.module("jtt_aping_jsonloader")
                                     if (_data.data.constructor !== Array) {
                                         resultArray.push(results);
                                     } else {
-                                        if (request.items < 0 || angular.isUndefined(request.items)) {
+                                        angular.extend(resultArray, results);
+
+                                        if (angular.isDefined(request.orderBy)) {
+                                            if (request.orderBy === "$RANDOM") {
+                                                resultArray = apingUtilityHelper.shuffleArray(resultArray);
+                                            } else {
+                                                resultArray.sort(apingUtilityHelper.sortArrayByProperty(request.orderBy));
+                                                if (angular.isDefined(request.orderReverse) && request.orderReverse === true) {
+                                                    //order desc
+                                                    resultArray.reverse();
+                                                }
+                                            }
+                                        }
+
+                                        if (angular.isUndefined(request.items)) {
                                             resultArray = results;
                                         } else {
-                                            angular.forEach(results, function (value, key) {
-                                                if (key < request.items) {
-                                                    resultArray.push(value);
-                                                }
-                                            });
+                                            //crop spare
+                                            if (request.items > 0 && resultArray.length > request.items) {
+                                                resultArray = resultArray.splice(0, request.items);
+                                            }
                                         }
                                     }
                                 }
@@ -91,12 +111,12 @@ angular.module("jtt_aping_jsonloader")
                 );
 
                 /*
-                return $http({
-                    method: 'JSONP',
-                    url: _requestObject.path,
-                    params: {callback: "JSON_CALLBACK"'},
-                });
-                */
+                 return $http({
+                 method: 'JSONP',
+                 url: _requestObject.path,
+                 params: {callback: "JSON_CALLBACK"'},
+                 });
+                 */
 
             } else {
                 return $http({
