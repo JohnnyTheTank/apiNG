@@ -736,8 +736,6 @@ angular.module("jtt_aping_jsonloader")
                         if (angular.isDefined(request.orderReverse) && (request.orderReverse === true || request.orderReverse === 'true')) {
                             request.orderReverse = true;
                         }
-
-
                         jsonloaderFactory.getJsonData(requestObject)
 
                             .then(function (_data) {
