@@ -1,6 +1,6 @@
 /**
     @name: aping 
-    @version: 1.1.2 (02-02-2016) 
+    @version: 1.1.3 (04-02-2016) 
     @author: Jonathan Hornung <jonathan.hornung@gmail.com> 
     @url: https://github.com/JohnnyTheTank/apiNG 
     @license: MIT
@@ -167,38 +167,40 @@ angular.module('jtt_aping')
                  * @param _array
                  */
                 this.concatToResults = function (_array) {
-                    $scope.results = $scope.results.concat(_array);
+                    var tempArray = $scope.results.concat(_array);
 
                     var appSettings = this.getAppSettings();
 
                     //remove doubles
                     if (appSettings.removeDoubles === true || appSettings.removeDoubles === "true") {
-                        $scope.results = apingUtilityHelper.removeDuplicateObjectsFromArray($scope.results, (appSettings.orderBy === false || appSettings.orderBy === "false" || appSettings.orderBy === "$NONE"));
+                        tempArray = apingUtilityHelper.removeDuplicateObjectsFromArray(tempArray, (appSettings.orderBy === false || appSettings.orderBy === "false" || appSettings.orderBy === "$NONE"));
                     }
 
                     //order array
                     if (angular.isDefined(appSettings.orderBy) && appSettings.orderBy !== false && appSettings.orderBy !== "false" && appSettings.orderBy !== "$NONE") {
                         //order random
                         if (appSettings.orderBy === "$RANDOM") {
-                            $scope.results = apingUtilityHelper.shuffleArray($scope.results);
+                            tempArray = apingUtilityHelper.shuffleArray(tempArray);
                         }
                         //order by attribute
                         else {
-                            $scope.results.sort(apingUtilityHelper.sortArrayByProperty(appSettings.orderBy));
+                            tempArray.sort(apingUtilityHelper.sortArrayByProperty(appSettings.orderBy));
                             if (appSettings.orderReverse === true || appSettings.orderReverse === "true") {
                                 //order desc
-                                $scope.results.reverse();
+                                tempArray.reverse();
                             }
                         }
                     }
                     //crop spare
-                    if (appSettings.maxItems > -1 && $scope.results.length > appSettings.maxItems) {
-                        $scope.results = $scope.results.splice(0, appSettings.maxItems);
+                    if (appSettings.maxItems > -1 && tempArray.length > appSettings.maxItems) {
+                        tempArray = tempArray.splice(0, appSettings.maxItems);
                     }
 
                     if (angular.isDefined(appSettings.valueName)) {
-                        apingResults[appSettings.valueName] = $scope.results;
+                        apingResults[appSettings.valueName] = tempArray;
                     }
+
+                    $scope.results = tempArray;
 
                     $scope.$broadcast('apiNG.resultMerged');
                 };
