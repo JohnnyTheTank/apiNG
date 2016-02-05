@@ -54,6 +54,7 @@ angular.module('jtt_aping')
                             $compile(clone)(innerScope);
                         });
                     }
+                    $scope.$broadcast('apiNG.templateRendered');
                 }
 
             },
