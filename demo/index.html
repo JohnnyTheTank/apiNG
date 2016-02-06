@@ -36,7 +36,7 @@
 <body ng-app="app">
 
 <h1>Unstyled, one result</h1>
-<aping aping-jsonloader="[{ 'path': 'https://randomuser.me/api/' }]">
+<aping aping-jsonloader="[{ 'path': 'https://randomuser.me/api/', 'resultProperty':'results.0.user'}]">
     <pre>{{results | json}}</pre>
 </aping>
 
@@ -44,7 +44,7 @@
 <h1>Styled, but two results</h1>
 <aping
         template-url="template.html"
-        aping-jsonloader="[{ 'path': 'https://randomuser.me/api/' }, { 'path': 'https://randomuser.me/api/' }]">
+        aping-jsonloader="[{ 'path': 'https://randomuser.me/api/', 'resultProperty':'results.0.user' }, { 'path': 'https://randomuser.me/api/', 'resultProperty':'results.0.user' }]">
 </aping>
 
 <br><br>
