@@ -1,13 +1,13 @@
 /**
     @name: aping 
-    @version: 1.1.3 (06-02-2016) 
+    @version: 1.2.0 (06-02-2016) 
     @author: Jonathan Hornung <jonathan.hornung@gmail.com> 
     @url: https://github.com/JohnnyTheTank/apiNG 
     @license: MIT
 */
 angular.module('jtt_aping', [
-  'jtt_aping_jsonloader',
-  'jtt_aping_ng_array'
+    'jtt_aping_jsonloader',
+    'jtt_aping_ng_array'
 ]);;"use strict";
 angular.module('jtt_aping')
 
@@ -407,13 +407,13 @@ angular.module('jtt_aping').service('apingTimeHelper', function () {
             return _array;
         };
 
-        this.removeNullIn = function(prop, obj) {
+        this.removeNullIn = function (prop, obj) {
             var pr = obj[prop];
             if (pr === null || pr === undefined) delete obj[prop];
             else if (typeof pr === 'object') for (var i in pr) this.removeNullIn(i, pr);
         };
 
-        this.removeNull = function(obj) {
+        this.removeNull = function (obj) {
             for (var i in obj) {
                 this.removeNullIn(i, obj);
             }

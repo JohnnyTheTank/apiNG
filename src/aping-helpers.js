@@ -159,13 +159,13 @@ angular.module('jtt_aping').service('apingTimeHelper', function () {
             return _array;
         };
 
-        this.removeNullIn = function(prop, obj) {
+        this.removeNullIn = function (prop, obj) {
             var pr = obj[prop];
             if (pr === null || pr === undefined) delete obj[prop];
             else if (typeof pr === 'object') for (var i in pr) this.removeNullIn(i, pr);
         };
 
-        this.removeNull = function(obj) {
+        this.removeNull = function (obj) {
             for (var i in obj) {
                 this.removeNullIn(i, obj);
             }
