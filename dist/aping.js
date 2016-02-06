@@ -482,31 +482,52 @@ angular.module('jtt_aping').service('apingTimeHelper', function () {
             return result;
         };
 
-        this.createIdByPropertiesForArray = function (_array, _propertyString, _idString) {
+        this.createIdByPropertiesForArray = function (_array, _propertiesString, _idString) {
 
             var that = this;
 
-            if(angular.isUndefined(_idString) || typeof _idString !== "string" ) {
+            if(angular.isUndefined(_idString) || !angular.isString(_idString)) {
                 _idString = "aping_id";
             }
 
-            if (angular.isDefined(_array) && _array.constructor === Array) {
+            if (angular.isDefined(_array) && angular.isArray(_array)) {
                 angular.forEach(_array, function (value, key) {
-                    console.group(value);
-                    value[_idString] = that.getValueFromObjectByPropertiesString(value, _propertyString);
-                    console.log(value);
-                    console.groupEnd();
+                    value[_idString] = that.getIdByPropertiesForObject(value, _propertiesString);
                 });
             }
 
             return _array;
         };
 
-        this.getValueFromObjectByPropertiesString = function (_object, _propertyString) {
+        this.getIdByPropertiesForObject = function (_object, _propertiesString) {
 
-            var _value;
+            var that = this;
 
-            if (angular.isDefined(_object) && typeof _object === 'object' && _object !== null) {
+            var idString = "";
+
+            if (angular.isDefined(_object) && angular.isObject(_object)) {
+
+                var properties = [];
+
+                if(_propertiesString.substr(0,1) === "[") {
+                    properties = this.replaceSingleQuotesAndParseJson(_propertiesString);
+                } else {
+                    properties.push(_propertiesString)
+                }
+
+                angular.forEach(properties, function (value, key) {
+                    idString += that.getValueFromObjectByPropertyString(_object, value);
+                });
+            }
+
+            return idString;
+        };
+
+        this.getValueFromObjectByPropertyString = function (_object, _propertyString) {
+
+            var _value = "";
+
+            if (angular.isDefined(_object) && angular.isObject(_object)) {
                 if (angular.isDefined(_object[_propertyString])) {
                     _value = _object[_propertyString];
                 }
@@ -514,6 +535,7 @@ angular.module('jtt_aping').service('apingTimeHelper', function () {
 
             return _value;
         };
+
     }]);;"use strict";
 
 angular.module('jtt_aping').service('apingInputObjects', ['apingDefaultSettings', function (apingDefaultSettings) {
