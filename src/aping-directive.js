@@ -22,6 +22,7 @@ angular.module('jtt_aping')
                 templateUrl: '@',
                 payloadJson: '@',
                 removeDoubles: '@',
+                mergeDoubles: '@',
                 idBy: '@',
                 valueName: '@'
             },
@@ -74,6 +75,7 @@ angular.module('jtt_aping')
                     var orderReverse;
                     var orderBy;
                     var removeDoubles;
+                    var mergeDoubles;
                     var valueName;
                     var idBy;
 
@@ -140,6 +142,14 @@ angular.module('jtt_aping')
                         removeDoubles = false;
                     }
 
+                    if (angular.isDefined($scope.mergeDoubles)) {
+                        mergeDoubles = $scope.mergeDoubles;
+                    } else if (angular.isDefined(apingDefaultSettings.mergeDoubles)) {
+                        mergeDoubles = apingDefaultSettings.mergeDoubles;
+                    } else {
+                        mergeDoubles = false;
+                    }
+
                     if (angular.isDefined($scope.idBy)) {
                         idBy = $scope.idBy;
                     } else if (angular.isDefined(apingDefaultSettings.idBy)) {
@@ -156,6 +166,7 @@ angular.module('jtt_aping')
                         orderBy: orderBy,
                         orderReverse: orderReverse,
                         removeDoubles: removeDoubles,
+                        mergeDoubles: mergeDoubles,
                         idBy: idBy,
                         valueName: valueName
                     };
@@ -173,15 +184,23 @@ angular.module('jtt_aping')
 
                     if (angular.isDefined(appSettings.idBy)) {
                         tempArray = apingUtilityHelper.createIdByPropertiesForArray(tempArray, appSettings.idBy);
+                        if (appSettings.mergeDoubles === true || appSettings.mergeDoubles === "true") {
+                            tempArray = apingUtilityHelper.mergeDuplicateObjectsFromArray(
+                                tempArray,
+                                (appSettings.orderBy === false || appSettings.orderBy === "false" || appSettings.orderBy === "$NONE")
+                            );
+                        }
                     }
 
                     //remove doubles
                     if (appSettings.removeDoubles === true || appSettings.removeDoubles === "true") {
-                        tempArray = apingUtilityHelper.removeDuplicateObjectsFromArray(
-                            tempArray,
-                            (appSettings.orderBy === false || appSettings.orderBy === "false" || appSettings.orderBy === "$NONE"),
-                            angular.isDefined(appSettings.idBy)
-                        );
+                        if (appSettings.mergeDoubles !== true && appSettings.mergeDoubles !== "true") {
+                            tempArray = apingUtilityHelper.removeDuplicateObjectsFromArray(
+                                tempArray,
+                                (appSettings.orderBy === false || appSettings.orderBy === "false" || appSettings.orderBy === "$NONE"),
+                                angular.isDefined(appSettings.idBy)
+                            );
+                        }
                     }
 
                     //order array
