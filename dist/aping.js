@@ -181,13 +181,17 @@ angular.module('jtt_aping')
 
                     var appSettings = this.getAppSettings();
 
-                    if(angular.isDefined(appSettings.idBy)) {
+                    if (angular.isDefined(appSettings.idBy)) {
                         tempArray = apingUtilityHelper.createIdByPropertiesForArray(tempArray, appSettings.idBy);
                     }
 
                     //remove doubles
                     if (appSettings.removeDoubles === true || appSettings.removeDoubles === "true") {
-                        tempArray = apingUtilityHelper.removeDuplicateObjectsFromArray(tempArray, (appSettings.orderBy === false || appSettings.orderBy === "false" || appSettings.orderBy === "$NONE"));
+                        tempArray = apingUtilityHelper.removeDuplicateObjectsFromArray(
+                            tempArray,
+                            (appSettings.orderBy === false || appSettings.orderBy === "false" || appSettings.orderBy === "$NONE"),
+                            angular.isDefined(appSettings.idBy)
+                        );
                     }
 
                     //order array
@@ -392,10 +396,16 @@ angular.module('jtt_aping').service('apingTimeHelper', function () {
          * @param _keepOrder {Boolean}
          * @returns {Array}
          */
-        this.removeDuplicateObjectsFromArray = function (_array, _keepOrder) {
+        this.removeDuplicateObjectsFromArray = function (_array, _keepOrder, _useApingId) {
             var sortedArray = [];
 
-            var stringifyPropertyName = 'apingStringified';
+            var stringifyPropertyName;
+            if (_useApingId) {
+                stringifyPropertyName = "aping_id"
+            } else {
+                stringifyPropertyName = 'apingStringified';
+            }
+
             var orderPropertyName = 'apingTempOrder';
 
             if (_array.length === 1) {
@@ -403,8 +413,10 @@ angular.module('jtt_aping').service('apingTimeHelper', function () {
             }
 
             angular.forEach(_array, function (firstValue, firstIndex) {
-                firstValue['$$hashKey'] = undefined;
-                firstValue[stringifyPropertyName] = JSON.stringify(firstValue);
+                if (!_useApingId) {
+                    firstValue['$$hashKey'] = undefined;
+                    firstValue[stringifyPropertyName] = JSON.stringify(firstValue);
+                }
 
                 if (_keepOrder === true) {
                     firstValue[orderPropertyName] = firstIndex;
@@ -427,7 +439,9 @@ angular.module('jtt_aping').service('apingTimeHelper', function () {
                     reducedArray.push(secondValue);
                 }
                 lastValue = secondValue[stringifyPropertyName];
-                secondValue[stringifyPropertyName] = undefined;
+                if (!_useApingId) {
+                    secondValue[stringifyPropertyName] = undefined;
+                }
             });
 
 
@@ -540,7 +554,7 @@ angular.module('jtt_aping').service('apingTimeHelper', function () {
                 });
 
                 if (angular.isDefined(object)) {
-                    if(_resultObjectToString && angular.isObject(object)) {
+                    if (_resultObjectToString && angular.isObject(object)) {
                         _value = JSON.stringify(object);
                     } else {
                         _value = object;
