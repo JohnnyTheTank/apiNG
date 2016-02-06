@@ -523,7 +523,7 @@ angular.module('jtt_aping').service('apingTimeHelper', function () {
             return idString;
         };
 
-        this.getValueFromObjectByPropertyString = function (_object, _propertyString) {
+        this.getValueFromObjectByPropertyString = function (_object, _propertyString, _resultObjectToString) {
 
             var _value = "";
 
@@ -540,7 +540,7 @@ angular.module('jtt_aping').service('apingTimeHelper', function () {
                 });
 
                 if (angular.isDefined(object)) {
-                    if(angular.isObject(object)) {
+                    if(_resultObjectToString && angular.isObject(object)) {
                         _value = JSON.stringify(object);
                     } else {
                         _value = object;
@@ -832,7 +832,8 @@ angular.module("jtt_aping_jsonloader")
                                     var results = _data.data;
 
                                     if (angular.isDefined(request.resultProperty)) {
-                                        results = _data.data[request.resultProperty];
+                                        //results = _data.data[request.resultProperty];
+                                        results = apingUtilityHelper.getValueFromObjectByPropertyString(_data.data, request.resultProperty, false);
                                     }
 
                                     if (_data.data.constructor !== Array) {
