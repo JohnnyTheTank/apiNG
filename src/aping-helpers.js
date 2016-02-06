@@ -255,5 +255,38 @@ angular.module('jtt_aping').service('apingTimeHelper', function () {
             }
 
             return result;
-        }
+        };
+
+        this.createIdByPropertiesForArray = function (_array, _propertyString, _idString) {
+
+            var that = this;
+
+            if(angular.isUndefined(_idString) || typeof _idString !== "string" ) {
+                _idString = "aping_id";
+            }
+
+            if (angular.isDefined(_array) && _array.constructor === Array) {
+                angular.forEach(_array, function (value, key) {
+                    console.group(value);
+                    value[_idString] = that.getValueFromObjectByPropertiesString(value, _propertyString);
+                    console.log(value);
+                    console.groupEnd();
+                });
+            }
+
+            return _array;
+        };
+
+        this.getValueFromObjectByPropertiesString = function (_object, _propertyString) {
+
+            var _value;
+
+            if (angular.isDefined(_object) && typeof _object === 'object' && _object !== null) {
+                if (angular.isDefined(_object[_propertyString])) {
+                    _value = _object[_propertyString];
+                }
+            }
+
+            return _value;
+        };
     }]);

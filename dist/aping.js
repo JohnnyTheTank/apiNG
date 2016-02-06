@@ -1,6 +1,6 @@
 /**
     @name: aping 
-    @version: 1.1.3 (05-02-2016) 
+    @version: 1.1.3 (06-02-2016) 
     @author: Jonathan Hornung <jonathan.hornung@gmail.com> 
     @url: https://github.com/JohnnyTheTank/apiNG 
     @license: MIT
@@ -34,6 +34,7 @@ angular.module('jtt_aping')
                 templateUrl: '@',
                 payloadJson: '@',
                 removeDoubles: '@',
+                idBy: '@',
                 valueName: '@'
             },
             link: function (scope, element, attrs, controller, transcludeFn) {
@@ -64,7 +65,7 @@ angular.module('jtt_aping')
                             $compile(clone)(innerScope);
                         });
                     }
-                    $scope.$broadcast('apiNG.templateRendered');
+                    scope.$broadcast('apiNG.templateRendered');
                 }
 
             },
@@ -86,6 +87,7 @@ angular.module('jtt_aping')
                     var orderBy;
                     var removeDoubles;
                     var valueName;
+                    var idBy;
 
 
                     if (angular.isDefined($scope.valueName)) {
@@ -150,6 +152,14 @@ angular.module('jtt_aping')
                         removeDoubles = false;
                     }
 
+                    if (angular.isDefined($scope.idBy)) {
+                        idBy = $scope.idBy;
+                    } else if (angular.isDefined(apingDefaultSettings.idBy)) {
+                        idBy = apingDefaultSettings.idBy;
+                    } else {
+                        idBy = undefined;
+                    }
+
                     return {
                         model: $scope.model || apingDefaultSettings.model || "native",
                         getNativeData: getNativeData,
@@ -158,6 +168,7 @@ angular.module('jtt_aping')
                         orderBy: orderBy,
                         orderReverse: orderReverse,
                         removeDoubles: removeDoubles,
+                        idBy: idBy,
                         valueName: valueName
                     };
                 };
@@ -171,6 +182,10 @@ angular.module('jtt_aping')
                     var tempArray = $scope.results.concat(_array);
 
                     var appSettings = this.getAppSettings();
+
+                    if(angular.isDefined(appSettings.idBy)) {
+                        tempArray = apingUtilityHelper.createIdByPropertiesForArray(tempArray, appSettings.idBy);
+                    }
 
                     //remove doubles
                     if (appSettings.removeDoubles === true || appSettings.removeDoubles === "true") {
@@ -467,7 +482,40 @@ angular.module('jtt_aping').service('apingTimeHelper', function () {
             }
 
             return result;
-        }
+        };
+
+        this.createIdByPropertiesForArray = function (_array, _propertyString, _idString) {
+
+            var that = this;
+
+            if(angular.isUndefined(_idString) || typeof _idString !== "string" ) {
+                _idString = "aping_id";
+            }
+
+            if (angular.isDefined(_array) && _array.constructor === Array) {
+                angular.forEach(_array, function (value, key) {
+                    console.group(value);
+                    value[_idString] = that.getValueFromObjectByPropertiesString(value, _propertyString);
+                    console.log(value);
+                    console.groupEnd();
+                });
+            }
+
+            return _array;
+        };
+
+        this.getValueFromObjectByPropertiesString = function (_object, _propertyString) {
+
+            var _value;
+
+            if (angular.isDefined(_object) && typeof _object === 'object' && _object !== null) {
+                if (angular.isDefined(_object[_propertyString])) {
+                    _value = _object[_propertyString];
+                }
+            }
+
+            return _value;
+        };
     }]);;"use strict";
 
 angular.module('jtt_aping').service('apingInputObjects', ['apingDefaultSettings', function (apingDefaultSettings) {
