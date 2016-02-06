@@ -1,6 +1,6 @@
 /**
     @name: aping 
-    @version: 1.1.3 (05-02-2016) 
+    @version: 1.1.3 (06-02-2016) 
     @author: Jonathan Hornung <jonathan.hornung@gmail.com> 
     @url: https://github.com/JohnnyTheTank/apiNG 
     @license: MIT
@@ -12,11 +12,9 @@ angular.module('jtt_aping', [
 angular.module('jtt_aping')
 
     .config(['$provide', function ($provide) {
-
         $provide.value("apingDefaultSettings", {
             apingApiKeys: {}
         });
-
     }])
     .value("apingResults", {})
     .directive('aping', ['apingResults', 'apingDefaultSettings', 'apingUtilityHelper', '$templateRequest', '$compile', function (apingResults, apingDefaultSettings, apingUtilityHelper, $templateRequest, $compile) {
@@ -64,7 +62,7 @@ angular.module('jtt_aping')
                             $compile(clone)(innerScope);
                         });
                     }
-                    $scope.$broadcast('apiNG.templateRendered');
+                    scope.$broadcast('apiNG.templateRendered');
                 }
 
             },
