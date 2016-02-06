@@ -2,11 +2,9 @@
 angular.module('jtt_aping')
 
     .config(['$provide', function ($provide) {
-
         $provide.value("apingDefaultSettings", {
             apingApiKeys: {}
         });
-
     }])
     .value("apingResults", {})
     .directive('aping', ['apingResults', 'apingDefaultSettings', 'apingUtilityHelper', '$templateRequest', '$compile', function (apingResults, apingDefaultSettings, apingUtilityHelper, $templateRequest, $compile) {
