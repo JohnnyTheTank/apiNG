@@ -171,13 +171,17 @@ angular.module('jtt_aping')
 
                     var appSettings = this.getAppSettings();
 
-                    if(angular.isDefined(appSettings.idBy)) {
+                    if (angular.isDefined(appSettings.idBy)) {
                         tempArray = apingUtilityHelper.createIdByPropertiesForArray(tempArray, appSettings.idBy);
                     }
 
                     //remove doubles
                     if (appSettings.removeDoubles === true || appSettings.removeDoubles === "true") {
-                        tempArray = apingUtilityHelper.removeDuplicateObjectsFromArray(tempArray, (appSettings.orderBy === false || appSettings.orderBy === "false" || appSettings.orderBy === "$NONE"));
+                        tempArray = apingUtilityHelper.removeDuplicateObjectsFromArray(
+                            tempArray,
+                            (appSettings.orderBy === false || appSettings.orderBy === "false" || appSettings.orderBy === "$NONE"),
+                            angular.isDefined(appSettings.idBy)
+                        );
                     }
 
                     //order array
