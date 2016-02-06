@@ -32,6 +32,7 @@ angular.module('jtt_aping')
                 templateUrl: '@',
                 payloadJson: '@',
                 removeDoubles: '@',
+                mergeDoubles: '@',
                 idBy: '@',
                 valueName: '@'
             },
@@ -84,6 +85,7 @@ angular.module('jtt_aping')
                     var orderReverse;
                     var orderBy;
                     var removeDoubles;
+                    var mergeDoubles;
                     var valueName;
                     var idBy;
 
@@ -150,6 +152,14 @@ angular.module('jtt_aping')
                         removeDoubles = false;
                     }
 
+                    if (angular.isDefined($scope.mergeDoubles)) {
+                        mergeDoubles = $scope.mergeDoubles;
+                    } else if (angular.isDefined(apingDefaultSettings.mergeDoubles)) {
+                        mergeDoubles = apingDefaultSettings.mergeDoubles;
+                    } else {
+                        mergeDoubles = false;
+                    }
+
                     if (angular.isDefined($scope.idBy)) {
                         idBy = $scope.idBy;
                     } else if (angular.isDefined(apingDefaultSettings.idBy)) {
@@ -166,6 +176,7 @@ angular.module('jtt_aping')
                         orderBy: orderBy,
                         orderReverse: orderReverse,
                         removeDoubles: removeDoubles,
+                        mergeDoubles: mergeDoubles,
                         idBy: idBy,
                         valueName: valueName
                     };
@@ -183,15 +194,23 @@ angular.module('jtt_aping')
 
                     if (angular.isDefined(appSettings.idBy)) {
                         tempArray = apingUtilityHelper.createIdByPropertiesForArray(tempArray, appSettings.idBy);
+                        if (appSettings.mergeDoubles === true || appSettings.mergeDoubles === "true") {
+                            tempArray = apingUtilityHelper.mergeDuplicateObjectsFromArray(
+                                tempArray,
+                                (appSettings.orderBy === false || appSettings.orderBy === "false" || appSettings.orderBy === "$NONE")
+                            );
+                        }
                     }
 
                     //remove doubles
                     if (appSettings.removeDoubles === true || appSettings.removeDoubles === "true") {
-                        tempArray = apingUtilityHelper.removeDuplicateObjectsFromArray(
-                            tempArray,
-                            (appSettings.orderBy === false || appSettings.orderBy === "false" || appSettings.orderBy === "$NONE"),
-                            angular.isDefined(appSettings.idBy)
-                        );
+                        if (appSettings.mergeDoubles !== true && appSettings.mergeDoubles !== "true") {
+                            tempArray = apingUtilityHelper.removeDuplicateObjectsFromArray(
+                                tempArray,
+                                (appSettings.orderBy === false || appSettings.orderBy === "false" || appSettings.orderBy === "$NONE"),
+                                angular.isDefined(appSettings.idBy)
+                            );
+                        }
                     }
 
                     //order array
@@ -388,6 +407,18 @@ angular.module('jtt_aping').service('apingTimeHelper', function () {
             return _array;
         };
 
+        this.removeNullIn = function(prop, obj) {
+            var pr = obj[prop];
+            if (pr === null || pr === undefined) delete obj[prop];
+            else if (typeof pr === 'object') for (var i in pr) this.removeNullIn(i, pr);
+        };
+
+        this.removeNull = function(obj) {
+            for (var i in obj) {
+                this.removeNullIn(i, obj);
+            }
+        };
+
 
         /**
          * remove double objects from array
@@ -399,11 +430,11 @@ angular.module('jtt_aping').service('apingTimeHelper', function () {
         this.removeDuplicateObjectsFromArray = function (_array, _keepOrder, _useApingId) {
             var sortedArray = [];
 
-            var stringifyPropertyName;
+            var propertyName;
             if (_useApingId) {
-                stringifyPropertyName = "aping_id"
+                propertyName = "aping_id"
             } else {
-                stringifyPropertyName = 'apingStringified';
+                propertyName = 'apingStringified';
             }
 
             var orderPropertyName = 'apingTempOrder';
@@ -415,7 +446,7 @@ angular.module('jtt_aping').service('apingTimeHelper', function () {
             angular.forEach(_array, function (firstValue, firstIndex) {
                 if (!_useApingId) {
                     firstValue['$$hashKey'] = undefined;
-                    firstValue[stringifyPropertyName] = JSON.stringify(firstValue);
+                    firstValue[propertyName] = JSON.stringify(firstValue);
                 }
 
                 if (_keepOrder === true) {
@@ -424,7 +455,7 @@ angular.module('jtt_aping').service('apingTimeHelper', function () {
                 sortedArray.push(firstValue);
             });
 
-            sortedArray.sort(this.sortArrayByProperty(stringifyPropertyName));
+            sortedArray.sort(this.sortArrayByProperty(propertyName));
 
             var lastValue;
 
@@ -432,28 +463,79 @@ angular.module('jtt_aping').service('apingTimeHelper', function () {
 
             angular.forEach(sortedArray, function (secondValue, secondIndex) {
                 if (angular.isDefined(lastValue)) {
-                    if (angular.isDefined(secondValue[stringifyPropertyName]) && secondValue[stringifyPropertyName] !== lastValue) {
+                    if (angular.isDefined(secondValue[propertyName]) && secondValue[propertyName] !== lastValue) {
                         reducedArray.push(secondValue);
                     }
                 } else {
                     reducedArray.push(secondValue);
                 }
-                lastValue = secondValue[stringifyPropertyName];
+                lastValue = secondValue[propertyName];
                 if (!_useApingId) {
-                    secondValue[stringifyPropertyName] = undefined;
+                    secondValue[propertyName] = undefined;
                 }
             });
 
 
             if (_keepOrder === true) {
-                sortedArray.sort(this.sortArrayByProperty(orderPropertyName));
+                reducedArray.sort(this.sortArrayByProperty(orderPropertyName));
 
-                angular.forEach(sortedArray, function (thirdValue, thirdIndex) {
+                angular.forEach(reducedArray, function (thirdValue, thirdIndex) {
                     thirdValue[orderPropertyName] = undefined;
                 });
             }
 
             return reducedArray;
+        };
+
+
+        this.mergeDuplicateObjectsFromArray = function (_array, _keepOrder) {
+
+            var that = this;
+
+            var sortedArray = [];
+
+            var propertyName = "aping_id";
+            var orderPropertyName = 'apingTempOrder';
+
+            if (_array.length === 1) {
+                return _array;
+            }
+
+            angular.forEach(_array, function (firstValue, firstIndex) {
+                if (_keepOrder === true) {
+                    firstValue[orderPropertyName] = firstIndex;
+                }
+                sortedArray.push(firstValue);
+            });
+
+            sortedArray.sort(this.sortArrayByProperty(propertyName));
+
+            var lastValue;
+            var mergedArray = [];
+
+            angular.forEach(sortedArray, function (secondValue, secondIndex) {
+                that.removeNull(secondValue);
+                if (angular.isDefined(lastValue)) {
+                    if (angular.isDefined(secondValue[propertyName]) && secondValue[propertyName] !== lastValue) {
+                        mergedArray.push(secondValue);
+                    } else {
+                        mergedArray[mergedArray.length - 1] = angular.merge(mergedArray[mergedArray.length - 1], mergedArray[mergedArray.length - 1], secondValue);
+                    }
+                } else {
+                    mergedArray.push(secondValue);
+                }
+                lastValue = secondValue[propertyName];
+            });
+
+            if (_keepOrder === true) {
+                mergedArray.sort(this.sortArrayByProperty(orderPropertyName));
+
+                angular.forEach(mergedArray, function (thirdValue, thirdIndex) {
+                    thirdValue[orderPropertyName] = undefined;
+                });
+            }
+
+            return mergedArray;
         };
 
         /**
