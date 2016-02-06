@@ -22,6 +22,7 @@ angular.module('jtt_aping')
                 templateUrl: '@',
                 payloadJson: '@',
                 removeDoubles: '@',
+                idBy: '@',
                 valueName: '@'
             },
             link: function (scope, element, attrs, controller, transcludeFn) {
@@ -74,6 +75,7 @@ angular.module('jtt_aping')
                     var orderBy;
                     var removeDoubles;
                     var valueName;
+                    var idBy;
 
 
                     if (angular.isDefined($scope.valueName)) {
@@ -138,6 +140,14 @@ angular.module('jtt_aping')
                         removeDoubles = false;
                     }
 
+                    if (angular.isDefined($scope.idBy)) {
+                        idBy = $scope.idBy;
+                    } else if (angular.isDefined(apingDefaultSettings.idBy)) {
+                        idBy = apingDefaultSettings.idBy;
+                    } else {
+                        idBy = undefined;
+                    }
+
                     return {
                         model: $scope.model || apingDefaultSettings.model || "native",
                         getNativeData: getNativeData,
@@ -146,6 +156,7 @@ angular.module('jtt_aping')
                         orderBy: orderBy,
                         orderReverse: orderReverse,
                         removeDoubles: removeDoubles,
+                        idBy: idBy,
                         valueName: valueName
                     };
                 };
@@ -159,6 +170,10 @@ angular.module('jtt_aping')
                     var tempArray = $scope.results.concat(_array);
 
                     var appSettings = this.getAppSettings();
+
+                    if(angular.isDefined(appSettings.idBy)) {
+                        tempArray = apingUtilityHelper.createIdByPropertiesForArray(tempArray, appSettings.idBy);
+                    }
 
                     //remove doubles
                     if (appSettings.removeDoubles === true || appSettings.removeDoubles === "true") {

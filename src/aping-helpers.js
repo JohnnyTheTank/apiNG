@@ -223,7 +223,7 @@ angular.module('jtt_aping').service('apingTimeHelper', function () {
          * @param _string {String}
          * @returns {String}
          */
-        this.getTextFromHtml = function(_string) {
+        this.getTextFromHtml = function (_string) {
             _string = _string.replace(/&lt;br ?\/\>|&lt;br ?\/&rt;|\<br ?\/\>/g, " ");
             _string = _string.replace(/<(?:.|\n)*?>/gm, '');
             return _string;
@@ -250,10 +250,80 @@ angular.module('jtt_aping').service('apingTimeHelper', function () {
 
             var result = {};
 
-            if(typeof _string === 'string') {
-                result = JSON.parse('{"' + decodeURI(_string.replace(/&/g, "\",\"").replace(/=/g,"\":\"")) + '"}');
+            if (typeof _string === 'string') {
+                result = JSON.parse('{"' + decodeURI(_string.replace(/&/g, "\",\"").replace(/=/g, "\":\"")) + '"}');
             }
 
             return result;
-        }
+        };
+
+        this.createIdByPropertiesForArray = function (_array, _propertiesString, _idString) {
+
+            var that = this;
+
+            if (angular.isUndefined(_idString) || !angular.isString(_idString)) {
+                _idString = "aping_id";
+            }
+
+            if (angular.isDefined(_array) && angular.isArray(_array)) {
+                angular.forEach(_array, function (value, key) {
+                    value[_idString] = that.getIdByPropertiesForObject(value, _propertiesString);
+                });
+            }
+
+            return _array;
+        };
+
+        this.getIdByPropertiesForObject = function (_object, _propertiesString) {
+
+            var that = this;
+
+            var idString = "";
+
+            if (angular.isDefined(_object) && angular.isObject(_object)) {
+
+                var properties = [];
+
+                if (_propertiesString.substr(0, 1) === "[") {
+                    properties = this.replaceSingleQuotesAndParseJson(_propertiesString);
+                } else {
+                    properties.push(_propertiesString)
+                }
+
+                angular.forEach(properties, function (value, key) {
+                    idString += that.getValueFromObjectByPropertyString(_object, value);
+                });
+            }
+
+            return idString;
+        };
+
+        this.getValueFromObjectByPropertyString = function (_object, _propertyString) {
+
+            var _value = "";
+
+            if (angular.isDefined(_object) && angular.isObject(_object)) {
+
+                var parts = _propertyString.split(".");
+
+                var object = _object;
+
+                angular.forEach(parts, function (value, key) {
+                    if (angular.isDefined(object[value])) {
+                        object = object[value];
+                    }
+                });
+
+                if (angular.isDefined(object)) {
+                    if(angular.isObject(object)) {
+                        _value = JSON.stringify(object);
+                    } else {
+                        _value = object;
+                    }
+                }
+            }
+
+            return _value;
+        };
+
     }]);
