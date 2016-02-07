@@ -24,6 +24,7 @@ angular.module('jtt_aping')
                 removeDoubles: '@',
                 mergeDoubles: '@',
                 idBy: '@',
+                resultProperty: '@',
                 valueName: '@'
             },
             link: function (scope, element, attrs, controller, transcludeFn) {
@@ -60,7 +61,11 @@ angular.module('jtt_aping')
             },
             controller: ['$scope', function ($scope) {
 
-                $scope.results = [];
+                if(angular.isUndefined($scope.resultProperty)) {
+                    $scope.resultProperty = "results";
+                }
+
+                $scope[$scope.resultProperty] = [];
                 $scope.payload = $scope.payloadJson ? apingUtilityHelper.replaceSingleQuotesAndParseJson($scope.payloadJson) : {};
 
                 /**
@@ -178,7 +183,7 @@ angular.module('jtt_aping')
                  * @param _array
                  */
                 this.concatToResults = function (_array) {
-                    var tempArray = $scope.results.concat(_array);
+                    var tempArray = $scope[$scope.resultProperty].concat(_array);
 
                     var appSettings = this.getAppSettings();
 
@@ -227,9 +232,9 @@ angular.module('jtt_aping')
                         apingResults[appSettings.valueName] = tempArray;
                     }
 
-                    $scope.results = tempArray;
+                    $scope[$scope.resultProperty] = tempArray;
 
-                    $scope.$broadcast('apiNG.resultMerged');
+                    $scope.$broadcast('apiNG.resultMerged', {'resultProperty':$scope.resultProperty});
                 };
                 this.apply = function () {
                     $scope.$apply();
