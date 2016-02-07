@@ -1,6 +1,6 @@
 /**
     @name: aping 
-    @version: 1.2.0 (07-02-2016) 
+    @version: 1.2.1 (07-02-2016) 
     @author: Jonathan Hornung <jonathan.hornung@gmail.com> 
     @url: https://github.com/JohnnyTheTank/apiNG 
     @license: MIT
