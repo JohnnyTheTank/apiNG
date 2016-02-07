@@ -1,6 +1,6 @@
 /**
     @name: aping 
-    @version: 1.2.1 (07-02-2016) 
+    @version: 1.2.2 (07-02-2016) 
     @author: Jonathan Hornung <jonathan.hornung@gmail.com> 
     @url: https://github.com/JohnnyTheTank/apiNG 
     @license: MIT
@@ -71,7 +71,7 @@ angular.module('jtt_aping')
             },
             controller: ['$scope', function ($scope) {
 
-                if(angular.isUndefined($scope.resultProperty)) {
+                if (angular.isUndefined($scope.resultProperty)) {
                     $scope.resultProperty = "results";
                 }
 
@@ -193,6 +193,10 @@ angular.module('jtt_aping')
                  * @param _array
                  */
                 this.concatToResults = function (_array) {
+                    if (angular.isUndefined($scope.resultProperty)) {
+                        $scope.resultProperty = "results";
+                    }
+
                     var tempArray = $scope[$scope.resultProperty].concat(_array);
 
                     var appSettings = this.getAppSettings();
@@ -244,7 +248,7 @@ angular.module('jtt_aping')
 
                     $scope[$scope.resultProperty] = tempArray;
 
-                    $scope.$broadcast('apiNG.resultMerged', {'resultProperty':$scope.resultProperty});
+                    $scope.$broadcast('apiNG.resultMerged', {'resultProperty': $scope.resultProperty});
                 };
                 this.apply = function () {
                     $scope.$apply();

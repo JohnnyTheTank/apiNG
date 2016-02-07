@@ -61,7 +61,7 @@ angular.module('jtt_aping')
             },
             controller: ['$scope', function ($scope) {
 
-                if(angular.isUndefined($scope.resultProperty)) {
+                if (angular.isUndefined($scope.resultProperty)) {
                     $scope.resultProperty = "results";
                 }
 
@@ -183,6 +183,10 @@ angular.module('jtt_aping')
                  * @param _array
                  */
                 this.concatToResults = function (_array) {
+                    if (angular.isUndefined($scope.resultProperty)) {
+                        $scope.resultProperty = "results";
+                    }
+
                     var tempArray = $scope[$scope.resultProperty].concat(_array);
 
                     var appSettings = this.getAppSettings();
@@ -234,7 +238,7 @@ angular.module('jtt_aping')
 
                     $scope[$scope.resultProperty] = tempArray;
 
-                    $scope.$broadcast('apiNG.resultMerged', {'resultProperty':$scope.resultProperty});
+                    $scope.$broadcast('apiNG.resultMerged', {'resultProperty': $scope.resultProperty});
                 };
                 this.apply = function () {
                     $scope.$apply();
