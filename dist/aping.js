@@ -997,35 +997,41 @@ angular.module("jtt_aping_ng_array")
 
                     if (request.name && scope[request.name]) {
 
-                        var requestObject = {};
-
-                        if(angular.isDefined(request.items)) {
-                            requestObject.count = request.items;
-                        } else {
-                            requestObject.count = appSettings.items;
+                        if (angular.isUndefined(request.items)) {
+                            request.items = appSettings.items;
                         }
-
-                        if(requestObject.count === 0 || requestObject.count === '0') {
+                        if (request.items === 0 || request.items === '0') {
                             return false;
                         }
 
                         // -1 is "no explicit limit". same for NaN value
-                        if(requestObject.count < 0 || isNaN(requestObject.count)) {
-                            requestObject.count = undefined;
+                        if (request.items < 0 || isNaN(request.items)) {
+                            request.items = undefined;
                         }
 
                         var resultArray = [];
 
                         if (scope[request.name].constructor === Array) {
-                            if (requestObject.items < 0 || angular.isUndefined(requestObject.items)) {
-                                resultArray = scope[request.name];
-                            } else {
-                                angular.forEach(scope[request.name], function (value, key) {
-                                    if (key < request.items) {
-                                        resultArray.push(value);
+                            resultArray = scope[request.name];
+                            if (angular.isDefined(request.orderBy)) {
+                                if (request.orderBy === "$RANDOM") {
+                                    resultArray = apingUtilityHelper.shuffleArray(resultArray);
+                                } else {
+                                    resultArray.sort(apingUtilityHelper.sortArrayByProperty(request.orderBy));
+                                    if (angular.isDefined(request.orderReverse) && request.orderReverse === true) {
+                                        //order desc
+                                        resultArray.reverse();
                                     }
-                                });
+                                }
                             }
+
+                            if (angular.isDefined(request.items)) {
+                                //crop spare
+                                if (request.items > 0 && resultArray.length > request.items) {
+                                    resultArray = resultArray.splice(0, request.items);
+                                }
+                            }
+
                         } else if (typeof scope[request.name] === 'object' && scope[request.name] !== null) {
                             resultArray.push(scope[request.name]);
                         }
@@ -1033,6 +1039,7 @@ angular.module("jtt_aping_ng_array")
                         if (resultArray.length > 0) {
                             apingController.concatToResults(resultArray);
                         }
+
                     }
                 });
             }
