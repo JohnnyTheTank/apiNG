@@ -22,9 +22,7 @@
     "bower_components",
     "test",
     "tests",
-    "demo",
-    "demo2",
-    "demo3_local_storage"
+    "demos"
   ],
   "author": "Jonathan Hornung <jonathan.hornung@gmail.com>",
   "license": "MIT",
