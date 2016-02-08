@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>apiNG Demo</title>
+
+    <!-- apiNG dependencies -->
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+    <!-- apiNG -->
+    <script src="../dist/aping.js"></script>
+
+    <!-- angular module -->
+    <script src="app.js"></script>
+
+</head>
+<body ng-app="app">
+
+<h1>Unstyled, one result</h1>
+<aping aping-local-storage="[{ 'key': 'apingTest', 'orderBy':'aping_id', 'items':3}]">
+    <pre>{{results | json}}</pre>
+</aping>
+
+
+</body>
+</html>

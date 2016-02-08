@@ -23,7 +23,8 @@
     "test",
     "tests",
     "demo",
-    "demo2"
+    "demo2",
+    "demo3_local_storage"
   ],
   "author": "Jonathan Hornung <jonathan.hornung@gmail.com>",
   "license": "MIT",
