@@ -55,11 +55,11 @@ angular.module('jtt_aping_local_storage', [])
                                                 resultArray = apingUtilityHelper.shuffleArray(resultArray);
                                             } else {
                                                 resultArray.sort(apingUtilityHelper.sortArrayByProperty(request.orderBy));
-                                                if (angular.isDefined(request.orderReverse) && request.orderReverse === true) {
-                                                    //order desc
-                                                    resultArray.reverse();
-                                                }
                                             }
+                                        }
+                                        //order desc
+                                        if (angular.isDefined(request.orderReverse) && request.orderReverse === true && request.orderBy !== "$RANDOM") {
+                                            resultArray.reverse();
                                         }
 
                                         if (angular.isUndefined(request.items)) {
@@ -79,9 +79,9 @@ angular.module('jtt_aping_local_storage', [])
             }
         }
     }])
-    .factory('apingLocalStorage', ['$window','$q', function ($window, $q) {
+    .factory('apingLocalStorage', ['$window', '$q', function ($window, $q) {
 
-        var set = function(key, value) {
+        var set = function (key, value) {
             var deferred = $q.defer();
 
             deferred.resolve($window.localStorage && $window.localStorage.setItem(key, angular.toJson(value)));
@@ -89,7 +89,7 @@ angular.module('jtt_aping_local_storage', [])
             return deferred.promise;
         };
 
-        var get = function(key) {
+        var get = function (key) {
             var deferred = $q.defer();
 
             deferred.resolve($window.localStorage && angular.fromJson($window.localStorage.getItem(key)));
