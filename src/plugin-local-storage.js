@@ -35,8 +35,6 @@ angular.module('jtt_aping_local_storage', [])
                         apingLocalStorage.get(request.key)
 
                             .then(function (_data) {
-                                console.log(_data);
-
                                 var resultArray = [];
                                 if (_data) {
 

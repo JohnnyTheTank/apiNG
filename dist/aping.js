@@ -1081,8 +1081,6 @@ angular.module("jtt_aping_ng_array", [])
                         apingLocalStorage.get(request.key)
 
                             .then(function (_data) {
-                                console.log(_data);
-
                                 var resultArray = [];
                                 if (_data) {
 
