@@ -1,6 +1,6 @@
 /**
     @name: aping 
-    @version: 1.2.3 (08-02-2016) 
+    @version: 1.2.4 (08-02-2016) 
     @author: Jonathan Hornung <jonathan.hornung@gmail.com> 
     @url: https://github.com/JohnnyTheTank/apiNG 
     @license: MIT
@@ -232,12 +232,14 @@ angular.module('jtt_aping')
                         //order by attribute
                         else {
                             tempArray.sort(apingUtilityHelper.sortArrayByProperty(appSettings.orderBy));
-                            if (appSettings.orderReverse === true || appSettings.orderReverse === "true") {
-                                //order desc
-                                tempArray.reverse();
-                            }
                         }
                     }
+
+                    //order reverse
+                    if ((appSettings.orderReverse === true || appSettings.orderReverse === "true") && appSettings.orderBy !== "$RANDOM") {
+                        tempArray.reverse();
+                    }
+
                     //crop spare
                     if (appSettings.maxItems > -1 && tempArray.length > appSettings.maxItems) {
                         tempArray = tempArray.splice(0, appSettings.maxItems);
@@ -924,11 +926,11 @@ angular.module("jtt_aping_jsonloader", [])
                                                 resultArray = apingUtilityHelper.shuffleArray(resultArray);
                                             } else {
                                                 resultArray.sort(apingUtilityHelper.sortArrayByProperty(request.orderBy));
-                                                if (angular.isDefined(request.orderReverse) && request.orderReverse === true) {
-                                                    //order desc
-                                                    resultArray.reverse();
-                                                }
                                             }
+                                        }
+                                        //order desc
+                                        if (angular.isDefined(request.orderReverse) && request.orderReverse === true && request.orderBy !== "$RANDOM") {
+                                            resultArray.reverse();
                                         }
 
                                         if (angular.isUndefined(request.items)) {
@@ -1019,11 +1021,11 @@ angular.module("jtt_aping_ng_array", [])
                                     resultArray = apingUtilityHelper.shuffleArray(resultArray);
                                 } else {
                                     resultArray.sort(apingUtilityHelper.sortArrayByProperty(request.orderBy));
-                                    if (angular.isDefined(request.orderReverse) && request.orderReverse === true) {
-                                        //order desc
-                                        resultArray.reverse();
-                                    }
                                 }
+                            }
+                            //order desc
+                            if (angular.isDefined(request.orderReverse) && request.orderReverse === true && request.orderBy !== "$RANDOM") {
+                                resultArray.reverse();
                             }
 
                             if (angular.isDefined(request.items)) {
@@ -1101,11 +1103,11 @@ angular.module("jtt_aping_ng_array", [])
                                                 resultArray = apingUtilityHelper.shuffleArray(resultArray);
                                             } else {
                                                 resultArray.sort(apingUtilityHelper.sortArrayByProperty(request.orderBy));
-                                                if (angular.isDefined(request.orderReverse) && request.orderReverse === true) {
-                                                    //order desc
-                                                    resultArray.reverse();
-                                                }
                                             }
+                                        }
+                                        //order desc
+                                        if (angular.isDefined(request.orderReverse) && request.orderReverse === true && request.orderBy !== "$RANDOM") {
+                                            resultArray.reverse();
                                         }
 
                                         if (angular.isUndefined(request.items)) {
@@ -1125,9 +1127,9 @@ angular.module("jtt_aping_ng_array", [])
             }
         }
     }])
-    .factory('apingLocalStorage', ['$window','$q', function ($window, $q) {
+    .factory('apingLocalStorage', ['$window', '$q', function ($window, $q) {
 
-        var set = function(key, value) {
+        var set = function (key, value) {
             var deferred = $q.defer();
 
             deferred.resolve($window.localStorage && $window.localStorage.setItem(key, angular.toJson(value)));
@@ -1135,7 +1137,7 @@ angular.module("jtt_aping_ng_array", [])
             return deferred.promise;
         };
 
-        var get = function(key) {
+        var get = function (key) {
             var deferred = $q.defer();
 
             deferred.resolve($window.localStorage && angular.fromJson($window.localStorage.getItem(key)));
