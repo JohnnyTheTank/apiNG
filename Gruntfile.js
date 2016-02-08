@@ -8,10 +8,8 @@ module.exports = function(grunt) {
                         'src/aping-helpers.js',
                         'src/aping-inputObjects.js',
                         'src/aping-models.js',
-                        'src/aping-jsonloader.module.js',
-                        'src/aping-jsonloader-directive.js',
-                        'src/aping-ng-array.module.js',
-                        'src/aping-ng-array-directive.js'
+                        'src/plugin-jsonloader.js',
+                        'src/plugin-ng-array.js'
                     ];
 
     grunt.initConfig({

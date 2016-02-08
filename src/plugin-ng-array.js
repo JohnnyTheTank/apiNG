@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module("jtt_aping_ng_array")
+angular.module("jtt_aping_ng_array", [])
     .directive('apingNgArray', ['apingUtilityHelper', function (apingUtilityHelper) {
         return {
             require: '?aping',
@@ -57,7 +57,6 @@ angular.module("jtt_aping_ng_array")
                         if (resultArray.length > 0) {
                             apingController.concatToResults(resultArray);
                         }
-
                     }
                 });
             }
