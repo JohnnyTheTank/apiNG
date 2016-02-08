@@ -852,9 +852,9 @@ angular.module('jtt_aping').service('apingModels', [function () {
         }
         return model;
     };
-}]);;angular.module("jtt_aping_jsonloader", []);"use strict";
+}]);;"use strict";
 
-angular.module("jtt_aping_jsonloader")
+angular.module("jtt_aping_jsonloader", [])
     .directive('apingJsonloader', ['apingUtilityHelper', 'jsonloaderFactory', function (apingUtilityHelper, jsonloaderFactory) {
         return {
             require: '?aping',
@@ -980,9 +980,9 @@ angular.module("jtt_aping_jsonloader")
             }
         };
         return jsonloaderFactory;
-    }]);;angular.module("jtt_aping_ng_array", []);"use strict";
+    }]);;"use strict";
 
-angular.module("jtt_aping_ng_array")
+angular.module("jtt_aping_ng_array", [])
     .directive('apingNgArray', ['apingUtilityHelper', function (apingUtilityHelper) {
         return {
             require: '?aping',
@@ -1039,7 +1039,6 @@ angular.module("jtt_aping_ng_array")
                         if (resultArray.length > 0) {
                             apingController.concatToResults(resultArray);
                         }
-
                     }
                 });
             }
