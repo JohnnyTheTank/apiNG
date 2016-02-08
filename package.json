@@ -1,6 +1,6 @@
 {
   "name": "aping",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "apiNG is an AngularJS directive that enables you to receive, aggregate, limit, order and display data from one or more sources. The complete setup is dead simple, just by adding data-attributes to your html",
   "main": "dist/aping.min.js",
   "scripts": {
@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/JohnnyTheTank/apiNG",
   "devDependencies": {
-    "angular-mocks": "^1.4.9",
+    "angular-mocks": "*",
     "grunt": "^0.4.5",
     "grunt-contrib-concat": "^0.5.1",
     "grunt-contrib-copy": "^0.8.2",
@@ -46,6 +46,6 @@
     "karma-ng-html2js-preprocessor": "^0.2.0"
   },
   "dependencies": {
-    "angular": "^1.4.9"
+    "angular": "*"
   }
 }
