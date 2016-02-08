@@ -221,12 +221,14 @@ angular.module('jtt_aping')
                         //order by attribute
                         else {
                             tempArray.sort(apingUtilityHelper.sortArrayByProperty(appSettings.orderBy));
-                            if (appSettings.orderReverse === true || appSettings.orderReverse === "true") {
-                                //order desc
-                                tempArray.reverse();
-                            }
                         }
                     }
+
+                    //order reverse
+                    if ((appSettings.orderReverse === true || appSettings.orderReverse === "true") && appSettings.orderBy !== "$RANDOM") {
+                        tempArray.reverse();
+                    }
+
                     //crop spare
                     if (appSettings.maxItems > -1 && tempArray.length > appSettings.maxItems) {
                         tempArray = tempArray.splice(0, appSettings.maxItems);

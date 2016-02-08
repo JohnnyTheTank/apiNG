@@ -69,11 +69,11 @@ angular.module("jtt_aping_jsonloader", [])
                                                 resultArray = apingUtilityHelper.shuffleArray(resultArray);
                                             } else {
                                                 resultArray.sort(apingUtilityHelper.sortArrayByProperty(request.orderBy));
-                                                if (angular.isDefined(request.orderReverse) && request.orderReverse === true) {
-                                                    //order desc
-                                                    resultArray.reverse();
-                                                }
                                             }
+                                        }
+                                        //order desc
+                                        if (angular.isDefined(request.orderReverse) && request.orderReverse === true && request.orderBy !== "$RANDOM") {
+                                            resultArray.reverse();
                                         }
 
                                         if (angular.isUndefined(request.items)) {
