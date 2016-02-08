@@ -16,6 +16,15 @@
     "api",
     "json"
   ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "demo",
+    "demo2"
+  ],
   "author": "Jonathan Hornung <jonathan.hornung@gmail.com>",
   "license": "MIT",
   "bugs": {
