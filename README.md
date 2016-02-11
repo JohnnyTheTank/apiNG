@@ -40,5 +40,3 @@ All apiNG designs are listed at [aping.readme.io/docs/all-designs](https://aping
 
 # License
 MIT
-
-![Analytics](https://ga-beacon.appspot.com/UA-68396655-2/apiNG/readme?pixel)
