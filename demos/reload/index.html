@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>apiNG Demo</title>
+
+    <!-- apiNG dependencies -->
+    <script src="../../bower_components/angular/angular.min.js"></script>
+
+    <!-- apiNG -->
+    <script src="../../dist/aping.js"></script>
+
+    <!-- angular module -->
+    <script src="app.js"></script>
+
+</head>
+<body ng-app="app">
+
+<aping
+        template-url="template.html"
+        aping-jsonloader="[{ 'path': 'pranks.json', 'items':1, 'orderBy':'$RANDOM'}]">
+</aping>
+
+<aping
+        template-url="template.html"
+        aping-jsonloader="[{ 'path': 'pranks.json', 'items':1, 'orderBy':'$RANDOM'}]">
+</aping>
+
+
+<br><br>
+
+</body>
+</html>

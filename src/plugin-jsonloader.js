@@ -1,95 +1,88 @@
 "use strict";
 
 angular.module("jtt_aping_jsonloader", [])
-    .directive('apingJsonloader', ['apingUtilityHelper', 'jsonloaderFactory', function (apingUtilityHelper, jsonloaderFactory) {
+    .directive('apingJsonloader', ['apingUtilityHelper', 'jsonloaderFactory', '$q', 'jsonloaderResults', function (apingUtilityHelper, jsonloaderFactory, $q, jsonloaderResults) {
         return {
             require: '?aping',
             restrict: 'A',
             replace: 'false',
             link: function (scope, element, attrs, apingController) {
 
-                var appSettings = apingController.getAppSettings();
-                var requests = apingUtilityHelper.parseJsonFromAttributes(attrs.apingJsonloader, "jsonloader", appSettings);
+                this.load = function () {
+                    var appSettings = apingController.getAppSettings();
+                    var requests = apingUtilityHelper.parseJsonFromAttributes(attrs.apingJsonloader, "jsonloader", appSettings);
 
-                requests.forEach(function (request) {
+                    scope.executeRequests(requests)
+                        .then(function (result) {
+                            apingController.concatToResults(jsonloaderResults.getResults(result));
+                        });
+                };
 
-                    if (request.path) {
-                        //create requestObject for factory function call
-                        var requestObject = {
-                            path: request.path,
-                        };
+                this.load();
 
-                        if (!request.format || request.format.toLowerCase() !== "jsonp") {
-                            requestObject.format = "json";
+            },
+            controller: function ($scope) {
+
+                $scope.executeRequests = function (_requests) {
+
+                    var deferred = $q.defer();
+
+                    _requests.forEach(function (request) {
+                        if (request.path) {
+                            //create requestObject for factory function call
+                            var requestObject = {
+                                path: request.path,
+                            };
+
+                            if (!request.format || request.format.toLowerCase() !== "jsonp") {
+                                requestObject.format = "json";
+                            } else {
+                                requestObject.format = "jsonp";
+                            }
+
+                            if (angular.isUndefined(request.items)) {
+                                request.items = appSettings.items;
+                            }
+
+                            if (request.items === 0 || request.items === '0') {
+                                deferred.reject({error: "0 items requested"});
+                            }
+
+                            // -1 is "no explicit limit". same for NaN value
+                            if (request.items < 0 || isNaN(request.items)) {
+                                request.items = undefined;
+                            }
+
+                            if (angular.isDefined(request.orderBy) && !angular.isString(request.orderBy)) {
+                                request.orderBy = undefined;
+                            }
+
+                            if (angular.isDefined(request.orderReverse) && (request.orderReverse === true || request.orderReverse === 'true')) {
+                                request.orderReverse = true;
+                            }
+                            jsonloaderFactory.getJsonData(requestObject)
+
+                                .then(function (_data) {
+
+                                    var result = {
+                                        data: _data,
+                                        request: request,
+                                        requestObject: requestObject
+                                    };
+
+                                    deferred.resolve(result);
+
+                                })
+                                .catch(function (_error) {
+                                    deferred.reject(_error);
+                                });
                         } else {
-                            requestObject.format = "jsonp";
+                            deferred.reject({error: "No path defined"});
                         }
+                    });
 
-                        if (angular.isUndefined(request.items)) {
-                            request.items = appSettings.items;
-                        }
-
-                        if (request.items === 0 || request.items === '0') {
-                            return false;
-                        }
-
-                        // -1 is "no explicit limit". same for NaN value
-                        if (request.items < 0 || isNaN(request.items)) {
-                            request.items = undefined;
-                        }
-
-                        if (angular.isDefined(request.orderBy) && !angular.isString(request.orderBy)) {
-                            request.orderBy = undefined;
-                        }
-
-                        if (angular.isDefined(request.orderReverse) && (request.orderReverse === true || request.orderReverse === 'true')) {
-                            request.orderReverse = true;
-                        }
-                        jsonloaderFactory.getJsonData(requestObject)
-
-                            .then(function (_data) {
-
-                                var resultArray = [];
-                                if (_data.data) {
-
-                                    var results = _data.data;
-
-                                    if (angular.isDefined(request.resultProperty)) {
-                                        //results = _data.data[request.resultProperty];
-                                        results = apingUtilityHelper.getValueFromObjectByPropertyString(_data.data, request.resultProperty, false);
-                                    }
-
-                                    if (_data.data.constructor !== Array) {
-                                        resultArray.push(results);
-                                    } else {
-                                        angular.extend(resultArray, results);
-
-                                        if (angular.isDefined(request.orderBy)) {
-                                            if (request.orderBy === "$RANDOM") {
-                                                resultArray = apingUtilityHelper.shuffleArray(resultArray);
-                                            } else {
-                                                resultArray.sort(apingUtilityHelper.sortArrayByProperty(request.orderBy));
-                                            }
-                                        }
-                                        //order desc
-                                        if (angular.isDefined(request.orderReverse) && request.orderReverse === true && request.orderBy !== "$RANDOM") {
-                                            resultArray.reverse();
-                                        }
-
-                                        if (angular.isUndefined(request.items)) {
-                                            resultArray = results;
-                                        } else {
-                                            //crop spare
-                                            if (request.items > 0 && resultArray.length > request.items) {
-                                                resultArray = resultArray.splice(0, request.items);
-                                            }
-                                        }
-                                    }
-                                }
-                                apingController.concatToResults(resultArray);
-                            });
-                    }
-                });
+                    return deferred.promise;
+                };
             }
         }
     }])
@@ -126,4 +119,47 @@ angular.module("jtt_aping_jsonloader", [])
             }
         };
         return jsonloaderFactory;
+    }])
+    .service('jsonloaderResults', ['apingUtilityHelper', function (apingUtilityHelper) {
+        this.getResults = function (_result) {
+            var resultArray = [];
+            if (_result.data && _result.data.data) {
+
+                var results = _result.data.data;
+                var request = _result.request;
+
+                if (angular.isDefined(request.resultProperty)) {
+                    //results = _data.data[request.resultProperty];
+                    results = apingUtilityHelper.getValueFromObjectByPropertyString(_result.data.data, request.resultProperty, false);
+                }
+
+                if (_result.data.data.constructor !== Array) {
+                    resultArray.push(results);
+                } else {
+                    angular.extend(resultArray, results);
+
+                    if (angular.isDefined(request.orderBy)) {
+                        if (request.orderBy === "$RANDOM") {
+                            resultArray = apingUtilityHelper.shuffleArray(resultArray);
+                        } else {
+                            resultArray.sort(apingUtilityHelper.sortArrayByProperty(request.orderBy));
+                        }
+                    }
+                    //order desc
+                    if (angular.isDefined(request.orderReverse) && request.orderReverse === true && request.orderBy !== "$RANDOM") {
+                        resultArray.reverse();
+                    }
+
+                    if (angular.isUndefined(request.items)) {
+                        resultArray = results;
+                    } else {
+                        //crop spare
+                        if (request.items > 0 && resultArray.length > request.items) {
+                            resultArray = resultArray.splice(0, request.items);
+                        }
+                    }
+                }
+            }
+            return resultArray;
+        }
     }]);
