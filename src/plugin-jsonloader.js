@@ -74,6 +74,10 @@ angular.module("jtt_aping_jsonloader", [])
 
                                     resultArray.push(result);
 
+                                    /**
+                                     * TODO: make it work for more than one requests
+                                     */
+
                                     deferred.resolve(result);
 
                                 })
