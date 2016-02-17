@@ -1,6 +1,6 @@
 /**
     @name: aping 
-    @version: 1.2.4 (13-02-2016) 
+    @version: 1.2.4 (17-02-2016) 
     @author: Jonathan Hornung <jonathan.hornung@gmail.com> 
     @url: https://github.com/JohnnyTheTank/apiNG 
     @license: MIT
@@ -869,7 +869,7 @@ angular.module("jtt_aping_jsonloader", [])
                     var appSettings = apingController.getAppSettings();
                     var requests = apingUtilityHelper.parseJsonFromAttributes(attrs.apingJsonloader, "jsonloader", appSettings);
 
-                    scope.executeRequests(requests)
+                    scope.executeRequests(requests, appSettings)
                         .then(function (result) {
                             apingController.concatToResults(jsonloaderResults.getResults(result));
                         });
@@ -880,9 +880,11 @@ angular.module("jtt_aping_jsonloader", [])
             },
             controller: function ($scope) {
 
-                $scope.executeRequests = function (_requests) {
+                $scope.executeRequests = function (_requests, _appSettings) {
 
                     var deferred = $q.defer();
+
+                    var resultArray = [];
 
                     _requests.forEach(function (request) {
                         if (request.path) {
@@ -898,7 +900,7 @@ angular.module("jtt_aping_jsonloader", [])
                             }
 
                             if (angular.isUndefined(request.items)) {
-                                request.items = appSettings.items;
+                                request.items = _appSettings.items;
                             }
 
                             if (request.items === 0 || request.items === '0') {
@@ -926,6 +928,8 @@ angular.module("jtt_aping_jsonloader", [])
                                         request: request,
                                         requestObject: requestObject
                                     };
+
+                                    resultArray.push(result);
 
                                     deferred.resolve(result);
 
