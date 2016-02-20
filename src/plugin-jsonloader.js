@@ -98,11 +98,7 @@ angular.module("jtt_aping_jsonloader", [])
 
                             })
                             .catch(function (_error) {
-                                deferred.resolve({
-                                    data: undefined,
-                                    request: _request,
-                                    requestObject: requestObject
-                                });
+                                deferred.resolve({});
                             });
 
                     } else {
