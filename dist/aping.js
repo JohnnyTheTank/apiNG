@@ -674,6 +674,7 @@ angular.module('jtt_aping').service('apingModels', [function () {
             case "social":
                 model = {
                     platform : _platform, //NAME of platform ( "youtube" / "facebook", "instagram" , ...)
+                    /*
                     blog_name : undefined, //NAME of blog (channel / youtube uploader / facebook page, instagram account, ..)
                     blog_id : undefined, //ID of channel / page / account, ...
                     blog_link : undefined, //link to channel / uploader / page / account, ...
@@ -692,12 +693,14 @@ angular.module('jtt_aping').service('apingModels', [function () {
                     shares: undefined,
                     comments: undefined,
                     position: undefined
+                    */
                 };
                 break;
 
             case "video":
                 model = {
                     platform : _platform, //NAME of platform ( "youtube" / "facebook", "instagram" , ...)
+                    /*
                     blog_name : undefined, //NAME of blog (channel / page / instagram account / ..)
                     blog_id : undefined, //ID of channel / page / account, ...
                     blog_link : undefined, //link to channel / uploader / page / account, ...
@@ -719,12 +722,14 @@ angular.module('jtt_aping').service('apingModels', [function () {
                     likes: undefined, // likes_count
                     shares: undefined, // shares_count
                     position: undefined // position in playlist
+                    */
                 };
                 break;
 
             case "image":
                 model = {
                     platform : _platform, //NAME of platform ( "youtube" / "facebook", "instagram" , ...)
+                    /*
                     blog_name : undefined, //NAME of blog (channel / youtube uploader / facebook page, instagram account, ..)
                     blog_id : undefined, //ID of channel / page / account, ...
                     blog_link : undefined, //link to channel / uploader / page / account, ...
@@ -748,12 +753,14 @@ angular.module('jtt_aping').service('apingModels', [function () {
                     shares: undefined,
                     comments: undefined,
                     position: undefined
+                    */
                 };
                 break;
 
             case "event":
                 model = {
                     platform : _platform, //NAME of platform ( "facebook", "bandsintown" , ...)
+                    /*
                     artist_name : undefined,
                     artist_id : undefined,
                     artist_link : undefined,
@@ -776,12 +783,14 @@ angular.module('jtt_aping').service('apingModels', [function () {
                     street: undefined,
                     zip : undefined,
                     source : undefined
+                    */
                 };
                 break;
 
             case "repo":
                 model = {
                     platform : _platform, //NAME of platform ( "youtube" / "facebook", "instagram" , ...)
+                    /*
                     owner_name : undefined,
                     owner_id : undefined,
                     owner_link : undefined,
@@ -808,12 +817,14 @@ angular.module('jtt_aping').service('apingModels', [function () {
                     updated_date_time: undefined,
                     pushed_timestamp: undefined,
                     pushed_date_time: undefined
+                    */
                 };
                 break;
 
             case "weather":
                 model = {
                     platform : _platform, //NAME of platform ( "youtube" / "facebook", "instagram" , ...)
+                    /*
                     weather_code: undefined,
                     weather_caption: undefined, //rain
                     weather_text : undefined, //light rain
@@ -847,10 +858,8 @@ angular.module('jtt_aping').service('apingModels', [function () {
                     loc_lat : undefined,
                     loc_lng : undefined,
                     loc_zip : undefined
+                    */
                 };
-                break;
-
-            default:
                 break;
         }
         return model;
@@ -955,11 +964,7 @@ angular.module("jtt_aping_jsonloader", [])
 
                             })
                             .catch(function (_error) {
-                                deferred.resolve({
-                                    data: undefined,
-                                    request: _request,
-                                    requestObject: requestObject
-                                });
+                                deferred.resolve({});
                             });
 
                     } else {
