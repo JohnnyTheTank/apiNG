@@ -7,7 +7,7 @@ angular.module('jtt_aping_design_default', ['wu.masonry', 'linkify', 'angularMom
     .controller('apingDefaultDesignController', ['$scope', '$sce', function ($scope, $sce) {
 
         $scope.$on('apiNG.resultMerged', function () {
-            $scope.workingCopy = $scope.results;
+            //$scope.workingCopy = $scope.results;
         });
 
         $scope.getPlatformIcon = function (_platform) {

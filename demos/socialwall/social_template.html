@@ -1,7 +1,7 @@
 <div class="aping-design-default aping-design-default-social">
     <div ng-controller="apingDefaultDesignController">
-        <div data-images-loaded masonry class="row" preserve-order reload-on-show ng-show="workingCopy">
-            <div class="masonry-brick col-lg-4 col-sm-6 col-xs-12" ng-repeat="item in workingCopy" ng-cloak>
+        <div data-images-loaded masonry class="row" preserve-order reload-on-show>
+            <div class="masonry-brick col-lg-4 col-sm-6 col-xs-12" ng-repeat="item in results" ng-cloak>
                 <div class="box">
                     <div class="box-header" ng-if="item.img_url">
                         <a ng-href="{{::item.post_url}}" target="_blank" class="aping-picture-link"><img
