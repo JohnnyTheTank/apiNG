@@ -51,7 +51,7 @@ angular.module('jtt_aping')
                         });
                     } else {
                         transcludeFn(scope, function (clone, innerScope) {
-                            element.append(clone);
+                            element.html(clone);
                             $compile(clone)(innerScope);
                         });
                     }
