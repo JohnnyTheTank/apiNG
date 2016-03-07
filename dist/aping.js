@@ -1,6 +1,6 @@
 /**
     @name: aping 
-    @version: 1.2.8 (07-03-2016) 
+    @version: 1.2.9 (07-03-2016) 
     @author: Jonathan Hornung <jonathan.hornung@gmail.com> 
     @url: https://github.com/JohnnyTheTank/apiNG 
     @license: MIT
@@ -62,6 +62,7 @@ angular.module('jtt_aping')
                         });
                     } else {
                         transcludeFn(scope, function (clone, innerScope) {
+                            element.html("");
                             element.append(clone);
                             $compile(clone)(innerScope);
                         });
