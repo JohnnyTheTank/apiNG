@@ -51,13 +51,12 @@ angular.module('jtt_aping')
                         });
                     } else {
                         transcludeFn(scope, function (clone, innerScope) {
-                            element.html(clone);
+                            element.append(clone);
                             $compile(clone)(innerScope);
                         });
                     }
                     scope.$broadcast('apiNG.templateRendered');
                 }
-
             },
             controller: ['$scope', function ($scope) {
 
