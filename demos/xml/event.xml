@@ -1,0 +1,123 @@
+<event>
+    <id>E0-001-016881998-1@2008120711</id>
+    <url>http://eventful.com/paloalto/events/living-legocy-legendary-/E0-001-016881998-1@2008120711</url>
+    <title>Living LEGO-cy - Legendary LEGOs and Terrific Trains</title>
+    <description> The Museum of American Heritage (MOAH), The Bay Area LEGO&amp;reg; User Group (BayLUG) and Bay Area LEGO Train Club (BayLTC) are again combining forces this winter to repeat last year's spectacular Holiday season display at MOAH. MOAH visitors can explore a variety of LEGO creations and an operating LEGO train layout featuring a wide variety of creations by club members. Highlighting it all is &lt;i&gt;Holidays in the Bay Area&lt;/i&gt;, a 12 by 25 foot train layout incorporating multiple trains running through city, farm, and suburban scenes. How many Bay Area locales and structures will you be able to indentify? Come and find out just how many clever ways LEGO can be used. Club members will be present during weekend hours to answer questions and support the displays.</description>
+    <start_time>2008-12-07 11:00:00</start_time>
+    <stop_time></stop_time>
+    <tz_id></tz_id>
+    <tz_olson_path></tz_olson_path>
+    <tz_country></tz_country>
+    <tz_city></tz_city>
+    <venue_id>V0-001-000170898-6</venue_id>
+    <all_day>0</all_day>
+    <recur_string>on various dates</recur_string>
+    <recurrence>
+        <description>on various dates</description>
+        <instances>
+            <instance>
+                <id>E0-001-016881998-1@2009053008</id>
+                <start_time>2009-05-30 11:00:00</start_time>
+                <stop_time></stop_time>
+                <all_day>0</all_day>
+            </instance>
+            <instance>
+                <id>E0-001-016881998-1@2009053108</id>
+                <start_time>2009-05-31 11:00:00</start_time>
+                <stop_time></stop_time>
+                <all_day>0</all_day>
+            </instance>
+            <instance>
+                <id>E0-001-016881998-1@2009060108</id>
+                <start_time>2009-06-01 11:00:00</start_time>
+                <stop_time></stop_time>
+                <all_day>0</all_day>
+            </instance>
+            <instance>
+                <id>E0-001-016881998-1@2009060208</id>
+                <start_time>2009-06-02 11:00:00</start_time>
+                <stop_time></stop_time>
+                <all_day>0</all_day>
+            </instance>
+        </instances>
+    </recurrence>
+    <created>2008-10-24 03:17:59</created>
+    <owner>evdb</owner>
+    <privacy>1</privacy>
+    <free></free>
+    <price></price>
+    <modified>2008-11-03 04:26:34</modified>
+    <performers></performers>
+    <image>
+        <url>http://static.eventful.com/images/small/I0-001/001/321/255-2.gif</url>
+        <width>48</width>
+        <height>48</height>
+        <thumb>
+            <url>http://static.eventful.com/images/thumb/I0-001/001/321/255-2.gif</url>
+            <width>48</width>
+            <height>48</height>
+        </thumb>
+        <small>
+            <url>http://static.eventful.com/images/small/I0-001/001/321/255-2.gif</url>
+            <width>48</width>
+            <height>48</height>
+        </small>
+        <medium>
+            <url>http://static.eventful.com/images/medium/I0-001/001/321/255-2.gif</url>
+            <width>128</width>
+            <height>128</height>
+        </medium>
+    </image>
+    <categories>
+        <category>
+            <id>art</id>
+            <name>Art, Antiques, Crafts</name>
+        </category>
+        <category>
+            <id>attractions</id>
+            <name>Museums, Zoos, Attractions</name>
+        </category>
+    </categories>
+    <tags>
+        <tag id="blues">
+            <title>Blues</title>
+            <owner>evdb</owner>
+        </tag>
+        <tag id="concert">
+            <title>concert</title>
+            <owner>chris_radcliff</owner>
+        </tag>
+        <tag id="concerts">
+            <title>concerts</title>
+            <owner>insightmg9</owner>
+        </tag>
+        <tag id="experimental">
+            <title>experimental</title>
+            <owner>insightmg9</owner>
+        </tag>
+        <tag id="jazz">
+            <title>jazz</title>
+            <owner>insightmg9</owner>
+        </tag>
+        <tag id="music">
+            <title>music</title>
+            <owner>insightmg9</owner>
+        </tag>
+    </tags>
+    <links>
+        <link id="36634942">
+            <url>http://gigaticket.com/ResultsTicket.aspx?evtid=1005735&amp;ppcsrc=onsite</url>
+            <type>Info</type>
+            <description>Buy tickets from gigaticket.com!</description>
+            <username>evdb</username>
+            <time>2009-01-31 22:22:57.923265</time>
+        </link>
+        <link id="36819886">
+            <url>http://www.stubhub.com/tickets/opeth-boston-house-of-blues-boston-5-2-2009-791626/?ticket_finder=1074&amp;sub=Buy_Tickets</url>
+            <type>Tickets</type>
+            <description>Buy tickets at StubHub.com</description>
+            <username>evdb</username>
+            <time>2009-02-02 23:02:58.455366</time>
+        </link>
+    </links>
+</event>
