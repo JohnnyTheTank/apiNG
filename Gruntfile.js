@@ -1,24 +1,25 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
     var banner = '/**\n    @name: <%= pkg.name %> \n    @version: <%= pkg.version %> (<%= grunt.template.today("dd-mm-yyyy") %>) \n    @author: <%= pkg.author %> \n    @url: <%= pkg.homepage %> \n    @license: <%= pkg.license %>\n*/\n';
 
     var sources = [
-                        'src/aping.module.js',
-                        'src/aping-directive.js',
-                        'src/aping-helpers.js',
-                        'src/aping-inputObjects.js',
-                        'src/aping-models.js',
-                        'src/plugin-jsonloader.js',
-                        'src/plugin-ng-array.js',
-                        'src/plugin-local-storage.js'
-                    ];
+        'src/aping.module.js',
+        'src/aping-directive.js',
+        'src/aping-helpers.js',
+        'src/aping-inputObjects.js',
+        'src/aping-models.js',
+        'src/plugin-jsonloader.js',
+        'src/plugin-ng-array.js',
+        'src/plugin-local-storage.js',
+        'src/plugin-xml.js',
+    ];
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         uglify: {
             js: {
-                files : {
-                    'dist/aping.min.js' : sources
+                files: {
+                    'dist/aping.min.js': sources
                 }
             },
             options: {

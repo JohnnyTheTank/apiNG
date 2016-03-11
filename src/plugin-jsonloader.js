@@ -12,7 +12,6 @@ angular.module("jtt_aping_jsonloader", [])
                 var requests = apingUtilityHelper.parseJsonFromAttributes(attrs.apingJsonloader, "jsonloader", appSettings);
 
                 requests.forEach(function (request) {
-
                     if (request.path) {
                         //create requestObject for factory function call
                         var requestObject = {
@@ -46,20 +45,17 @@ angular.module("jtt_aping_jsonloader", [])
                             request.orderReverse = true;
                         }
                         jsonloaderFactory.getJsonData(requestObject)
-
                             .then(function (_data) {
-
                                 var resultArray = [];
                                 if (_data.data) {
 
                                     var results = _data.data;
 
                                     if (angular.isDefined(request.resultProperty)) {
-                                        //results = _data.data[request.resultProperty];
-                                        results = apingUtilityHelper.getValueFromObjectByPropertyString(_data.data, request.resultProperty, false);
+                                        results = apingUtilityHelper.getValueFromObjectByPropertyString(results, request.resultProperty, false);
                                     }
 
-                                    if (_data.data.constructor !== Array) {
+                                    if (results.constructor !== Array) {
                                         resultArray.push(results);
                                     } else {
                                         angular.extend(resultArray, results);

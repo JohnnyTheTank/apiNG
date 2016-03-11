@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>apiNG Demo</title>
+
+    <!-- apiNG dependencies -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+
+    <!-- apiNG -->
+    <script src="../../dist/aping.js"></script>
+
+    <!-- angular module -->
+    <script src="app.js"></script>
+</head>
+<body ng-app="app">
+
+<h1>External XML File</h1>
+<aping aping-xml="[{ 'path': 'https://raw.githubusercontent.com/JohnnyTheTank/apiNG/master/demos/xml/event.xml'}]">
+    <pre>{{results | json}}</pre>
+</aping>
+
+<h1>Local XML File</h1>
+<aping aping-xml="[{ 'path': 'event.xml', 'resultProperty':'event'}]">
+    <pre>{{results | json}}</pre>
+</aping>
+
+</body>
+</html>
