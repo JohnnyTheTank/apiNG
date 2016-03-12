@@ -1,6 +1,5 @@
 "use strict";
 angular.module('jtt_aping')
-
     .config(['$provide', function ($provide) {
         $provide.value("apingDefaultSettings", {
             apingApiKeys: {}
@@ -24,8 +23,10 @@ angular.module('jtt_aping')
                 removeDoubles: '@',
                 mergeDoubles: '@',
                 idBy: '@',
-                resultProperty: '@',
-                valueName: '@'
+                resultProperty: '@', // legacy
+                resultName: '@',
+                valueName: '@',
+                protocol: '@'
             },
             link: function (scope, element, attrs, controller, transcludeFn) {
 
@@ -61,11 +62,15 @@ angular.module('jtt_aping')
             },
             controller: ['$scope', function ($scope) {
 
-                if (angular.isUndefined($scope.resultProperty)) {
-                    $scope.resultProperty = "results";
+                if(angular.isUndefined($scope.resultName)) {
+                    if (angular.isUndefined($scope.resultProperty)) {
+                        $scope.resultName = "results";
+                    } else {
+                        $scope.resultName = $scope.resultProperty;
+                    }
                 }
 
-                $scope[$scope.resultProperty] = [];
+                $scope[$scope.resultName] = [];
                 $scope.payload = $scope.payloadJson ? apingUtilityHelper.replaceSingleQuotesAndParseJson($scope.payloadJson) : {};
 
                 /**
@@ -83,6 +88,7 @@ angular.module('jtt_aping')
                     var mergeDoubles;
                     var valueName;
                     var idBy;
+                    var protocol;
 
 
                     if (angular.isDefined($scope.valueName)) {
@@ -163,6 +169,14 @@ angular.module('jtt_aping')
                         idBy = undefined;
                     }
 
+                    if (angular.isDefined($scope.protocol)) {
+                        protocol = $scope.protocol;
+                    } else if (angular.isDefined(apingDefaultSettings.protocol)) {
+                        protocol = apingDefaultSettings.protocol;
+                    } else {
+                        protocol = undefined;
+                    }
+
                     return {
                         model: $scope.model || apingDefaultSettings.model || "native",
                         getNativeData: getNativeData,
@@ -173,7 +187,8 @@ angular.module('jtt_aping')
                         removeDoubles: removeDoubles,
                         mergeDoubles: mergeDoubles,
                         idBy: idBy,
-                        valueName: valueName
+                        valueName: valueName,
+                        protocol: protocol
                     };
                 };
 
@@ -183,11 +198,15 @@ angular.module('jtt_aping')
                  * @param _array
                  */
                 this.concatToResults = function (_array) {
-                    if (angular.isUndefined($scope.resultProperty)) {
-                        $scope.resultProperty = "results";
+                    if(angular.isUndefined($scope.resultName)) {
+                        if (angular.isUndefined($scope.resultProperty)) {
+                            $scope.resultName = "results";
+                        } else {
+                            $scope.resultName = $scope.resultProperty;
+                        }
                     }
 
-                    var tempArray = $scope[$scope.resultProperty].concat(_array);
+                    var tempArray = $scope[$scope.resultName].concat(_array);
 
                     var appSettings = this.getAppSettings();
 
@@ -238,9 +257,9 @@ angular.module('jtt_aping')
                         apingResults[appSettings.valueName] = tempArray;
                     }
 
-                    $scope[$scope.resultProperty] = tempArray;
+                    $scope[$scope.resultName] = tempArray;
 
-                    $scope.$broadcast('apiNG.resultMerged', {'resultProperty': $scope.resultProperty});
+                    $scope.$broadcast('apiNG.resultMerged', {'resultName': $scope.resultName});
                 };
                 this.apply = function () {
                     $scope.$apply();
