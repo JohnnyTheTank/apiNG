@@ -25,7 +25,8 @@ angular.module('jtt_aping')
                 idBy: '@',
                 resultProperty: '@', // legacy
                 resultName: '@',
-                valueName: '@'
+                valueName: '@',
+                protocol: '@'
             },
             link: function (scope, element, attrs, controller, transcludeFn) {
 
@@ -87,6 +88,7 @@ angular.module('jtt_aping')
                     var mergeDoubles;
                     var valueName;
                     var idBy;
+                    var protocol;
 
 
                     if (angular.isDefined($scope.valueName)) {
@@ -167,6 +169,14 @@ angular.module('jtt_aping')
                         idBy = undefined;
                     }
 
+                    if (angular.isDefined($scope.protocol)) {
+                        protocol = $scope.protocol;
+                    } else if (angular.isDefined(apingDefaultSettings.protocol)) {
+                        protocol = apingDefaultSettings.protocol;
+                    } else {
+                        protocol = undefined;
+                    }
+
                     return {
                         model: $scope.model || apingDefaultSettings.model || "native",
                         getNativeData: getNativeData,
@@ -177,7 +187,8 @@ angular.module('jtt_aping')
                         removeDoubles: removeDoubles,
                         mergeDoubles: mergeDoubles,
                         idBy: idBy,
-                        valueName: valueName
+                        valueName: valueName,
+                        protocol: protocol
                     };
                 };
 
