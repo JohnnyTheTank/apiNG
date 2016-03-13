@@ -4,7 +4,7 @@
 [![Join the chat at https://gitter.im/JohnnyTheTank/apiNG](https://img.shields.io/badge/GITTER-join%20chat-green.svg)](https://gitter.im/JohnnyTheTank/apiNG?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![npm version](https://badge.fury.io/js/aping.svg)](https://badge.fury.io/js/aping)
 [![Bower version](https://badge.fury.io/bo/apiNG.svg)](https://badge.fury.io/bo/apiNG)
-[![Docs](https://img.shields.io/docs/90%.svg)](https://aping.readme.io)
+[![Docs](https://img.shields.io/docs/90%.png)](https://aping.readme.io)
 
 **apiNG** is an AngularJS module that enables you to receive and display data from one or more sources. The data can be aggregated, limited and ordered. The complete setup is dead simple, just by adding data-attributes to your html.
 
