@@ -1,0 +1,8 @@
+{
+  "display": true,
+  "demo": "http://apiNG.io",
+  "docs": "https://apiNG.readme.io",
+  "language": "AngularJS",
+  "namespace": "apiNG",
+  "subspace": "main"
+}
