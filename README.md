@@ -20,7 +20,7 @@ There are two level of usage: _basic_ and _advanced_
 - [Social Wall](http://aping.io/#demo) (default design)
 - [Image Gallery](https://rawgit.com/JohnnyTheTank/apiNG-design-xgallerify/master/demo/) (images from twitter)
 - [Demo: Socal Wall (plnkr)](http://plnkr.co/dz3Dru)
-- [ionic + apiNG (plnkr)](http://plnkr.co/edit/WesqTb?p=previewdoc)
+- [ionic + apiNG (plnkr)](http://plnkr.co/edit/WesqTb?p=preview)
 
 ## References
 - [sonymusic.de/videos](https://sonymusic.de/videos) (Youtube video playlist & player) based on apiNG
