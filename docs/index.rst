@@ -29,6 +29,20 @@ More info about common mark
 
 https://github.com/jgm/CommonMark
 
+To build the docs automatically on rtfd.org:
+--------------------------------------------
+
+You need to add a webhook to your repository on github.com
+
+Go to: https://github.com/JohnnyTheTank/apiNG/settings/hooks
+
+Click on ``Add service`` and add ReadTheDocs.
+
+When you push stuff to the repo, your docs will build automatically.
+
+You will find more help here:
+
+http://read-the-docs.readthedocs.org/en/latest/getting_started.html#in-markdown
 
 Indices and tables
 ==================
