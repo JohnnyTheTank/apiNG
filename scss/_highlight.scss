@@ -1,0 +1,27 @@
+$attr-color:black;
+$template-color:#55F;
+$plugin-color:green;
+
+pre {
+    code {
+        &.html {
+            .element {
+                font-weight: bold;
+            }
+
+            .attr {
+                color:$attr-color;
+            }
+
+            .template {
+                color:$template-color;
+            }
+
+            .plugin {
+                color:$plugin-color;
+            }
+
+
+        }
+    }
+}

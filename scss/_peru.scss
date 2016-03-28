@@ -1,0 +1,88 @@
+.aping-design-peru {
+
+    $background-color: #555555;
+    $text-color:white;
+
+    .text-muted {
+        color: #b9bfba;
+    }
+
+    $box-shadow:0 0 5px 0 rgba(44, 91, 63, 0.4);
+    $box-shadow-hover:0 0 5px 0 rgba(0, 91, 47, 0.8);
+
+    $border-radius:5px;
+
+    .masonry-brick {
+        .box {
+            background-color:$background-color;
+            color:$text-color;
+
+            border-radius: $border-radius;
+
+            font-family: 'Alegreya', serif;
+
+            @include transition(all 250ms ease);
+            @include box-shadow($box-shadow);
+
+            margin-bottom:2rem;
+
+            font-size:0.9em;
+
+            &:hover {
+                @include box-shadow($box-shadow-hover);
+            }
+
+            a {
+
+                color: #30b12d;
+
+                &.aping-picture-link {
+                    @include transition(all 250ms ease);
+                    &:hover {
+                        opacity:1;
+                        @include filter(grayscale(0.5) sepia(0.6));
+                    }
+                }
+            }
+
+            h4 {
+                color: #d8d593;
+            }
+
+
+            img.main-image {
+                border-top-right-radius: $border-radius;
+                border-top-left-radius: $border-radius;
+                border:1px solid black;
+                width:100%;
+                height:auto;
+            }
+
+            .box-content {
+                padding:1rem;
+                overflow:hidden;
+            }
+
+            .box-footer {
+                height:1em;
+
+                .platform-box {
+
+                    margin-left: 10px;
+                    margin-top:10px;
+
+                    a.platform-link {
+                        display:inline-block;
+                        background-color:$text-color;
+                        @include transition(all 250ms ease);
+                        @include box-shadow(0 0 5px 0 rgba(101, 202, 136, 0.82));
+                        @include border-radius(40px);
+                        &:hover {
+                            @include box-shadow(0 0 5px 0 rgba(151, 252, 186, 1));
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

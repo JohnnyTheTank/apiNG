@@ -1,19 +1,198 @@
+<?php
+header("Access-Control-Allow-Origin: *");
+
 <!DOCTYPE html>
 <html lang="en-us">
-<meta http-equiv="refresh" content="0; URL=//aping.io" />
 <head>
     <meta charset="UTF-8">
-    <title>apiNG by JohnnyTheTank</title>
+    <title>apiNG.io - Official apiNG project page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- IE Force -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Meta Tags -->
+    <meta name="description"
+          content="apiNG is an AngularJS directive for receiving and displaying data from any source"/>
+    <meta name="keywords" content="apiNG angular angularjs api json directive template plugin"/>
+    <meta name="author" content="Jonathan Hornung">
+    <meta name="page-topic" content="apiNG.io - Official apiNG project page">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/styles.min.css" media="screen">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdn.rawgit.com/JohnnyTheTank/apiNG-design-default/master/demo/css/main.css">
+    <link rel="stylesheet"
+          href="//cdn.rawgit.com/JohnnyTheTank/apiNG-design-default/master/dist/aping-design-default.min.css">
+
+    <!-- Font -->
+    <link href='//fonts.googleapis.com/css?family=Economica' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Alegreya' rel='stylesheet' type='text/css'>
+
+
+    <!-- JavaScript -->
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+    <!-- apiNG -->
+    <script src="//cdn.jsdelivr.net/aping/latest/aping.min.js"></script>
+    <script src="legacy/js/aping-config.js"></script>
+
+    <!-- apiNG plugins -->
+    <script src="//cdn.jsdelivr.net/aping.plugin-youtube/latest/aping-plugin-youtube.min.js"></script>
+    <script src="//cdn.jsdelivr.net/aping.plugin-instagram/latest/aping-plugin-instagram.min.js"></script>
+    <script src="//cdn.jsdelivr.net/aping.plugin-facebook/latest/aping-plugin-facebook.min.js"></script>
+    <script src="//cdn.jsdelivr.net/aping.plugin-codebird/latest/aping-plugin-codebird.min.js"></script>
+    <script src="//cdn.jsdelivr.net/aping.plugin-vimeo/latest/aping-plugin-vimeo.min.js"></script>
+    <script src="//cdn.jsdelivr.net/aping.plugin-flickr/latest/aping-plugin-flickr.min.js"></script>
+    <script src="//cdn.jsdelivr.net/aping.plugin-dailymotion/latest/aping-plugin-dailymotion.min.js"></script>
+    <script src="//cdn.jsdelivr.net/aping.plugin-tumblr/latest/aping-plugin-tumblr.min.js"></script>
+    <script src="//cdn.jsdelivr.net/aping.plugin-rss/latest/aping-plugin-rss.min.js"></script>
+
+    <script src="//rawgit.com/JohnnyTheTank/apiNG-design-default/master/demo/js/social_app.js"></script>
+
+    <!-- apiNG design & dependencies -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.min.js"></script>
+    <script src="//cdn.jsdelivr.net/angular.masonry-packed/0.14.5/angular-masonry-packed.min.js"></script>
+    <script src="//cdn.jsdelivr.net/angular.linkify/1.2.0/angular-linkify.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment-with-locales.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-moment/0.10.3/angular-moment.min.js"></script>
+    <script src="//rawgit.com/JohnnyTheTank/angular-images-loaded-custom/master/dist/angular-images-loaded-directive.min.js"></script>
+    <script src="//rawgit.com/JohnnyTheTank/apiNG-design-default/master/dist/aping-design-default.min.js"></script>
+
+
 </head>
-<body>
+<body ng-app="app">
+<section class="page-header">
+    <h1 class="project-name">apiNG</h1>
 
-<script>
-    window.top.location.href = '//aping.io';
+    <h2 class="project-tagline">api directive for angularjs</h2>
+    <a href="https://github.com/JohnnyTheTank/apiNG" class="btn">View on GitHub</a>
+    <a href="https://github.com/JohnnyTheTank/apiNG/zipball/master" class="btn">Download .zip</a>
+    <a href="https://github.com/JohnnyTheTank/apiNG/tarball/master" class="btn">Download .tar.gz</a>
+</section>
+
+<section class="main-content">
+    <h1>
+        <a id="aping" class="anchor" href="#aping" aria-hidden="true"><span class="octicon octicon-link"></span></a>apiNG <iframe src="https://ghbtns.com/github-btn.html?user=JohnnyTheTank&repo=apiNG&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+    </h1>
+
+
+    <p><strong>apiNG</strong> is an AngularJS directive that enables you to receive and display data from one or more sources. The data can be aggregated, limited and ordered. The complete setup is dead simple, just by adding data-attributes to your html.
+    </p>
+
+    <h2><a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>Documentation</h2>
+    <p>
+        The Documentation comes up at <a href="https://aping.readme.io/" target="_blank">apiNG.readme.io</a>
+    </p>
+
+    <h2 id="demo">Demos</h2>
+    <h3>Demo 1: Mixed Social Wall</h3>
+    apiNG Demo with <a href="https://aping.readme.io/docs/plugins" target="_blank">some plugins</a> and default design
+    <h4>Demo 1: HTML</h4>
+
+    <pre><code class="html"><span class="element">&lt;aping</span>
+    <span class="template">template-url="social_template.html"</span>
+    <span class="attr">model="social"</span>
+    <span class="attr">items="3"</span>
+    <span class="plugin">aping-youtube="[{'channelId':'UCuGcxogeiX5DbfzBMTl_aZQ'}]"
+    aping-instagram="[{'userId':'416104304', 'items':2}]"
+    aping-facebook="[{'page':'BreakingBad'}]"
+    aping-codebird="[{'user':'adidas', 'showAvatar':false}]"
+    aping-flickr="[{'tags':'münchen'}]"
+    aping-dailymotion="[{'userId':'electropose'}]"
+    aping-tumblr="[{'page':'davidhinga'}]"
+    aping-rss="[{'path':'http://blog.hackerearth.com/feed'}]"
+    aping-vimeo="[{'channel':'worldhd'}]"
+    aping-flickr="[{'tags':'münchen'}]"</span><span class="element">&gt;</span>
+<span class="element">&lt;/aping&gt;</span></code></pre>
+
+    <h4>Demo 1: Result</h4>
+    <aping
+            template-url="social_template.html"
+            model="social"
+            items="3"
+            order-by="timestamp"
+            order-reverse="true"
+            aping-youtube="[{'channelId':'UCuGcxogeiX5DbfzBMTl_aZQ'}]"
+            aping-instagram="[{'userId':'416104304', 'items':2}]"
+            aping-facebook="[{'page':'BreakingBad'}]"
+            aping-codebird="[{'user':'adidas', 'showAvatar':false}]"
+            aping-flickr="[{'tags':'münchen'}]"
+            aping-dailymotion="[{'userId':'electropose'}]"
+            aping-tumblr="[{'page':'davidhinga'}]"
+            aping-rss="[{'path':'http://blog.hackerearth.com/feed'}]"
+            aping-vimeo="[{'channel':'worldhd'}]"
+            aping-flickr="[{'tags':'münchen'}]">
+    </aping>
+
+    <hr>
+
+    <h3>Demo 2: Location based Social Wall</h3>
+    Social feed by coordinates (-13.163333, -72.545556) for <strong>Machu Picchu, Peru</strong>
+    <h4>Demo 2: HTML</h4>
+
+    <pre><code class="html"><span class="element">&lt;aping</span>
+    <span class="template">template-url="social_template_peru.html"</span>
+    <span class="attr">model="social"</span>
+    <span class="attr">items="6"</span>
+    <span class="plugin">aping-codebird="[{'search':'machu picchu', 'lat':'-13.163333', 'lng':'-72.545556', 'distance':5, 'result_type':'recent'}]"
+    aping-instagram="[{'lat':'-13.163333', 'lng':'-72.545556', 'distance':'5000'}]"
+    aping-youtube="[{'lat':'-13.163333', 'lng':'-72.545556', 'distance':'5000m'}]"</span><span
+    class="element">&gt;</span>
+<span class="element">&lt;/aping&gt;</span></code></pre>
+
+    <h4>Demo 2: Result</h4>
+    <aping
+            template-url="social_template_peru.html"
+            model="social"
+            items="6"
+            order-by="timestamp"
+            order-reverse="true"
+            aping-codebird="[{'search':'machu picchu', 'lat':'-13.163333', 'lng':'-72.545556', 'distance':5, 'result_type':'recent'}]"
+            aping-instagram="[{'lat':'-13.163333', 'lng':'-72.545556', 'distance':'5000'}]"
+            aping-youtube="[{'lat':'-13.163333', 'lng':'-72.545556', 'distance':'5000m'}]">
+    </aping>
+
+    <h3>Other demos</h3>
+    <ul>
+        <li><a href="https://rawgit.com/JohnnyTheTank/apiNG-design-xgallerify/master/demo/" target="_blank">Image
+            Gallery</a> (xgallerify design)
+        </li>
+        <li><a href="https://rawgit.com/JohnnyTheTank/apiNG-design-deadwood/master/demo/" targt="_blank">Video
+            Player</a> (deadwood design)
+        </li>
+        <li>more demos coming soon ...</li>
+    </ul>
+
+    <h2>
+        <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span
+                class="octicon octicon-link"></span></a>Authors and Contributors</h2>
+
+    <p>Jonathan Hornung (<a href="https://github.com/JohnnyTheTank" class="user-mention">@JohnnyTheTank</a>)</p>
+
+    <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/JohnnyTheTank/apiNG">apiNG</a> is maintained by <a
+                href="https://github.com/JohnnyTheTank">JohnnyTheTank</a>.</span>
+    </footer>
+
+</section>
+
+<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
 </script>
-
-<a href="http://aping.io">apiNG.io</a>
-
+<script type="text/javascript">
+    try {
+        var pageTracker = _gat._getTracker("UA-71417715-1");
+        pageTracker._trackPageview();
+    } catch (err) {
+    }
+</script>
 
 </body>
 </html>
