@@ -1,4 +1,4 @@
-[logo]: http://aping.io/logo/320/aping-logo.png "apiNG"
+[logo]: http://johnnythetank.github.io/apiNG/logo/320/aping-logo.png "apiNG"
 ![apiNG][logo]
 
 [![Join the chat at https://gitter.im/JohnnyTheTank/apiNG](https://img.shields.io/badge/GITTER-join%20chat-green.svg)](https://gitter.im/JohnnyTheTank/apiNG?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
@@ -17,7 +17,7 @@ There are two level of usage: _basic_ and _advanced_
 - [Demo: Read Json Files (plnkr)](http://plnkr.co/k3DPNc)
 
 ## Advanced Demos
-- [Social Wall](http://aping.io/#demo) (default design)
+- [Social Wall](http://johnnythetank.github.io/apiNG//#demo) (default design)
 - [Image Gallery](https://rawgit.com/JohnnyTheTank/apiNG-design-xgallerify/master/demo/) (images from twitter)
 - [Demo: Socal Wall (plnkr)](http://plnkr.co/dz3Dru)
 - ionic + apiNG ([pnklr](http://plnkr.co/edit/WesqTb?p=preview)) ([play.ionic.io](http://play.ionic.io/app/0137f0b5967d))
