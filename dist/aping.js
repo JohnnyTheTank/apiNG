@@ -1,6 +1,6 @@
 /**
     @name: aping 
-    @version: 1.3.1 (12-03-2016) 
+    @version: 1.3.2 (29-03-2016) 
     @author: Jonathan Hornung <jonathan.hornung@gmail.com> 
     @url: https://github.com/JohnnyTheTank/apiNG 
     @license: MIT
@@ -271,7 +271,8 @@ angular.module('jtt_aping')
 
                     $scope[$scope.resultName] = tempArray;
 
-                    $scope.$broadcast('apiNG.resultMerged', {'resultName': $scope.resultName});
+                    $scope.$broadcast('apiNG.resultMerged', {resultName: $scope.resultName, valueName: $scope.valueName});
+                    $scope.$emit('apiNG.resultMerged', {resultName: $scope.resultName, valueName: $scope.valueName});
                 };
                 this.apply = function () {
                     $scope.$apply();
