@@ -259,7 +259,8 @@ angular.module('jtt_aping')
 
                     $scope[$scope.resultName] = tempArray;
 
-                    $scope.$broadcast('apiNG.resultMerged', {'resultName': $scope.resultName});
+                    $scope.$broadcast('apiNG.resultMerged', {resultName: $scope.resultName, valueName: $scope.valueName});
+                    $scope.$emit('apiNG.resultMerged', {resultName: $scope.resultName, valueName: $scope.valueName});
                 };
                 this.apply = function () {
                     $scope.$apply();
