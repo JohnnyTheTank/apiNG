@@ -26,7 +26,6 @@ There are two level of usage: _basic_ and _advanced_
 - [sonymusic.de/videos](https://sonymusic.de/videos) (Youtube video playlist & player) based on apiNG
 - [julia-lindholm.de](http://www.julia-lindholm.de/home/#news) (Facebook News)
 - [olliegabriel.de](http://www.olliegabriel.de/#news) (Facebook News)
-- [namikamusik.de](http://www.namikamusik.de/blog/) (Tumblr Blog)
 
 ## Documentation
 **Full documentation comes up at [aping.readme.io](https://aping.readme.io)**
