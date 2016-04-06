@@ -24,7 +24,7 @@ There are two level of usage: _basic_ and _advanced_
 
 ## References
 - [sonymusic.de/videos](https://sonymusic.de/videos) (Youtube video playlist & player) based on apiNG
-- [julia-lindholm.de](http://www.julia-lindholm.de/home/#news) (Facebook News)
+- julia-lindholm.de ([Facebook News](http://www.julia-lindholm.de/home/#news) & [Instagram Images](http://www.julia-lindholm.de/home/#fotos))
 - [olliegabriel.de](http://www.olliegabriel.de/#news) (Facebook News)
 
 ## Documentation
