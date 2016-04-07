@@ -2,7 +2,7 @@
   "name": "aping",
   "version": "1.3.2",
   "description": "apiNG is an AngularJS directive that enables you to receive, aggregate, limit, order and display data from one or more sources. The complete setup is dead simple, just by adding data-attributes to your html",
-  "main": "dist/aping.min.js",
+  "main": "dist/aping.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JohnnyTheTank/apiNG.git"
