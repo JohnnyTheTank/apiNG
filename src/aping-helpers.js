@@ -88,7 +88,7 @@ angular.module('jtt_aping')
             }
             var requests = [];
             var tempArray = this.replaceSingleQuotesAndParseJson(_string);
-            angular.forEach(tempArray, function (value, key) {
+            angular.forEach(tempArray, function (value) {
                 value.platform = _platform;
                 if (_appSettings) {
                     if (angular.isUndefined(value.items) && angular.isDefined(_appSettings.items)) {
@@ -191,7 +191,7 @@ angular.module('jtt_aping')
             sortedArray.sort(this.sortArrayByProperty(propertyName));
             var lastValue;
             var reducedArray = [];
-            angular.forEach(sortedArray, function (secondValue, secondIndex) {
+            angular.forEach(sortedArray, function (secondValue) {
                 if (angular.isDefined(lastValue)) {
                     if (angular.isDefined(secondValue[propertyName]) && secondValue[propertyName] !== lastValue) {
                         reducedArray.push(secondValue);
@@ -206,7 +206,7 @@ angular.module('jtt_aping')
             });
             if (_keepOrder === true) {
                 reducedArray.sort(this.sortArrayByProperty(orderPropertyName));
-                angular.forEach(reducedArray, function (thirdValue, thirdIndex) {
+                angular.forEach(reducedArray, function (thirdValue) {
                     thirdValue[orderPropertyName] = undefined;
                 });
             }
@@ -238,7 +238,7 @@ angular.module('jtt_aping')
             sortedArray.sort(this.sortArrayByProperty(propertyName));
             var lastValue;
             var mergedArray = [];
-            angular.forEach(sortedArray, function (secondValue, secondIndex) {
+            angular.forEach(sortedArray, function (secondValue) {
                 that.removeNull(secondValue);
                 if (angular.isDefined(lastValue)) {
                     if (angular.isDefined(secondValue[propertyName]) && secondValue[propertyName] !== lastValue) {
@@ -253,7 +253,7 @@ angular.module('jtt_aping')
             });
             if (_keepOrder === true) {
                 mergedArray.sort(this.sortArrayByProperty(orderPropertyName));
-                angular.forEach(mergedArray, function (thirdValue, thirdIndex) {
+                angular.forEach(mergedArray, function (thirdValue) {
                     thirdValue[orderPropertyName] = undefined;
                 });
             }
@@ -311,7 +311,7 @@ angular.module('jtt_aping')
                 _idString = "aping_id";
             }
             if (angular.isDefined(_array) && angular.isArray(_array)) {
-                angular.forEach(_array, function (value, key) {
+                angular.forEach(_array, function (value) {
                     value[_idString] = that.getIdByPropertiesForObject(value, _propertiesString);
                 });
             }
@@ -335,7 +335,7 @@ angular.module('jtt_aping')
                 } else {
                     properties.push(_propertiesString)
                 }
-                angular.forEach(properties, function (value, key) {
+                angular.forEach(properties, function (value) {
                     idString += that.getValueFromObjectByPropertyString(_object, value);
                 });
             }
@@ -355,7 +355,7 @@ angular.module('jtt_aping')
             if (angular.isDefined(_object) && angular.isObject(_object)) {
                 var parts = _propertyString.split(".");
                 var object = _object;
-                angular.forEach(parts, function (value, key) {
+                angular.forEach(parts, function (value) {
                     if (angular.isDefined(object[value])) {
                         object = object[value];
                     }
