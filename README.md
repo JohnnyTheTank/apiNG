@@ -28,7 +28,7 @@ There are two level of usage: _basic_ and _advanced_
 - [olliegabriel.de](http://www.olliegabriel.de/#news) (Facebook News)
 
 **Are you using apiNG for your next project?**
-[Let us know](https://github.com/JohnnyTheTank/apiNG/issues/new?title=We%20use%apiNG,%20too!&body=Please%20add%20this%20to%20the%20list!%0A%0AWebsite:%20%3Curl%3E%0ATitle:%20%3Ca%20short%20title%3E%0A%0A%3Cany%20description%3E) if you use this awesome library in your project and we'll add here!
+<br>[Let us know](https://github.com/JohnnyTheTank/apiNG/issues/new) if you use this awesome library in your project and we'll add here!
 
 ## Documentation
 **Full documentation comes up at [aping.readme.io](https://aping.readme.io)**
