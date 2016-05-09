@@ -88,19 +88,23 @@ angular.module('jtt_aping')
             }
             var requests = [];
             var tempArray = this.replaceSingleQuotesAndParseJson(_string);
-            angular.forEach(tempArray, function (value) {
-                value.platform = _platform;
-                if (_appSettings) {
-                    if (angular.isUndefined(value.items) && angular.isDefined(_appSettings.items)) {
-                        value.items = _appSettings.items;
+            if (tempArray.constructor === Array) {
+                angular.forEach(tempArray, function (value) {
+                    value.platform = _platform;
+                    if (_appSettings) {
+                        if (angular.isUndefined(value.items) && angular.isDefined(_appSettings.items)) {
+                            value.items = _appSettings.items;
+                        }
+                        if (angular.isUndefined(value.model) && angular.isDefined(_appSettings.model)) {
+                            value.model = _appSettings.model;
+                        }
                     }
-                    if (angular.isUndefined(value.model) && angular.isDefined(_appSettings.model)) {
-                        value.model = _appSettings.model;
-                    }
-                }
-                var request = apingInputObjects.getNew("request", value);
-                requests.push(request);
-            });
+                    var request = apingInputObjects.getNew("request", value);
+                    requests.push(request);
+                });
+            } else {
+                requests.push(tempArray);
+            }
             return requests;
         };
 
