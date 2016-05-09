@@ -1,6 +1,6 @@
 /**
     @name: aping 
-    @version: 1.3.2 (22-04-2016) 
+    @version: 1.3.3 (09-05-2016) 
     @author: Jonathan Hornung <jonathan.hornung@gmail.com> 
     @url: https://github.com/JohnnyTheTank/apiNG 
     @license: MIT
@@ -10,6 +10,7 @@ angular.module('jtt_aping', [
     'jtt_aping_xml',
     'jtt_aping_ng_array',
     'jtt_aping_local_storage',
+    'jtt_aping_json_string',
 ]);;"use strict";
 angular.module('jtt_aping')
     .config(['$provide', function ($provide) {
@@ -369,19 +370,23 @@ angular.module('jtt_aping')
             }
             var requests = [];
             var tempArray = this.replaceSingleQuotesAndParseJson(_string);
-            angular.forEach(tempArray, function (value) {
-                value.platform = _platform;
-                if (_appSettings) {
-                    if (angular.isUndefined(value.items) && angular.isDefined(_appSettings.items)) {
-                        value.items = _appSettings.items;
+            if (tempArray.constructor === Array) {
+                angular.forEach(tempArray, function (value) {
+                    value.platform = _platform;
+                    if (_appSettings) {
+                        if (angular.isUndefined(value.items) && angular.isDefined(_appSettings.items)) {
+                            value.items = _appSettings.items;
+                        }
+                        if (angular.isUndefined(value.model) && angular.isDefined(_appSettings.model)) {
+                            value.model = _appSettings.model;
+                        }
                     }
-                    if (angular.isUndefined(value.model) && angular.isDefined(_appSettings.model)) {
-                        value.model = _appSettings.model;
-                    }
-                }
-                var request = apingInputObjects.getNew("request", value);
-                requests.push(request);
-            });
+                    var request = apingInputObjects.getNew("request", value);
+                    requests.push(request);
+                });
+            } else {
+                requests.push(tempArray);
+            }
             return requests;
         };
 
@@ -1009,6 +1014,33 @@ angular.module("jtt_aping_jsonloader", [])
             }
         };
         return jsonloaderFactory;
+    }]);;"use strict";
+
+angular.module("jtt_aping_json_string", [])
+    .directive('apingJsonString', ['apingUtilityHelper', function (apingUtilityHelper) {
+        return {
+            require: '?aping',
+            restrict: 'A',
+            replace: 'false',
+            link: function (scope, element, attrs, apingController) {
+
+                var appSettings = apingController.getAppSettings();
+                var request = apingUtilityHelper.parseJsonFromAttributes(attrs.apingJsonString, "apingJsonString", appSettings);
+
+                var resultArray = [];
+
+                if (request) {
+                    if (request.constructor === Array) {
+                        resultArray = request;
+                    } else {
+                        resultArray.push(request);
+                    }
+                    if (resultArray.length > 0) {
+                        apingController.concatToResults(resultArray);
+                    }
+                }
+            }
+        }
     }]);;"use strict";
 
 angular.module("jtt_aping_ng_array", [])

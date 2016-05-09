@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>apiNG Demo</title>
+
+    <!-- apiNG dependencies -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+
+    <!-- apiNG -->
+    <script src="../../dist/aping.js"></script>
+
+    <!-- angular module -->
+    <script src="app.js"></script>
+
+</head>
+<body ng-app="app">
+
+<aping aping-json-string='{"gender":"male","name":{"title":"mr","first":"fernando","last":"soto"},"location":{"street":"5303 calle covadonga","city":"alicante","state":"cataluña","postcode":28020},"email":"fernando.soto@example.com","login":{"username":"lazyduck489","password":"1616","salt":"vptikytR","md5":"68d978f4bc562fd270bf7297565af0ad","sha1":"451c9a970f114ea76e4760b7c5d68f5c11a4221c","sha256":"885489cc2ccf54d83f5bec2f2cbfc06c2282e2cda581e21f79febb45f990d62d"},"registered":1105370272,"dob":1319579754,"phone":"932-763-620","cell":"634-690-303","id":{"name":"DNI","value":"25588238-D"},"picture":{"large":"https://randomuser.me/api/portraits/men/92.jpg","medium":"https://randomuser.me/api/portraits/med/men/92.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/men/92.jpg"},"nat":"ES"}'>
+    <pre>{{results | json}}</pre>
+</aping>
+
+</body>
+</html>
