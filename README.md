@@ -24,7 +24,7 @@ There are two level of usage: _basic_ and _advanced_
 
 ## References
 - [sonymusic.de/videos](https://sonymusic.de/videos) (Youtube video playlist & player) based on apiNG
-- julia-lindholm.de ([Facebook News](http://www.julia-lindholm.de/home/#news) & [Instagram Images](http://www.julia-lindholm.de/home/#fotos))
+- [julia-lindholm.de](http://www.julia-lindholm.de/home/#news) (Facebook News) 
 - [olliegabriel.de](http://www.olliegabriel.de/#news) (Facebook News)
 
 **Are you using apiNG for your next project?**
@@ -34,7 +34,7 @@ There are two level of usage: _basic_ and _advanced_
 **Full documentation comes up at [aping.readme.io](https://aping.readme.io)**
 
 ## Plugins
-**apiNG plugin quicklist:** [Youtube](https://github.com/JohnnyTheTank/apiNG-plugin-youtube), [Facebook](https://github.com/JohnnyTheTank/apiNG-plugin-facebook), [Twitter](https://github.com/JohnnyTheTank/apiNG-plugin-codebird), [Instagram](https://github.com/JohnnyTheTank/apiNG-plugin-instagram), [Vimeo](https://github.com/JohnnyTheTank/apiNG-plugin-vimeo), [Flickr](https://github.com/JohnnyTheTank/apiNG-plugin-flickr), [Dailymotion](https://github.com/JohnnyTheTank/apiNG-plugin-dailymotion), [Tumblr](https://github.com/JohnnyTheTank/apiNG-plugin-tumblr), [GitHub](https://github.com/JohnnyTheTank/apiNG-plugin-github), [RSS](https://github.com/JohnnyTheTank/apiNG-plugin-rss), [OpenWeatherMap](https://github.com/JohnnyTheTank/apiNG-plugin-openweathermap), [BandsInTown](https://github.com/JohnnyTheTank/apiNG-plugin-bandsintown)
+**apiNG plugin quicklist:** [Youtube](https://github.com/JohnnyTheTank/apiNG-plugin-youtube), [Facebook](https://github.com/JohnnyTheTank/apiNG-plugin-facebook), [Twitter](https://github.com/JohnnyTheTank/apiNG-plugin-codebird), [Vimeo](https://github.com/JohnnyTheTank/apiNG-plugin-vimeo), [Flickr](https://github.com/JohnnyTheTank/apiNG-plugin-flickr), [Dailymotion](https://github.com/JohnnyTheTank/apiNG-plugin-dailymotion), [Tumblr](https://github.com/JohnnyTheTank/apiNG-plugin-tumblr), [GitHub](https://github.com/JohnnyTheTank/apiNG-plugin-github), [RSS](https://github.com/JohnnyTheTank/apiNG-plugin-rss), [OpenWeatherMap](https://github.com/JohnnyTheTank/apiNG-plugin-openweathermap), [BandsInTown](https://github.com/JohnnyTheTank/apiNG-plugin-bandsintown)
 
 All apiNG plugins are listed at [aping.readme.io/docs/all-plugins](https://aping.readme.io/docs/all-plugins)
 
