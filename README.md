@@ -26,6 +26,8 @@ There are two level of usage: _basic_ and _advanced_
 - [sonymusic.de/videos](https://sonymusic.de/videos) (Youtube video playlist & player) based on apiNG
 - [julia-lindholm.de](http://www.julia-lindholm.de/home/#news) (Facebook News) 
 - [olliegabriel.de](http://www.olliegabriel.de/#news) (Facebook News)
+- [chakuza.de](http://www.chakuza.de/news/) (Facebook News)
+
 
 **Are you using apiNG for your next project?**
 <br>[Let us know](https://github.com/JohnnyTheTank/apiNG/issues/new) if you use this module in your project and we'll add here!
