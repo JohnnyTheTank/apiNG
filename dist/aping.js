@@ -1,6 +1,6 @@
 /**
     @name: aping 
-    @version: 1.3.4 (21-06-2016) 
+    @version: 1.4.0 (27-06-2016) 
     @author: Jonathan Hornung <jonathan.hornung@gmail.com> 
     @url: https://github.com/JohnnyTheTank/apiNG 
     @license: MIT
@@ -748,6 +748,10 @@ angular.module("jtt_aping_jsonloader", [])
                         if (angular.isDefined(request.orderReverse) && (request.orderReverse === true || request.orderReverse === 'true')) {
                             request.orderReverse = true;
                         }
+
+                        if (angular.isDefined(request.xAuthToken)) {
+                            requestObject.xAuthToken = request.xAuthToken;
+                        }
                         jsonloaderFactory.getJsonData(requestObject)
                             .then(function (_data) {
                                 var resultArray = [];
@@ -801,12 +805,20 @@ angular.module("jtt_aping_jsonloader", [])
 
             if (_requestObject.format === "jsonp") {
 
+                var httpObject = {
+                    method: 'GET',
+                    params: {callback: "JSON_CALLBACK"},
+                };
+
+                if (angular.isDefined(_requestObject.xAuthToken)) {
+                    httpObject.headers = {
+                        'X-Auth-Token': _requestObject.xAuthToken
+                    }
+                }
+
                 return $http.jsonp(
                     _requestObject.path,
-                    {
-                        method: 'GET',
-                        params: {callback: "JSON_CALLBACK"},
-                    }
+                    httpObject
                 );
 
                 /*
@@ -818,11 +830,20 @@ angular.module("jtt_aping_jsonloader", [])
                  */
 
             } else {
-                return $http({
+
+                var httpObject = {
                     method: 'GET',
                     url: _requestObject.path,
-                    params: params
-                });
+                    params: params,
+                };
+
+                if (angular.isDefined(_requestObject.xAuthToken)) {
+                    httpObject.headers = {
+                        'X-Auth-Token': _requestObject.xAuthToken
+                    }
+                }
+
+                return $http(httpObject);
             }
         };
         return jsonloaderFactory;
