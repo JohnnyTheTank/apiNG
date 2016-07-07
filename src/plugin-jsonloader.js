@@ -1,6 +1,6 @@
-"use strict";
+'use strict';
 
-angular.module("jtt_aping_jsonloader", [])
+angular.module('jtt_aping_jsonloader', [])
     .directive('apingJsonloader', ['apingUtilityHelper', 'jsonloaderFactory', function (apingUtilityHelper, jsonloaderFactory) {
         return {
             require: '?aping',
@@ -9,7 +9,7 @@ angular.module("jtt_aping_jsonloader", [])
             link: function (scope, element, attrs, apingController) {
 
                 var appSettings = apingController.getAppSettings();
-                var requests = apingUtilityHelper.parseJsonFromAttributes(attrs.apingJsonloader, "jsonloader", appSettings);
+                var requests = apingUtilityHelper.parseJsonFromAttributes(attrs.apingJsonloader, 'jsonloader', appSettings);
 
                 requests.forEach(function (request) {
                     if (request.path) {
@@ -18,10 +18,10 @@ angular.module("jtt_aping_jsonloader", [])
                             path: request.path,
                         };
 
-                        if (!request.format || request.format.toLowerCase() !== "jsonp") {
-                            requestObject.format = "json";
+                        if (!request.format || request.format.toLowerCase() !== 'jsonp') {
+                            requestObject.format = 'json';
                         } else {
-                            requestObject.format = "jsonp";
+                            requestObject.format = 'jsonp';
                         }
 
                         if (angular.isUndefined(request.items)) {
@@ -32,7 +32,7 @@ angular.module("jtt_aping_jsonloader", [])
                             return false;
                         }
 
-                        // -1 is "no explicit limit". same for NaN value
+                        // -1 is 'no explicit limit'. same for NaN value
                         if (request.items < 0 || isNaN(request.items)) {
                             request.items = undefined;
                         }
@@ -65,14 +65,14 @@ angular.module("jtt_aping_jsonloader", [])
                                         angular.extend(resultArray, results);
 
                                         if (angular.isDefined(request.orderBy)) {
-                                            if (request.orderBy === "$RANDOM") {
+                                            if (request.orderBy === '$RANDOM') {
                                                 resultArray = apingUtilityHelper.shuffleArray(resultArray);
                                             } else {
                                                 resultArray.sort(apingUtilityHelper.sortArrayByProperty(request.orderBy));
                                             }
                                         }
                                         //order desc
-                                        if (angular.isDefined(request.orderReverse) && request.orderReverse === true && request.orderBy !== "$RANDOM") {
+                                        if (angular.isDefined(request.orderReverse) && request.orderReverse === true && request.orderBy !== '$RANDOM') {
                                             resultArray.reverse();
                                         }
 
@@ -99,11 +99,11 @@ angular.module("jtt_aping_jsonloader", [])
         jsonloaderFactory.getJsonData = function (_requestObject) {
             var params = {};
 
-            if (_requestObject.format === "jsonp") {
+            if (_requestObject.format === 'jsonp') {
 
                 var httpObject = {
                     method: 'GET',
-                    params: {callback: "JSON_CALLBACK"},
+                    params: {callback: 'JSON_CALLBACK'},
                 };
 
                 if (angular.isDefined(_requestObject.xAuthToken)) {
@@ -121,7 +121,7 @@ angular.module("jtt_aping_jsonloader", [])
                  return $http({
                  method: 'JSONP',
                  url: _requestObject.path,
-                 params: {callback: "JSON_CALLBACK"'},
+                 params: {callback: 'JSON_CALLBACK'},
                  });
                  */
 

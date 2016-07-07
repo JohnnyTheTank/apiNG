@@ -3,13 +3,13 @@
 angular.module('jtt_aping')
     .config(['$provide', function ($provide) {
 
-    $provide.value("apingDefaultSettings", {
-        //templateUrl: "<PATH_TO_YOUR_DEFAULT_DESIGN>",
+    $provide.value('apingDefaultSettings', {
+        //templateUrl: '<PATH_TO_YOUR_DEFAULT_DESIGN>',
         //items: 20, //items per request
         //maxItems: 100, //max items per aping
-        //orderBy: "timestamp",
-        //orderReverse: "true",
-        //model: "social",
+        //orderBy: 'timestamp',
+        //orderReverse: 'true',
+        //model: 'social',
         //getNativeData: false,
         //removeDoubles: false,
         apingApiKeys: {
@@ -40,5 +40,4 @@ angular.module('jtt_aping')
         }
 
     });
-
 }]);

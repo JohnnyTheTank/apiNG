@@ -1,6 +1,6 @@
-"use strict";
+'use strict';
 
-angular.module("jtt_aping_json_string", [])
+angular.module('jtt_aping_json_string', [])
     .directive('apingJsonString', ['apingUtilityHelper', function (apingUtilityHelper) {
         return {
             require: '?aping',
@@ -9,7 +9,7 @@ angular.module("jtt_aping_json_string", [])
             link: function (scope, element, attrs, apingController) {
 
                 var appSettings = apingController.getAppSettings();
-                var request = apingUtilityHelper.parseJsonFromAttributes(attrs.apingJsonString, "apingJsonString", appSettings);
+                var request = apingUtilityHelper.parseJsonFromAttributes(attrs.apingJsonString, 'apingJsonString', appSettings);
 
                 var resultArray = [];
 

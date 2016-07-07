@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 angular.module('jtt_aping')
     .service('apingTimeHelper', function () {
 
@@ -17,7 +17,7 @@ angular.module('jtt_aping')
             if (angular.isUndefined(_add) || isNaN(_add)) {
                 _add = 0;
             }
-            if (typeof _string === "string") {
+            if (typeof _string === 'string') {
                 var a = _string.split(/[^0-9]/);
                 try {
                     return parseInt(Math.round(new Date(a[0], a[1] - 1, a[2], a[3], a[4], a[5]) / 1000 * _multiplier) + _add, 10);
@@ -31,7 +31,7 @@ angular.module('jtt_aping')
     .service('apingUtilityHelper', ['apingInputObjects', 'apingDefaultSettings', function (apingInputObjects, apingDefaultSettings) {
 
         /**
-         * return random matching API Key from apingDefaultSettings property "apingApiKeys". If there is no matching API Key, the function returns 'false'
+         * return random matching API Key from apingDefaultSettings property 'apingApiKeys'. If there is no matching API Key, the function returns 'false'
          *
          * @param _platform {String}
          * @param _keyName {String}
@@ -83,7 +83,7 @@ angular.module('jtt_aping')
          * @returns {Array}
          */
         this.parseRequestsFromAttributes = function (_string, _platform, _appSettings) {
-            if (!(typeof _string === "string" && _string)) {
+            if (!(typeof _string === 'string' && _string)) {
                 return [];
             }
             var requests = [];
@@ -99,7 +99,7 @@ angular.module('jtt_aping')
                             value.model = _appSettings.model;
                         }
                     }
-                    var request = apingInputObjects.getNew("request", value);
+                    var request = apingInputObjects.getNew('request', value);
                     requests.push(request);
                 });
             } else {
@@ -126,7 +126,7 @@ angular.module('jtt_aping')
          */
         this.sortArrayByProperty = function (_property) {
             var sortOrder = 1;
-            if (_property[0] === "-") {
+            if (_property[0] === '-') {
                 sortOrder = -1;
                 _property = _property.substr(1);
             }
@@ -174,7 +174,7 @@ angular.module('jtt_aping')
             var sortedArray = [];
             var propertyName;
             if (_useApingId) {
-                propertyName = "aping_id"
+                propertyName = 'aping_id'
             } else {
                 propertyName = 'apingStringified';
             }
@@ -228,7 +228,7 @@ angular.module('jtt_aping')
         this.mergeDuplicateObjectsFromArray = function (_array, _keepOrder) {
             var that = this;
             var sortedArray = [];
-            var propertyName = "aping_id";
+            var propertyName = 'aping_id';
             var orderPropertyName = 'apingTempOrder';
             if (_array.length === 1) {
                 return _array;
@@ -271,7 +271,7 @@ angular.module('jtt_aping')
          * @returns {String}
          */
         this.getTextFromHtml = function (_string) {
-            _string = _string.replace(/&lt;br ?\/\>|&lt;br ?\/&rt;|\<br ?\/\>/g, " ");
+            _string = _string.replace(/&lt;br ?\/\>|&lt;br ?\/&rt;|\<br ?\/\>/g, ' ');
             _string = _string.replace(/<(?:.|\n)*?>/gm, '');
             return _string;
         };
@@ -312,7 +312,7 @@ angular.module('jtt_aping')
         this.createIdByPropertiesForArray = function (_array, _propertiesString, _idString) {
             var that = this;
             if (angular.isUndefined(_idString) || !angular.isString(_idString)) {
-                _idString = "aping_id";
+                _idString = 'aping_id';
             }
             if (angular.isDefined(_array) && angular.isArray(_array)) {
                 angular.forEach(_array, function (value) {
@@ -331,10 +331,10 @@ angular.module('jtt_aping')
          */
         this.getIdByPropertiesForObject = function (_object, _propertiesString) {
             var that = this;
-            var idString = "";
+            var idString = '';
             if (angular.isDefined(_object) && angular.isObject(_object)) {
                 var properties = [];
-                if (_propertiesString.substr(0, 1) === "[") {
+                if (_propertiesString.substr(0, 1) === '[') {
                     properties = this.replaceSingleQuotesAndParseJson(_propertiesString);
                 } else {
                     properties.push(_propertiesString)
@@ -355,9 +355,9 @@ angular.module('jtt_aping')
          * @returns {String}
          */
         this.getValueFromObjectByPropertyString = function (_object, _propertyString, _resultObjectToString) {
-            var _value = "";
+            var _value = '';
             if (angular.isDefined(_object) && angular.isObject(_object)) {
-                var parts = _propertyString.split(".");
+                var parts = _propertyString.split('.');
                 var object = _object;
                 angular.forEach(parts, function (value) {
                     if (angular.isDefined(object[value])) {

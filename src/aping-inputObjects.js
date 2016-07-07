@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 angular.module('jtt_aping').service('apingInputObjects', ['apingDefaultSettings', function (apingDefaultSettings) {
 
@@ -14,7 +14,7 @@ angular.module('jtt_aping').service('apingInputObjects', ['apingDefaultSettings'
         var inputObject = {};
 
         switch (_type) {
-            case "request":
+            case 'request':
                 inputObject = angular.extend({
                     model: apingDefaultSettings.model
                 }, _params);
