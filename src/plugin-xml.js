@@ -1,6 +1,6 @@
-"use strict";
+'use strict';
 
-angular.module("jtt_aping_xml", [])
+angular.module('jtt_aping_xml', [])
     .directive('apingXml', ['apingUtilityHelper', 'xmlFactory', 'xmlService', function (apingUtilityHelper, xmlFactory, xmlService) {
         return {
             require: '?aping',
@@ -9,7 +9,7 @@ angular.module("jtt_aping_xml", [])
             link: function (scope, element, attrs, apingController) {
 
                 var appSettings = apingController.getAppSettings();
-                var requests = apingUtilityHelper.parseJsonFromAttributes(attrs.apingXml, "xml", appSettings);
+                var requests = apingUtilityHelper.parseJsonFromAttributes(attrs.apingXml, 'xml', appSettings);
 
                 requests.forEach(function (request) {
 
@@ -27,7 +27,7 @@ angular.module("jtt_aping_xml", [])
                             return false;
                         }
 
-                        // -1 is "no explicit limit". same for NaN value
+                        // -1 is 'no explicit limit'. same for NaN value
                         if (request.items < 0 || isNaN(request.items)) {
                             request.items = undefined;
                         }
@@ -57,14 +57,14 @@ angular.module("jtt_aping_xml", [])
                                         angular.extend(resultArray, results);
 
                                         if (angular.isDefined(request.orderBy)) {
-                                            if (request.orderBy === "$RANDOM") {
+                                            if (request.orderBy === '$RANDOM') {
                                                 resultArray = apingUtilityHelper.shuffleArray(resultArray);
                                             } else {
                                                 resultArray.sort(apingUtilityHelper.sortArrayByProperty(request.orderBy));
                                             }
                                         }
                                         //order desc
-                                        if (angular.isDefined(request.orderReverse) && request.orderReverse === true && request.orderBy !== "$RANDOM") {
+                                        if (angular.isDefined(request.orderReverse) && request.orderReverse === true && request.orderBy !== '$RANDOM') {
                                             resultArray.reverse();
                                         }
 
@@ -138,11 +138,11 @@ angular.module("jtt_aping_xml", [])
 
                     var oldTag = selfClosingTags[i];
                     var tempTag = oldTag.substring(0, oldTag.length - 2);
-                    tempTag += ">";
+                    tempTag += '>';
 
                     var tagName = oldTag.match(/[^<][\w+$]*/)[0];
-                    var closingTag = "</" + tagName + ">";
-                    var newTag = "<" + tagName + ">";
+                    var closingTag = '</' + tagName + '>';
+                    var newTag = '<' + tagName + '>';
 
                     var attrs = tempTag.match(/(\S+)=["']?((?:.(?!["']?\s+(?:\S+)=|[>"']))+.)["']?/g);
 
@@ -152,7 +152,7 @@ angular.module("jtt_aping_xml", [])
                             var attrName = attr.substring(0, attr.indexOf('='));
                             var attrValue = attr.substring(attr.indexOf('"') + 1, attr.lastIndexOf('"'));
 
-                            newTag += "<" + attrName + ">" + attrValue + "</" + attrName + ">";
+                            newTag += '<' + attrName + '>' + attrValue + '</' + attrName + '>';
                         }
                     }
 
@@ -180,10 +180,10 @@ angular.module("jtt_aping_xml", [])
                 for (var i = 0; i < tagsWithAttributesAndValue.length; i++) {
 
                     var oldTag = tagsWithAttributesAndValue[i];
-                    var oldTagName = oldTag.substring(0, oldTag.indexOf(">") + 1);
-                    var oldTagValue = oldTag.substring(oldTag.indexOf(">") + 1);
+                    var oldTagName = oldTag.substring(0, oldTag.indexOf('>') + 1);
+                    var oldTagValue = oldTag.substring(oldTag.indexOf('>') + 1);
 
-                    var newTag = oldTagName + "<_@ttribute>" + oldTagValue + "</_@ttribute>";
+                    var newTag = oldTagName + '<_@ttribute>' + oldTagValue + '</_@ttribute>';
 
                     xmlStr = xmlStr.replace(oldTag, newTag);
                 }
@@ -207,7 +207,7 @@ angular.module("jtt_aping_xml", [])
 
                     var oldTag = tagsWithAttributes[i];
                     var tagName = oldTag.match(/[^<][\w+$]*/)[0];
-                    var newTag = "<" + tagName + ">";
+                    var newTag = '<' + tagName + '>';
                     var attrs = oldTag.match(/(\S+)=["']?((?:.(?!["']?\s+(?:\S+)=|[>"']))+.)["']?/g);
 
                     if (attrs) {
@@ -217,7 +217,7 @@ angular.module("jtt_aping_xml", [])
                             var attrName = attr.substring(0, attr.indexOf('='));
                             var attrValue = attr.substring(attr.indexOf('"') + 1, attr.lastIndexOf('"'));
 
-                            newTag += "<" + attrName + ">" + attrValue + "</" + attrName + ">";
+                            newTag += '<' + attrName + '>' + attrValue + '</' + attrName + '>';
                         }
                     }
 

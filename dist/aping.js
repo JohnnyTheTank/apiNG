@@ -1,6 +1,6 @@
 /**
     @name: aping 
-    @version: 1.4.0 (27-06-2016) 
+    @version: 1.4.0 (07-07-2016) 
     @author: Jonathan Hornung <jonathan.hornung@gmail.com> 
     @url: https://github.com/JohnnyTheTank/apiNG 
     @license: MIT
@@ -11,14 +11,14 @@ angular.module('jtt_aping', [
     'jtt_aping_ng_array',
     'jtt_aping_local_storage',
     'jtt_aping_json_string',
-]);;"use strict";
+]);;'use strict';
 angular.module('jtt_aping')
     .config(['$provide', function ($provide) {
-        $provide.value("apingDefaultSettings", {
+        $provide.value('apingDefaultSettings', {
             apingApiKeys: {}
         });
     }])
-    .value("apingResults", {})
+    .value('apingResults', {})
     .directive('aping', ['apingResults', 'apingDefaultSettings', 'apingUtilityHelper', '$templateRequest', '$compile', function (apingResults, apingDefaultSettings, apingUtilityHelper, $templateRequest, $compile) {
         return {
             restrict: 'E',
@@ -57,7 +57,7 @@ angular.module('jtt_aping')
                 }
 
                 function renderTemplate(_templatePath) {
-                    if (angular.isDefined(_templatePath) && _templatePath !== "$NONE") {
+                    if (angular.isDefined(_templatePath) && _templatePath !== '$NONE') {
                         $templateRequest(_templatePath).then(function (html) {
                             var template = angular.element(html);
                             element.empty().append(template);
@@ -65,7 +65,7 @@ angular.module('jtt_aping')
                         });
                     } else {
                         transcludeFn(scope, function (clone, innerScope) {
-                            element.html("");
+                            element.html('');
                             element.append(clone);
                             $compile(clone)(innerScope);
                         });
@@ -77,7 +77,7 @@ angular.module('jtt_aping')
 
                 if(angular.isUndefined($scope.resultName)) {
                     if (angular.isUndefined($scope.resultProperty)) {
-                        $scope.resultName = "results";
+                        $scope.resultName = 'results';
                     } else {
                         $scope.resultName = $scope.resultProperty;
                     }
@@ -191,7 +191,7 @@ angular.module('jtt_aping')
                     }
 
                     return {
-                        model: $scope.model || apingDefaultSettings.model || "native",
+                        model: $scope.model || apingDefaultSettings.model || 'native',
                         getNativeData: getNativeData,
                         items: items,
                         maxItems: maxItems,
@@ -213,7 +213,7 @@ angular.module('jtt_aping')
                 this.concatToResults = function (_array) {
                     if(angular.isUndefined($scope.resultName)) {
                         if (angular.isUndefined($scope.resultProperty)) {
-                            $scope.resultName = "results";
+                            $scope.resultName = 'results';
                         } else {
                             $scope.resultName = $scope.resultProperty;
                         }
@@ -225,29 +225,29 @@ angular.module('jtt_aping')
 
                     if (angular.isDefined(appSettings.idBy)) {
                         tempArray = apingUtilityHelper.createIdByPropertiesForArray(tempArray, appSettings.idBy);
-                        if (appSettings.mergeDoubles === true || appSettings.mergeDoubles === "true") {
+                        if (appSettings.mergeDoubles === true || appSettings.mergeDoubles === 'true') {
                             tempArray = apingUtilityHelper.mergeDuplicateObjectsFromArray(
                                 tempArray,
-                                (appSettings.orderBy === false || appSettings.orderBy === "false" || appSettings.orderBy === "$NONE")
+                                (appSettings.orderBy === false || appSettings.orderBy === 'false' || appSettings.orderBy === '$NONE')
                             );
                         }
                     }
 
                     //remove doubles
-                    if (appSettings.removeDoubles === true || appSettings.removeDoubles === "true") {
-                        if (appSettings.mergeDoubles !== true && appSettings.mergeDoubles !== "true") {
+                    if (appSettings.removeDoubles === true || appSettings.removeDoubles === 'true') {
+                        if (appSettings.mergeDoubles !== true && appSettings.mergeDoubles !== 'true') {
                             tempArray = apingUtilityHelper.removeDuplicateObjectsFromArray(
                                 tempArray,
-                                (appSettings.orderBy === false || appSettings.orderBy === "false" || appSettings.orderBy === "$NONE"),
+                                (appSettings.orderBy === false || appSettings.orderBy === 'false' || appSettings.orderBy === '$NONE'),
                                 angular.isDefined(appSettings.idBy)
                             );
                         }
                     }
 
                     //order array
-                    if (angular.isDefined(appSettings.orderBy) && appSettings.orderBy !== false && appSettings.orderBy !== "false" && appSettings.orderBy !== "$NONE") {
+                    if (angular.isDefined(appSettings.orderBy) && appSettings.orderBy !== false && appSettings.orderBy !== 'false' && appSettings.orderBy !== '$NONE') {
                         //order random
-                        if (appSettings.orderBy === "$RANDOM") {
+                        if (appSettings.orderBy === '$RANDOM') {
                             tempArray = apingUtilityHelper.shuffleArray(tempArray);
                         }
                         //order by attribute
@@ -257,7 +257,7 @@ angular.module('jtt_aping')
                     }
 
                     //order reverse
-                    if ((appSettings.orderReverse === true || appSettings.orderReverse === "true") && appSettings.orderBy !== "$RANDOM") {
+                    if ((appSettings.orderReverse === true || appSettings.orderReverse === 'true') && appSettings.orderBy !== '$RANDOM') {
                         tempArray.reverse();
                     }
 
@@ -280,7 +280,7 @@ angular.module('jtt_aping')
                 };
             }]
         };
-    }]);;"use strict";
+    }]);;'use strict';
 angular.module('jtt_aping')
     .service('apingTimeHelper', function () {
 
@@ -299,7 +299,7 @@ angular.module('jtt_aping')
             if (angular.isUndefined(_add) || isNaN(_add)) {
                 _add = 0;
             }
-            if (typeof _string === "string") {
+            if (typeof _string === 'string') {
                 var a = _string.split(/[^0-9]/);
                 try {
                     return parseInt(Math.round(new Date(a[0], a[1] - 1, a[2], a[3], a[4], a[5]) / 1000 * _multiplier) + _add, 10);
@@ -313,7 +313,7 @@ angular.module('jtt_aping')
     .service('apingUtilityHelper', ['apingInputObjects', 'apingDefaultSettings', function (apingInputObjects, apingDefaultSettings) {
 
         /**
-         * return random matching API Key from apingDefaultSettings property "apingApiKeys". If there is no matching API Key, the function returns 'false'
+         * return random matching API Key from apingDefaultSettings property 'apingApiKeys'. If there is no matching API Key, the function returns 'false'
          *
          * @param _platform {String}
          * @param _keyName {String}
@@ -365,7 +365,7 @@ angular.module('jtt_aping')
          * @returns {Array}
          */
         this.parseRequestsFromAttributes = function (_string, _platform, _appSettings) {
-            if (!(typeof _string === "string" && _string)) {
+            if (!(typeof _string === 'string' && _string)) {
                 return [];
             }
             var requests = [];
@@ -381,7 +381,7 @@ angular.module('jtt_aping')
                             value.model = _appSettings.model;
                         }
                     }
-                    var request = apingInputObjects.getNew("request", value);
+                    var request = apingInputObjects.getNew('request', value);
                     requests.push(request);
                 });
             } else {
@@ -408,7 +408,7 @@ angular.module('jtt_aping')
          */
         this.sortArrayByProperty = function (_property) {
             var sortOrder = 1;
-            if (_property[0] === "-") {
+            if (_property[0] === '-') {
                 sortOrder = -1;
                 _property = _property.substr(1);
             }
@@ -456,7 +456,7 @@ angular.module('jtt_aping')
             var sortedArray = [];
             var propertyName;
             if (_useApingId) {
-                propertyName = "aping_id"
+                propertyName = 'aping_id'
             } else {
                 propertyName = 'apingStringified';
             }
@@ -510,7 +510,7 @@ angular.module('jtt_aping')
         this.mergeDuplicateObjectsFromArray = function (_array, _keepOrder) {
             var that = this;
             var sortedArray = [];
-            var propertyName = "aping_id";
+            var propertyName = 'aping_id';
             var orderPropertyName = 'apingTempOrder';
             if (_array.length === 1) {
                 return _array;
@@ -553,7 +553,7 @@ angular.module('jtt_aping')
          * @returns {String}
          */
         this.getTextFromHtml = function (_string) {
-            _string = _string.replace(/&lt;br ?\/\>|&lt;br ?\/&rt;|\<br ?\/\>/g, " ");
+            _string = _string.replace(/&lt;br ?\/\>|&lt;br ?\/&rt;|\<br ?\/\>/g, ' ');
             _string = _string.replace(/<(?:.|\n)*?>/gm, '');
             return _string;
         };
@@ -594,7 +594,7 @@ angular.module('jtt_aping')
         this.createIdByPropertiesForArray = function (_array, _propertiesString, _idString) {
             var that = this;
             if (angular.isUndefined(_idString) || !angular.isString(_idString)) {
-                _idString = "aping_id";
+                _idString = 'aping_id';
             }
             if (angular.isDefined(_array) && angular.isArray(_array)) {
                 angular.forEach(_array, function (value) {
@@ -613,10 +613,10 @@ angular.module('jtt_aping')
          */
         this.getIdByPropertiesForObject = function (_object, _propertiesString) {
             var that = this;
-            var idString = "";
+            var idString = '';
             if (angular.isDefined(_object) && angular.isObject(_object)) {
                 var properties = [];
-                if (_propertiesString.substr(0, 1) === "[") {
+                if (_propertiesString.substr(0, 1) === '[') {
                     properties = this.replaceSingleQuotesAndParseJson(_propertiesString);
                 } else {
                     properties.push(_propertiesString)
@@ -637,9 +637,9 @@ angular.module('jtt_aping')
          * @returns {String}
          */
         this.getValueFromObjectByPropertyString = function (_object, _propertyString, _resultObjectToString) {
-            var _value = "";
+            var _value = '';
             if (angular.isDefined(_object) && angular.isObject(_object)) {
-                var parts = _propertyString.split(".");
+                var parts = _propertyString.split('.');
                 var object = _object;
                 angular.forEach(parts, function (value) {
                     if (angular.isDefined(object[value])) {
@@ -657,7 +657,7 @@ angular.module('jtt_aping')
             return _value;
         };
 
-    }]);;"use strict";
+    }]);;'use strict';
 
 angular.module('jtt_aping').service('apingInputObjects', ['apingDefaultSettings', function (apingDefaultSettings) {
 
@@ -673,7 +673,7 @@ angular.module('jtt_aping').service('apingInputObjects', ['apingDefaultSettings'
         var inputObject = {};
 
         switch (_type) {
-            case "request":
+            case 'request':
                 inputObject = angular.extend({
                     model: apingDefaultSettings.model
                 }, _params);
@@ -685,7 +685,7 @@ angular.module('jtt_aping').service('apingInputObjects', ['apingDefaultSettings'
 
         return inputObject;
     }
-}]);;"use strict";
+}]);;'use strict';
 angular.module('jtt_aping').service('apingModels', [function () {
     /**
      * return new clean apiNG model object by _model and _platform
@@ -702,9 +702,9 @@ angular.module('jtt_aping').service('apingModels', [function () {
         };
         return model;
     };
-}]);;"use strict";
+}]);;'use strict';
 
-angular.module("jtt_aping_jsonloader", [])
+angular.module('jtt_aping_jsonloader', [])
     .directive('apingJsonloader', ['apingUtilityHelper', 'jsonloaderFactory', function (apingUtilityHelper, jsonloaderFactory) {
         return {
             require: '?aping',
@@ -713,7 +713,7 @@ angular.module("jtt_aping_jsonloader", [])
             link: function (scope, element, attrs, apingController) {
 
                 var appSettings = apingController.getAppSettings();
-                var requests = apingUtilityHelper.parseJsonFromAttributes(attrs.apingJsonloader, "jsonloader", appSettings);
+                var requests = apingUtilityHelper.parseJsonFromAttributes(attrs.apingJsonloader, 'jsonloader', appSettings);
 
                 requests.forEach(function (request) {
                     if (request.path) {
@@ -722,10 +722,10 @@ angular.module("jtt_aping_jsonloader", [])
                             path: request.path,
                         };
 
-                        if (!request.format || request.format.toLowerCase() !== "jsonp") {
-                            requestObject.format = "json";
+                        if (!request.format || request.format.toLowerCase() !== 'jsonp') {
+                            requestObject.format = 'json';
                         } else {
-                            requestObject.format = "jsonp";
+                            requestObject.format = 'jsonp';
                         }
 
                         if (angular.isUndefined(request.items)) {
@@ -736,7 +736,7 @@ angular.module("jtt_aping_jsonloader", [])
                             return false;
                         }
 
-                        // -1 is "no explicit limit". same for NaN value
+                        // -1 is 'no explicit limit'. same for NaN value
                         if (request.items < 0 || isNaN(request.items)) {
                             request.items = undefined;
                         }
@@ -769,14 +769,14 @@ angular.module("jtt_aping_jsonloader", [])
                                         angular.extend(resultArray, results);
 
                                         if (angular.isDefined(request.orderBy)) {
-                                            if (request.orderBy === "$RANDOM") {
+                                            if (request.orderBy === '$RANDOM') {
                                                 resultArray = apingUtilityHelper.shuffleArray(resultArray);
                                             } else {
                                                 resultArray.sort(apingUtilityHelper.sortArrayByProperty(request.orderBy));
                                             }
                                         }
                                         //order desc
-                                        if (angular.isDefined(request.orderReverse) && request.orderReverse === true && request.orderBy !== "$RANDOM") {
+                                        if (angular.isDefined(request.orderReverse) && request.orderReverse === true && request.orderBy !== '$RANDOM') {
                                             resultArray.reverse();
                                         }
 
@@ -803,11 +803,11 @@ angular.module("jtt_aping_jsonloader", [])
         jsonloaderFactory.getJsonData = function (_requestObject) {
             var params = {};
 
-            if (_requestObject.format === "jsonp") {
+            if (_requestObject.format === 'jsonp') {
 
                 var httpObject = {
                     method: 'GET',
-                    params: {callback: "JSON_CALLBACK"},
+                    params: {callback: 'JSON_CALLBACK'},
                 };
 
                 if (angular.isDefined(_requestObject.xAuthToken)) {
@@ -825,7 +825,7 @@ angular.module("jtt_aping_jsonloader", [])
                  return $http({
                  method: 'JSONP',
                  url: _requestObject.path,
-                 params: {callback: "JSON_CALLBACK"'},
+                 params: {callback: 'JSON_CALLBACK'},
                  });
                  */
 
@@ -847,9 +847,9 @@ angular.module("jtt_aping_jsonloader", [])
             }
         };
         return jsonloaderFactory;
-    }]);;"use strict";
+    }]);;'use strict';
 
-angular.module("jtt_aping_json_string", [])
+angular.module('jtt_aping_json_string', [])
     .directive('apingJsonString', ['apingUtilityHelper', function (apingUtilityHelper) {
         return {
             require: '?aping',
@@ -858,7 +858,7 @@ angular.module("jtt_aping_json_string", [])
             link: function (scope, element, attrs, apingController) {
 
                 var appSettings = apingController.getAppSettings();
-                var request = apingUtilityHelper.parseJsonFromAttributes(attrs.apingJsonString, "apingJsonString", appSettings);
+                var request = apingUtilityHelper.parseJsonFromAttributes(attrs.apingJsonString, 'apingJsonString', appSettings);
 
                 var resultArray = [];
 
@@ -874,9 +874,9 @@ angular.module("jtt_aping_json_string", [])
                 }
             }
         }
-    }]);;"use strict";
+    }]);;'use strict';
 
-angular.module("jtt_aping_ng_array", [])
+angular.module('jtt_aping_ng_array', [])
     .directive('apingNgArray', ['apingUtilityHelper', function (apingUtilityHelper) {
         return {
             require: '?aping',
@@ -885,7 +885,7 @@ angular.module("jtt_aping_ng_array", [])
             link: function (scope, element, attrs, apingController) {
 
                 var appSettings = apingController.getAppSettings();
-                var requests = apingUtilityHelper.parseJsonFromAttributes(attrs.apingNgArray, "ngArray", appSettings);
+                var requests = apingUtilityHelper.parseJsonFromAttributes(attrs.apingNgArray, 'ngArray', appSettings);
 
                 requests.forEach(function (request) {
 
@@ -898,7 +898,7 @@ angular.module("jtt_aping_ng_array", [])
                             return false;
                         }
 
-                        // -1 is "no explicit limit". same for NaN value
+                        // -1 is 'no explicit limit'. same for NaN value
                         if (request.items < 0 || isNaN(request.items)) {
                             request.items = undefined;
                         }
@@ -908,14 +908,14 @@ angular.module("jtt_aping_ng_array", [])
                         if (scope[request.name].constructor === Array) {
                             resultArray = scope[request.name];
                             if (angular.isDefined(request.orderBy)) {
-                                if (request.orderBy === "$RANDOM") {
+                                if (request.orderBy === '$RANDOM') {
                                     resultArray = apingUtilityHelper.shuffleArray(resultArray);
                                 } else {
                                     resultArray.sort(apingUtilityHelper.sortArrayByProperty(request.orderBy));
                                 }
                             }
                             //order desc
-                            if (angular.isDefined(request.orderReverse) && request.orderReverse === true && request.orderBy !== "$RANDOM") {
+                            if (angular.isDefined(request.orderReverse) && request.orderReverse === true && request.orderBy !== '$RANDOM') {
                                 resultArray.reverse();
                             }
 
@@ -946,7 +946,7 @@ angular.module("jtt_aping_ng_array", [])
             link: function (scope, element, attrs, apingController) {
 
                 var appSettings = apingController.getAppSettings();
-                var requests = apingUtilityHelper.parseJsonFromAttributes(attrs.apingLocalStorage, "localStorage", appSettings);
+                var requests = apingUtilityHelper.parseJsonFromAttributes(attrs.apingLocalStorage, 'localStorage', appSettings);
 
                 requests.forEach(function (request) {
 
@@ -959,7 +959,7 @@ angular.module("jtt_aping_ng_array", [])
                             return false;
                         }
 
-                        // -1 is "no explicit limit". same for NaN value
+                        // -1 is 'no explicit limit'. same for NaN value
                         if (request.items < 0 || isNaN(request.items)) {
                             request.items = undefined;
                         }
@@ -990,14 +990,14 @@ angular.module("jtt_aping_ng_array", [])
                                         resultArray = results;
 
                                         if (angular.isDefined(request.orderBy)) {
-                                            if (request.orderBy === "$RANDOM") {
+                                            if (request.orderBy === '$RANDOM') {
                                                 resultArray = apingUtilityHelper.shuffleArray(resultArray);
                                             } else {
                                                 resultArray.sort(apingUtilityHelper.sortArrayByProperty(request.orderBy));
                                             }
                                         }
                                         //order desc
-                                        if (angular.isDefined(request.orderReverse) && request.orderReverse === true && request.orderBy !== "$RANDOM") {
+                                        if (angular.isDefined(request.orderReverse) && request.orderReverse === true && request.orderBy !== '$RANDOM') {
                                             resultArray.reverse();
                                         }
 
@@ -1040,9 +1040,9 @@ angular.module("jtt_aping_ng_array", [])
             set: set,
             get: get
         };
-    }]);;"use strict";
+    }]);;'use strict';
 
-angular.module("jtt_aping_xml", [])
+angular.module('jtt_aping_xml', [])
     .directive('apingXml', ['apingUtilityHelper', 'xmlFactory', 'xmlService', function (apingUtilityHelper, xmlFactory, xmlService) {
         return {
             require: '?aping',
@@ -1051,7 +1051,7 @@ angular.module("jtt_aping_xml", [])
             link: function (scope, element, attrs, apingController) {
 
                 var appSettings = apingController.getAppSettings();
-                var requests = apingUtilityHelper.parseJsonFromAttributes(attrs.apingXml, "xml", appSettings);
+                var requests = apingUtilityHelper.parseJsonFromAttributes(attrs.apingXml, 'xml', appSettings);
 
                 requests.forEach(function (request) {
 
@@ -1069,7 +1069,7 @@ angular.module("jtt_aping_xml", [])
                             return false;
                         }
 
-                        // -1 is "no explicit limit". same for NaN value
+                        // -1 is 'no explicit limit'. same for NaN value
                         if (request.items < 0 || isNaN(request.items)) {
                             request.items = undefined;
                         }
@@ -1099,14 +1099,14 @@ angular.module("jtt_aping_xml", [])
                                         angular.extend(resultArray, results);
 
                                         if (angular.isDefined(request.orderBy)) {
-                                            if (request.orderBy === "$RANDOM") {
+                                            if (request.orderBy === '$RANDOM') {
                                                 resultArray = apingUtilityHelper.shuffleArray(resultArray);
                                             } else {
                                                 resultArray.sort(apingUtilityHelper.sortArrayByProperty(request.orderBy));
                                             }
                                         }
                                         //order desc
-                                        if (angular.isDefined(request.orderReverse) && request.orderReverse === true && request.orderBy !== "$RANDOM") {
+                                        if (angular.isDefined(request.orderReverse) && request.orderReverse === true && request.orderBy !== '$RANDOM') {
                                             resultArray.reverse();
                                         }
 
@@ -1180,11 +1180,11 @@ angular.module("jtt_aping_xml", [])
 
                     var oldTag = selfClosingTags[i];
                     var tempTag = oldTag.substring(0, oldTag.length - 2);
-                    tempTag += ">";
+                    tempTag += '>';
 
                     var tagName = oldTag.match(/[^<][\w+$]*/)[0];
-                    var closingTag = "</" + tagName + ">";
-                    var newTag = "<" + tagName + ">";
+                    var closingTag = '</' + tagName + '>';
+                    var newTag = '<' + tagName + '>';
 
                     var attrs = tempTag.match(/(\S+)=["']?((?:.(?!["']?\s+(?:\S+)=|[>"']))+.)["']?/g);
 
@@ -1194,7 +1194,7 @@ angular.module("jtt_aping_xml", [])
                             var attrName = attr.substring(0, attr.indexOf('='));
                             var attrValue = attr.substring(attr.indexOf('"') + 1, attr.lastIndexOf('"'));
 
-                            newTag += "<" + attrName + ">" + attrValue + "</" + attrName + ">";
+                            newTag += '<' + attrName + '>' + attrValue + '</' + attrName + '>';
                         }
                     }
 
@@ -1222,10 +1222,10 @@ angular.module("jtt_aping_xml", [])
                 for (var i = 0; i < tagsWithAttributesAndValue.length; i++) {
 
                     var oldTag = tagsWithAttributesAndValue[i];
-                    var oldTagName = oldTag.substring(0, oldTag.indexOf(">") + 1);
-                    var oldTagValue = oldTag.substring(oldTag.indexOf(">") + 1);
+                    var oldTagName = oldTag.substring(0, oldTag.indexOf('>') + 1);
+                    var oldTagValue = oldTag.substring(oldTag.indexOf('>') + 1);
 
-                    var newTag = oldTagName + "<_@ttribute>" + oldTagValue + "</_@ttribute>";
+                    var newTag = oldTagName + '<_@ttribute>' + oldTagValue + '</_@ttribute>';
 
                     xmlStr = xmlStr.replace(oldTag, newTag);
                 }
@@ -1249,7 +1249,7 @@ angular.module("jtt_aping_xml", [])
 
                     var oldTag = tagsWithAttributes[i];
                     var tagName = oldTag.match(/[^<][\w+$]*/)[0];
-                    var newTag = "<" + tagName + ">";
+                    var newTag = '<' + tagName + '>';
                     var attrs = oldTag.match(/(\S+)=["']?((?:.(?!["']?\s+(?:\S+)=|[>"']))+.)["']?/g);
 
                     if (attrs) {
@@ -1259,7 +1259,7 @@ angular.module("jtt_aping_xml", [])
                             var attrName = attr.substring(0, attr.indexOf('='));
                             var attrValue = attr.substring(attr.indexOf('"') + 1, attr.lastIndexOf('"'));
 
-                            newTag += "<" + attrName + ">" + attrValue + "</" + attrName + ">";
+                            newTag += '<' + attrName + '>' + attrValue + '</' + attrName + '>';
                         }
                     }
 

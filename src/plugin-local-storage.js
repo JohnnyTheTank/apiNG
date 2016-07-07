@@ -7,7 +7,7 @@ angular.module('jtt_aping_local_storage', [])
             link: function (scope, element, attrs, apingController) {
 
                 var appSettings = apingController.getAppSettings();
-                var requests = apingUtilityHelper.parseJsonFromAttributes(attrs.apingLocalStorage, "localStorage", appSettings);
+                var requests = apingUtilityHelper.parseJsonFromAttributes(attrs.apingLocalStorage, 'localStorage', appSettings);
 
                 requests.forEach(function (request) {
 
@@ -20,7 +20,7 @@ angular.module('jtt_aping_local_storage', [])
                             return false;
                         }
 
-                        // -1 is "no explicit limit". same for NaN value
+                        // -1 is 'no explicit limit'. same for NaN value
                         if (request.items < 0 || isNaN(request.items)) {
                             request.items = undefined;
                         }
@@ -51,14 +51,14 @@ angular.module('jtt_aping_local_storage', [])
                                         resultArray = results;
 
                                         if (angular.isDefined(request.orderBy)) {
-                                            if (request.orderBy === "$RANDOM") {
+                                            if (request.orderBy === '$RANDOM') {
                                                 resultArray = apingUtilityHelper.shuffleArray(resultArray);
                                             } else {
                                                 resultArray.sort(apingUtilityHelper.sortArrayByProperty(request.orderBy));
                                             }
                                         }
                                         //order desc
-                                        if (angular.isDefined(request.orderReverse) && request.orderReverse === true && request.orderBy !== "$RANDOM") {
+                                        if (angular.isDefined(request.orderReverse) && request.orderReverse === true && request.orderBy !== '$RANDOM') {
                                             resultArray.reverse();
                                         }
 

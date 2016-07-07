@@ -1,11 +1,11 @@
-"use strict";
+'use strict';
 angular.module('jtt_aping')
     .config(['$provide', function ($provide) {
-        $provide.value("apingDefaultSettings", {
+        $provide.value('apingDefaultSettings', {
             apingApiKeys: {}
         });
     }])
-    .value("apingResults", {})
+    .value('apingResults', {})
     .directive('aping', ['apingResults', 'apingDefaultSettings', 'apingUtilityHelper', '$templateRequest', '$compile', function (apingResults, apingDefaultSettings, apingUtilityHelper, $templateRequest, $compile) {
         return {
             restrict: 'E',
@@ -44,7 +44,7 @@ angular.module('jtt_aping')
                 }
 
                 function renderTemplate(_templatePath) {
-                    if (angular.isDefined(_templatePath) && _templatePath !== "$NONE") {
+                    if (angular.isDefined(_templatePath) && _templatePath !== '$NONE') {
                         $templateRequest(_templatePath).then(function (html) {
                             var template = angular.element(html);
                             element.empty().append(template);
@@ -52,7 +52,7 @@ angular.module('jtt_aping')
                         });
                     } else {
                         transcludeFn(scope, function (clone, innerScope) {
-                            element.html("");
+                            element.html('');
                             element.append(clone);
                             $compile(clone)(innerScope);
                         });
@@ -64,7 +64,7 @@ angular.module('jtt_aping')
 
                 if(angular.isUndefined($scope.resultName)) {
                     if (angular.isUndefined($scope.resultProperty)) {
-                        $scope.resultName = "results";
+                        $scope.resultName = 'results';
                     } else {
                         $scope.resultName = $scope.resultProperty;
                     }
@@ -178,7 +178,7 @@ angular.module('jtt_aping')
                     }
 
                     return {
-                        model: $scope.model || apingDefaultSettings.model || "native",
+                        model: $scope.model || apingDefaultSettings.model || 'native',
                         getNativeData: getNativeData,
                         items: items,
                         maxItems: maxItems,
@@ -200,7 +200,7 @@ angular.module('jtt_aping')
                 this.concatToResults = function (_array) {
                     if(angular.isUndefined($scope.resultName)) {
                         if (angular.isUndefined($scope.resultProperty)) {
-                            $scope.resultName = "results";
+                            $scope.resultName = 'results';
                         } else {
                             $scope.resultName = $scope.resultProperty;
                         }
@@ -212,29 +212,29 @@ angular.module('jtt_aping')
 
                     if (angular.isDefined(appSettings.idBy)) {
                         tempArray = apingUtilityHelper.createIdByPropertiesForArray(tempArray, appSettings.idBy);
-                        if (appSettings.mergeDoubles === true || appSettings.mergeDoubles === "true") {
+                        if (appSettings.mergeDoubles === true || appSettings.mergeDoubles === 'true') {
                             tempArray = apingUtilityHelper.mergeDuplicateObjectsFromArray(
                                 tempArray,
-                                (appSettings.orderBy === false || appSettings.orderBy === "false" || appSettings.orderBy === "$NONE")
+                                (appSettings.orderBy === false || appSettings.orderBy === 'false' || appSettings.orderBy === '$NONE')
                             );
                         }
                     }
 
                     //remove doubles
-                    if (appSettings.removeDoubles === true || appSettings.removeDoubles === "true") {
-                        if (appSettings.mergeDoubles !== true && appSettings.mergeDoubles !== "true") {
+                    if (appSettings.removeDoubles === true || appSettings.removeDoubles === 'true') {
+                        if (appSettings.mergeDoubles !== true && appSettings.mergeDoubles !== 'true') {
                             tempArray = apingUtilityHelper.removeDuplicateObjectsFromArray(
                                 tempArray,
-                                (appSettings.orderBy === false || appSettings.orderBy === "false" || appSettings.orderBy === "$NONE"),
+                                (appSettings.orderBy === false || appSettings.orderBy === 'false' || appSettings.orderBy === '$NONE'),
                                 angular.isDefined(appSettings.idBy)
                             );
                         }
                     }
 
                     //order array
-                    if (angular.isDefined(appSettings.orderBy) && appSettings.orderBy !== false && appSettings.orderBy !== "false" && appSettings.orderBy !== "$NONE") {
+                    if (angular.isDefined(appSettings.orderBy) && appSettings.orderBy !== false && appSettings.orderBy !== 'false' && appSettings.orderBy !== '$NONE') {
                         //order random
-                        if (appSettings.orderBy === "$RANDOM") {
+                        if (appSettings.orderBy === '$RANDOM') {
                             tempArray = apingUtilityHelper.shuffleArray(tempArray);
                         }
                         //order by attribute
@@ -244,7 +244,7 @@ angular.module('jtt_aping')
                     }
 
                     //order reverse
-                    if ((appSettings.orderReverse === true || appSettings.orderReverse === "true") && appSettings.orderBy !== "$RANDOM") {
+                    if ((appSettings.orderReverse === true || appSettings.orderReverse === 'true') && appSettings.orderBy !== '$RANDOM') {
                         tempArray.reverse();
                     }
 

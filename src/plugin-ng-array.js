@@ -1,6 +1,6 @@
-"use strict";
+'use strict';
 
-angular.module("jtt_aping_ng_array", [])
+angular.module('jtt_aping_ng_array', [])
     .directive('apingNgArray', ['apingUtilityHelper', function (apingUtilityHelper) {
         return {
             require: '?aping',
@@ -9,7 +9,7 @@ angular.module("jtt_aping_ng_array", [])
             link: function (scope, element, attrs, apingController) {
 
                 var appSettings = apingController.getAppSettings();
-                var requests = apingUtilityHelper.parseJsonFromAttributes(attrs.apingNgArray, "ngArray", appSettings);
+                var requests = apingUtilityHelper.parseJsonFromAttributes(attrs.apingNgArray, 'ngArray', appSettings);
 
                 requests.forEach(function (request) {
 
@@ -22,7 +22,7 @@ angular.module("jtt_aping_ng_array", [])
                             return false;
                         }
 
-                        // -1 is "no explicit limit". same for NaN value
+                        // -1 is 'no explicit limit'. same for NaN value
                         if (request.items < 0 || isNaN(request.items)) {
                             request.items = undefined;
                         }
@@ -32,14 +32,14 @@ angular.module("jtt_aping_ng_array", [])
                         if (scope[request.name].constructor === Array) {
                             resultArray = scope[request.name];
                             if (angular.isDefined(request.orderBy)) {
-                                if (request.orderBy === "$RANDOM") {
+                                if (request.orderBy === '$RANDOM') {
                                     resultArray = apingUtilityHelper.shuffleArray(resultArray);
                                 } else {
                                     resultArray.sort(apingUtilityHelper.sortArrayByProperty(request.orderBy));
                                 }
                             }
                             //order desc
-                            if (angular.isDefined(request.orderReverse) && request.orderReverse === true && request.orderBy !== "$RANDOM") {
+                            if (angular.isDefined(request.orderReverse) && request.orderReverse === true && request.orderBy !== '$RANDOM') {
                                 resultArray.reverse();
                             }
 

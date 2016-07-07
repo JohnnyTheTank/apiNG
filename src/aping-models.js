@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 angular.module('jtt_aping').service('apingModels', [function () {
     /**
      * return new clean apiNG model object by _model and _platform
