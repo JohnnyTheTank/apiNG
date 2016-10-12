@@ -12,14 +12,18 @@ There are two level of usage: _basic_ and _advanced_
 * The _advanced_ usage turns apiNG into a plugin system for data-sources and designs, focused on re-usable modules
 
 ## Basic Demos
-- [Demo: Random Users (plnkr)](http://plnkr.co/xmflhJ)
-- [Demo: Read Json Files (plnkr)](http://plnkr.co/k3DPNc)
+- Get data from **REST API**: [View & Edit on Plunker](http://plnkr.co/xmflhJ)
+- Read data from **JSON Files**: [View & Edit on Plunker](http://plnkr.co/k3DPNc)
 
 ## Advanced Demos
-- [Social Wall](http://aping.js.org/#demo) (default design)
-- [Image Gallery](https://rawgit.com/JohnnyTheTank/apiNG-design-xgallerify/master/demo/) (images from twitter)
-- [Demo: Socal Wall (plnkr)](http://plnkr.co/dz3Dru)
-- ionic + apiNG ([on play.ionic.io](http://play.ionic.io/app/0137f0b5967d)) - ([on Plnkr](http://plnkr.co/edit/WesqTb?p=preview))
+- **Social Wall**
+    - [Demopage](http://aping.js.org/#demo)
+    - [View & Edit on Plunker](http://plnkr.co/dz3Dru)
+- **Football-Data**
+    - [View & Edit on Plunker](http://plnkr.co/a8Uj8V)
+- **ionic + apiNG** (hybrid mobile apps)
+    - [View & Edit on play.ionic.io](http://play.ionic.io/app/0137f0b5967d)
+    - [View & Edit on Plunker](http://plnkr.co/edit/WesqTb?p=preview)
 
 ## References
 - [sonymusic.de/videos](https://sonymusic.de/videos) (Youtube video playlist & player) based on apiNG
