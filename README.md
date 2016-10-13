@@ -30,6 +30,7 @@ There are two level of usage: _basic_ and _advanced_
 - [julia-lindholm.de](http://www.julia-lindholm.de/home/#news) (Facebook News) 
 - [olliegabriel.de](http://www.olliegabriel.de/#news) (Facebook News)
 - [chakuza.de](http://www.chakuza.de/news/) (Facebook News)
+- [Article about apiNG on **t3n.de**](http://t3n.de/news/angularjs-modul-aping-686160/) (german)
 
 More demos and references are listed at [aping.readme.io/docs/demos](https://aping.readme.io/docs/demos)
 
