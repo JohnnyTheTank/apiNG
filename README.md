@@ -38,7 +38,7 @@ More demos and references are listed at [aping.readme.io/docs/demos](https://api
 <br>[Let us know](https://github.com/JohnnyTheTank/apiNG/issues/new) if you use this module in your project and we'll add here!
 
 ## Documentation
-**Full documentation comes up at [aping.readme.io](https://aping.readme.io)**
+**Full documentation is available at [aping.readme.io](https://aping.readme.io)**
 
 ## Plugins
 **apiNG plugin quicklist:** [Youtube](https://github.com/JohnnyTheTank/apiNG-plugin-youtube), [Facebook](https://github.com/JohnnyTheTank/apiNG-plugin-facebook), [Twitter](https://github.com/JohnnyTheTank/apiNG-plugin-codebird), [Vimeo](https://github.com/JohnnyTheTank/apiNG-plugin-vimeo), [Flickr](https://github.com/JohnnyTheTank/apiNG-plugin-flickr), [Dailymotion](https://github.com/JohnnyTheTank/apiNG-plugin-dailymotion), [Tumblr](https://github.com/JohnnyTheTank/apiNG-plugin-tumblr), [GitHub](https://github.com/JohnnyTheTank/apiNG-plugin-github), [RSS](https://github.com/JohnnyTheTank/apiNG-plugin-rss), [OpenWeatherMap](https://github.com/JohnnyTheTank/apiNG-plugin-openweathermap), [Wikipedia](https://github.com/JohnnyTheTank/apiNG-plugin-wikipedia), [BandsInTown](https://github.com/JohnnyTheTank/apiNG-plugin-bandsintown), [football-data](https://github.com/JohnnyTheTank/apiNG-plugin-footballdata)
