@@ -8,7 +8,7 @@ angular.module('jtt_aping')
     .value('apingResults', {})
     .directive('aping', ['apingResults', 'apingDefaultSettings', 'apingUtilityHelper', '$templateRequest', '$compile', function (apingResults, apingDefaultSettings, apingUtilityHelper, $templateRequest, $compile) {
         return {
-            restrict: 'E',
+            restrict: 'EA',
             transclude: true,
             template: '<ng-transclude></ng-transclude>',
             scope: {
