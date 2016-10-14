@@ -1,6 +1,6 @@
 /**
     @name: aping 
-    @version: 1.4.0 (07-07-2016) 
+    @version: 1.4.1 (14-10-2016) 
     @author: Jonathan Hornung <jonathan.hornung@gmail.com> 
     @url: https://github.com/JohnnyTheTank/apiNG 
     @license: MIT
@@ -21,7 +21,7 @@ angular.module('jtt_aping')
     .value('apingResults', {})
     .directive('aping', ['apingResults', 'apingDefaultSettings', 'apingUtilityHelper', '$templateRequest', '$compile', function (apingResults, apingDefaultSettings, apingUtilityHelper, $templateRequest, $compile) {
         return {
-            restrict: 'E',
+            restrict: 'EA',
             transclude: true,
             template: '<ng-transclude></ng-transclude>',
             scope: {
