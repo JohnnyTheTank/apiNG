@@ -45,8 +45,5 @@ More demos and references are listed at [aping.readme.io/docs/demos](https://api
 
 All apiNG plugins are listed at [aping.readme.io/docs/all-plugins](https://aping.readme.io/docs/all-plugins)
 
-## Designs
-All apiNG designs are listed at [aping.readme.io/docs/all-designs](https://aping.readme.io/docs/all-designs)
-
 # License
 MIT
