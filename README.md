@@ -32,7 +32,7 @@ There are two level of usage: _basic_ and _advanced_
 - [chakuza.de](http://www.chakuza.de/news/) (Facebook News)
 - [Article about apiNG on **t3n.de**](http://t3n.de/news/angularjs-modul-aping-686160/) (german)
 
-**More demos and references are listed at *[aping.readme.io/docs/demos](https://aping.readme.io/docs/demos)***
+**More demos and references are listed at [*aping.readme.io/docs/demos*](https://aping.readme.io/docs/demos)**
 
 **Are you using apiNG for your next project?**
 <br>[Let us know](https://github.com/JohnnyTheTank/apiNG/issues/new) if you use this module in your project and we'll add here!
