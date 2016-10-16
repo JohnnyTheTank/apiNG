@@ -34,7 +34,7 @@ There are two level of usage: _basic_ and _advanced_
 
 **More demos and references are listed at [*aping.readme.io/docs/demos*](https://aping.readme.io/docs/demos)**
 
-**Are you using apiNG for your next project?**
+> **Are you using apiNG for your next project?**
 <br>[Let us know](https://github.com/JohnnyTheTank/apiNG/issues/new) if you use this module in your project and we'll add here!
 
 ## Documentation
