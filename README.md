@@ -32,18 +32,19 @@ There are two level of usage: _basic_ and _advanced_
 - [chakuza.de](http://www.chakuza.de/news/) (Facebook News)
 - [Article about apiNG on **t3n.de**](http://t3n.de/news/angularjs-modul-aping-686160/) (german)
 
-> **More demos and references are listed at *[aping.readme.io/docs/demos](https://aping.readme.io/docs/demos)***
+**More demos and references are listed at *[aping.readme.io/docs/demos](https://aping.readme.io/docs/demos)***
 
 **Are you using apiNG for your next project?**
 <br>[Let us know](https://github.com/JohnnyTheTank/apiNG/issues/new) if you use this module in your project and we'll add here!
 
 ## Documentation
-> **Full documentation is available at *[aping.readme.io](https://aping.readme.io)***
+**Full documentation is available at *[aping.readme.io](https://aping.readme.io)***
 
 ## Plugins
-**apiNG plugin quicklist:** [Youtube](https://github.com/JohnnyTheTank/apiNG-plugin-youtube), [Facebook](https://github.com/JohnnyTheTank/apiNG-plugin-facebook), [Twitter](https://github.com/JohnnyTheTank/apiNG-plugin-codebird), [Vimeo](https://github.com/JohnnyTheTank/apiNG-plugin-vimeo), [Flickr](https://github.com/JohnnyTheTank/apiNG-plugin-flickr), [Dailymotion](https://github.com/JohnnyTheTank/apiNG-plugin-dailymotion), [Tumblr](https://github.com/JohnnyTheTank/apiNG-plugin-tumblr), [GitHub](https://github.com/JohnnyTheTank/apiNG-plugin-github), [RSS](https://github.com/JohnnyTheTank/apiNG-plugin-rss), [OpenWeatherMap](https://github.com/JohnnyTheTank/apiNG-plugin-openweathermap), [Wikipedia](https://github.com/JohnnyTheTank/apiNG-plugin-wikipedia), [BandsInTown](https://github.com/JohnnyTheTank/apiNG-plugin-bandsintown), [football-data](https://github.com/JohnnyTheTank/apiNG-plugin-footballdata)
+**apiNG plugin quicklist:**
+> [Youtube](https://github.com/JohnnyTheTank/apiNG-plugin-youtube), [Facebook](https://github.com/JohnnyTheTank/apiNG-plugin-facebook), [Twitter](https://github.com/JohnnyTheTank/apiNG-plugin-codebird), [Vimeo](https://github.com/JohnnyTheTank/apiNG-plugin-vimeo), [Flickr](https://github.com/JohnnyTheTank/apiNG-plugin-flickr), [Dailymotion](https://github.com/JohnnyTheTank/apiNG-plugin-dailymotion), [Tumblr](https://github.com/JohnnyTheTank/apiNG-plugin-tumblr), [GitHub](https://github.com/JohnnyTheTank/apiNG-plugin-github), [RSS](https://github.com/JohnnyTheTank/apiNG-plugin-rss), [OpenWeatherMap](https://github.com/JohnnyTheTank/apiNG-plugin-openweathermap), [Wikipedia](https://github.com/JohnnyTheTank/apiNG-plugin-wikipedia), [BandsInTown](https://github.com/JohnnyTheTank/apiNG-plugin-bandsintown), [football-data](https://github.com/JohnnyTheTank/apiNG-plugin-footballdata)
 
-> All apiNG plugins: *[aping.readme.io/docs/all-plugins](https://aping.readme.io/docs/all-plugins)*
+All apiNG plugins: *[aping.readme.io/docs/all-plugins](https://aping.readme.io/docs/all-plugins)*
 
 # License
 MIT
