@@ -38,7 +38,7 @@ There are two level of usage: _basic_ and _advanced_
 <br>[Let us know](https://github.com/JohnnyTheTank/apiNG/issues/new) if you use this module in your project and we'll add here!
 
 ## Documentation
-**Full documentation is available at *[aping.readme.io](https://aping.readme.io)***
+**Full documentation is available at [*aping.readme.io*](https://aping.readme.io)**
 
 ## Plugins
 **apiNG plugin quicklist:**
