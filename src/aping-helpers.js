@@ -28,7 +28,7 @@ angular.module('jtt_aping')
             return 0;
         };
     })
-    .service('apingUtilityHelper', ['apingInputObjects', 'apingDefaultSettings', function (apingInputObjects, apingDefaultSettings) {
+    .service('apingUtilityHelper', ['apingInputObjects', 'apingDefaultSettings', '$parse', function (apingInputObjects, apingDefaultSettings, $parse) {
 
         /**
          * return random matching API Key from apingDefaultSettings property 'apingApiKeys'. If there is no matching API Key, the function returns 'false'
@@ -115,7 +115,7 @@ angular.module('jtt_aping')
          * @returns {Array/Object}
          */
         this.replaceSingleQuotesAndParseJson = function (_string) {
-            return angular.fromJson(_string.replace(/'/g, '"'));
+            return $parse(_string)();
         };
 
         /**
