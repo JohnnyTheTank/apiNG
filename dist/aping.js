@@ -1,6 +1,6 @@
 /**
     @name: aping 
-    @version: 1.4.2 (11-03-2018) 
+    @version: 1.4.3 (03-05-2018) 
     @author: Jonathan Hornung <jonathan.hornung@gmail.com> 
     @url: https://github.com/JohnnyTheTank/apiNG 
     @license: MIT
@@ -752,6 +752,11 @@ angular.module('jtt_aping_jsonloader', [])
                         if (angular.isDefined(request.xAuthToken)) {
                             requestObject.xAuthToken = request.xAuthToken;
                         }
+
+                        if (angular.isDefined(request.Authorization)) {
+                            requestObject.Authorization = request.Authorization;
+                        }
+
                         jsonloaderFactory.getJsonData(requestObject)
                             .then(function (_data) {
                                 var resultArray = [];
@@ -816,18 +821,16 @@ angular.module('jtt_aping_jsonloader', [])
                     }
                 }
 
+                if (angular.isDefined(_requestObject.Authorization)) {
+                    httpObject.headers = {
+                        'Authorization': _requestObject.Authorization
+                    }
+                }
+
                 return $http.jsonp(
                     _requestObject.path,
                     httpObject
                 );
-
-                /*
-                 return $http({
-                 method: 'JSONP',
-                 url: _requestObject.path,
-                 params: {callback: 'JSON_CALLBACK'},
-                 });
-                 */
 
             } else {
 
@@ -840,6 +843,12 @@ angular.module('jtt_aping_jsonloader', [])
                 if (angular.isDefined(_requestObject.xAuthToken)) {
                     httpObject.headers = {
                         'X-Auth-Token': _requestObject.xAuthToken
+                    }
+                }
+
+                if (angular.isDefined(_requestObject.Authorization)) {
+                    httpObject.headers = {
+                        'Authorization': _requestObject.Authorization
                     }
                 }
 
