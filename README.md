@@ -19,10 +19,7 @@ There are two level of usage: _basic_ and _advanced_
 - **Social Wall**
     - [Demopage](http://aping.js.org/#demo)
     - [View & Edit on Plunker](http://plnkr.co/dz3Dru)
-- **Football-Data**
-    - [View & Edit on Plunker](http://plnkr.co/a8Uj8V)
 - **ionic + apiNG** (hybrid mobile apps)
-    - [View & Edit on play.ionic.io](http://play.ionic.io/app/0137f0b5967d)
     - [View & Edit on Plunker](http://plnkr.co/edit/WesqTb?p=preview)
 
 ## References
