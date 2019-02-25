@@ -17,7 +17,7 @@ There are two level of usage: _basic_ and _advanced_
 
 ## Advanced Demos
 - **Social Wall**
-    - [Demopage](http://aping.js.org/#demo)
+    - [Demopage](https://aping.js.org/#demo)
     - [View & Edit on Plunker](http://plnkr.co/dz3Dru)
 - **ionic + apiNG** (hybrid mobile apps)
     - [View & Edit on Plunker](http://plnkr.co/edit/WesqTb?p=preview)
