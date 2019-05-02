@@ -26,7 +26,6 @@ There are two level of usage: _basic_ and _advanced_
 - [sonymusic.de/videos](https://sonymusic.de/videos) (Youtube Player & Playlist)
 - [julia-lindholm.de](http://www.julia-lindholm.de/home/#news) (Facebook News) 
 - [chakuza.de](http://www.chakuza.de/news/) (Facebook News)
-- [Article about apiNG on **t3n.de**](http://t3n.de/news/angularjs-modul-aping-686160/) (german)
 
 **More demos and references are listed at [*aping.readme.io/docs/demos*](https://aping.readme.io/docs/demos)**
 
