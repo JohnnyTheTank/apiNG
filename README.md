@@ -12,15 +12,12 @@ There are two level of usage: _basic_ and _advanced_
 * The _advanced_ usage turns apiNG into a plugin system for data-sources and designs, focused on re-usable modules
 
 ## Basic Demos
-- Get data from **REST API**: [View & Edit on Plunker](http://plnkr.co/xmflhJ)
-- Read data from **JSON Files**: [View & Edit on Plunker](http://plnkr.co/k3DPNc)
+- Get data from **REST API**
+- Read data from **JSON Files**
 
 ## Advanced Demos
 - **Social Wall**
     - [Demopage](https://aping.js.org/#demo)
-    - [View & Edit on Plunker](http://plnkr.co/dz3Dru)
-- **ionic + apiNG** (hybrid mobile apps)
-    - [View & Edit on Plunker](http://plnkr.co/edit/WesqTb?p=preview)
 
 ## References
 - [sonymusic.de/videos](https://sonymusic.de/videos) (Youtube Player & Playlist)
