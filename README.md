@@ -20,10 +20,7 @@ There are two level of usage: _basic_ and _advanced_
     - [Demopage](https://aping.js.org/#demo)
 
 ## References
-- [sonymusic.de/videos](https://sonymusic.de/videos) (Youtube Player & Playlist)
-- [julia-lindholm.de](http://www.julia-lindholm.de/home/#news) (Facebook News) 
-
-**More demos and references are listed at [*aping.readme.io/docs/demos*](https://aping.readme.io/docs/demos)**
+**References are listed at [*aping.readme.io/docs/demos*](https://aping.readme.io/docs/demos)**
 
 > **Are you using apiNG for your next project?**
 <br>[Let us know](https://github.com/JohnnyTheTank/apiNG/issues/new) if you use this module in your project and we'll add here!
