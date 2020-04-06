@@ -11,13 +11,8 @@ There are two level of usage: _basic_ and _advanced_
 * The _basic_ usage is focused on keeping it simple and easy, but with enough power for most use cases
 * The _advanced_ usage turns apiNG into a plugin system for data-sources and designs, focused on re-usable modules
 
-## Basic Demos
-- Get data from **REST API**
-- Read data from **JSON Files**
-
-## Advanced Demos
-- **Social Wall**
-    - [Demopage](https://aping.js.org/#demo)
+## Demo
+- [Demopage](https://aping.js.org/#demo)
 
 ## References
 **References are listed at [*aping.readme.io/docs/demos*](https://aping.readme.io/docs/demos)**
